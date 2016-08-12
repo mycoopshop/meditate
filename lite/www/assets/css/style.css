@@ -1,0 +1,21 @@
+@font-face {
+	font-family: 'Conv_MuseoSansRounded-300';
+	src: url('fonts/MuseoSansRounded-300.eot');
+	src: local('☺'), url('fonts/MuseoSansRounded-300.woff') format('woff'), url('fonts/MuseoSansRounded-300.ttf') format('truetype'), url('fonts/MuseoSansRounded-300.svg') format('svg');
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+a {color:#7EC349;}
+
+body {
+    font-family: Conv_MuseoSansRounded-300;
+    font-size: 15px;
+    text-align: justify;
+    line-height:1.5;	
+}
+
+* {
+   -webkit-user-select: none;
+}

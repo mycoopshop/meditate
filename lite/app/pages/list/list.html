@@ -1,0 +1,103 @@
+<ion-header>
+   <ion-navbar>
+      <button menuToggle>
+         <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>My Menu List</ion-title>
+   </ion-navbar>
+</ion-header>
+<ion-content class="background-blinker">
+   <ion-list>
+      <div class="parent-main-container" *ngFor="let menu of subMenus">
+         <div class="slideContainer" *ngIf="(menu.parent_id == 0)" id="sidebar">
+            <button class="button button-block button-positive menu-text slide" id="hider" (click)="sayHello(menu.id)" >
+               <!-- <div data-ng-init="btnId=2;">
+                  <span #localVariable="elt.title"></span>
+                  {{localVariable}} 
+                  {{btnId}}
+                  </div> -->
+               {{menu.title}}
+               <!-- {{flag}} -->
+               <!-- {{getValue()}} -->
+            </button>
+         </div>
+         <div *ngIf="(menu.parent_id != 0) && (menu.parent_id == getValue())">
+            <button class="button button-block button-positive menu-text" id="hider" (click)="sayHello(menu.id)" >
+              {{menu.title}}
+            </button>
+         </div>
+      </div>
+
+      <!-- <div class="parent-main-container">
+         <button class="button button-block button-positive menu-text" *ngFor="let item of items" (click)="itemTapped($event, item)">
+          <ion-icon name="{{item.icon}}" item-left></ion-icon>
+         {{item.title}}
+         <div class="item-note" item-right>
+            {{item.note}}
+            </div>
+         </button>
+         </div> -->
+      <!-- Menu Array
+         <div ion-item *ngFor="let m of mainmenu">
+            {{m.Id}}
+            <div class="item-note" item-right>
+               {{m.title}}
+            </div>
+         </div>
+         SubMenu Array -->
+      <!-- {{submenu}} -->
+      <!-- <div ion-item *ngFor="let sm of submenu">
+         {{sm.Id}}
+         <div class="item-note" item-right>
+            {{sm.mm_id}}
+            {{sm.menu_type}}
+         </div>
+         {{sm.title}}
+         </div> -->
+   </ion-list>
+   <!-- <div class="list">
+      <a class="item" href="#" onclick="window.open('http://www.nraboy.com/contact', '_self', 'location=yes'); return false;">
+      External Link Profile
+      </a>
+      <a class="item" href="#" onclick="window.open('http://localhost:8100/ionic-lab', '_self', 'location=yes'); return false;">
+      Local Link of app
+      </a>
+      <a class="item" href="#" onclick="window.open('http://localhost:8100/www/', '_self', 'location=yes'); return false;">
+         Open a Browser
+         </a>
+      <a class="item" href="#" onclick="window.open('/assets/challenge/dayChallenge.html','_self');">
+      Open Challenges
+      </a>
+      <a class="item" href="#" onclick="window.open('/assets/experience/201.How to meditate.html','_self');">
+      Open Experience
+      </a>
+      <a class="item" href="#" onclick="window.open('/assets/knowledge/1.Intro to the book/300.Introduction to this book.html','_self');">
+      Open Knowledge
+      </a>
+      </div> -->
+      
+<input type="checkbox" id="hider">
+<div id="sidebar">foo</div>
+
+
+</ion-content>
+<style type="text/css">
+   .parent-main-container {
+     margin: 5%;
+   }
+   .menu-text {
+     text-transform: capitalize;
+   }
+
+   .slideContainer {
+     white-space: nowrap;
+     overflow-x: scroll;
+   }
+   .slide { 
+     float: left;
+     display: inline;
+}
+        #sidebar {height:100%; background:blue; width:100%; clear:none; float:left;}
+        
+        input:checked+#sidebar{display:none;}
+</style>

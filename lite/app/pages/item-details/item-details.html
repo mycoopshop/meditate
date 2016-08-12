@@ -1,0 +1,47 @@
+<ion-header>
+   <ion-navbar>
+      <button menuToggle *ngIf="!selectedMenu">
+         <ion-icon name="menu"></ion-icon>
+      </button>
+      <ion-title>Menu Page Details</ion-title>
+   </ion-navbar>
+</ion-header>
+<ion-content> 
+   <div *ngIf="selectedMenu" class="selection">
+      <b>{{selectedMenu.title}}</b>
+      <!-- <ion-icon name="{{selectedMenu.icon}}"></ion-icon> -->
+      <!-- <div>
+         You navigated here from <b>{{selectedMenu.type}}</b>
+         </div> -->
+      <!-- {{(selectedMenu.title.toString('')).substr((selectedMenu.title.toString('')).length - 1)}} -->
+         <div *ngFor="let subMenu of subMenus">
+            <div *ngIf="(selectedMenu.Id ==subMenu.parent_id) && (subMenu.type=='menu')">
+               <button class="button button-block button-positive">
+                 <!-- {{subMenu.id}} -->
+                 {{subMenu.title}}
+               </button>
+                 <div *ngFor="let childSubMenu of childSubMenus">
+                   <div *ngIf="(subMenu.id == childSubMenu.submenu_id)">
+                     <!-- {{subMenu.Id}} -->
+                     {{childSubMenu.title}}
+                   </div>
+                 </div>
+            </div>
+            <div *ngIf="(selectedMenu.Id ==subMenu.parent_id) && (subMenu.type=='html')">
+               <button class="button button-block button-positive">
+               <a class="button-font" href="#" onclick="window.open('/assets/challenge/dayChallenge.html','_self');">
+               {{subMenu.title}}</a>
+               </button>
+            </div>
+            <div *ngIf="(selectedMenu.Id ==subMenu.parent_id) && (subMenu.type=='list')">
+               <button class="button button-block button-positive">
+               <a class="button-font" href="#" onclick="window.open('/assets/challenge/dayChallenge.html','_self');">
+               {{subMenu.title}}</a>
+               </button>
+            </div>
+         </div>
+        <!--  <div *ngFor="let subMenu of subMenus">
+
+         </div> -->
+   </div>
+</ion-content>
