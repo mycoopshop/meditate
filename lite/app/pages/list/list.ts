@@ -13,7 +13,7 @@ export class ListPage {
 
   constructor(private navCtrl: NavController, navParams: NavParams) {
     
-    this.flag = "-1";
+    this.flag = "0";
     this.subMenus = [
       { id: 1,  title: 'Challenges',      parent_id: 0, type: 'menu', child_type: 1, url: ''},
       { id: 2,  title: 'Begin now',       parent_id: 0, type: 'menu', child_type: 1, url: ''},
@@ -43,6 +43,7 @@ export class ListPage {
       { id: 26, title: 'demo sesfds menu',parent_id: 10,type: 'list', child_type: 1, url: ''}
     ];
   }
+
   sayHello(str) {
     this.flag = str;};
   

@@ -8,9 +8,9 @@
 </ion-header>
 <ion-content class="background-blinker">
    <ion-list>
-      <div class="parent-main-container" *ngFor="let menu of subMenus">
-         <div class="slideContainer" *ngIf="(menu.parent_id == 0)" id="sidebar">
-            <button class="button button-block button-positive menu-text slide" id="hider" (click)="sayHello(menu.id)" >
+      <div class="#" *ngFor="let menu of subMenus">
+         <div class="slideContainer" *ngIf="(menu.parent_id == getValue())   ">
+            <button class="button button-block button-positive pdn menu-text slide" (click)="sayHello(menu.id)" >
                <!-- <div data-ng-init="btnId=2;">
                   <span #localVariable="elt.title"></span>
                   {{localVariable}} 
@@ -21,11 +21,11 @@
                <!-- {{getValue()}} -->
             </button>
          </div>
-         <div *ngIf="(menu.parent_id != 0) && (menu.parent_id == getValue())">
-            <button class="button button-block button-positive menu-text" id="hider" (click)="sayHello(menu.id)" >
+         <!-- <div *ngIf="(menu.parent_id != 0) && (menu.parent_id == getValue())">
+            <button class="button button-block button-positive menu-text" (click)="sayHello(menu.id)" >
               {{menu.title}}
             </button>
-         </div>
+         </div> -->
       </div>
 
       <!-- <div class="parent-main-container">
@@ -76,8 +76,8 @@
       </a>
       </div> -->
       
-<input type="checkbox" id="hider">
-<div id="sidebar">foo</div>
+<!-- <input type="checkbox" id="hider">
+<div id="sidebar">foo</div> -->
 
 
 </ion-content>
@@ -88,16 +88,4 @@
    .menu-text {
      text-transform: capitalize;
    }
-
-   .slideContainer {
-     white-space: nowrap;
-     overflow-x: scroll;
-   }
-   .slide { 
-     float: left;
-     display: inline;
-}
-        #sidebar {height:100%; background:blue; width:100%; clear:none; float:left;}
-        
-        input:checked+#sidebar{display:none;}
 </style>
