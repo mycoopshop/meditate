@@ -11,21 +11,10 @@
       <div class="#" *ngFor="let menu of subMenus">
          <div class="slideContainer" *ngIf="(menu.parent_id == getValue())   ">
             <button class="button button-block button-positive pdn menu-text slide" (click)="sayHello(menu.id)" >
-               <!-- <div data-ng-init="btnId=2;">
-                  <span #localVariable="elt.title"></span>
-                  {{localVariable}} 
-                  {{btnId}}
-                  </div> -->
                {{menu.title}}
-               <!-- {{flag}} -->
                <!-- {{getValue()}} -->
             </button>
          </div>
-         <!-- <div *ngIf="(menu.parent_id != 0) && (menu.parent_id == getValue())">
-            <button class="button button-block button-positive menu-text" (click)="sayHello(menu.id)" >
-              {{menu.title}}
-            </button>
-         </div> -->
       </div>
 
       <!-- <div class="parent-main-container">
@@ -87,5 +76,11 @@
    }
    .menu-text {
      text-transform: capitalize;
+   }
+   .slideContainer {
+    width: 60%;
+/*    background-color: black;
+*/    text-align: center;
+    margin: 0% 20%;
    }
 </style>
