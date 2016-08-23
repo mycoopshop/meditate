@@ -6,14 +6,29 @@
       <ion-title>My Menu List</ion-title>
    </ion-navbar>
 </ion-header>
-<ion-content class="background-blinker">
-   <ion-list>
-      <div class="#" *ngFor="let menu of subMenus">
-         <div class="slideContainer" *ngIf="(menu.parent_id == getValue())   ">
-            <button class="button button-block button-positive pdn menu-text slide" (click)="sayHello(menu.id)" >
-               {{menu.title}}
-               <!-- {{getValue()}} -->
-            </button>
+<ion-content class="background-blinker ">
+   <ion-list class="bg-color">
+    <div class="top-align">
+      <div *ngFor="let menu of subMenus">
+         <div class="slideContainer" *ngIf="(menu.parent_id == getValue())">
+            <div *ngIf="(menu.type=='menu')">
+              <button class="button button-block button-royal" style="background-color:#3474e1" (click)="sayHello(menu.id)" >
+                 {{menu.title}}
+                 <!-- {{getValue()}} -->
+              </button>
+            </div>
+            <div *ngIf="(menu.type=='list')">
+              <button class="button button-block button-assertive" style="background-color:#2e612f" (click)="sayHello(menu.id)">
+                 {{menu.title}}
+              </button>
+            </div>
+            <div *ngIf="(menu.type=='html')">
+              <button class="button button-block button-assertive" style="background-color:#266069" (click)="sayHello(menu.id)">
+                 <a href="{{menu.url}}" style="text-decoration:none;color:#fff" onclick="window.open(this.href,'_self');">
+                    {{menu.title}}
+                 </a>
+              </button>
+            </div>
          </div>
       </div>
 
@@ -43,6 +58,7 @@
          </div>
          {{sm.title}}
          </div> -->
+      </div>
    </ion-list>
    <!-- <div class="list">
       <a class="item" href="#" onclick="window.open('http://www.nraboy.com/contact', '_self', 'location=yes'); return false;">
@@ -79,8 +95,16 @@
    }
    .slideContainer {
     width: 60%;
-/*    background-color: black;
-*/    text-align: center;
+    text-align: center;
     margin: 0% 20%;
+   }
+   .bg-color {
+    background-color: #d4e2f9;
+    height: 100%;
+   }
+   .top-align {
+    margin-top: 30%;
+    float: left;
+    width: 100%
    }
 </style>
