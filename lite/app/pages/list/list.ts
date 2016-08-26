@@ -15,7 +15,7 @@ export class ListPage {
     
     this.flag = "0";
     this.subMenus = [
-      { id: 1,  title: 'Challenges',      parent_id: 0, type: 'html', child_type: 1, url: 'assets/experience/The-8-Day-Challenge.html'},
+      { id: 1,  title: 'Challenges',      parent_id: 0, type: 'menu', child_type: 1, url: 'assets/experience/The-8-Day-Challenge.html'},
       { id: 2,  title: 'Explore',         parent_id: 0, type: 'menu', child_type: 1, url: ''},
       { id: 3,  title: 'Meditate Now',    parent_id: 0, type: 'menu', child_type: 1, url: ''},
       { id: 4,  title: 'Read',            parent_id: 0, type: 'menu', child_type: 1, url: ''},
