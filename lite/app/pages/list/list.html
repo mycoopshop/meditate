@@ -9,33 +9,17 @@
 <ion-content class="background-blinker ">
    <ion-list class="bg-color" style="background-image: url('img/cartwheel-beach.jpg')">
     <div class="top-align">
-      <div *ngFor="let menu of subMenus">
        <ul style="list-style: none;">
+      <div *ngFor="let menu of subMenus">
          <div class="slideContainer" *ngIf="(menu.parent_id == getValue())">
             <div *ngIf="(menu.type=='menu')">
-              <li><div class="royal-menu-container" (click)="sayHello(menu.id)" >
+              <div class="royal-menu-container" (click)="sayHello(menu.id)" >
                 <div class="inner-border-box">
                   <div class="menu-title-container"> 
                    <div class="menu-title">
-                     
+                     <li>
                       {{menu.title}}
-                     
-                   </div>
-                  </div>
-                  <div class="arrow-container">
-                    <div class="in-arrow">
-                      <img src="img/more_than_256.png" width="20" height="20">
-                    </div>
-                  </div>
-                </div>
-              </div></li>
-            </div>
-            <div *ngIf="(menu.type=='list')">
-              <li><div class="royal-menu-container" (click)="sayHello(menu.id)" >
-                <div class="inner-border-box">
-                  <div class="menu-title-container"> 
-                   <div class="menu-title">
-                      {{menu.title}}
+                     </li>
                    </div>
                   </div>
                   <div class="arrow-container">
@@ -45,19 +29,39 @@
                   </div>
                 </div>
                  <!-- {{getValue()}} -->
-              </div></li>
+              </div>
+            </div>
+            <div *ngIf="(menu.type=='list')">
+              <div class="royal-menu-container" (click)="sayHello(menu.id)" >
+                <div class="inner-border-box">
+                  <div class="menu-title-container"> 
+                   <div class="menu-title">
+                   <li>
+                      {{menu.title}}
+                     </li>
+                   </div>
+                  </div>
+                  <div class="arrow-container">
+                    <div class="in-arrow">
+                      <img src="img/more_than_256.png" width="20" height="20">
+                    </div>
+                  </div>
+                </div>
+                 <!-- {{getValue()}} -->
+              </div>
             </div>
             <div *ngIf="(menu.type=='html')">
-              <li><button class="button button-block button-assertive" style="background-color:#266069" (click)="sayHello(menu.id)">
+              <button class="button button-block button-assertive" style="background-color:#266069" (click)="sayHello(menu.id)">
                  <a href="{{menu.url}}" style="text-decoration:none;color:#fff" onclick="window.open(this.href,'_self');">
-                    
+                    <li>
                       {{menu.title}}
+                     </li>
                  </a>
-              </button></li>
+              </button>
             </div>
          </div>
-         </ul>
       </div>
+         </ul>
 
       <!-- <div class="parent-main-container">
          <button class="button button-block button-positive menu-text" *ngFor="let item of items" (click)="itemTapped($event, item)">
@@ -178,7 +182,7 @@
     float: right;
     margin: 1%;
    }
-   ul div div div li:nth-child(2) {  
+   ul li:nth-child(3n+1) {  
     color: #ccc;
    }
 </style>
