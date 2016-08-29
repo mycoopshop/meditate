@@ -1,5 +1,6 @@
 import {Component} from '@angular/core';
 import {ListPage} from '../list/list';
+import {MenuPage} from '../menu/menu';
 
 
 @Component({
@@ -8,6 +9,7 @@ import {ListPage} from '../list/list';
 export class HelloIonicPage {
   
   listPage = ListPage;
+  menuPage = MenuPage;
   constructor() {
 
   }
