@@ -9,18 +9,14 @@
 <ion-content class="background-blinker ">
    <ion-list class="bg-color" style="background-image: url('img/cartwheel-beach.jpg')">
     <div class="top-align">
-       <ul style="list-style: none;">
       <div *ngFor="let menu of subMenus">
          <div class="slideContainer" *ngIf="(menu.parent_id == getValue())">
             <div *ngIf="(menu.type=='menu')">
               <div class="royal-menu-container" (click)="sayHello(menu.id)" >
                 <div class="inner-border-box">
                   <div class="menu-title-container"> 
-                   <div class="menu-title">
-                     <li class="module">
+                   <div class="menu-title module">
                       {{menu.title}}
-                      {{menu.menu}}
-                     </li>
                    </div>
                   </div>
                   <div class="arrow-container">
@@ -37,9 +33,7 @@
                 <div class="inner-border-box">
                   <div class="menu-title-container"> 
                    <div class="menu-title">
-                   <li>
                       {{menu.title}}
-                     </li>
                    </div>
                   </div>
                   <div class="arrow-container">
@@ -54,16 +48,12 @@
             <div *ngIf="(menu.type=='html')">
               <button class="button button-block button-assertive" style="background-color:#266069" (click)="sayHello(menu.id)">
                  <a href="{{menu.url}}" style="text-decoration:none;color:#fff" onclick="window.open(this.href,'_self');">
-                    <li>
                       {{menu.title}}
-                     </li>
                  </a>
               </button>
             </div>
          </div>
       </div>
-         </ul>
-
       <!-- <div class="parent-main-container">
          <button class="button button-block button-positive menu-text" *ngFor="let item of items" (click)="itemTapped($event, item)">
           <ion-icon name="{{item.icon}}" item-left></ion-icon>
@@ -112,9 +102,4 @@
       Open Knowledge
       </a>
       </div> -->
-      
-<!-- <input type="checkbox" id="hider">
-<div id="sidebar">foo</div> -->
-
-
 </ion-content>
