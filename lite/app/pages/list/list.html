@@ -7,7 +7,7 @@
    </ion-navbar>
 </ion-header>
 <ion-content class="background-blinker ">
-   <ion-list class="bg-color" style="background-image: url('img/cartwheel-beach.jpg')">
+   <ion-list class="bg-color" style="background-image: url('img/cartwheel-beach.jpg')" id="item-list">
     <div class="top-align">
       <div *ngFor="let menu of subMenus">
          <div class="slideContainer" *ngIf="(menu.parent_id == getValue())">
@@ -52,8 +52,13 @@
                  </a>
               </button>
             </div>
+            
          </div>
       </div>
+      <div class="down-scroll-container">
+      <img (click)="scrollTo()" src="img/arrow-down.png" width="30" height="30" alt="">
+    </div>
+      
       <!-- <div class="parent-main-container">
          <button class="button button-block button-positive menu-text" *ngFor="let item of items" (click)="itemTapped($event, item)">
           <ion-icon name="{{item.icon}}" item-left></ion-icon>
@@ -103,3 +108,7 @@
       </a>
       </div> -->
 </ion-content>
+<script>
+    var itemList = document.getElementById("item-list");
+    itemList.scrollTop = itemList.scrollHeight
+</script>

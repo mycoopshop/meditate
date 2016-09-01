@@ -1,5 +1,5 @@
-import {Component} from '@angular/core';
-import {NavController, NavParams} from 'ionic-angular';
+import {Component, ViewChild} from '@angular/core';
+import {NavController, NavParams, Content} from 'ionic-angular';
 import {ItemDetailsPage} from '../item-details/item-details';
 
 
@@ -10,7 +10,7 @@ import {ItemDetailsPage} from '../item-details/item-details';
 export class ListPage {
   public flag;
   subMenus: Array<{id: number, title: string, parent_id: number, type: string, child_type: number, url: string}>;
-
+  @ViewChild(Content) content: Content;
   constructor(private navCtrl: NavController, navParams: NavParams) {
     
     this.flag = "0";
@@ -51,4 +51,9 @@ export class ListPage {
     //this.flag = str;
     return this.flag;
   };
+  
+  scrollTo() {
+    this.content.scrollTo(0, 500, 200);
+  }
+
 }
