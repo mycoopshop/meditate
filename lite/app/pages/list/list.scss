@@ -28,34 +28,30 @@
     color: #fff;
     float: left;
     height: 73px;
-    margin: 0% 0% 0% 0%;
+    margin: 0% 0% 3% 0%;
+   }
+   .center-menu-container {
+    float: left;
+    width: 100%;
+    height: 100%;
    }
    .inner-border-box {
     float: left;
     width: 94%;
     height: 82%;
-    margin: 3% 3% 3% 3%;
+    //margin: 3% 3% 3% 3%;
     border: 3px solid #000;
    }
    .floating-boarder1 {
     float: left;
-    margin: 1% 0% 0% -1.6%;
-    width: 60%;
-    height: 10%;
+    width: 50%;
+    height: 5px;
     background-color: #000;
    }
   .floating-boarder2 {
     float: left;
-    margin: 1% 0% 0% -1.6%;
-    width: 60%;
-    height: 10%;
-    background-color: #000;
-   }
-   .floating-boarder3 {
-    float: left;
-    margin: 1% 0% 0% -1.6%;
-    width: 60%;
-    height: 10%;
+    width: 2%;
+    height: 59.4px;
     background-color: #000;
    }
    .menu-title-container {
@@ -71,6 +67,8 @@
     font-family: -webkit-body;
     color: #000;
     word-wrap: break-word;
+    font-weight: bold;
+    text-align: left;
    }
    .arrow-container {
     float: left;
