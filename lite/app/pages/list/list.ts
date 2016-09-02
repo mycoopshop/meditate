@@ -8,7 +8,8 @@ import {ItemDetailsPage} from '../item-details/item-details';
 })
 
 export class ListPage {
-  public flag;
+  public flag,item;
+
   subMenus: Array<{id: number, title: string, parent_id: number, type: string, child_type: number, url: string}>;
   @ViewChild(Content) content: Content;
   constructor(private navCtrl: NavController, navParams: NavParams) {

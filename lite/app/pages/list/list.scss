@@ -5,9 +5,8 @@
      text-transform: capitalize;
    }
    .slideContainer {
-    width: 60%;
     text-align: center;
-    margin: 0% 14%;
+    margin: 20%;
    }
    .bg-color {
     background-color: #fff;
@@ -29,7 +28,7 @@
     color: #fff;
     float: left;
     height: 73px;
-    margin: 2% 0% 0% 0%;
+    margin: 0% 0% 0% 0%;
    }
    .inner-border-box {
     float: left;
@@ -37,6 +36,27 @@
     height: 82%;
     margin: 3% 3% 3% 3%;
     border: 3px solid #000;
+   }
+   .floating-boarder1 {
+    float: left;
+    margin: 1% 0% 0% -1.6%;
+    width: 60%;
+    height: 10%;
+    background-color: #000;
+   }
+  .floating-boarder2 {
+    float: left;
+    margin: 1% 0% 0% -1.6%;
+    width: 60%;
+    height: 10%;
+    background-color: #000;
+   }
+   .floating-boarder3 {
+    float: left;
+    margin: 1% 0% 0% -1.6%;
+    width: 60%;
+    height: 10%;
+    background-color: #000;
    }
    .menu-title-container {
     float: left;
@@ -65,7 +85,7 @@
   .module {
     $bg: red;
     &:nth-child(3n+1) {
-        background-color: $bg;
+        //background-color: $bg;
       }
   }
   .down-scroll-container {

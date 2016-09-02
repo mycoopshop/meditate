@@ -1,11 +1,16 @@
+<ion-side-menu
+  side="right"
+  width="myWidthValue + 20"
+  is-enabled="shouldLeftSideMenuBeEnabled()">
 <ion-header>
    <ion-navbar>
       <button menuToggle>
-         <ion-icon name="menu"></ion-icon>
+         <img src="img/more_than_256.png" width="20" height="20">
       </button>
       <ion-title>My Menu List</ion-title>
    </ion-navbar>
 </ion-header>
+</ion-side-menu>
 <ion-content class="background-blinker ">
    <ion-list class="bg-color" style="background-image: url('img/cartwheel-beach.jpg')" id="item-list">
     <div class="top-align">
@@ -24,8 +29,12 @@
                       <img src="img/more_than_256.png" width="20" height="20">
                     </div>
                   </div>
+                  <!-- {{menu.id}} -->
+                  <div class="floating-boarder{{menu.id}}">
+                    
+                  </div>
                 </div>
-                 <!-- {{getValue()}} -->
+                  <!-- {{getValue()}}  -->
               </div>
             </div>
             <div *ngIf="(menu.type=='list')">
