@@ -1,11 +1,9 @@
 <!-- <ion-header>
-
-  <ion-navbar>
-    <ion-title>menu</ion-title>
-  </ion-navbar>
-
-</ion-header> -->
-
+   <ion-navbar>
+     <ion-title>menu</ion-title>
+   </ion-navbar>
+   
+   </ion-header> -->
 <ion-header>
    <ion-navbar>
       <button menuToggle>
@@ -14,114 +12,10 @@
       <ion-title>My Menu Page</ion-title>
    </ion-navbar>
 </ion-header>
-<ion-content class="background-blinker ">
-   <ion-list class="bg-color" style="background-image: url('img/cartwheel-beach.jpg')">
-    <div class="top-align">
-       <ul style="list-style: none;">
-      <div *ngFor="let menu of subMenus">
-         <div class="slideContainer" *ngIf="(menu.parent_id == getValue())">
-            <div *ngIf="(menu.type=='menu')">
-              <div class="royal-menu-container" (click)="sayHello(menu.id)" >
-                <div class="inner-border-box">
-                  <div class="menu-title-container"> 
-                   <div class="menu-title">
-                     <li class="module">
-                      {{menu.title}}
-                     </li>
-                   </div>
-                  </div>
-                  <div class="arrow-container">
-                    <div class="in-arrow">
-                      <img src="img/more_than_256.png" width="20" height="20">
-                    </div>
-                  </div>
-                </div>
-                 <!-- {{getValue()}} -->
-              </div>
-            </div>
-            <div *ngIf="(menu.type=='list')">
-              <div class="royal-menu-container" (click)="sayHello(menu.id)" >
-                <div class="inner-border-box">
-                  <div class="menu-title-container"> 
-                   <div class="menu-title">
-                   <li>
-                      {{menu.title}}
-                     </li>
-                   </div>
-                  </div>
-                  <div class="arrow-container">
-                    <div class="in-arrow">
-                      <img src="img/more_than_256.png" width="20" height="20">
-                    </div>
-                  </div>
-                </div>
-                 <!-- {{getValue()}} -->
-              </div>
-            </div>
-            <div *ngIf="(menu.type=='html')">
-              <button class="button button-block button-assertive" style="background-color:#266069" (click)="sayHello(menu.id)">
-                 <a href="{{menu.url}}" style="text-decoration:none;color:#fff" onclick="window.open(this.href,'_self');">
-                    <li>
-                      {{menu.title}}
-                     </li>
-                 </a>
-              </button>
-            </div>
-         </div>
-      </div>
-         </ul>
-
-      <!-- <div class="parent-main-container">
-         <button class="button button-block button-positive menu-text" *ngFor="let item of items" (click)="itemTapped($event, item)">
-          <ion-icon name="{{item.icon}}" item-left></ion-icon>
-         {{item.title}}
-         <div class="item-note" item-right>
-            {{item.note}}
-            </div>
-         </button>
-         </div> -->
-      <!-- Menu Array
-         <div ion-item *ngFor="let m of mainmenu">
-            {{m.Id}}
-            <div class="item-note" item-right>
-               {{m.title}}
-            </div>
-         </div>
-         SubMenu Array -->
-      <!-- {{submenu}} -->
-      <!-- <div ion-item *ngFor="let sm of submenu">
-         {{sm.Id}}
-         <div class="item-note" item-right>
-            {{sm.mm_id}}
-            {{sm.menu_type}}
-         </div>
-         {{sm.title}}
-         </div> -->
-      </div>
-   </ion-list>
-   <!-- <div class="list">
-      <a class="item" href="#" onclick="window.open('http://www.nraboy.com/contact', '_self', 'location=yes'); return false;">
-      External Link Profile
-      </a>
-      <a class="item" href="#" onclick="window.open('http://localhost:8100/ionic-lab', '_self', 'location=yes'); return false;">
-      Local Link of app
-      </a>
-      <a class="item" href="#" onclick="window.open('http://localhost:8100/www/', '_self', 'location=yes'); return false;">
-         Open a Browser
-         </a>
-      <a class="item" href="#" onclick="window.open('/assets/challenge/dayChallenge.html','_self');">
-      Open Challenges
-      </a>
-      <a class="item" href="#" onclick="window.open('/assets/experience/201.How to meditate.html','_self');">
-      Open Experience
-      </a>
-      <a class="item" href="#" onclick="window.open('/assets/knowledge/1.Intro to the book/300.Introduction to this book.html','_self');">
-      Open Knowledge
-      </a>
-      </div> -->
-      
-<!-- <input type="checkbox" id="hider">
-<div id="sidebar">foo</div> -->
-
-
+<ion-content class="background-blinker " padding="true" overflow-scroll="true">
+   <ion-view title="Welcome">
+      <video controls="controls" preload="metadata" autoplay="autoplay" webkit-playsinline="webkit-playsinline" class="videoPlayer">
+         <source src="videos/your_mind.m4v" type="video/mp4"/>
+      </video>
+   </ion-view>
 </ion-content>

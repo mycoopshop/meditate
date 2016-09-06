@@ -91,3 +91,62 @@
     float:left;
     text-align: center;
   }
+  @-webkit-keyframes blackWhiteFade {  
+        0% { background: linear-gradient(to bottom right, #F5D0A9, #6D91A9); }
+        2% { background: linear-gradient(to bottom right, #F5D0A9, #569BC9); }
+        4% { background: linear-gradient(to bottom right, #F5D0A9, #68BDF5); }
+        6% { background: linear-gradient(to bottom right, #F5D0A9, #E3B468); }
+        8% { background: linear-gradient(to bottom right, #F5D0A9, #E3B56C); }
+        10% { background: linear-gradient(to bottom right, #F5D0A9, #E4B873); }
+        12% { background: linear-gradient(to bottom right, #7349AE, #E5BC79); }
+        14% { background: linear-gradient(to bottom right, #8B57D5, #BA975F); }
+        16% { background: linear-gradient(to bottom right, #9F62F4, #B0905E); }
+        18% { background: linear-gradient(to bottom right, #BA62F4, #835FCB); }
+        20% { background: linear-gradient(to bottom right, #974CC9, #9D8255); }
+        22% { background: linear-gradient(to bottom right, #BB4CC9, #909867); }
+        24% { background: linear-gradient(to bottom right, #E058F2, #9FA96D); }
+        26% { background: linear-gradient(to bottom right, #D64EC4, #AAB66B); }
+        28% { background: linear-gradient(to bottom right, #99468E, #B5C469); }
+        30% { background: linear-gradient(to bottom right, #B74AA9, #BFD162); }
+        32% { background: linear-gradient(to bottom right, #B44080, #C9DE61); }
+        34% { background: linear-gradient(to bottom right, #CE5196, #D2E961); }
+        36% { background: linear-gradient(to bottom right, #F56AB6, #D7F056); }
+        38% { background: linear-gradient(to bottom right, #AB4864, #A3F952); }
+        40% { background: linear-gradient(to bottom right, #CC3E66, #8CE23C); }
+        42% { background: linear-gradient(to bottom right, #F22B64, #76CE24); }
+        44% { background: linear-gradient(to bottom right, #9E291F, #41F5C8); }
+        46% { background: linear-gradient(to bottom right, #AE5951, #46E7BF); }
+        48% { background: linear-gradient(to bottom right, #DA655B, #51D4B3); }
+        50% { background: linear-gradient(to bottom right, #F56E61, #4BB99D); }
+        52% { background: linear-gradient(to bottom right, #E66832, #4CA68F); }
+        54% { background: linear-gradient(to bottom right, #FD5A14, #47907E); }
+        56% { background: linear-gradient(to bottom right, #8F5F3B, #9ADAF4); }
+        58% { background: linear-gradient(to bottom right, #DF945B, #7DC6E3); }
+        60% { background: linear-gradient(to bottom right, #F78F3F, #65C3E9); }
+        62% { background: linear-gradient(to bottom right, #895B1B, #30B6EB); }
+        64% { background: linear-gradient(to bottom right, #DB9D46, #3081EB); }
+        68% { background: linear-gradient(to bottom right, #E39324, #498ADF); }
+        70% { background: linear-gradient(to bottom right, #E5C44C, #5C90D2); }
+        72% { background: linear-gradient(to bottom right, #F5DB7A, #648ABB); }
+        74% { background: linear-gradient(to bottom right, #B9BB70, #6B6CB6); }
+        76% { background: linear-gradient(to bottom right, #E7ED39, #6768C0); }
+        78% { background: linear-gradient(to bottom right, #DCE15C, #9470B5); }
+        80% { background: linear-gradient(to bottom right, #BBE15C, #9568BF); }
+        82% { background: linear-gradient(to bottom right, #CBE194, #9C60D5); }
+        84% { background: linear-gradient(to bottom right, #68815C, #95669B); }
+        86% { background: linear-gradient(to bottom right, #8DB778, #A55EAE); }
+        88% { background: linear-gradient(to bottom right, #76DF8F, #B951C7); }
+        90% { background: linear-gradient(to bottom right, #88DB9C, #AB569D); }
+        92% { background: linear-gradient(to bottom right, #88DBCC, #C44BB0); }
+        94% { background: linear-gradient(to bottom right, #69B0A3, #EC3CA6); }
+        96% { background: linear-gradient(to bottom right, #8E69B0, #DA4CA1); }
+        98% { background: linear-gradient(to bottom right, #F5D0A9, #FF8001); }
+        100% { background: linear-gradient(to bottom right, #F5D0A9, #E4903C); }
+      }
+  .background-blinker {
+    background-color: B1A6A6;
+    /*-webkit-animation-name: blackWhite;*/
+    -webkit-animation-name: blackWhiteFade;
+    -webkit-animation-iteration-count: infinite;  
+    -webkit-animation-duration: 100s; 
+  }

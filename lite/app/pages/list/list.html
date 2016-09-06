@@ -1,10 +1,7 @@
-<ion-side-menu
-   side="right"
-   width="myWidthValue + 20"
-   is-enabled="shouldLeftSideMenuBeEnabled()">
+<ion-side-menu>
    <ion-header>
       <ion-navbar>
-         <button menuToggle>
+         <button menuToggle right>
          <img src="img/more_than_256.png" width="20" height="20">
          </button>
          <ion-title>My Menu List</ion-title>
@@ -12,7 +9,7 @@
    </ion-header>
 </ion-side-menu>
 <ion-content class="background-blinker ">
-   <ion-list class="bg-color" style="background-image: url('img/cartwheel-beach.jpg')" id="item-list">
+   <ion-list class="bg-color background-blinker" id="item-list">
       <div class="top-align">
          <!-- <div [ngSwitch]="[{{menu.id}}]">
             <ion-list *ngFor="let menu of subMenus; #i = index" *ngSwitchWhen="'menu.id'">
