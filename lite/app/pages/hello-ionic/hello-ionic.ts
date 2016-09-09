@@ -1,6 +1,6 @@
 import {Component} from '@angular/core';
 import {ListPage} from '../list/list';
-import {MenuPage} from '../menu/menu';
+import {PopUpPage} from '../pop-up/pop-up';
 
 
 @Component({
@@ -9,7 +9,7 @@ import {MenuPage} from '../menu/menu';
 export class HelloIonicPage {
   
   listPage = ListPage;
-  menuPage = MenuPage;
+  popUpPage = PopUpPage;
   constructor() {
 
   }

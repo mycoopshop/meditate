@@ -3,7 +3,7 @@ import {ionicBootstrap, Platform, MenuController, Nav} from 'ionic-angular';
 import {StatusBar} from 'ionic-native';
 import {HelloIonicPage} from './pages/hello-ionic/hello-ionic';
 import {ListPage} from './pages/list/list';
-import {MenuPage} from './pages/menu/menu';
+import {PopUpPage} from './pages/pop-up/pop-up';
 import {VideoPage} from './pages/video/video';
 import {AudioPage} from './pages/audio/audio';
 
@@ -30,7 +30,7 @@ class MyApp {
       { title: 'Menu List Page', component: ListPage },
       { title: 'Audios Page', component:  AudioPage },
       { title: 'Vodeos Page', component:  VideoPage },
-      { title: 'Menu Page', component: MenuPage }
+      { title: 'PopUp Page', component: PopUpPage }
     ];
   }
 

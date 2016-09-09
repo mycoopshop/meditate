@@ -4,17 +4,15 @@ import {NavController, NavParams} from 'ionic-angular';
 
 
 @Component({
-  templateUrl: 'build/pages/menu/menu.html',
+  templateUrl: 'build/pages/pop-up/pop-up.html',
 })
 
 
-export class MenuPage {
+export class PopUpPage {
   
-
   constructor(private navCtrl: NavController, navParams: NavParams) {
     
     
   }
-
   
 }
