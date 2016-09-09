@@ -1,23 +1,41 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>Yoga Audio</ion-title>
-  </ion-navbar>
-
+   <ion-navbar>
+      <ion-title>Yoga Audio</ion-title>
+   </ion-navbar>
 </ion-header>
-
 <ion-content class="background-blinker " padding="true" overflow-scroll="true">
    <ion-view title="Welcome">
-      <!-- <video controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline" class="videoPlayer">
-         <source src="videos/your_mind.m4v" type="video/mp4"/>
-      </video> -->
+      <br>
+      <audio class="audio-controll" src="audios/Jag Ghoomeya.mp3" id="audio" controls></audio>
+      <p class="audio-buttons">
+         <button type="button" onclick="audio.play();">Play</button>
+         <button type="button" onclick="audio.pause();">Pause</button>
+         <button type="button" onclick="audio.currentTime = 0;"><< Rewind</button>
+      </p>
    </ion-view>
-   <br>
-   <br>
-   <audio class="audio-controll" src="audios/Jag Ghoomeya.mp3" id="audio" controls></audio>
-   <p class="audio-buttons">
-     <button type="button" onclick="audio.play();">Play</button>
-     <button type="button" onclick="audio.pause();">Pause</button>
-     <button type="button" onclick="audio.currentTime = 0;"><< Rewind</button>
-   </p>
 </ion-content>
+
+<script>
+  seekbar.value = 0;
+  var audio = document.getElementById("audio");
+
+  var seekbar = document.getElementById('seekbar');
+  function setupSeekbar() {
+    seekbar.min = audio.startTime;
+    seekbar.max = audio.startTime + audio.duration;
+  }
+  audio.ondurationchange = setupSeekbar;
+
+  function seekAudio() {
+    audio.currentTime = seekbar.value;
+  }
+
+  function updateUI() {
+    var lastBuffered = audio.buffered.end(audio.buffered.length-1);
+    seekbar.min = audio.startTime;
+    seekbar.max = lastBuffered;
+    seekbar.value = audio.currentTime;
+  }
+  seekbar.onchange = seekAudio;
+  audio.ontimeupdate = updateUI;
+</script>
