@@ -25,8 +25,15 @@
     <preference name="android-minSdkVersion" value="16" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="3000" />
-    <preference name="FadeSplashScreenDuration" value="200" />
+    <preference name="SplashScreenDelay" value="1100" />
+    <preference name="FadeSplashScreenDuration" value="11500" />
+
+    <preference name="ShowSplashScreen" value="true"/>
+    <preference name="AutoHideSplashScreen" value="true"/>
+    <preference name="SplashShowOnlyFirstTime" value="false"/>
+    <preference name="FadeSplashScreen" value="true"/>
+    
+
     <feature name="StatusBar">
         <param name="ios-package" onload="true" value="CDVStatusBar" />
     </feature>

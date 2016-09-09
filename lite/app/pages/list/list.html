@@ -9,15 +9,8 @@
    </ion-header>
 </ion-side-menu>
 <ion-content class="background-blinker ">
-   <ion-list class="bg-color background-blinker" id="item-list">
+   <ion-list class="bg-color background-blinker">
       <div class="top-align">
-         <!-- <div [ngSwitch]="[{{menu.id}}]">
-            <ion-list *ngFor="let menu of subMenus; #i = index" *ngSwitchWhen="'menu.id'">
-              <ion-item >
-                <h2>{{menu.id}}</h2>
-              </ion-item>
-            </ion-list>
-            </div> -->
          <div *ngFor="let menu of subMenus">
             <div class="slideContainer" *ngIf="(menu.parent_id == getValue())">
                <div *ngIf="(menu.type=='menu')">
@@ -99,8 +92,8 @@
                            <div class="menu-title-container">
                               <div class="menu-title module">
                                  <a href="{{menu.url}}" style="text-decoration:none;color:#fff" onclick="window.open(this.href,'_self');">
-                  {{menu.title}}
-                  </a>
+                                   {{menu.title}}
+                                 </a>
                               </div>
                            </div>
                            <div class="arrow-container">
@@ -121,43 +114,12 @@
                         </div>
                      </div>
                   </div>
-                  <!-- <button class="button button-block button-assertive" style="background-color:#266069" (click)="sayHello(menu.id)">
-                  <a href="{{menu.url}}" style="text-decoration:none;color:#fff" onclick="window.open(this.href,'_self');">
-                  {{menu.title}}
-                  </a>
-                  </button> -->
                </div>
             </div>
          </div>
          <div class="down-scroll-container">
             <img (click)="scrollTo()" src="img/arrow-down.png" width="30" height="30" alt="">
          </div>
-         <!-- <div class="parent-main-container">
-            <button class="button button-block button-positive menu-text" *ngFor="let item of items" (click)="itemTapped($event, item)">
-             <ion-icon name="{{item.icon}}" item-left></ion-icon>
-            {{item.title}}
-            <div class="item-note" item-right>
-               {{item.note}}
-               </div>
-            </button>
-            </div> -->
-         <!-- Menu Array
-            <div ion-item *ngFor="let m of mainmenu">
-               {{m.Id}}
-               <div class="item-note" item-right>
-                  {{m.title}}
-               </div>
-            </div>
-            SubMenu Array -->
-         <!-- {{submenu}} -->
-         <!-- <div ion-item *ngFor="let sm of submenu">
-            {{sm.Id}}
-            <div class="item-note" item-right>
-               {{sm.mm_id}}
-               {{sm.menu_type}}
-            </div>
-            {{sm.title}}
-            </div> -->
       </div>
    </ion-list>
    <!-- <div class="list">
@@ -181,7 +143,4 @@
       </a>
       </div> -->
 </ion-content>
-<script>
-   var itemList = document.getElementById("item-list");
-   itemList.scrollTop = itemList.scrollHeight
-</script>
+
