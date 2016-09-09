@@ -26,7 +26,7 @@
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashScreen" value="screen" />
     <preference name="SplashScreenDelay" value="1100" />
-    <preference name="FadeSplashScreenDuration" value="11500" />
+    <preference name="FadeSplashScreenDuration" value="12000" />
 
     <preference name="ShowSplashScreen" value="true"/>
     <preference name="AutoHideSplashScreen" value="true"/>
