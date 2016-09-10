@@ -25,8 +25,8 @@
     <preference name="android-minSdkVersion" value="16" />
     <preference name="BackupWebStorage" value="none" />
     <preference name="SplashScreen" value="screen" />
-    <preference name="SplashScreenDelay" value="1100" />
-    <preference name="FadeSplashScreenDuration" value="12000" />
+    <preference name="SplashScreenDelay" value="300" />
+    <preference name="FadeSplashScreenDuration" value="12500" />
 
     <preference name="ShowSplashScreen" value="true"/>
     <preference name="AutoHideSplashScreen" value="true"/>

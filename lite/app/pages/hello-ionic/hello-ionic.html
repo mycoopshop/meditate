@@ -26,12 +26,12 @@
                   <div class="pause-text-deco" href="#">Pause</div>
                </div>
                <div class="skip-text-container">
-                  <a class="skip-text-deco" href="#">Skip</a>
+                  <a class="skip-text-deco" href="#menu-show">Skip</a>
                </div>
             </div>
          </div>
       </div>
-      <div class="home-page-container" id="menu-page-show">
+      <div class="home-page-container menu-page-show" id="menu-show">
          <div class="home-page-main-title">
             <div class="human-being-title">
                Mindfulness:
@@ -96,3 +96,9 @@
       </div>
    </div>
 </ion-content>
+
+<script type="text/javascript">
+   function showstuff(boxid){
+     document.getElementById(boxid).style.visibility="visible";
+   }
+</script>
