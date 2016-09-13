@@ -9,11 +9,15 @@ import {ItemDetailsPage} from '../item-details/item-details';
 
 export class ListPage {
   public flag;
-
+  public parameter1;
+  public parameter2;
   subMenus: Array<{id: number, border_type:number, title: string, parent_id: number, type: string, child_type: number, url: string}>;
   @ViewChild(Content) content: Content;
   constructor(private navCtrl: NavController, navParams: NavParams) {
     
+    this.parameter1 = navParams.get('param1'); 
+    this.parameter2 = navParams.get('param2');
+
     this.flag = "0";
     this.subMenus = [
       { id: 1,  border_type: 1, title: 'Challenges',      parent_id: 0, type: 'menu', child_type: 1, url: 'assets/experience/The-8-Day-Challenge.html'},
