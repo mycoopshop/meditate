@@ -53,12 +53,12 @@
                </div>
                <div class="mid-center-container background-blinker">
                   <div class="mid-center-top-container">
-                     <div class="explore-outer-container" [navPush]="listPage">
+                     <div class="explore-outer-container" (click)="itemTappedTwo($event, menuId)">
                         <div class="explore-rotate-text">
                            Explore
                         </div>
                      </div>
-                     <div class="challenges-outer-container" [navPush]="popUpPage">
+                     <div class="challenges-outer-container" (click)="itemTappedOne($event, menuId)">
                         <div class="challenges-simple-text">
                            Challenges
                         </div>
@@ -67,13 +67,13 @@
                   <div class="mid-center-middle-container">
                   </div>
                   <div class="mid-center-bottom-container">
-                     <div class="meditate-main-container" [navPush]="popUpPage">
+                     <div class="meditate-main-container" (click)="itemTappedThree($event, menuId)">
                         <div class="meditate-rotate-text">
                            Meditate Now
                         </div>
                      </div>
                      <div class="read-main-container">
-                        <div class="read-inner-container" [navPush]="listPage">
+                        <div class="read-inner-container" (click)="itemTappedFour($event, menuId)">
                            <div class="read-text">
                               Read
                            </div>
