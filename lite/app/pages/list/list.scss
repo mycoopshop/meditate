@@ -5,88 +5,82 @@
      text-transform: capitalize;
    }
    .slideContainer {
-    text-align: center;
-    margin: 20%;
+      text-align: center;
+      margin: 20%;
    }
    .bg-color {
-    background-color: #fff;
-    height: 100%;
+      background-color: #fff;
+      height: 100%;
    }
    .top-align {
-    align-items: center;
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    transform: -webkit-translate(-50%, -50%);
-    transform: -ms-translate(-50%, -50%);
-    float: left;
-    width: 100%
+      align-items: center;
+      position: fixed;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      transform: -webkit-translate(-50%, -50%);
+      transform: -ms-translate(-50%, -50%);
+      float: left;
+      width: 100%
    }
    .royal-menu-container {
-    width: 100%;
-    color: #fff;
-    float: left;
-    height: 73px;
-    margin: 0% 0% 3% 0%;
+      width: 100%;
+      color: #fff;
+      float: left;
+      height: 73px;
+      margin: 0% 0% 3% 0%;
    }
    .center-menu-container {
-    float: left;
-    width: 100%;
-    height: 100%;
+      float: left;
+      width: 100%;
+      height: 100%;
    }
    .inner-border-box {
-    float: left;
-    width: 94%;
-    height: 82%;
-    //margin: 3% 3% 3% 3%;
-    border: 3px solid #000;
+      float: left;
+      width: 94%;
+      height: 82%;
+      border: 3px solid #000;
    }
    .floating-boarder1 {
-    float: left;
-    width: 50%;
-    height: 5px;
-    background-color: #000;
+      float: left;
+      width: 50%;
+      height: 5px;
+      background-color: #000;
    }
   .floating-boarder2 {
-    float: left;
-    width: 2%;
-    height: 59.4px;
-    background-color: #000;
+      float: left;
+      width: 2%;
+      height: 60px;
+      background-color: #000;
    }
    .menu-title-container {
-    float: left;
-    width: 80%;
-    height:100%;
-    color: #fff;
+      float: left;
+      width: 80%;
+      height:100%;
+      color: #fff;
    }
    .menu-title {
-    float: left;
-    margin: 3% 0% 0% 5%;
-    font-size: 20px;
-    font-family: -webkit-body;
-    color: #000;
-    word-wrap: break-word;
-    font-weight: bold;
-    text-align: left;
-    text-transform: uppercase;
+      float: left;
+      margin: 3% 0% 0% 5%;
+      font-size: 20px;
+      font-family: -webkit-body;
+      color: #000;
+      word-wrap: break-word;
+      font-weight: bold;
+      text-align: left;
+      text-transform: uppercase;
    }
    .arrow-container {
-    float: left;
-    width: 20%;
-    height:100%;
-    color: #fff;
+      float: left;
+      width: 20%;
+      height:100%;
+      color: #fff;
    }
    .in-arrow {
-    float: right;
-    margin: 1%;
+      float: right;
+      margin: 1%;
    }
-  .module {
-    $bg: red;
-    &:nth-child(3n+1) {
-        //background-color: $bg;
-      }
-  }
+
   .down-scroll-container {
     width:100%;
     float:left;

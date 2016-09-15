@@ -8,7 +8,6 @@ import {ItemDetailsPage} from '../item-details/item-details';
 
 export class ListPage {
   selectedId: any;
-  
   public flag;
   
   subMenus: Array<{id: number, border_type:number, title: string, parent_id: number, type: string, child_type: number, url: string}>;
@@ -38,13 +37,13 @@ export class ListPage {
       { id: 21, border_type: 1, title: 'Mindfulness Meditations',  parent_id: 10, type: 'html', child_type: 1, url: 'assets/knowledge/1.Intro-to-the-book/300.Introduction-to-this-book.html'},
       { id: 22, border_type: 2, title: 'Experientail Exercises',   parent_id: 10, type: 'html', child_type: 2, url: 'assets/experience/202.Mindful-Check-In-9mins.html'},
       { id: 23, border_type: 3, title: 'Tips And Tools',           parent_id: 10, type: 'html', child_type: 3, url: 'assets/more/501.Getting-to-the-heart-of-it-video.html'},
-      { id: 24, border_type: 1, title: 'Sub Heads',                parent_id: 13, type: 'html', child_type: 3, url: 'assets/knowledge/3.Mind and emotions/3.Feelings as feelings/325.Normal human emotions.html'},
+      { id: 24, border_type: 1, title: 'Sub Heads',                parent_id: 13, type: 'html', child_type: 3, url: 'assets/knowledge/3.Mind-and-emotions/3.Feelings-as-feelings/325.Normal-human-emotions.html'},
       { id: 25, border_type: 2, title: 'Sub Heads',                parent_id: 14, type: 'html', child_type: 3, url: 'assets/welcome/100.Introduction.html'},
     ];
   }
 
   sayHello(str) {
-      this.selectedId=str;
+    this.selectedId=str;
   };
   
   getValue() {
