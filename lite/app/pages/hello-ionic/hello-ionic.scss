@@ -341,7 +341,11 @@
       width:88%;
       height: 90%;
       margin: -152% 5% 5% 5%;
-
+        button {
+         background-color: transparent ;
+         box-shadow: none;
+         border: none; 
+        }
         .home-page-main-title {
           width: 100%;
           height: 28%;
@@ -475,11 +479,7 @@
         float: left;
         border: 3px solid black;
         
-        button {
-         background-color: transparent ;
-         box-shadow: none;
-         border: none; 
-        }
+        
         .mid-center-top-container {
           width: 100%;
           height: 33%;

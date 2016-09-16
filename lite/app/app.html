@@ -1,16 +1,56 @@
 <ion-menu [content]="content">
-
-  <ion-toolbar>
-    <ion-title>Pages</ion-title>
-  </ion-toolbar>
-
-  <ion-content>
-    <ion-list right>
-      <button ion-item *ngFor="let p of pages" (click)="openPage(p)">
-        {{p.title}}
-      </button>
-    </ion-list>
-  </ion-content>
-
+   <ion-toolbar >
+      <ion-title style="background-color: #999;">
+         Mindfulness:
+      </ion-title>
+   </ion-toolbar>
+   <ion-content style="background-color: #999;">
+      <ion-list right>
+         <div class="side-menu-outer-container">
+            <div class="#" *ngFor="let p of pages" (click)="openPage(p)">
+            <div *ngIf="(p.type == 'main menu')">
+               <div class="main-menu-container">
+                  {{p.title}}
+               </div>
+            </div>
+            <div *ngIf="(p.type == 'sub menu')">
+               <div class="sub-menu-container">
+                  <a>{{p.title}}</a>
+               </div>
+            </div>
+         </div>
+         </div>
+      </ion-list>
+   </ion-content>
 </ion-menu>
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+
+
+<style type="text/css">
+  .side-inner-container {
+    background-color: red;
+    margin: 1% 0% 0% 0%;
+  }
+  .main-menu-container {
+    width: 70%;
+    float: left;
+    margin: 7% 0% 0% 15%;
+    text-transform: uppercase;
+  }
+  .sub-menu-container {
+    width: 70%;
+    float: left;
+    margin: 1.3% 0% 0% 20%;
+  }
+  .sub-menu-container a {
+    text-decoration: none;
+    color: #000;
+  }
+  .sub-menu-container a:hover {
+    text-decoration: none;
+    color: #fff;
+  }
+  .toolbar-background {
+    background-color: #999 !important;
+  }
+</style>
