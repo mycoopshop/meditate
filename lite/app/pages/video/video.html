@@ -1,13 +1,20 @@
-<ion-header>
-
-  <ion-navbar>
-    <ion-title>Meditational Videos</ion-title>
-  </ion-navbar>
-
-</ion-header>
-
+<!-- <ion-header>
+   <ion-navbar>
+      <button menuToggle right>
+      <img src="img/more_than_256.png" width="20" height="20">
+      </button>
+      <ion-title>My Menu List</ion-title>
+   </ion-navbar>
+</ion-header> -->
 <ion-content class="background-blinker " padding="true" overflow-scroll="true">
    <ion-view title="Welcome">
+      <ion-row responsive-sm>
+         <ion-col width-80>
+            <div menuToggle class="align-me">
+              <img src="img/more_than_256.png" width="20" height="20">
+            </div>
+         </ion-col>
+      </ion-row>
       <video autoplay="true" controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline" class="videoPlayer">
          <source src="videos/your_mind.m4v" type="video/mp4"/>
       </video>

@@ -1,15 +1,20 @@
-<ion-side-menu>
-   <ion-header>
-      <ion-navbar>
-         <button menuToggle right>
-         <img src="img/more_than_256.png" width="20" height="20">
-         </button>
-         <ion-title>My Menu List</ion-title>
-      </ion-navbar>
-   </ion-header>
-</ion-side-menu>
+<!-- <ion-header>
+   <ion-navbar>
+      <button menuToggle right>
+      <img src="img/more_than_256.png" width="20" height="20">
+      </button>
+      <ion-title>Menu List</ion-title>
+   </ion-navbar>
+</ion-header> -->
 <ion-content class="background-blinker ">
    <ion-list class="bg-color background-blinker">
+      <ion-row responsive-sm>
+         <ion-col width-80>
+            <div menuToggle class="align-me-now">
+              <img src="img/more_than_256.png" width="20" height="20">
+            </div>
+         </ion-col>
+      </ion-row>
       <div class="top-align">
          <div *ngFor="let menu of subMenus">
             <div class="slideContainer" *ngIf="(menu.parent_id == getValue())">

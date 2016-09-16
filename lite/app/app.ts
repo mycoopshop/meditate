@@ -26,31 +26,28 @@ class MyApp {
 
     // set our app's pages
     this.pages = [
-      { title: 'WELCOME',             component: HelloIonicPage, type: 'main menu' },
-      { title: 'Introduction',        component: ListPage,       type: 'sub menu' },
-      { title: 'How to use this app', component: AudioPage,      type: 'sub menu' },
-      
-      { title: 'ABOUT',                       component: HelloIonicPage, type: 'main menu' },
+      { title: 'WELCOME',                     component: HelloIonicPage, type: 'main menu'},
+      { title: 'Introduction',                component: VideoPage,       type: 'sub menu' },
+      { title: 'How to use this app',         component: AudioPage,      type: 'sub menu' },
+      { title: 'ABOUT',                       component: HelloIonicPage, type: 'main menu'},
       { title: 'Mindfulness in a few words',  component: PopUpPage,      type: 'sub menu' },
       { title: 'Psychology influences',       component: VideoPage,      type: 'sub menu' },
       { title: 'About Reuben',                component: HelloIonicPage, type: 'sub menu' },
       { title: 'About Mindful Creation',      component: HelloIonicPage, type: 'sub menu' },
       { title: 'Disclaimer',                  component: HelloIonicPage, type: 'sub menu' },
       { title: 'Terms and Conditions',        component: HelloIonicPage, type: 'sub menu' },
-      
-      { title: 'MY VIDEO/AUDIO',         component: HelloIonicPage, type: 'main menu' },
-      { title: 'SETTINGS',               component: HelloIonicPage, type: 'sub menu' },
-      { title: 'Random insights',        component: HelloIonicPage, type: 'sub menu' },
-      { title: 'Random meditation tips', component: HelloIonicPage, type: 'sub menu' },
-
-      { title: 'MORE',               component: HelloIonicPage, type: 'main menu' },
-      { title: 'Tap me!',            component: HelloIonicPage, type: 'sub menu' },
-      { title: 'Set reminder',       component: HelloIonicPage, type: 'sub menu' },
-      { title: 'Share with friends', component: HelloIonicPage, type: 'sub menu' },
-      { title: 'Sign up',            component: HelloIonicPage, type: 'sub menu' },
-      { title: 'Our apps',           component: HelloIonicPage, type: 'sub menu' },
-      { title: 'News',               component: HelloIonicPage, type: 'sub menu' },
-      { title: 'Thank you',          component: HelloIonicPage, type: 'sub menu' }
+      { title: 'MY VIDEO/AUDIO',              component: HelloIonicPage, type: 'main menu'},
+      { title: 'SETTINGS',                    component: HelloIonicPage, type: 'sub menu' },
+      { title: 'Random insights',             component: HelloIonicPage, type: 'sub menu' },
+      { title: 'Random meditation tips',      component: HelloIonicPage, type: 'sub menu' },
+      { title: 'MORE',                        component: HelloIonicPage, type: 'main menu'},
+      { title: 'Tap me!',                     component: HelloIonicPage, type: 'sub menu' },
+      { title: 'Set reminder',                component: HelloIonicPage, type: 'sub menu' },
+      { title: 'Share with friends',          component: HelloIonicPage, type: 'sub menu' },
+      { title: 'Sign up',                     component: HelloIonicPage, type: 'sub menu' },
+      { title: 'Our apps',                    component: HelloIonicPage, type: 'sub menu' },
+      { title: 'News',                        component: HelloIonicPage, type: 'sub menu' },
+      { title: 'Thank you',                   component: HelloIonicPage, type: 'sub menu' }
 
       //{ title: 'Home Page',   component: HelloIonicPage },
       //{ title: 'Menu Page',   component: ListPage },
