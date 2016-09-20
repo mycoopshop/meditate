@@ -7,7 +7,7 @@
    </ion-navbar>
    </ion-header> -->
 <ion-view>
-   <ion-content class="background-blinker ">
+   <ion-content overflow-scroll = "true" class="background-blinker ">
       <ion-list class="bg-color background-blinker">
          <ion-row responsive-sm>
             <ion-col width-80>
@@ -16,7 +16,7 @@
                </div>
             </ion-col>
          </ion-row>
-         <ion-scroll zooming="true" direction="xy" style="width: 500px; height: 500px">
+<ion-scroll scrollbar-x="false" scrollbar-y="false" >
          <div class="top-align">
             <div *ngFor="let menu of subMenus">
                <div class="slideContainer" *ngIf="(menu.parent_id == getValue())">
@@ -124,7 +124,7 @@
                               <div class="top-text-container">
                                  <div class="menu-title-container">
                                     <div class="menu-title module">
-                                       <a href="{{menu.url}}" style="text-decoration:none;color:#fff" onclick="window.open(this.href,'_self');">
+                                       <a href="{{menu.url}}" style="text-decoration:none;color:#fff" onclick="window.open(this.href,'_self', 'width =500 height=500');">
                                        {{menu.title}}
                                        </a>
                                     </div>
