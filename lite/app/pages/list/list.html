@@ -1,7 +1,7 @@
 <!-- <ion-header>
    <ion-navbar>
       <button menuToggle right>
-      <img src="img/more_than_256.png" width="20" height="20">
+      <img src="img/greater-than.png" width="20" height="20">
       </button>
       <ion-title>Menu List</ion-title>
    </ion-navbar>
@@ -12,149 +12,150 @@
          <ion-row responsive-sm>
             <ion-col width-80>
                <div menuToggle class="align-me-now">
-                  <img src="img/more_than_256.png" width="20" height="20">
+                  <img src="img/greater-than.png" width="20" height="20">
                </div>
             </ion-col>
          </ion-row>
-            <div class="top-align">
-               <div *ngFor="let menu of subMenus">
-                  <div class="#" *ngIf="(menu.parent_id == getValue())">
-                     <div *ngIf="(menu.type=='menu')">
-                        <div class="slideContainer">
-                           <div class="royal-menu-container" (click)="sayHello(menu.id)" >
-                              <div *ngIf="(menu.border_type == 3)">
+         <div class="top-align">
+            <div *ngFor="let menu of subMenus">
+               <div class="#" *ngIf="(menu.parent_id == getValue())">
+                  <div *ngIf="(menu.type=='menu')">
+                     <div class="slideContainer">
+                        <div class="royal-menu-container" (click)="sayHello(menu.id)" >
+                           <div *ngIf="(menu.border_type == 3)">
+                              <div class="floating-boarder1">
+                              </div>
+                           </div>
+                           <div class="center-menu-container">
+                              <div class="inner-border-box">
+                                 <div class="top-text-container">
+                                    <div class="menu-title-container">
+                                       <div class="menu-title module">
+                                          {{menu.title}}
+                                       </div>
+                                    </div>
+                                    <div class="arrow-container">
+                                       <div class="arrow-icon">
+                                          <img src="img/greater-than.png" width="15" height="15">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div *ngIf="(menu.border_type == 2)">
+                                 <div class="floating-boarder2">
+                                 </div>
+                              </div>
+                              <div *ngIf="(menu.border_type == 1)">
                                  <div class="floating-boarder1">
                                  </div>
                               </div>
-                              <div class="center-menu-container">
-                                 <div class="inner-border-box">
-                                    <div class="top-text-container">
-                                       <div class="menu-title-container">
-                                          <div class="menu-title module">
-                                             {{menu.title}}
+                           </div>
+                           <!-- {{getValue()}}  -->
+                        </div>
+                     </div>
+                  </div>
+                  <div *ngIf="(menu.type=='list')">
+                     <div class="slideContainer">
+                        <div class="royal-menu-container" (click)="sayHello(menu.id)" >
+                           <div *ngIf="(menu.border_type == 3)">
+                              <div class="floating-boarder1">
+                              </div>
+                           </div>
+                           <div class="center-menu-container">
+                              <div class="inner-border-box">
+                                 <div class="top-text-container">
+                                    <div class="menu-title-container">
+                                       <div class="menu-title module" style="color:#0056ff;">
+                                          {{menu.title}}
+                                       </div>
+                                    </div>
+                                    <div class="arrow-container">
+                                       <div class="arrow-icon">
+                                          <img src="img/greater-than.png" width="15" height="15">
+                                       </div>
+                                    </div>
+                                 </div>
+                              </div>
+                              <div *ngIf="(menu.border_type == 2)">
+                                 <div class="floating-boarder2">
+                                 </div>
+                              </div>
+                              <div *ngIf="(menu.border_type == 1)">
+                                 <div class="floating-boarder1">
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div *ngIf="(menu.contain=='video')">
+                     <div class="slideContainer">
+                        <div class="royal-menu-container" (click)="sayHello(menu.id)" >
+                           <div *ngIf="(menu.border_type == 3)">
+                              <div class="floating-boarder1">
+                              </div>
+                           </div>
+                           <div class="center-menu-container">
+                              <div class="inner-border-box">
+                                 <div class="top-text-container">
+                                    <div class="menu-title-container">
+                                       <div class="menu-title module" style="color:#fff;">
+                                          <a href="{{menu.url}}" style="text-decoration:none;color:#000" onclick="window.open(this.href,'_self', 'width =200 height=500');">
+                                          {{menu.title}}
+                                          </a>
+                                       </div>
+                                    </div>
+                                    <div class="arrow-container">
+                                       <div *ngIf="(menu.contain=='video')">
+                                          <div class="video-icon">
+                                             <img src="img/video-icon.png" width="30" height="30">
                                           </div>
                                        </div>
-                                       <div class="arrow-container">
+                                       <div *ngIf="(menu.contain=='none')">
                                           <div class="arrow-icon">
-                                             <img src="img/more_than_256.png" width="20" height="20">
+                                             <img src="img/greater-than.png" width="15" height="15">
                                           </div>
                                        </div>
                                     </div>
                                  </div>
-                                 <div *ngIf="(menu.border_type == 2)">
-                                    <div class="floating-boarder2">
-                                    </div>
-                                 </div>
-                                 <div *ngIf="(menu.border_type == 1)">
-                                    <div class="floating-boarder1">
+                                 <div *ngIf="(menu.contain=='video')">
+                                    <div class="bottom-icon-container">
+                                       <div class="bottom-arrow-icon">
+                                          <img src="img/arrow-down.png" width="12" height="12">
+                                       </div>
                                     </div>
                                  </div>
                               </div>
-                              <!-- {{getValue()}}  -->
-                           </div>
-                        </div>
-                     </div>
-                     <div *ngIf="(menu.type=='list')">
-                        <div class="slideContainer">
-                           <div class="royal-menu-container" (click)="sayHello(menu.id)" >
-                              <div *ngIf="(menu.border_type == 3)">
+                              <div *ngIf="(menu.border_type == 2)">
+                                 <div class="floating-boarder3">
+                                 </div>
+                              </div>
+                              <div *ngIf="(menu.border_type == 1)">
                                  <div class="floating-boarder1">
                                  </div>
                               </div>
-                              <div class="center-menu-container">
-                                 <div class="inner-border-box">
-                                    <div class="top-text-container">
-                                       <div class="menu-title-container">
-                                          <div class="menu-title module" style="color:#0056ff;">
-                                             {{menu.title}}
-                                          </div>
-                                       </div>
-                                       <div class="arrow-container">
-                                          <div class="arrow-icon">
-                                             <img src="img/more_than_256.png" width="20" height="20">
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div *ngIf="(menu.border_type == 2)">
-                                    <div class="floating-boarder2">
-                                    </div>
-                                 </div>
-                                 <div *ngIf="(menu.border_type == 1)">
-                                    <div class="floating-boarder1">
-                                    </div>
-                                 </div>
-                              </div>
                            </div>
                         </div>
                      </div>
-                     <div *ngIf="(menu.contain=='video')">
-                        <div class="slideContainer">
-                           <div class="royal-menu-container" (click)="sayHello(menu.id)" >
+                  </div>
+                  <div *ngIf="((menu.type=='html')&& !(menu.contain=='video'))">
+                     <div class="HtmlSlideContainer">
+                        <div class="royal-menu-container-html" (click)="sayHello(menu.id)" >
+                           <div class="center-menu-container-html">
                               <div *ngIf="(menu.border_type == 3)">
-                                 <div class="floating-boarder1">
-                                 </div>
                               </div>
-                              <div class="center-menu-container">
-                                 <div class="inner-border-box">
-                                    <div class="top-text-container">
-                                       <div class="menu-title-container">
-                                          <div class="menu-title module" style="color:#fff;">
-                                             {{menu.title}}
-                                          </div>
-                                       </div>
-                                       <div class="arrow-container">
-                                          <div *ngIf="(menu.contain=='video')">
-                                             <div class="video-icon">
-                                                <img src="img/video-icon.png" width="30" height="30">
-                                             </div>
-                                          </div>
-                                          <div *ngIf="(menu.contain=='none')">
-                                             <div class="arrow-icon">
-                                                <img src="img/more_than_256.png" width="20" height="20">
-                                             </div>
-                                          </div>
+                              <div class="inner-border-html-box">
+                                 <div class="top-text-container" style="margin-bottom:2%">
+                                    <div class="html-menu-title-container">
+                                       <div class="html-menu-title module">
+                                          <a href="{{menu.url}}" style="text-decoration:none;color:#000" onclick="window.open(this.href,'_self', 'width =200 height=500');">
+                                          {{menu.title}}
+                                          </a>
                                        </div>
                                     </div>
-                                    <div *ngIf="(menu.contain=='video')">
-                                       <div class="bottom-icon-container">
-                                          <div class="bottom-arrow-icon">
-                                             <img src="img/arrow-down.png" width="12" height="12">
-                                          </div>
-                                       </div>
-                                    </div>
-                                 </div>
-                                 <div *ngIf="(menu.border_type == 2)">
-                                    <div class="floating-boarder3">
-                                    </div>
-                                 </div>
-                                 <div *ngIf="(menu.border_type == 1)">
-                                    <div class="floating-boarder1">
-                                    </div>
-                                 </div>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div *ngIf="((menu.type=='html')&& !(menu.contain=='video'))">
-                        <div class="HtmlSlideContainer">
-                           <div class="royal-menu-container-html" (click)="sayHello(menu.id)" >
-                              <div class="center-menu-container-html">
-                                 <div *ngIf="(menu.border_type == 3)">
-                                 </div>
-                                 <div class="inner-border-html-box">
-                                    <div class="top-text-container" style="margin-bottom:2%">
-                                       <div class="html-menu-title-container">
-                                          <div class="html-menu-title module">
-                                             <a href="{{menu.url}}" style="text-decoration:none;color:#000" onclick="window.open(this.href,'_self', 'width =500 height=500');">
-                                             {{menu.title}}
-                                             </a>
-                                          </div>
-                                       </div>
-                                       <div class="html-arrow-container">
-                                          <div class="html-arrow-icon">
-                                             <img src="img/more_than_256.png" width="20" height="20">
-                                          </div>
+                                    <div class="html-arrow-container">
+                                       <div class="html-arrow-icon">
+                                          <img src="img/greater-than.png" width="15" height="15">
                                        </div>
                                     </div>
                                  </div>
@@ -165,6 +166,7 @@
                   </div>
                </div>
             </div>
+         </div>
       </ion-list>
    </ion-content>
 </ion-nav-view>

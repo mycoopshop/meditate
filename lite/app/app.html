@@ -1,24 +1,25 @@
-<ion-menu [content]="content">
-   <ion-toolbar >
-      <ion-title style="background-color: #999;">
+<ion-menu [content]="content" side="right" class="side-menu">
+   <ion-row class="title-main-container">
+      <div class = "col-67 inner-title">
          Mindfulness:
-      </ion-title>
-   </ion-toolbar>
+      </div>
+      <div menuToggle class = "col-20 top-toggle">
+         <img src="img/less-than.png" width="20" height="20">
+      </div>
+   </ion-row>
    <ion-content style="background-color: #999;">
       <ion-list right>
-         <div class="side-menu-outer-container">
-            <div class="#" *ngFor="let p of pages" (click)="openPage(p)">
-              <div *ngIf="(p.type == 'main menu')">
-                 <div class="main-menu-container">
-                    {{p.title}}
-                 </div>
-              </div>
-              <div *ngIf="(p.type == 'sub menu')">
-                 <div class="sub-menu-container">
-                    <a>{{p.title}}</a>
-                 </div>
-              </div>
+         <div class="#" *ngFor="let p of pages" (click)="openPage(p)">
+         <div *ngIf="(p.type == 'main menu')">
+            <div class="main-menu-container">
+               {{p.title}}
             </div>
+         </div>
+         <div *ngIf="(p.type == 'sub menu')">
+            <div class="sub-menu-container">
+               <a>{{p.title}}</a>
+            </div>
+         </div>
          </div>
       </ion-list>
    </ion-content>
@@ -26,20 +27,16 @@
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
 
 <style type="text/css">
-  .side-inner-container {
-    background-color: red;
-    margin: 1% 0% 0% 0%;
-  }
   .main-menu-container {
     width: 70%;
     float: left;
-    margin: 7% 0% 0% 15%;
+    margin: 7% 0% 0% 25%;
     text-transform: uppercase;
   }
   .sub-menu-container {
     width: 70%;
     float: left;
-    margin: 1.3% 0% 0% 20%;
+    margin: 1.3% 0% 0% 30%;
   }
   .sub-menu-container a {
     text-decoration: none;
@@ -51,5 +48,27 @@
   }
   .toolbar-background {
     background-color: #999 !important;
+  }
+  .side-menu {
+    width: 100%;
+  }
+  .title-main-container {
+    background-color: #999;
+    text-align: left;
+    padding: 4% 0% 1% 5%;
+    color: #000;
+    font-weight: bold;
+  }
+  .inner-title {
+    float: left;
+    width: 88%;
+    background-color: #999;
+    font-size: 32px;
+    text-transform: uppercase;
+    font-family: sans-serif;
+  }
+  .top-toggle {
+    float: left;
+    width: 8%;
   }
 </style>

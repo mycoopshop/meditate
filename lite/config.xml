@@ -30,7 +30,7 @@
 
     <preference name="ShowSplashScreen" value="true"/>
     <preference name="AutoHideSplashScreen" value="true"/>
-    <preference name="SplashShowOnlyFirstTime" value="false"/>
+    <preference name="SplashShowOnlyFirstTime" value="true"/>
     <preference name="FadeSplashScreen" value="true"/>
     
 
