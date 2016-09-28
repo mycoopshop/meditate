@@ -21,7 +21,7 @@
 
     .title-container {
       float: left;
-      font-size: 210%;
+      font-size: 180%;
       font-family: sans-serif;
       text-transform: uppercase;
       font-weight: bold;
@@ -34,7 +34,7 @@
 
       .second-quote {
         float: left;
-        margin-top: -43%;
+        margin-top: -35%;
         width: 80%;
       }
     }
@@ -203,13 +203,14 @@
     float: left;
     width:100%;
     height: 20%;
+    margin-top: 20%;
 
     .pause-me-now {
       float: left;
       width:30%;
       height: 50%;
       font-weight: bold;
-      margin-top: 20.4%;
+      //margin-top: 20.4%;
       font-size: 150%;
 
       .pause-text-container {
@@ -239,7 +240,7 @@
         }
         .skip-text-deco:hover {
           text-decoration: inherit;
-    	  color: #757070 !important;
+    	    color: #757070 !important;
         }
       }
     }
@@ -249,6 +250,13 @@
         -moz-animation: showMe 30s;
         -o-animation: showMe 30s;
         animation: showMe 30s;
+        opacity: 1;
+    }
+    .menu-show {
+      -webkit-animation: showMe 1s;
+        -moz-animation: showMe 1s;
+        -o-animation: showMe 1s;
+        animation: showMe 1s;
         opacity: 1;
     }
     @keyframes showMe {
@@ -338,9 +346,9 @@
     }
     .home-page-container {
       float: left;
-      width:88%;
+      width: 85%;
       height: 90%;
-      margin: -152% 5% 5% 5%;
+      margin: 12% 0% 0% 0%;
         button {
          background-color: transparent ;
          box-shadow: none;
@@ -362,7 +370,7 @@
         .up-arrow-container {
           width: 18%;
           float: right;
-          margin: -10px -16px 0px;
+          //margin: -10px -16px 0px;
           height: 25%;
         }
       }

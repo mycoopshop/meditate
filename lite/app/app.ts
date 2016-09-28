@@ -27,7 +27,7 @@ class MyApp {
     // set our app's pages
     this.pages = [
       { title: 'WELCOME',                     component: HelloIonicPage, type: 'main menu'},
-      { title: 'Introduction',                component: VideoPage,       type: 'sub menu' },
+      { title: 'Introduction',                component: VideoPage,      type: 'sub menu' },
       { title: 'How to use this app',         component: AudioPage,      type: 'sub menu' },
       { title: 'ABOUT',                       component: HelloIonicPage, type: 'main menu'},
       { title: 'Mindfulness in a few words',  component: PopUpPage,      type: 'sub menu' },
