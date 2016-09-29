@@ -36,4 +36,8 @@ export class HelloIonicPage {
       menuId: 4
     });
   }
+   Swiper(), {
+    speed: 400,
+    spaceBetween: 100  
+  }
 }
