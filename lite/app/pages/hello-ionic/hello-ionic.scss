@@ -34,8 +34,8 @@
 
       .second-quote {
         float: left;
-        margin-top: -35%;
-        width: 80%;
+        margin-top: -42%;
+        width: 90%;
       }
     }
 
@@ -195,22 +195,17 @@
    }
    // full div hide end
 
-   // #quote-hide:after {
-   //   content: 'whatever it is you want to add';
-   // }
-
   .bottom-inner-container {
     float: left;
     width:100%;
     height: 20%;
-    margin-top: 20%;
+    margin-top: 34%;
 
     .pause-me-now {
       float: left;
       width:30%;
       height: 50%;
       font-weight: bold;
-      //margin-top: 20.4%;
       font-size: 150%;
 
       .pause-text-container {
@@ -246,18 +241,18 @@
     }
   }
     .menu-page-show {
-        -webkit-animation: showMe 30s;
-        -moz-animation: showMe 30s;
-        -o-animation: showMe 30s;
-        animation: showMe 30s;
-        opacity: 1;
+      -webkit-animation: showMe 30s;
+      -moz-animation: showMe 30s;
+      -o-animation: showMe 30s;
+      animation: showMe 30s;
+      opacity: 1;
     }
     .menu-show {
       -webkit-animation: showMe 1s;
-        -moz-animation: showMe 1s;
-        -o-animation: showMe 1s;
-        animation: showMe 1s;
-        opacity: 1;
+      -moz-animation: showMe 1s;
+      -o-animation: showMe 1s;
+      animation: showMe 1s;
+      opacity: 1;
     }
     @keyframes showMe {
         0% {
@@ -344,49 +339,46 @@
             opacity: 1;
         }
     }
+    
     .home-page-container {
       float: left;
-      width: 85%;
+      width: 90%;
       height: 90%;
-      margin: 12% 0% 0% 0%;
+
         button {
-         background-color: transparent ;
-         box-shadow: none;
-         border: none; 
+          background-color: transparent ;
+          box-shadow: none;
+          border: none; 
         }
+
         .home-page-main-title {
           width: 100%;
-          height: 28%;
     
-        .human-being-title {
-          float:left;
-  	      width: 70%;
-  	      height: 100%;
-  	      font-size: 31px;
-          font-weight: bolder;
-          font-family: inherit;
-          text-transform: uppercase;
+          .human-being-title {
+            float: left;
+            width: 72%;
+            margin-left: -7%;
+          }
+          .up-arrow-container {
+            width: 14%;
+            float: right;
+            margin: 1% 5% 0% 0%;
+            height: 25%;
+          }
         }
-        .up-arrow-container {
-          width: 18%;
-          float: right;
-          //margin: -10px -16px 0px;
-          height: 25%;
-        }
-      }
     }
 
     .home-inner-main-container {
       background-color: #939598;
-      width: 94%;
-      height: 68%;
+      width: 88%;
+      height: 70%;
       float: left;
-      margin: 3%;
+      margin: 5% 0% 0% 0%;
 
-    .top-inner-container {
-      width: 100%;
-      height: 2.3%;
-      float: left;
+      .top-inner-container {
+        width: 100%;
+        height: 2.3%;
+        float: left;
       
       .top-right-border {
         background-color: black;
@@ -413,6 +405,7 @@
           float: left;
         }
       }
+
       @-webkit-keyframes blackWhite {  
         0% { background-color: red; }
         10% { background-color: white; }
@@ -494,16 +487,16 @@
           float: left;
           
           .explore-outer-container {
-            width: 13%;
+            width: 11%;
             height: 100%;
             float: left;
             
             .explore-rotate-text {
               transform: rotate(90deg);
               float: left;
-              font-size: 15px;
-              margin-top: 85%;
-              margin-left: -75%;
+              font-size: 19px;
+              margin-top: 105%;
+              margin-left: -139%;
               font-weight: bold;
               color : #000;
               text-transform: uppercase;
@@ -518,10 +511,10 @@
             .challenges-simple-text {
               font-weight: bold;
               text-transform: uppercase;
-              font-size: 15px;
+              font-size: 19px;
               float: right;
               color : #000;
-              margin: 0% 0% 0% 0%;
+              margin: 0% -8% 0% 0%;
             }
             
           }
@@ -546,9 +539,9 @@
             .meditate-rotate-text {
               font-weight: bold;
               text-transform: uppercase;
-              font-size: 15px;
+              font-size: 19px;
               color : #000;
-              margin: 53% 0% 0% -5%;
+              margin: 67% 0% 0% -5%;
             }
           }
 
@@ -556,7 +549,6 @@
             width: 50%;
             height: 100%;
             float: right;
-            //margin: 26% 0% 0% 2%;
 
             .read-inner-container {
               width: 18%;
@@ -567,10 +559,11 @@
               .read-text {
                 float: right;
                 color : #000;
+                font-size: 19px;
                 font-weight: bold;
                 transform: rotate(90deg);
                 text-transform: uppercase;
-                margin: 11% -45% 0% 0%;
+                margin: 50% -90% -5% -4%;
               }
             }
           }
@@ -599,6 +592,7 @@
       width: 100%;
       height: 2.3%;
       float: left;
+      margin-top: 0%;
 
       .bottom-left-border {
         background-color: black;

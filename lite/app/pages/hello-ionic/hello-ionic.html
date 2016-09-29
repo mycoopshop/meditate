@@ -9,7 +9,7 @@
 <ion-content class="getting-started">
    <div class="main-container">
       <ion-slides>
-         <ion-slide class="slide-zoom">
+         <ion-slide>
             <div class="inner-main slide-zoom" id="#">
                <div class="top-inner-main-container">
                   <div class="title-container">
@@ -34,12 +34,15 @@
                </div>
             </div>
          </ion-slide>
-         <ion-slide>
+         <div class="swiper-slide">
             <div class="home-page-container" id="menu-show">
                <div class="home-page-main-title">
                   <div class="human-being-title">
-                     Mindfulness:
-                     The art <br> of being <br> human
+                     <ion-row responsive-sm>
+                        <ion-col width80>
+                           <img src="img/logo-the-art.png" width="80" height="80">
+                        </ion-col>
+                     </ion-row>
                   </div>
                   <button class="up-arrow-container" menuToggle>
                   <img src="img/greater-than.png" width="20" height="20" class="rotate">
@@ -72,7 +75,7 @@
                         </div>
                         <div class="mid-center-bottom-container">
                            <div class="meditate-main-container">
-                              <button class="meditate-rotate-text">
+                              <button class="meditate-rotate-text" (click)="itemTappedThree($event, menuId)">
                               Meditate Now
                               </button>
                            </div>
@@ -98,13 +101,14 @@
                   </div>
                </div>
             </div>
-         </ion-slide>
+         </div>
       </ion-slides>
    </div>
 </ion-content>
+
 <style type="text/css">
    .slide-zoom {
-    width: 99%;
+    width: 95%;
     height: 100%;
     text-align: left !important;
    }
