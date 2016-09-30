@@ -1,12 +1,15 @@
 import {Component} from '@angular/core';
 import {NavController, NavParams, Content} from 'ionic-angular';
 import {ListPage} from '../list/list';
+import {MenuPage} from '../menu/menu';
 import {PopUpPage} from '../pop-up/pop-up';
 
 @Component({
   templateUrl: 'build/pages/hello-ionic/hello-ionic.html'
 })
 export class HelloIonicPage {
+  
+  menuPage = MenuPage;
   listPage = ListPage;
   popUpPage = PopUpPage;
   constructor(private navController: NavController) {
