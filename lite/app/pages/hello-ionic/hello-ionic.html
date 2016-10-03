@@ -8,7 +8,7 @@
    </ion-header> -->
 <ion-header>
 <!-- <meta http-equiv="refresh" content="5;url=http://ionicframework.com/docs/v2/getting-started/tutorial/navigation/" /> -->
-<meta http-equiv="refresh" content="3;url=app/menu/menu.html" />
+<!-- <meta http-equiv="refresh" content="3;url=build/pages/menu/menu.html" /> -->
 </ion-header>
 
 <ion-content class="getting-started">
@@ -28,19 +28,25 @@
                   </div>
                </div>
                <div class="bottom-inner-container">
+                  <!-- <div class="menu-page-show">
+                    <button (click)= navigate()>
+                        Skip
+                     </button>
+                  </div> -->
                   <div class="pause-me-now">
                      <div class="pause-text-container">
                         <div class="pause-text-deco" href="#">Pause</div>
                      </div>
                      <div class="skip-text-container">
-                        <a class="skip-text-deco" [navPush]="menuPage">Skip</a>
+                        <!-- <a class="skip-text-deco" [navPush]="menuPage">Skip</a> -->
+                        <a class="skip-text-deco" href="#menu-show">Skip</a>
                      </div>
                   </div>
                </div>
             </div>
          </ion-slide>
-         <!-- <div class="swiper-slide">
-            <div class="home-page-container menu-page-show" id="menu-show">
+         <div class="swiper-slide">
+            <div class="home-page-container" id="menu-show">
                <div class="home-page-main-title">
                   <div class="human-being-title">
                      <ion-row responsive-sm>
@@ -106,7 +112,7 @@
                   </div>
                </div>
             </div>
-         </div> -->
+         </div>
       </ion-slides>
    </div>
 </ion-content>

@@ -39,4 +39,8 @@ export class HelloIonicPage {
       menuId: 4
     });
   }
+
+  navigate() {
+    this.navController.push(MenuPage);
+  }
 }

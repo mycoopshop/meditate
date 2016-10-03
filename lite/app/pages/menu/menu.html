@@ -1,80 +1,75 @@
 <ion-header>
-
-  <ion-navbar>
-    <ion-title>menu</ion-title>
-  </ion-navbar>
-
+   <ion-navbar>
+      <ion-title>menu</ion-title>
+   </ion-navbar>
 </ion-header>
-
-
 <ion-content padding>
- <div class="swiper-slide">
-            <div class="home-page-container menu-page-show" id="menu-show">
-               <div class="home-page-main-title">
-                  <div class="human-being-title">
-                     <ion-row responsive-sm>
-                        <ion-col width80>
-                           <img src="img/logo-the-art.png" width="80" height="80">
-                        </ion-col>
-                     </ion-row>
-                  </div>
-                  <button class="up-arrow-container" menuToggle>
-                  <img src="img/greater-than.png" width="20" height="20" class="rotate">
-                  </button>
+   <div class="swiper-slide">
+      <div class="home-page-container menu-page-show" id="menu-show">
+         <div class="home-page-main-title">
+            <div class="human-being-title">
+               <ion-row responsive-sm>
+                  <ion-col width80>
+                     <img src="/img/logo-the-art.png" width="80" height="80">
+                  </ion-col>
+               </ion-row>
+            </div>
+            <button class="up-arrow-container" menuToggle>
+            <img src="/img/greater-than.png" width="20" height="20" class="rotate">
+            </button>
+         </div>
+         <div class="home-inner-main-container">
+            <div class="top-inner-container">
+               <div class="top-right-border">
                </div>
-               <div class="home-inner-main-container">
-                  <div class="top-inner-container">
-                     <div class="top-right-border">
+            </div>
+            <div class="middle-inner-container">
+               <div class="mid-left-container">
+                  <div class="side-left-top-border">
+                  </div>
+               </div>
+               <div class="mid-center-container background-blinker">
+                  <div class="mid-center-top-container">
+                     <div class="explore-outer-container">
+                        <button class="explore-rotate-text" (click)="itemTappedTwo($event, menuId)">
+                        Explore
+                        </button>
+                     </div>
+                     <div class="challenges-outer-container">
+                        <button class="challenges-simple-text" (click)="itemTappedOne($event, menuId)">
+                        Challenges
+                        </button>
                      </div>
                   </div>
-                  <div class="middle-inner-container">
-                     <div class="mid-left-container">
-                        <div class="side-left-top-border">
-                        </div>
+                  <div class="mid-center-middle-container">
+                  </div>
+                  <div class="mid-center-bottom-container">
+                     <div class="meditate-main-container">
+                        <button class="meditate-rotate-text" (click)="itemTappedThree($event, menuId)">
+                        Meditate Now
+                        </button>
                      </div>
-                     <div class="mid-center-container background-blinker">
-                        <div class="mid-center-top-container">
-                           <div class="explore-outer-container">
-                              <button class="explore-rotate-text" (click)="itemTappedTwo($event, menuId)">
-                              Explore
-                              </button>
-                           </div>
-                           <div class="challenges-outer-container">
-                              <button class="challenges-simple-text" (click)="itemTappedOne($event, menuId)">
-                              Challenges
-                              </button>
-                           </div>
-                        </div>
-                        <div class="mid-center-middle-container">
-                        </div>
-                        <div class="mid-center-bottom-container">
-                           <div class="meditate-main-container">
-                              <button class="meditate-rotate-text" (click)="itemTappedThree($event, menuId)">
-                              Meditate Now
-                              </button>
-                           </div>
-                           <div class="read-main-container">
-                              <div class="read-inner-container" >
-                                 <button class="read-text" (click)="itemTappedFour($event, menuId)">
-                                 Read
-                                 </button>
-                              </div>
-                           </div>
-                        </div>
-                     </div>
-                     <div class="mid-right-container">
-                        <div class="top-right-empty-border">
-                        </div>
-                        <div class="side-right-bottom-border">
+                     <div class="read-main-container">
+                        <div class="read-inner-container" >
+                           <button class="read-text" (click)="itemTappedFour($event, menuId)">
+                           Read
+                           </button>
                         </div>
                      </div>
                   </div>
-                  <div class="bottom-inner-container">
-                     <div class="bottom-left-border">
-                     </div>
+               </div>
+               <div class="mid-right-container">
+                  <div class="top-right-empty-border">
+                  </div>
+                  <div class="side-right-bottom-border">
                   </div>
                </div>
             </div>
+            <div class="bottom-inner-container">
+               <div class="bottom-left-border">
+               </div>
+            </div>
          </div>
-
+      </div>
+   </div>
 </ion-content>

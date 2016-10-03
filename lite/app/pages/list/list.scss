@@ -6,28 +6,36 @@
    }
    .slideContainer {
       text-align: center;
-      margin: 20%;
+      margin: 0% 20% 0% 20%;
+      float: left;
+      width: 60%;
+      min-heightt: 100%;
    }
    .bg-color {
-      background-color: #fff;
+      background-color: #999;
       height: 100%;
    }
    .top-align {
-      align-items: center;
-      position: fixed;
-      top: 50%;
-      left: 50%;
-      transform: translate(-50%, -50%);
-      transform: -webkit-translate(-50%, -50%);
-      transform: -ms-translate(-50%, -50%);
       float: left;
-      width: 100%
+      width: 100%;
+      margin: 40% 0% 0% 0%;
+      height: 35%
+      // align-items: center;
+      // position: relative;
+      // top: 50%;
+      // height: 50%;
+      // left: 50%;
+      // transform: translate(-50%, -50%);
+      // transform: -webkit-translate(-50%, -50%);
+      // transform: -ms-translate(-50%, -50%);
+      // float: left;
+      // width: 100%
    }
    .royal-menu-container {
       width: 100%;
       color: #fff;
       float: left;
-      min-height: 20px;
+      height: 20%;
       margin: 0% 0% 3% 0%;
    }
    .center-menu-container {
