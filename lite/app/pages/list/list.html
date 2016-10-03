@@ -7,10 +7,13 @@
    </ion-navbar>
    </ion-header> -->
 <ion-nav-view>
-   <ion-content overflow-scroll="true">
-      <ion-list class="bg-color background-blinker">
+   <ion-content overflow-scroll="true" class="background-blinker">
+      <ion-list>
          <ion-row responsive-sm>
             <ion-col width-80>
+               <div class="text-logo">
+                  <img src="img/logo-the-art.png" width="250" height="135">
+               </div>
                <div menuToggle class="align-me-now">
                   <img src="img/greater-than.png" width="15" height="25">
                </div>
@@ -108,7 +111,7 @@
                                     <div class="arrow-container">
                                        <div *ngIf="(menu.contain=='video')">
                                           <div class="video-icon">
-                                             <img src="img/video-icon.png" width="30" height="30">
+                                             <img src="img/video-icon.png" width="40" height="40">
                                           </div>
                                        </div>
                                        <div *ngIf="(menu.contain=='none')">
