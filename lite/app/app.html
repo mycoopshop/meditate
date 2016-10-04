@@ -7,7 +7,7 @@
          <img src="img/less-than.png" width="15" height="25">
       </div>
    </ion-row>
-   <ion-content style="background-color: #999; opacity: 0.5;">
+   <ion-content style="background-color: #999;">
       <ion-list right>
          <div class="#" *ngFor="let p of pages" (click)="openPage(p)">
          <div *ngIf="(p.type == 'main menu')">
@@ -33,11 +33,13 @@
     float: left;
     margin: 7% 0% 0% 25%;
     text-transform: uppercase;
+    font-size: 16px;
     font-family: MuseoSansRounded;
   }
   .sub-menu-container {
     width: 70%;
     float: left;
+    font-size: 16px;
     margin: 1.3% 0% 0% 30%;
   }
   .sub-menu-container a {
@@ -53,6 +55,7 @@
   }
   .side-menu {
     width: 100%;
+    opacity: 0.97;
   }
   .title-main-container {
     background-color: #999;

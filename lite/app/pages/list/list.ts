@@ -212,7 +212,7 @@ export class ListPage {
   };
   
   scrollTo() {
-    this.content.scrollTo(0, 900, 200);
+    this.content.scrollTo(0, 1890, 15000);
   }
 
 }
