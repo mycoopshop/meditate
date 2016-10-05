@@ -7,20 +7,24 @@
          <img src="img/less-than.png" width="15" height="25">
       </div>
    </ion-row>
-   <ion-content style="background-color: #999;">
+   <ion-content style="background-color: #999898;">
       <ion-list right>
-         <div class="#" *ngFor="let p of pages" (click)="openPage(p)">
-         <div *ngIf="(p.type == 'main menu')">
-            <div class="main-menu-container">
-               {{p.title}}
-            </div>
-         </div>
-         <div *ngIf="(p.type == 'sub menu')">
-            <div class="sub-menu-container">
-               <a>{{p.title}}</a>
-            </div>
-         </div>
-         </div>
+        <div *ngFor="let p of pages" (click)="openPage(p)">
+          <div *ngIf="(p.type == 'main menu')">
+             <div class="main-menu-container">
+                {{p.title}}
+             </div>
+          </div>
+          <div *ngIf="(p.type == 'sub menu')">
+             <div class="sub-menu-container">
+                <a>{{p.title}}</a>
+             </div>
+          </div>
+        </div>
+        <ion-row class="bottom-bar">
+          <ion-col width-100>
+          </ion-col>
+        </ion-row>
       </ion-list>
    </ion-content>
 </ion-menu>
@@ -75,5 +79,10 @@
   .top-toggle {
     float: left;
     width: 8%;
+  }
+  .bottom-bar {
+    float: left;
+    width: 100%;
+    height: 20px;
   }
 </style>

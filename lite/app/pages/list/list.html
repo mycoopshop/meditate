@@ -14,10 +14,13 @@
                <div class="text-logo">
                   <img src="img/logo-the-art.png" width="250" height="135">
                </div>
-               <div menuToggle class="align-me-now">
+               <span menuToggle class="align-me-now" fab-fixed>
                   <img src="img/greater-than.png" width="15" height="25">
-               </div>
+               </span>
             </ion-col>
+            <!-- <button (click)="newContact()" fab fab-bottom fab-right fab-fixed>
+    <ion-icon name="add"></ion-icon>
+  </button> -->
          </ion-row>
          <div class="top-align">
             <div *ngFor="let menu of subMenus">
@@ -173,8 +176,8 @@
       </ion-list>
    </ion-content>
 </ion-nav-view>
-<ion-footer class="bar-stable gb-color" (click)="scrollTo()">
-   <center class="manage-me">
+<ion-footer class="bar-stable gb-color">
+   <center class="manage-me" (click)="scrollTo()">
       <img src="img/arrow-down.png" width="25" height="15">
    </center>
 </ion-footer>
