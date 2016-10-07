@@ -221,6 +221,6 @@ export class ListPage {
     }
     this.scrollNow = this.scrollNow+320;
     this.content.scrollTo(0, this.scrollNow, 3000);
-    console.log(this.scrollNow);
+    //console.log(this.scrollNow);
   };
 }
