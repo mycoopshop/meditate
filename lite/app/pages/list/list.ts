@@ -61,7 +61,7 @@ export class ListPage {
       { id: 43,  border_type: 3, parent_id: 10,  title: 'Tips And Tools',                             contain: 'none',   type: 'list', child_type: 3, url: ''},
       { id: 44,  border_type: 1, parent_id: 13,  title: 'Sub Heads',                                  contain: 'none',   type: 'html', child_type: 3, url: ''},
       { id: 45,  border_type: 2, parent_id: 14,  title: 'Sub Heads',                                  contain: 'none',   type: 'html', child_type: 3, url: ''},
-      { id: 46,  border_type: 1, parent_id: 35,  title: 'Mindfulness is like a triangle',             contain: 'none',   type: 'html', child_type: 1, url: 'assets/1.EXPLORE/1.I_like_them_short/1.Guided_Mindfulness/201.Mindfulness_is_like_a_triangle.html'},
+      { id: 46,  border_type: 1, parent_id: 35,  title: 'Mindfulness is like a triangle',             contain: 'none',   type: 'html', child_type: 1, url: 'build/pages/explore/i-am-like-to/guided/an-imagine.html'},
       { id: 47,  border_type: 2, parent_id: 35,  title: 'An imaginary balloon (7 mins)',              contain: 'none',   type: 'html', child_type: 2, url: 'assets/1.EXPLORE/1.I_like_them_short/1.Guided_Mindfulness/202.5.An-imaginary-balloon(7mins).html'},
       { id: 48,  border_type: 3, parent_id: 35,  title: 'An imaginary line (8 mins)',                 contain: 'none',   type: 'html', child_type: 3, url: 'assets/1.EXPLORE/1.I_like_them_short/1.Guided_Mindfulness/202._An_imaginary_line_(8-mins).html'},
       { id: 49,  border_type: 1, parent_id: 35,  title: 'Choose it - Use it (8 mins)',                contain: 'none',   type: 'html', child_type: 2, url: 'assets/1.EXPLORE/1.I_like_them_short/1.Guided_Mindfulness/203.Choose-it-Use-it-(8-mins).html'},
@@ -221,6 +221,6 @@ export class ListPage {
     }
     this.scrollNow = this.scrollNow+320;
     this.content.scrollTo(0, this.scrollNow, 3000);
-    //console.log(this.scrollNow);
+    // console.log(this.scrollNow);
   };
 }

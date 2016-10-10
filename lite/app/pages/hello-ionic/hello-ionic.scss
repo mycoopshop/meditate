@@ -359,12 +359,12 @@
           .human-being-title {
             float: left;
             width: 76%;
-            margin: 0.5% -7%;
+            margin: 2% -7%;
           }
           .up-arrow-container {
             width: 14%;
             float: right;
-            margin: 3% 3% 0% 0%;
+            margin: 2% 3% 0% 0%;
             height: 25%;
           }
         }
@@ -605,16 +605,4 @@
       }
     }
   }
-}
-
-@media (max-width: 479px) {
-  .getting-started .inner-main{height:100%;margin-top:3%; margin-bottom: 3%;}
-}
-
-@media (max-width: 425px){
-  .getting-started .inner-main{height:100%;margin-top:2%; margin-bottom: 2%;}
-}
-
-@media (max-width: 321px){
-  .getting-started .inner-main{height:100%;margin-top:1%; margin-bottom: 1%;}  
 }

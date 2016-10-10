@@ -18,6 +18,9 @@
                   <img src="img/greater-than.png" width="15" height="25">
                </span>
             </ion-col>
+            <!-- <button (click)="newContact()" fab fab-bottom fab-right fab-fixed>
+    <ion-icon name="add"></ion-icon>
+  </button> -->
          </ion-row>
          <div class="top-align">
             <div *ngFor="let menu of subMenus">
@@ -68,7 +71,7 @@
                               <div class="inner-border-box">
                                  <div class="top-text-container">
                                     <div class="menu-title-container">
-                                       <div class="menu-title module" style="color:#0056ff;">
+                                       <div class="menu-title module">
                                           {{menu.title}}
                                        </div>
                                     </div>
@@ -102,7 +105,7 @@
                               <div class="inner-border-box">
                                  <div class="top-text-container">
                                     <div class="menu-title-container">
-                                       <div class="menu-title module" style="color:#fff;">
+                                       <div class="menu-title module">
                                           <a href="{{menu.url}}" style="text-decoration:none;color:#000" onclick="window.open(this.href,'_self', 'width =200 height=500');">
                                           {{menu.title}}
                                           </a>
