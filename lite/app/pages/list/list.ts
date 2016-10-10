@@ -216,7 +216,7 @@ export class ListPage {
   
   scrollTo() {
     let dimensions = this.content.getContentDimensions();
-    if (this.scrollNow>= (dimensions.scrollBottom-1920)) {
+    if (this.scrollNow >= (dimensions.scrollBottom-1920)) {
       this.scrollNow = -165;
     }
     this.scrollNow = this.scrollNow+320;
