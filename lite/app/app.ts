@@ -1,5 +1,5 @@
-import {Component, ViewChild} from '@angular/core';
-import {ionicBootstrap, Platform, MenuController, Nav} from 'ionic-angular';
+import {Component, ViewChild}                           from '@angular/core';
+import {ionicBootstrap, Platform, MenuController, Nav}  from 'ionic-angular';
 import {StatusBar}       from 'ionic-native';
 import {HelloIonicPage}  from './pages/hello-ionic/hello-ionic';
 import {ListPage}        from './pages/list/list';
@@ -11,20 +11,20 @@ import {AudioPage}       from './pages/audio/audio';
 @Component({
   templateUrl: 'build/app.html'
 })
+
 class MyApp {
   @ViewChild(Nav) nav: Nav;
 
-  // make HelloIonicPage the root (or first) page
   rootPage: any = HelloIonicPage;
-  pages: Array<{title: string, component: any, type: string}>;
+  pages: Array <{title: string, component: any, type: string}>;
 
   constructor(
-    private platform: Platform,
-    private menu: MenuController
-  ) {
+      private platform: Platform,
+      private menu: MenuController
+    ) 
+  {
     this.initializeApp();
 
-    // set our app's pages
     this.pages = [
       { title: 'WELCOME',                     component: HelloIonicPage, type: 'main menu'},
       { title: 'Introduction',                component: VideoPage,      type: 'sub menu' },
