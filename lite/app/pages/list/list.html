@@ -3,6 +3,8 @@
       <button menuToggle right>
       <img src="img/greater-than.png" width="20" height="20">
       </button>
+      <ion-nav-back-button class="button-clear" transitiontype="flip" direction="right" go-native>
+  </ion-nav-back-button>
       <ion-title>Menu List</ion-title>
    </ion-navbar>
    </ion-header> -->
@@ -11,7 +13,7 @@
       <ion-list>
          <ion-row responsive-sm>
             <ion-col width-80>
-               <div class="text-logo">
+               <div class="text-logo animated zoomIn">
                   <img src="img/logo-the-art.png" width="250" height="135">
                </div>
                <span menuToggle class="align-me-now" fab-fixed>
@@ -19,7 +21,7 @@
                </span>
             </ion-col>
          </ion-row>
-         <div class="top-align">
+         <div class="top-align animated slideInRight">
             <div *ngFor="let menu of subMenus">
                <div class="#" *ngIf="(menu.parent_id == getValue())">
                   <div *ngIf="(menu.type=='menu')">
@@ -151,9 +153,10 @@
                                  <div class="top-text-container" style="margin-bottom:2%">
                                     <div class="html-menu-title-container">
                                        <div class="html-menu-title module">
-                                          <a href="{{menu.url}}" style="text-decoration:none;color:#000" onclick="window.open(this.href,'_self', 'width =200 height=500');">
+                                          <!-- <a href="{{menu.url}}" style="text-decoration:none;color:#000" onclick="window.open(this.href,'_self', 'width =200 height=500');">
                                           {{menu.title}}
-                                          </a>
+                                          </a> -->
+                                          <a (click)="viewPage($event, menu.url)">{{menu.title}}</a>
                                        </div>
                                     </div>
                                     <div class="html-arrow-container">

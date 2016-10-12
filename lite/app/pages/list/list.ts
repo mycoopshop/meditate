@@ -1,4 +1,5 @@
 import {Component, ViewChild} from '@angular/core';
+import {ViewPage} from '../view/view';
 import {NavController, NavParams, Content} from 'ionic-angular';
 
 @Component({
@@ -204,6 +205,8 @@ export class ListPage {
       { id: 196, border_type: 3, parent_id: 33,  title: 'Summary',                                    contain: 'none',  type: 'html', child_type: 1, url: 'assets/4.read/Ch.5.The-art-of-allowing/363.Summary.html'},
       { id: 197, border_type: 1, parent_id: 34,  title: 'Final words',                                contain: 'none',  type: 'html', child_type: 2, url: 'assets/4.read/Final-words/364.Final-words.html'},
     ];
+      
+    
   }
 
   sayHello(str) {
@@ -223,4 +226,11 @@ export class ListPage {
     this.content.scrollTo(0, this.scrollNow, 3000);
     // console.log(this.scrollNow);
   };
+
+  viewPage(event, url) {
+    this.navCtrl.push(ViewPage, {
+      url: url
+    });
+  }
+
 }

@@ -12,6 +12,7 @@ export class HelloIonicPage {
   menuPage = MenuPage;
   listPage = ListPage;
   popUpPage = PopUpPage;
+  
   constructor(private navController: NavController) {
   	
   }
