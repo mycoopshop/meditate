@@ -7,7 +7,6 @@ import {PopUpPage}       from './pages/pop-up/pop-up';
 import {VideoPage}       from './pages/video/video';
 import {AudioPage}       from './pages/audio/audio';
 
-
 @Component({
   templateUrl: 'build/app.html'
 })
@@ -26,34 +25,28 @@ class MyApp {
     this.initializeApp();
 
     this.pages = [
-      { title: 'WELCOME',                     component: HelloIonicPage, type: 'main menu'},
-      { title: 'Introduction',                component: VideoPage,      type: 'sub menu' },
-      { title: 'How to use this app',         component: AudioPage,      type: 'sub menu' },
-      { title: 'ABOUT',                       component: HelloIonicPage, type: 'main menu'},
-      { title: 'Mindfulness in a few words',  component: PopUpPage,      type: 'sub menu' },
-      { title: 'Psychology influences',       component: VideoPage,      type: 'sub menu' },
-      { title: 'About Reuben',                component: HelloIonicPage, type: 'sub menu' },
-      { title: 'About Mindful Creation',      component: HelloIonicPage, type: 'sub menu' },
-      { title: 'Disclaimer',                  component: HelloIonicPage, type: 'sub menu' },
-      { title: 'Terms and Conditions',        component: HelloIonicPage, type: 'sub menu' },
-      { title: 'SETTINGS',                    component: HelloIonicPage, type: 'main menu'},
-      { title: 'Random insights',             component: HelloIonicPage, type: 'sub menu' },
-      { title: 'Random meditation tips',      component: HelloIonicPage, type: 'sub menu' },
-      { title: 'MY VIDEO',                    component: HelloIonicPage, type: 'main menu'},
-      { title: 'MORE',                        component: HelloIonicPage, type: 'main menu'},
-      { title: 'Tap me!',                     component: HelloIonicPage, type: 'sub menu' },
-      { title: 'Set reminder',                component: HelloIonicPage, type: 'sub menu' },
-      { title: 'Share with friends',          component: HelloIonicPage, type: 'sub menu' },
-      { title: 'Sign up',                     component: HelloIonicPage, type: 'sub menu' },
-      { title: 'Our apps',                    component: HelloIonicPage, type: 'sub menu' },
-      { title: 'News',                        component: HelloIonicPage, type: 'sub menu' },
-      { title: 'Thank you',                   component: HelloIonicPage, type: 'sub menu' }
-
-      //{ title: 'Home Page',   component: HelloIonicPage },
-      //{ title: 'Menu Page',   component: ListPage },
-      //{ title: 'Audios Page', component: AudioPage },
-      //{ title: 'Videos Page', component: VideoPage },
-      //{ title: 'PopUp Page',  component: PopUpPage }
+      { title: 'WELCOME',                    type: 'main menu',  component: VideoPage },
+      { title: 'Introduction',               type: 'sub menu' ,  component: 'assets/4.read/Ch.5.The-art-of-allowing/356.Start.html'     },
+      { title: 'How to use this app',        type: 'sub menu' ,  component: 'assets/4.read/Ch.5.The-art-of-allowing/357.5.A-bit-about-me.html'     },
+      { title: 'ABOUT',                      type: 'main menu',  component: AudioPage     },
+      { title: 'Mindfulness in a few words', type: 'sub menu' ,  component: 'assets/4.read/Ch.5.The-art-of-allowing/357.What-am-i-noticing.html'     },
+      { title: 'Psychology influences',      type: 'sub menu' ,  component: 'assets/4.read/Ch.5.The-art-of-allowing/358.5.The-Observer-Within-part-two.html'     },
+      { title: 'About Reuben',               type: 'sub menu' ,  component: 'assets/4.read/Ch.5.The-art-of-allowing/358.The-Observer-Within-part-one.html' },
+      { title: 'About Mindful Creation',     type: 'sub menu' ,  component: 'assets/4.read/Ch.5.The-art-of-allowing/359.5.Phase-one-Expanding.html' },
+      { title: 'Disclaimer',                 type: 'sub menu' ,  component: 'assets/4.read/Ch.4.Patterns-of-behaviour/1.The-little-patterns/338.Summary.html' },
+      { title: 'Terms and Conditions',       type: 'sub menu' ,  component: 'assets/4.read/Ch.4.Patterns-of-behaviour/2.Inner-resistance/343.The-feeling-good-trap-part-one.html' },
+      { title: 'SETTINGS',                   type: 'main menu',  component: PopUpPage      },
+      { title: 'Random insights',            type: 'sub menu' ,  component: 'assets/4.read/Ch.3.Mind-and-emotions/3.Feelings-as-feelings/332.Summary.html' },
+      { title: 'Random meditation tips',     type: 'sub menu' ,  component: 'assets/4.read/Ch.3.Mind-and-emotions/3.Feelings-as-feelings/331.End-of-section.html' },
+      { title: 'MY VIDEO',                   type: 'main menu',  component: VideoPage },
+      { title: 'MORE',                       type: 'main menu',  component: AudioPage },
+      { title: 'Tap me!',                    type: 'sub menu' ,  component: 'assets/4.read/Ch.4.Patterns-of-behaviour/2.Inner-resistance/341.5.Quick-fixes.html' },
+      { title: 'Set reminder',               type: 'sub menu' ,  component: 'assets/4.read/Ch.4.Patterns-of-behaviour/2.Inner-resistance/345.Neuro-what.html' },
+      { title: 'Share with friends',         type: 'sub menu' ,  component: 'assets/4.read/Ch.4.Patterns-of-behaviour/3.Resistance-traps/348.Start.html' },
+      { title: 'Sign up',                    type: 'sub menu' ,  component: 'assets/4.read/Ch.4.Patterns-of-behaviour/3.Resistance-traps/355.Summary.html' },
+      { title: 'Our apps',                   type: 'sub menu' ,  component: 'assets/4.read/Ch.5.The-art-of-allowing/356.Start.html' },
+      { title: 'News',                       type: 'sub menu' ,  component: 'assets/3.Challenges/8-Day-Challenge/401.The-8-Day-Challenge.html' },
+      { title: 'Thank you',                  type: 'sub menu' ,  component: 'assets/3.Challenges/8-Day-Micro-Course/408.Module-6-Resistance-traps.html' }
     ];
   }
 
@@ -66,11 +59,10 @@ class MyApp {
   }
 
   openPage(page) {
-    // close the menu when clicking a link from the menu
     this.menu.close();
-    // navigate to the new page if it is not the current page
     this.nav.setRoot(page.component);
   }
 }
 
 ionicBootstrap(MyApp);
+

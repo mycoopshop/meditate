@@ -17,7 +17,8 @@
           </div>
           <div *ngIf="(p.type == 'sub menu')">
              <div class="sub-menu-container">
-                <a>{{p.title}}</a>
+                <a href="{{p.component}}">{{p.title}}</a>
+                <!-- <a>{{p.title}}</a> -->
              </div>
           </div>
         </div>
