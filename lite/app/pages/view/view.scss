@@ -1,12 +1,12 @@
 .view {
-	.text-logo {
+	.view-text-logo {
       float: left;
       width: 87%;
       height: 30%;
       margin: 9% 0% 0% 3%;
    }
 
-   .align-me-now {
+   .view-align-me-now {
     float: right;
     width: 10%;
     margin-top: 8%;
@@ -19,5 +19,11 @@
 
    .manage-me {
      margin-top: 5%;
+   }
+
+   .webPage {
+    width: 100%;
+    height: 100%;
+    background-color: #999;
    }
 }

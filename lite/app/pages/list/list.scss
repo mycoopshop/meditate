@@ -227,11 +227,36 @@
         100% { background: linear-gradient(to bottom right, #F5D0A9, #E4903C); }
       }
       
+  //.background-blinker {
+  //  background-color: B1A6A6;
+  //  -webkit-animation-name: blackWhiteFade;
+  //  -webkit-animation-iteration-count: infinite;  
+  //  -webkit-animation-duration: 100s; 
+  //}
+
   .background-blinker {
-    background-color: B1A6A6;
-    -webkit-animation-name: blackWhiteFade;
-    -webkit-animation-iteration-count: infinite;  
-    -webkit-animation-duration: 100s; 
+    background: linear-gradient(320deg, #E4903C,#F5D0A9,#FF8001,#68BDF5,#D64EC4,#AAB66B,#B44080,#569BC9,#CE5196,#6D91A9,#F5D0A9,#F5D0A9,#6D91A9,#569BC9);
+    background-size: 600% 800%;
+
+    -webkit-animation: AnimationName 200s ease-in infinite;
+    -moz-animation: AnimationName 200s ease-in infinite;
+    animation: AnimationName 200s ease-in infinite;
+  }
+  
+  @-webkit-keyframes AnimationName {
+    0%{background-position:79% 0%}
+    50%{background-position:22% 100%}
+    100%{background-position:79% 0%}
+  }
+  @-moz-keyframes AnimationName {
+    0%{background-position:79% 0%}
+    50%{background-position:22% 100%}
+    100%{background-position:79% 0%}
+  }
+  @keyframes AnimationName { 
+    0%{background-position:79% 0%}
+    50%{background-position:22% 100%}
+    100%{background-position:79% 0%}
   }
 
   .align-me {
