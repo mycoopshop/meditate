@@ -8,9 +8,10 @@ import { ViewPage } from '../view/view';
 export class GetPageService {
 
     private url;
-    private retryCount = 2;
+    private retryCount = 0;
 
     constructor(private _http: Http, navParams: NavParams) {
+    
       this.url = navParams.get('url');
     }
 
