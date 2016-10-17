@@ -8,14 +8,15 @@ import { ViewPage } from '../view/view';
 export class GetPageService {
 
     private url;
-    private retryCount = 0;
-
+    private retryCount = 1;
+    //  See the "Take it slow" appendix
     constructor(private _http: Http, navParams: NavParams) {
     
       this.url = navParams.get('url');
     }
 
     getPage(){
+      console.log(this.url);
       return this._http.get(this.url)
         .retry(this.retryCount)
         .map((res) => {
