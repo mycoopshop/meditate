@@ -7,16 +7,17 @@
          <img src="img/less-than.png" width="15" height="25">
       </div>
    </ion-row>
+   <div class="content-backdrop"></div>
    <ion-content style="background-color: #999898;">
       <ion-list right>
         <div *ngFor="let p of pages" (click)="openPage(p)">
           <div *ngIf="(p.type == 'main menu')">
-             <div class="main-menu-container">
+             <div class="main-menu-container animated fadeInUp">
                 {{p.title}}
              </div>
           </div>
           <div *ngIf="(p.type == 'sub menu')">
-             <div class="sub-menu-container">
+             <div class="sub-menu-container animated lisgtSlidIn">
                 <a href="{{p.component}}">{{p.title}}</a>
                 <!-- <a>{{p.title}}</a> -->
              </div>
