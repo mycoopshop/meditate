@@ -12,8 +12,17 @@ export class HelloIonicPage {
   menuPage = MenuPage;
   listPage = ListPage;
   popUpPage = PopUpPage;
+  quotes: Array <{id: number, title: string, author: string}>;
   
   constructor(private navController: NavController) {
+
+    this.quotes = [
+      {id: 1, author: "abc", title: "hello all"},
+      {id: 2, author: "abc", title: "hello all"},
+      {id: 3, author: "abc", title: "hello all"},
+      {id: 4, author: "abc", title: "hello all"},
+
+    ];
   	
   }
 

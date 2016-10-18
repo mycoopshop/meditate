@@ -1,35 +1,53 @@
-.view {
-	.view-text-logo {
-      float: left;
-      width: 87%;
-      height: 30%;
-      margin: 9% 0% 0% 3%;
-   }
-
-   .view-align-me-now {
-    float: right;
-    width: 10%;
-    margin-top: 8%;
-   }
-   
-   .gb-color {
-    background-color: gray;
-    height: 8%;
-   }
-
-   .manage-me {
-     margin-top: 5%;
-   }
-
-   .webPage {
-    width: 100%;
-    height: 100%;
-    background-color: #999;
-   }
-
-   .slide-container {
-     float: left;
-     width: 95%;
-     height:40vh;
-   }
+ion-slide img {
+   height: 30vh !important;
+   width: 100% !important;
 }
+
+.swiper-button-prev{
+  /*background-image: url(img/less-than.png);*/
+  height:25px;
+  left:25px;
+}
+
+.swiper-button-next{
+  /*background-image: url(img/greater-than.png);*/
+  height:25px;
+  right:25px;
+}
+
+.view-text-logo {
+  float: left;
+  width: 87%;
+  height: 30%;
+  margin: 9% 0% 0% 3%;
+}
+
+.view-align-me-now {
+  float: right;
+  width: 10%;
+  margin-top: 8%;
+}
+
+.gb-color {
+  background-color: gray;
+  height: 8%;
+}
+.manage-me {
+  margin-top: 5%;
+}
+
+.webPage {
+  width: 100%;
+  height: 100%;
+  background-color: #999;
+}
+
+.gray-background {
+  background-color: #999;
+  height: 100%;
+}
+
+.scroll-content {
+  margin: 0px !important;
+}
+
