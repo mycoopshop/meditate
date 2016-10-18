@@ -105,9 +105,10 @@
                                  <div class="top-text-container">
                                     <div class="menu-title-container">
                                        <div class="menu-title module animated slideInRight">
-                                          <a href="{{menu.url}}" style="text-decoration:none;color:#000" onclick="window.open(this.href,'_self', 'width =200 height=500');">
+                                          <!-- <a href="{{menu.url}}" style="text-decoration:none;color:#000" onclick="window.open(this.href,'_self', 'width =200 height=500');">
                                           {{menu.title}}
-                                          </a>
+                                          </a> -->
+                                          <a style="text-decoration:none;color:#000" (click)="viewPage($event, menu.url)">{{menu.title}}</a>
                                        </div>
                                     </div>
                                     <div class="arrow-container">
