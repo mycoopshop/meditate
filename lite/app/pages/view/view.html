@@ -2,24 +2,54 @@
    <ion-navbar>
       <ion-title>view Page</ion-title>
    </ion-navbar>
-</ion-header> -->
-   <ion-content padding class="background-blinker">
-      <ion-row responsive-sm>
-         <ion-col width-80>
-            <div class="text-logo animated zoomIn">
-               <img src="img/logo-the-art.png" width="250" height="135">
-            </div>
-            <span menuToggle class="align-me-now" fab-fixed>
-            <img src="img/greater-than.png" width="15" height="25">
-            </span>
-         </ion-col>
-      </ion-row>
-      <!-- {{page}} -->
-      <iframe class= "animated fadeInUp" [src]='page' width="100%" height="250" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-      </iframe><br>
-   </ion-content>
+   </ion-header> -->
+<ion-content padding class="background-blinker">
+   <ion-row responsive-sm>
+      <ion-col width-80>
+         <div class="text-logo animated zoomIn">
+            <img src="img/logo-the-art.png" width="250" height="135">
+         </div>
+         <span menuToggle class="align-me-now" fab-fixed>
+         <img src="img/greater-than.png" width="15" height="25">
+         </span>
+      </ion-col>
+   </ion-row>
+   <ion-col width-90>
+      <ion-slides>
+           
+         <ion-slide>
+        <div class="slide-container">
+            <img src="img/mindfulness_part_two.jpg">
+        </div>
+         </ion-slide>
+        
+         <ion-slide>
+         <div class="slide-container">
+            <img src="img/hat.jpg">
+         </div>
+         </ion-slide>
+          <ion-slide>
+         <div class="slide-container">
+            <img src="img/online.jpg" >
+         </div>
+         </ion-slide>
+      </ion-slides>
+   </ion-col>
+   <!-- {{page}} -->
+   <iframe class= "animated fadeInUp" [src]='page' width="100%" height="250" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+   </iframe><br>
+</ion-content>
 <ion-footer class="bar-stable gb-color">
    <center class="manage-me" (click)="scrollTo()">
-     <img src="img/arrow-down.png" width="25" height="15">
+      <img src="img/arrow-down.png" width="25" height="15">
    </center>
 </ion-footer>
+
+<style type="text/css">
+   .slide-container {
+    width: 92%;
+    text-align: left !important;
+    height: 180px;
+   }
+   
+</style>
