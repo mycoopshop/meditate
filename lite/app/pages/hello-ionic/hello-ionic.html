@@ -55,26 +55,19 @@
                         <br>
                         -c. {{quote.author}} 
                      </div> -->
-                     <!-- <div id="quote-show" class="second-quote">
-                        Our thoughts are just thoughts… <br>In being seen and known, They cannot but self-liberate, and we are, in that moment, liberated from them.<br>
-                        -J. Kabat-Zinn
-                     </div> -->
                   </div>
                </div>
                <div class="bottom-inner-container">
-                  <!-- <div class="menu-page-show">
-                    <button (click)= navigate()>
-                        Skip
-                     </button>
-                  </div> -->
-                  <!-- <div class="pause-me-now">
-                     <div class="pause-text-container">
+                  <div class="bottom-inner-container">
+                     <div class="pause-me-now">
+                        <!-- <div class="pause-text-container">
+                          <a>Pause</a>
+                        </div> -->
+                        <div class="skip-text-container">
+                          <a class="skip-text-deco" href="#menu-show" [navPush]="menuPage">Skip</a>
+                        </div>
                      </div>
-                     <div class="skip-text-container">
-                        <button (click)="generate()" >Pause</button>
-                        <a class="skip-text-deco" href="#menu-show">Skip</a>
-                     </div>
-                  </div> -->
+               </div>
                </div>
             </div>
          </ion-slide>
@@ -147,9 +140,6 @@
             </div>
          </div> -->
       </ion-slides>
-      <div class="skip-text-container">
-         <a class="skip-text-deco" href="#menu-show" [navPush]="menuPage" > Skip</a>
-      </div>
    </div>
 </ion-content>
 
