@@ -20,32 +20,32 @@
                   <div class="title-container">
                      <ion-slides #mySlider  [options]="mySlideOptions">
                         <ion-slide>
-                           <div class="first-quote">
+                           <div class="#">
                              Relax, let go. But remember only one thing: You are a witness.<br>-Osho
                            </div>
                         </ion-slide>
                         <ion-slide>
-                           <div class="first-quote">
+                           <div class="#">
                               When you own your breath, nobody can steal your peace.<br>-Unknown
                            </div>
                         </ion-slide>
                         <ion-slide>
-                           <div class="first-quote">
+                           <div class="#">
                               Our one true home is in the present moment.<br>-T.N. Hanh 
                            </div>
                         </ion-slide>
                         <ion-slide>
-                           <div class="first-quote">
+                           <div class="#">
                              Nothing is worth more than this day.J. Goethe<br>-J. Goethe
                            </div>
                         </ion-slide>
                         <ion-slide>
-                           <div class="first-quote">
+                           <div class="#">
                               It's being here now that's important. There's no past and there's no future. Time is a very misleading thing. All there is ever, is the now.<br>-G. Harrison
                            </div>
                         </ion-slide>
                         <ion-slide>
-                           <div class="first-quote">
+                           <div class="#">
                               Out beyond ideas of wrongdoing and right doing, there is a field. I͛ll meet you there.<br>-J. Rumi 
                            </div>
                         </ion-slide>
@@ -67,16 +67,14 @@
                         Skip
                      </button>
                   </div> -->
-                  <div class="pause-me-now">
+                  <!-- <div class="pause-me-now">
                      <div class="pause-text-container">
-                        <!-- <div class="pause-text-deco" href="#">Pause</div> -->
                      </div>
                      <div class="skip-text-container">
-                        <!-- <a class="skip-text-deco" [navPush]="menuPage">Skip</a> -->
                         <button (click)="generate()" >Pause</button>
                         <a class="skip-text-deco" href="#menu-show">Skip</a>
                      </div>
-                  </div>
+                  </div> -->
                </div>
             </div>
          </ion-slide>
@@ -150,7 +148,7 @@
          </div> -->
       </ion-slides>
       <div class="skip-text-container">
-         <a class="skip-text-deco" href="#menu-show" [navPush]="menuPage" >Skip</a>
+         <a class="skip-text-deco" href="#menu-show" [navPush]="menuPage" > Skip</a>
       </div>
    </div>
 </ion-content>
@@ -159,6 +157,9 @@
    .slide-zoom {
     width: 92%;
     text-align: left !important;
+   }
+   .ion-slides {
+      display: none;
    }
    
 </style>

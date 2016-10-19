@@ -1,4 +1,4 @@
-import {DomSanitizationService} from '@angular/platform-browser';
+import {SafeResourceUrl, DomSanitizationService} from '@angular/platform-browser';
 import { NavController, NavParams } from 'ionic-angular';
 import { Component, OnInit } from '@angular/core';
 import {GetPageService} from "./get_page.service";
@@ -18,20 +18,21 @@ export class ViewPage {
   page: any;
   @ViewChild('mySlider') slider: Slides;
 
-  constructor(private _gps: GetPageService, private sanitizer: DomSanitizationService, private nav: NavController, navParams: NavParams ) {
-    
+  constructor(public _gps: GetPageService, public sanitizer: DomSanitizationService, public nav: NavController, navParams: NavParams ) {
+    let url = navParams.get('url');
+    this.page = this.sanitizer.bypassSecurityTrustResourceUrl(url);
     // this.url = navParams.get('url'); 
     // console.log(this.url);
   }
 
-  ngOnInit() {
-    this._gps.getPage().subscribe(
-        (data)=>{
-          this.page = this.sanitizer.bypassSecurityTrustResourceUrl(data);
-          //console.log(this.page);
-        }
-    )
-  }
+  // ngOnInit() {
+  //   this._gps.getPage().subscribe(
+  //       (data)=>{
+  //         this.page = this.sanitizer.bypassSecurityTrustResourceUrl(data);
+  //         //console.log(this.page);
+  //       }
+  //   )
+  // }
 
   mySlideOptions = {
     initialSlide: 0,

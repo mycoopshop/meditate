@@ -1,185 +1,198 @@
 .swiper-slide {
   float:left;
   background-color: #999;
+  width: 100%;
+  height:100%;
 }
 
 .home-page-container {
-      float: left;
-      width: 90%;
-      height: 96%;
-      //margin-top: 5%;
+  float: left;
+  width: 90%;
+  height: 96%;
+  //margin-top: 5%;
 
+  button {
+    background-color: transparent ;
+    box-shadow: none;
+    border: none; 
+  }
+
+  .home-page-main-title {
+    width: 100%;
+  
+    .human-being-title {
+      float: left;
+      width: 76%;
+    }
+    .up-arrow-container {
+      width: 14%;
+      float: right;
+      margin: 2% 0% 0% 0%;
+      height: 25%;
+    }
+  }
+}
+.home-inner-main-container {
+    background-color: #939598;
+    width: 88%;
+    height: 65%;
+    float: left;
+    margin: 5% 0% 0% 5%;
+
+    .top-inner-container {
+      width: 100%;
+      height: 2.3%;
+      float: left;
+    
+    .top-right-border {
+      background-color: black;
+      width: 42%;
+      height: 100%;
+      float: right;
+      margin: 0% 3%;
+    }
+  }
+}
+.mid-center-container {
+  width: 94%;
+  height: 100%;
+  float: left;
+  border: 3px solid black;
+        
+        
+  .mid-center-top-container {
+    width: 100%;
+    height: 33%;
+    float: left;
+          
+      .explore-outer-container {
+        width: 11%;
+        height: 100%;
+        float: left;
+            
         button {
           background-color: transparent ;
           box-shadow: none;
           border: none; 
         }
-
-        .home-page-main-title {
-          width: 100%;
-    
-          .human-being-title {
-            float: left;
-            width: 76%;
-          }
-          .up-arrow-container {
-            width: 14%;
-            float: right;
-            margin: 2% 0% 0% 0%;
-            height: 25%;
-          }
+            
+        .explore-rotate-text {
+          transform: rotate(90deg);
+          float: left;
+          font-size: 19px;
+          margin-top: 105%;
+          margin-left: -139%;
+          font-weight: bold;
+          color : #000;
+          text-transform: uppercase;
         }
-    }
-  .home-inner-main-container {
-      background-color: #939598;
-      width: 88%;
-      height: 65%;
-      float: left;
-      margin: 5% 0% 0% 5%;
+      }
 
-      .top-inner-container {
-        width: 100%;
-        height: 2.3%;
+      .challenges-outer-container {
+        width: 38%;
+        height: 35%;
+        float: right;
+        
+        .challenges-simple-text {
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 19px;
+          float: right;
+          color : #000;
+          margin: 0% -8% 0% 0%;
+        }
+        
+      }
+    }
+
+    .mid-center-middle-container {
+      width: 100%;
+      height: 34%;
+      float: left;
+    }
+
+    .mid-center-bottom-container {
+      width: 100%;
+      height: 33%;
+      float: left;
+
+      .meditate-main-container {
+        width: 50%;
+        height: 100%;
         float: left;
-      
-      .top-right-border {
-        background-color: black;
-        width: 42%;
+                        
+        .meditate-rotate-text {
+          font-weight: bold;
+          text-transform: uppercase;
+          font-size: 19px;
+          color : #000;
+          margin: 60% 0% 0% -5%;
+        }
+      }
+
+      .read-main-container {
+        width: 50%;
         height: 100%;
         float: right;
-        margin: 0% 3%;
+
+        .read-inner-container {
+          width: 18%;
+          margin-top: 44%;
+          height: 51%;
+          float: right;
+
+          .read-text {
+            float: right;
+            color : #000;
+            font-size: 19px;
+            font-weight: bold;
+            transform: rotate(90deg);
+            text-transform: uppercase;
+            margin: 20% -80% -5% -4%;
+          }
+        }
       }
     }
   }
-   .mid-center-container {
-        width: 94%;
-        height: 100%;
-        float: left;
-        border: 3px solid black;
-        
-        
-        .mid-center-top-container {
-          width: 100%;
-          height: 33%;
-          float: left;
-          
-          .explore-outer-container {
-            width: 11%;
-            height: 100%;
-            float: left;
-            
-            .explore-rotate-text {
-              transform: rotate(90deg);
-              float: left;
-              font-size: 19px;
-              margin-top: 105%;
-              margin-left: -139%;
-              font-weight: bold;
-              color : #000;
-              text-transform: uppercase;
-            }
-          }
+  .middle-inner-container {
+    width: 100%;
+    height: 96%;
+    float: left;
 
-          .challenges-outer-container {
-            width: 38%;
-            height: 35%;
-            float: right;
-            
-            .challenges-simple-text {
-              font-weight: bold;
-              text-transform: uppercase;
-              font-size: 19px;
-              float: right;
-              color : #000;
-              margin: 0% -8% 0% 0%;
-            }
-            
-          }
-        }
-
-        .mid-center-middle-container {
-          width: 100%;
-          height: 34%;
-          float: left;
-        }
-
-        .mid-center-bottom-container {
-          width: 100%;
-          height: 33%;
-          float: left;
-
-          .meditate-main-container {
-            width: 50%;
-            height: 100%;
-            float: left;
-                        
-            .meditate-rotate-text {
-              font-weight: bold;
-              text-transform: uppercase;
-              font-size: 19px;
-              color : #000;
-              margin: 60% 0% 0% -5%;
-            }
-          }
-
-          .read-main-container {
-            width: 50%;
-            height: 100%;
-            float: right;
-
-            .read-inner-container {
-              width: 18%;
-              margin-top: 44%;
-              height: 51%;
-              float: right;
-
-              .read-text {
-                float: right;
-                color : #000;
-                font-size: 19px;
-                font-weight: bold;
-                transform: rotate(90deg);
-                text-transform: uppercase;
-                margin: 20% -80% -5% -4%;
-              }
-            }
-          }
-        }
-      }
-      .middle-inner-container {
-      width: 100%;
-      height: 96%;
+    .mid-left-container {
+      width: 3%;
+      height: 100%;
       float: left;
-
-      .mid-left-container {
-        width: 3%;
-        height: 100%;
-        float: left;
         
-        .side-left-top-border {
-          background-color: black;
-          width: 100%;
-          height: 33%;
-          float: left;
-        }
+      .side-left-top-border {
+        background-color: black;
+        width: 100%;
+        height: 33%;
+        float: left;
       }
+    }
 
-      .mid-center-container {
-        width: 94%;
-        height: 100%;
+    .mid-center-container {
+      width: 94%;
+      height: 100%;
+      float: left;
+      border: 3px solid black;
+
+      .mid-center-top-container {
+        width: 100%;
+        height: 33%;
         float: left;
-        border: 3px solid black;
-        
-        
-        .mid-center-top-container {
-          width: 100%;
-          height: 33%;
-          float: left;
           
           .explore-outer-container {
             width: 11%;
             height: 100%;
             float: left;
+
+            button {
+              background-color: transparent ;
+              box-shadow: none;
+              border: none; 
+            }
             
             .explore-rotate-text {
               transform: rotate(90deg);
@@ -278,17 +291,17 @@
         }
       }
     }
-    .bottom-inner-container {
-      width: 100%;
-      height: 2.3%;
-      float: left;
-      margin-top: 0%;
+.bottom-inner-container {
+  width: 100%;
+  height: 2.3%;
+  float: left;
+  margin-top: 0%;
 
-      .bottom-left-border {
-        background-color: black;
-        width: 42%;
-        height: 100%;
-        float: left;
-        margin: 0% 0% 0% 3%;
-      }
-    }
+  .bottom-left-border {
+    background-color: black;
+    width: 42%;
+    height: 100%;
+    float: left;
+    margin: 0% 0% 0% 3%;
+  }
+}

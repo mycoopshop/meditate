@@ -94,7 +94,7 @@ export class HelloIonicPage {
     autoplay:3000,
     autoplayDisableOnInteraction: false,
     direction:"horizontal",
-    speed:2500,
+    speed:900,
     nextButton: ".swiper-button-next",
     prevButton: ".swiper-button-prev" 
   };
