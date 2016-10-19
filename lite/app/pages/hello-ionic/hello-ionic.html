@@ -13,40 +13,125 @@
 
 <ion-content class="getting-started">
    <div class="main-container">
-      <ion-slides >
-         <ion-slide>
-            <div class="inner-main slide-zoom" id="#">
+            <div class="inner-main" id="#">
                <div class="top-inner-main-container">
-                  <div class="title-container">
+                  <div class="title-containermyslider">
                      <ion-slides #mySlider  [options]="mySlideOptions">
                         <ion-slide>
-                           <div class="#">
-                             Relax, let go. But remember only one thing: You are a witness.<br>-Osho
+                           <div class="myslider">
+                             Relax, let go. But remember only one thing: You are a witness.
+                             <br>
+                             <br>-Osho
                            </div>
                         </ion-slide>
                         <ion-slide>
-                           <div class="#">
-                              When you own your breath, nobody can steal your peace.<br>-Unknown
+                           <div class="myslider">
+                              When you own your breath, nobody can steal your peace.
+                              <br>
+                              <br>-Unknown
                            </div>
                         </ion-slide>
                         <ion-slide>
-                           <div class="#">
-                              Our one true home is in the present moment.<br>-T.N. Hanh 
+                           <div class="myslider">
+                              Our one true home is in the present moment.
+                              <br>
+                              <br>-T.N. Hanh 
                            </div>
                         </ion-slide>
                         <ion-slide>
-                           <div class="#">
-                             Nothing is worth more than this day.J. Goethe<br>-J. Goethe
+                           <div class="myslider">
+                             Nothing is worth more than this day.J. Goethe
+                             <br>
+                             <br>-J. Goethe
                            </div>
                         </ion-slide>
                         <ion-slide>
-                           <div class="#">
-                              It's being here now that's important. There's no past and there's no future. Time is a very misleading thing. All there is ever, is the now.<br>-G. Harrison
+                           <div class="myslider">
+                              It's being here now that's important. There's no past and there's no future. Time is a very misleading thing. All there is ever, is the now.
+                              <br>
+                              <br>-G. Harrison
                            </div>
                         </ion-slide>
                         <ion-slide>
-                           <div class="#">
-                              Out beyond ideas of wrongdoing and right doing, there is a field. I͛ll meet you there.<br>-J. Rumi 
+                           <div class="myslider">
+                              Out beyond ideas of wrongdoing and right doing, there is a field. I͛ll meet you there.
+                              <br>
+                              <br>-J. Rumi 
+                           </div>
+                        </ion-slide>
+                        <ion-slide>
+                           <div class="myslider">
+                              All the things that truly matter – beauty, love, creativity, joy, inner peace – arise from beyond the mind.
+                              <br>
+                              <br>-E. Tolle
+                           </div>
+                        </ion-slide>
+                        <ion-slide>
+                           <div class="myslider">
+                              What a liberation to realise that the ͚voice in my head͛ is not who I am. Who am I then? The one who sees that.
+                              <br>
+                              <br>-E. Tolle
+                           </div>
+                        </ion-slide>
+                        <ion-slide>
+                           <div class="myslider">
+                              A thought is harmless unless we believe it. It͛s not our thoughts, but our attachment to our thoughts, that causes suffering.
+                              <br>
+                              <br>-B. Katie 
+                           </div>
+                        </ion-slide>
+                        <ion-slide>
+                           <div class="myslider">
+                              Our thoughts are just thoughts... In being seen and known, they cannot but self-liberate, and we are, in that moment, liberated from them.
+                              <br>
+                              <br>-J. Kabat-Zinn 
+                           </div>
+                        </ion-slide>
+                        <ion-slide>
+                           <div class="myslider">
+                              In my experience, we don͛t make thoughts appear, they just appear. One day, I noticed that their appearance just wasn͛t personal.
+                              <br>
+                              <br>-B. Katie
+                           </div>
+                        </ion-slide>
+                        <ion-slide>
+                           <div class="myslider">
+                              What you resist persists.
+                              <br>
+                              <br>-C. Jung 
+                           </div>
+                        </ion-slide>
+                        <ion-slide>
+                           <div class="myslider">
+                              My life has been full of terrible misfortunes, most of which have never happened.
+                              <br><br>
+                              -M. Montaigne 
+                           </div>
+                        </ion-slide>
+                        <ion-slide>
+                           <div class="myslider">
+                              When you argue with reality, you lose... 100% of the time... Arguing with reality is like teaching a cat to bark.
+                              <br>
+                              <br>-B. Katie 
+                           </div>
+                        </ion-slide>
+                        <ion-slide>
+                           <div class="myslider">
+                              What we cannot be with will not let us be.<br>-D. Ford 
+                           </div>
+                        </ion-slide>
+                        <ion-slide>
+                           <div class="myslider">
+                              Change is in the air, as old patterns fall away and new energies are emerging.
+                              <br>
+                              <br>-M. Williamson 
+                           </div>
+                        </ion-slide>
+                        <ion-slide>
+                           <div class="myslider">
+                              If I do not go within, I go without.
+                              <br>
+                              <br>-N.D. Walsch
                            </div>
                         </ion-slide>
                      </ion-slides>
@@ -70,7 +155,6 @@
                </div>
                </div>
             </div>
-         </ion-slide>
         <!--  <div class="swiper-slide">
             <div class="home-page-container" id="menu-show">
                <div class="home-page-main-title">
@@ -139,17 +223,23 @@
                </div>
             </div>
          </div> -->
-      </ion-slides>
    </div>
 </ion-content>
 
 <style type="text/css">
-   .slide-zoom {
-    width: 92%;
-    text-align: left !important;
-   }
-   .ion-slides {
-      display: none;
-   }
-   
+
+ ion-slide div.myslider {
+   height: auto !important;
+   width: 100% !important;
+   font-size: 180%;
+     font-family: sans-serif;
+     text-transform: uppercase;
+     font-weight: bold;
+     text-align:left;
+}
+.swiper-slide{
+  background-color: transparent;
+}
+
 </style>
+   

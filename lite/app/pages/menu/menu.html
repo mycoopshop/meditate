@@ -7,7 +7,7 @@
    <div class="swiper-slide">
       <div class="home-page-container menu-page-show" id="menu-show">
          <div class="home-page-main-title">
-            <div class="human-being-title">
+            <div class="human-being-title animated zoomIn">
                <ion-row responsive-sm>
                   <ion-col width80>
                      <img src="img/logo-the-art.png" width="80" height="80">
@@ -30,12 +30,12 @@
                </div>
                <div class="mid-center-container background-blinker">
                   <div class="mid-center-top-container">
-                     <div class="explore-outer-container">
+                     <div class="explore-outer-container animated bounceInDown">
                         <button class="explore-rotate-text" (click)="itemTappedTwo($event, menuId)">
                         Explore
                         </button>
                      </div>
-                     <div class="challenges-outer-container">
+                     <div class="challenges-outer-container animated bounceInRight">
                         <button class="challenges-simple-text" (click)="itemTappedOne($event, menuId)">
                         Challenges
                         </button>
@@ -44,12 +44,12 @@
                   <div class="mid-center-middle-container">
                   </div>
                   <div class="mid-center-bottom-container">
-                     <div class="meditate-main-container">
+                     <div class="meditate-main-container animated bounceInLeft">
                         <button class="meditate-rotate-text" (click)="itemTappedThree($event, menuId)">
                         Meditate Now
                         </button>
                      </div>
-                     <div class="read-main-container">
+                     <div class="read-main-container animated bounceInUp">
                         <div class="read-inner-container" >
                            <button class="read-text" (click)="itemTappedFour($event, menuId)">
                            Read

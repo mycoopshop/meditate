@@ -91,17 +91,17 @@ export class HelloIonicPage {
   mySlideOptions = {
     initialSlide: 0,
     loop: true,
-    autoplay:3000,
+    autoplay:8000,
     autoplayDisableOnInteraction: false,
     direction:"horizontal",
-    speed:900,
+    speed:6000,
     nextButton: ".swiper-button-next",
     prevButton: ".swiper-button-prev" 
   };
 
   onSlideChanged() {
     let currentIndex = this.slider.getActiveIndex();
-    this.slider.slideTo(currentIndex, 500);
+    this.slider.slideTo(currentIndex, 200);
     //console.log("Current index is", currentIndex);
   }
 
