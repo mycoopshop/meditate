@@ -3,6 +3,8 @@ import {NavController, NavParams, Content} from 'ionic-angular';
 import {ListPage} from '../list/list';
 import {MenuPage} from '../menu/menu';
 import {PopUpPage} from '../pop-up/pop-up';
+import { Slides } from 'ionic-angular';
+import { ViewChild } from '@angular/core';
 
 @Component({
   templateUrl: 'build/pages/hello-ionic/hello-ionic.html'
@@ -12,16 +14,47 @@ export class HelloIonicPage {
   menuPage = MenuPage;
   listPage = ListPage;
   popUpPage = PopUpPage;
+  @ViewChild('mySlider') slider: Slides;
   quotes: Array <{id: number, title: string, author: string}>;
   
   constructor(private navController: NavController) {
 
     this.quotes = [
-      {id: 1, author: "abc", title: "hello all"},
-      {id: 2, author: "abc", title: "hello all"},
-      {id: 3, author: "abc", title: "hello all"},
-      {id: 4, author: "abc", title: "hello all"},
-
+      {id: 1,  author: "Osho",          title: "Relax, let go. But remember only one thing: You are a witness."},
+      {id: 2,  author: "Unknown",       title: "When you own your breath, nobody can steal your peace."},
+      {id: 3,  author: "T.N. Hanh",     title: "Our one true home is in the present moment."},
+      {id: 4,  author: "J. Goethe",     title: "Nothing is worth more than this day.J. Goethe"},
+      {id: 5,  author: "G. Harrison",   title: "It's being here now that's important. There's no past and there's no future. Time is a very misleading thing. All there is ever, is the now."},
+      {id: 6,  author: "J. Rumi",       title: "Out beyond ideas of wrongdoing and right doing, there is a field. I͛ll meet you there. "},
+      {id: 7,  author: "E. Tolle",      title: "All the things that truly matter – beauty, love, creativity, joy, inner peace – arise from beyond the mind."},
+      {id: 8,  author: "E. Tolle",      title: "What a liberation to realise that the ͚voice in my head͛ is not who I am. Who am I then? The one who sees that."},
+      {id: 9,  author: "B. Katie ",     title: "A thought is harmless unless we believe it. It͛s not our thoughts, but our attachment to our thoughts, that causes suffering."},
+      {id: 10, author: "J. Kabat-Zinn", title: "Our thoughts are just thoughts... In being seen and known, they cannot but self-liberate, and we are, in that moment, liberated from them."},
+      {id: 11, author: "B. Katie",      title: "In my experience, we don͛t make thoughts appear, they just appear. One day, I noticed that their appearance just wasn͛t personal."},
+      {id: 12, author: "C. Jung",       title: "What you resist persists."},
+      {id: 13, author: "M. Montaigne",  title: "My life has been full of terrible misfortunes, most of which have never happened."},
+      {id: 14, author: "B. Katie",      title: "When you argue with reality, you lose... 100% of the time... Arguing with reality is like teaching a cat to bark."},
+      {id: 15, author: "D. Ford",       title: "What we cannot be with will not let us be."},
+      {id: 16, author: "M. Williamson", title: "Change is in the air, as old patterns fall away and new energies are emerging."},
+      {id: 17, author: "N.D. Walsch ",  title: "If I do not go within, I go without."},
+      {id: 18, author: "T.N. Hanh",     title: "I think therefore I am not here."},
+      {id: 19, author: "H. Ford",       title: "If you always do what you've always done, you'll always get what you've always got."},
+      {id: 20, author: "S. Hayes",      title: "Get out of your mind and into your life."},
+      {id: 21, author: "C. Hassad",     title: "If we give our consciousness to a thought, it is like plugging it into that power source."},
+      {id: 22, author: "D. Chopra",     title: "It͛s difficult enough to change yourself. Release the need to change anyone else."},
+      {id: 23, author: "J. Kabat-Zinn", title: "Staying with the breath no matter what, ultimately leads to deep experiences of calmness and awareness."},
+      {id: 24, author: "N. Branden",    title: "The first step to change is awareness. The second step is acceptance."},
+      {id: 25, author: "D. Eldon",      title: "The journey is the destination."},
+      {id: 26, author: "B. Katie",      title: "The judgments you believe just created your world."},
+      {id: 27, author: "P.Chödrön",     title: "The more times we witness our emotional reactions and understand how they work, the easier it is to refrain. "},
+      {id: 28, author: "E. Tolle",      title: "The world can only change from within. "},
+      {id: 29, author: "W. Shakespeare",title: "There is nothing either good or bad, but thinking makes it so."},
+      {id: 30, author: "T. Robson",     title: "When awareness is brought to an emotion, power is brought to your life."},
+      {id: 31, author: "Byron Katie",   title: "When you argue with reality, you lose... 100% of the time... Arguing with reality is like teaching a cat to bark."},
+      {id: 32, author: "Osho",          title: "When you think, you can͛t see reality as it is, because your thinking becomes a barrier. Your thinking colours reality. "},
+      {id: 33, author: "S. Boorstein",  title: "Fear doesn't frighten me as much as it used to. I know it's from clinging, and I know it will pass. "},
+      {id: 34, author: "S. MacLaine",   title: "Fear makes strangers out of people who would be friends. "},
+      {id: 35, author: "W. Erhar",      title: "Resistance causes persistence."},
     ];
   	
   }
@@ -53,4 +86,35 @@ export class HelloIonicPage {
   navigate() {
     this.navController.push(MenuPage);
   }
+
+  // slide quotes
+  mySlideOptions = {
+    initialSlide: 0,
+    loop: true,
+    autoplay:3000,
+    autoplayDisableOnInteraction: false,
+    direction:"horizontal",
+    speed:2500,
+    nextButton: ".swiper-button-next",
+    prevButton: ".swiper-button-prev" 
+  };
+
+  onSlideChanged() {
+    let currentIndex = this.slider.getActiveIndex();
+    this.slider.slideTo(currentIndex, 500);
+    //console.log("Current index is", currentIndex);
+  }
+
+  // auto generate quote
+  // function TheApp() {
+  //   function getRandomInt(min, max) {
+  //       return Math.floor(Math.random() * (max - min + 1)) + min;
+  //   }
+
+  //   this.generate = function() {
+  //       this.number = getRandomInt(1, 100);
+  //   }
+
+  //   this.generate();
+  // }
 }

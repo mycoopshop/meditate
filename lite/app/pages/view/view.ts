@@ -36,10 +36,10 @@ export class ViewPage {
   mySlideOptions = {
     initialSlide: 0,
     loop: true,
-    autoplay:1000,
+    autoplay:3000,
     autoplayDisableOnInteraction: false,
     direction:"horizontal",
-    speed:1600,
+    speed:2500,
     nextButton: ".swiper-button-next",
     prevButton: ".swiper-button-prev" 
   };

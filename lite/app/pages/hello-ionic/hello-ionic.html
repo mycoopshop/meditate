@@ -13,23 +13,52 @@
 
 <ion-content class="getting-started">
    <div class="main-container">
-      <ion-slides>
+      <ion-slides >
          <ion-slide>
             <div class="inner-main slide-zoom" id="#">
                <div class="top-inner-main-container">
                   <div class="title-container">
-                     <div id="quote-hide" class="first-quote">
-                        What you resist persists.<br>-c. jung 
-                     </div>
+                     <ion-slides #mySlider  [options]="mySlideOptions">
+                        <ion-slide>
+                           <div class="first-quote">
+                             Relax, let go. But remember only one thing: You are a witness.<br>-Osho
+                           </div>
+                        </ion-slide>
+                        <ion-slide>
+                           <div class="first-quote">
+                              When you own your breath, nobody can steal your peace.<br>-Unknown
+                           </div>
+                        </ion-slide>
+                        <ion-slide>
+                           <div class="first-quote">
+                              Our one true home is in the present moment.<br>-T.N. Hanh 
+                           </div>
+                        </ion-slide>
+                        <ion-slide>
+                           <div class="first-quote">
+                             Nothing is worth more than this day.J. Goethe<br>-J. Goethe
+                           </div>
+                        </ion-slide>
+                        <ion-slide>
+                           <div class="first-quote">
+                              It's being here now that's important. There's no past and there's no future. Time is a very misleading thing. All there is ever, is the now.<br>-G. Harrison
+                           </div>
+                        </ion-slide>
+                        <ion-slide>
+                           <div class="first-quote">
+                              Out beyond ideas of wrongdoing and right doing, there is a field. I͛ll meet you there.<br>-J. Rumi 
+                           </div>
+                        </ion-slide>
+                     </ion-slides>
                      <!-- <div *ngFor="let quote of quotes">
                        {{quote.title}}   
                         <br>
                         -c. {{quote.author}} 
                      </div> -->
-                     <div id="quote-show" class="second-quote">
+                     <!-- <div id="quote-show" class="second-quote">
                         Our thoughts are just thoughts… <br>In being seen and known, They cannot but self-liberate, and we are, in that moment, liberated from them.<br>
                         -J. Kabat-Zinn
-                     </div>
+                     </div> -->
                   </div>
                </div>
                <div class="bottom-inner-container">
@@ -44,13 +73,14 @@
                      </div>
                      <div class="skip-text-container">
                         <!-- <a class="skip-text-deco" [navPush]="menuPage">Skip</a> -->
+                        <button (click)="generate()" >Pause</button>
                         <a class="skip-text-deco" href="#menu-show">Skip</a>
                      </div>
                   </div>
                </div>
             </div>
          </ion-slide>
-         <div class="swiper-slide">
+        <!--  <div class="swiper-slide">
             <div class="home-page-container" id="menu-show">
                <div class="home-page-main-title">
                   <div class="human-being-title">
@@ -117,8 +147,11 @@
                   </div>
                </div>
             </div>
-         </div>
+         </div> -->
       </ion-slides>
+      <div class="skip-text-container">
+         <a class="skip-text-deco" href="#menu-show" [navPush]="menuPage" >Skip</a>
+      </div>
    </div>
 </ion-content>
 
