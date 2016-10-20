@@ -100,16 +100,16 @@ export class HelloIonicPage {
     effect: 'fade',
     fade: {crossFade:true},
     autoplay:2700,
-    autoplayDisableOnInteraction: false,
+    autoplayDisableOnInteraction: true,
     direction:"horizontal",
     speed:4000,
-    nextButton: ".swiper-button-next",
+    nextButton: ".pause-me",
     prevButton: ".swiper-button-prev" 
   };
 
   onSlideChanged() {
     let currentIndex = this.slider.getActiveIndex();
-    this.slider.slideTo(currentIndex, 200);
+    this.slider.slideTo(currentIndex, 10);
     //console.log("Current index is", currentIndex);
   }
 

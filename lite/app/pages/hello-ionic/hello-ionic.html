@@ -29,6 +29,9 @@
          <div class="bottom-inner-container">
             <div class="bottom-inner-container">
                <div class="pause-me-now">
+                    <div  (ionDidChange)="onSlideChanged()" class="pause-text-container">
+                       <a href="#" class="pause-me pause-text-deco">Pause</a>
+                    </div>
                   <div class="skip-text-container">
                      <a class="skip-text-deco" href="#menu-show" [navPush]="menuPage">Skip</a>
                   </div>
