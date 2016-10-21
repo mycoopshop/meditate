@@ -1,10 +1,8 @@
 import {SafeResourceUrl, DomSanitizationService} from '@angular/platform-browser';
 import { NavController, NavParams } from 'ionic-angular';
 import { Component, ViewChild } from '@angular/core';
-//import {GetPageService} from "./get_page.service";
 import { Http } from '@angular/http';
 import { Slides } from 'ionic-angular';
-//import { ViewChild } from '@angular/core';
 
 
 @Component({
