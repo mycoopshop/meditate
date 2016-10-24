@@ -2,8 +2,41 @@
 <html lang="en">
 <head>
     <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../slider/slider.css">
+    <link rel="stylesheet" href="../../slider/swiper.min.css">
+    <script src="../../slider/swiper.min.js"></script>
 </head>
-<img src="mc.png" alt="Thoughts as Thoughts" width="100%">
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="../../slider-img/1-bird.jpg" /></div>
+    <div class="swiper-slide"><img src="../../slider-img/2-duck.jpg" /></div>
+    <div class="swiper-slide"><img src="../../slider-img/3-boy.jpg" /></div>
+    <div class="swiper-slide"><img src="../../slider-img/4-frog.jpg" /></div>
+    <div class="swiper-slide"><img src="../../slider-img/5-cat.jpg" /></div>
+    <div class="swiper-slide"><img src="../../slider-img/6-hat.jpg" /></div>
+    <div class="swiper-slide"><img src="../../slider-img/7-water.jpg" /></div>
+    <div class="swiper-slide"><img src="../../slider-img/8-day.jpg" /></div>
+    <div class="swiper-slide"><img src="../../slider-img/9-screen.jpg" /></div>
+  </div>
+    <!-- <div class="swiper-pagination"></div> -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<script>
+  var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      paginationClickable: true,
+      spaceBetween: 30,
+      centeredSlides: false,
+      autoplay: 2500,
+      autoplayDisableOnInteraction: false
+  });
+</script>
+
 </p>
 <p align="center">
 	<em>Self-discipline is one way to adhere to a new committed action, but introducing a ritual is far more effective. - </em>Tony Schwartz
@@ -11,6 +44,7 @@
 <p>
 	You've been meditating frequently for a few days now. This may have involved practicing even when you didn't feel like it. 
 </p>
+<img src="mc.png" alt="Thoughts as Thoughts" width="100%">
 <p>	
 	What was your practice like? Was it a ritual? 
 </p>

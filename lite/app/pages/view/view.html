@@ -3,18 +3,18 @@
       <ion-title>view Page</ion-title>
    </ion-navbar>
    </ion-header> -->
-<div padding class="gray-background">
+<div padding class="gray-background scroller">
    <ion-row responsive-sm>
       <ion-col width-80>
          <div class="text-logo animated zoomIn">
             <img src="img/logo-the-art.png" width="250" height="135">
          </div>
          <span menuToggle class="align-me-now" fab-fixed>
-         <img src="img/greater-than.png" width="15" height="25">
+            <img src="img/greater-than.png" width="15" height="25">
          </span>
       </ion-col>
    </ion-row>
-   <ion-col width-100>
+   <!-- <ion-col width-100>
       <ion-slides #mySlider  [options]="mySlideOptions">
       <ion-slide>
          <div class="slide-container">
@@ -32,17 +32,33 @@
          </div>
       </ion-slide>
       </ion-slides>
-      <div  (ionDidChange)="onSlideChanged()" class="previous-toggle">
-         <div class="swiper-button-prev"></div>
+      <div class="slider-toggle">
+         <div  (ionDidChange)="onSlideChanged()" class="swiper-button-prev"></div>
+         <div (ionWillChange)="onSlideChanged()" class="swiper-button-next"></div>
       </div>
-      <div (ionWillChange)="onSlideChanged()" class="swiper-button-next"></div>
-   </ion-col>
+   </ion-col> -->
    <!-- {{page}} -->
-   <iframe class= "animated fadeInUp" [src]='page' width="100%" height="33%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
-   </iframe><br>
+   <div class="#">
+      <iframe class= "animated fadeInUp" id="iframe1" [src]='page' width="100%" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen>
+      <img src="img/video-icon.png">
+      </iframe><br>
+   </div>
 </div>
 <ion-footer class="bar-stable gb-color">
    <center class="manage-me" (click)="scrollTo()">
       <img src="img/arrow-down.png" width="25" height="15">
    </center>
 </ion-footer>
+
+<style type="text/css">
+   
+
+iframe {position:absolute;
+   z-index:1;
+   top: 30%;
+   left: 5%;
+   border: 0 !important;
+   width: 90%;
+   height: 63%;
+}
+</style>

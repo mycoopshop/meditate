@@ -1,8 +1,41 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
 <head>
-	<meta charset="utf-8" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="../../slider/slider.css">
+    <link rel="stylesheet" href="../../slider/swiper.min.css">
+    <script src="../../slider/swiper.min.js"></script>
 </head>
+
+<div class="swiper-container">
+  <div class="swiper-wrapper">
+    <div class="swiper-slide"><img src="../../slider-img/1-bird.jpg" /></div>
+    <div class="swiper-slide"><img src="../../slider-img/2-duck.jpg" /></div>
+    <div class="swiper-slide"><img src="../../slider-img/3-boy.jpg" /></div>
+    <div class="swiper-slide"><img src="../../slider-img/4-frog.jpg" /></div>
+    <div class="swiper-slide"><img src="../../slider-img/5-cat.jpg" /></div>
+    <div class="swiper-slide"><img src="../../slider-img/6-hat.jpg" /></div>
+    <div class="swiper-slide"><img src="../../slider-img/7-water.jpg" /></div>
+    <div class="swiper-slide"><img src="../../slider-img/8-day.jpg" /></div>
+    <div class="swiper-slide"><img src="../../slider-img/9-screen.jpg" /></div>
+  </div>
+    <!-- <div class="swiper-pagination"></div> -->
+    <div class="swiper-button-next"></div>
+    <div class="swiper-button-prev"></div>
+</div>
+
+<script>
+  var swiper = new Swiper('.swiper-container', {
+      pagination: '.swiper-pagination',
+      nextButton: '.swiper-button-next',
+      prevButton: '.swiper-button-prev',
+      paginationClickable: true,
+      spaceBetween: 30,
+      centeredSlides: false,
+      autoplay: 2500,
+      autoplayDisableOnInteraction: false
+  });
+</script>
 
 <p>
     A number of spiritual traditions have developed meditative practices similar to this. (Remember, it simply boils down to conscious intent and acceptance, which means a focus of attention with open receptivity.) But, the formal mindfulness practice is thought to have started with Buddhism around 2,500 years ago. 

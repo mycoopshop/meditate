@@ -23,7 +23,7 @@ export class ListPage {
     this.subMenus = [
       { id: 5,   border_type: 1, parent_id: 1,   title: '8 day challenge',                            contain: 'none',   type: 'list', child_type: 1, url: ''},
       { id: 6,   border_type: 2, parent_id: 1,   title: '8 day micro course',                         contain: 'none',   type: 'list', child_type: 2, url: ''},
-      { id: 7,   border_type: 3, parent_id: 1,   title: 'More',                                       contain: 'none',   type: 'list', child_type: 3, url: ''},
+      { id: 7,   border_type: 3, parent_id: 0,   title: 'More',                                       contain: 'none',   type: 'list', child_type: 3, url: ''},
       { id: 8,   border_type: 1, parent_id: 2,   title: "I like them short",                          contain: 'none',   type: 'list', child_type: 1, url: ''},
       { id: 9,   border_type: 2, parent_id: 2,   title: "I'm used to this",                           contain: 'none',   type: 'list', child_type: 1, url: ''},
       { id: 10,  border_type: 3, parent_id: 2,   title: "Let's go deeper",                            contain: 'none',   type: 'list', child_type: 3, url: ''},
