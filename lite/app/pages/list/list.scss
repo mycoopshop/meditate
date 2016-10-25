@@ -219,3 +219,17 @@
   .manage-me {
     margin-top: 5%;
   }
+
+  .back-container {
+  float: left;
+  width: 30%;
+  height: 5vh;
+  margin: -9% 0% 0% 3%;
+  cursor:pointer;
+  
+  .back-text {
+    float: left;
+    width: 100%;
+    height: 100%
+  }
+}

@@ -63,10 +63,24 @@ overflow: auto;
 
 iframe {position:absolute;
    z-index:1;
-   top: 30%;
+   top: 26%;
    left: 5%;
    border: 0 !important;
    width: 90%;
    height: 63%;
+}
+
+.back-container {
+  float: left;
+  width: 30%;
+  height: 5vh;
+  margin: -9% 0% 0% 3%;
+  cursor:pointer;
+  
+  .back-text {
+    float: left;
+    width: 100%;
+    height: 100%
+  }
 }
 

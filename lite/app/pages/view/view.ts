@@ -1,8 +1,8 @@
 import {SafeResourceUrl, DomSanitizationService} from '@angular/platform-browser';
-import { NavController, NavParams } from 'ionic-angular';
+import { NavController, NavParams, Slides } from 'ionic-angular';
 import { Component, ViewChild } from '@angular/core';
-import { Http } from '@angular/http';
-import { Slides } from 'ionic-angular';
+import {ListPage}               from '../list/list';
+import { Http }                 from '@angular/http';
 
 @Component({
   templateUrl: 'build/pages/view/view.html',
@@ -11,12 +11,14 @@ import { Slides } from 'ionic-angular';
 export class ViewPage {
 
   //url: any;
+  parentId: any;
   page: any;
   @ViewChild('mySlider') slider: Slides;
 
   constructor( public sanitizer: DomSanitizationService, public nav: NavController, navParams: NavParams ) {
     let url = navParams.get('url');
     this.page = this.sanitizer.bypassSecurityTrustResourceUrl(url);
+    this.parentId = navParams.get('parent_id');
     // this.url = navParams.get('url'); 
     // console.log(this.url);
   }
@@ -35,6 +37,12 @@ export class ViewPage {
   onSlideChanged() {
     let currentIndex = this.slider.getActiveIndex();
     this.slider.slideTo(currentIndex, 500);
-    //console.log("Current index is", currentIndex);
   } 
+
+  goBack() {
+    this.nav.push(ListPage, {
+      menuId: this.parentId
+    });
+  }
+
 }

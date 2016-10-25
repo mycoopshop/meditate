@@ -67,8 +67,8 @@ class MyApp {
     this.nav.push(ViewPage, {
       url: url
     });
-    //console.log("url");
   }
+  
 }
 
 ionicBootstrap(MyApp);

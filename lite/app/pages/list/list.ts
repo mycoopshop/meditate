@@ -1,6 +1,7 @@
+import {NavController, NavParams, Content} from 'ionic-angular';
 import {Component, ViewChild} from '@angular/core';
 import {ViewPage} from '../view/view';
-import {NavController, NavParams, Content} from 'ionic-angular';
+import {MenuPage} from '../menu/menu';
 
 @Component({
   templateUrl: 'build/pages/list/list.html',
@@ -10,6 +11,8 @@ export class ListPage {
   selectedId: any;
   public flag;
   public scrollNow;
+  parentId: any;
+  rootPage: any = ListPage;
   
   subMenus: Array<{id: number, border_type:number, title: string, contain: string, parent_id: number, type: string, child_type: number, url: string}>;
   @ViewChild(Content) content: Content;
@@ -207,8 +210,9 @@ export class ListPage {
     ];
   }
 
-  sayHello(str) {
-    this.selectedId=str;
+  setValue(id, pId) {
+    this.selectedId=id;
+    this.parentId=pId;
   };
   
   getValue() {
@@ -225,10 +229,24 @@ export class ListPage {
     // console.log(this.scrollNow);
   };
 
-  viewPage(event, url) {
+  viewPage(event, url, id) {
     this.navCtrl.push(ViewPage, {
-      url: url
+      url: url,
+      parent_id: id
     });
+  }
+
+  goBack() {
+    if(this.selectedId == 1 || this.selectedId == 2 || this.selectedId == 3 || this.selectedId == 4)
+    {
+      this.navCtrl.push(MenuPage);
+    }
+    else
+      {
+        this.navCtrl.push(this.rootPage, {
+          menuId: this.parentId
+      });
+    }
   }
 
 }
