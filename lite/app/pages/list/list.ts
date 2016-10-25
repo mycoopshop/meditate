@@ -237,15 +237,30 @@ export class ListPage {
   }
 
   goBack() {
+    //this.navCtrl.pop();
+    console.log('selectedId= '+this.selectedId);
     if(this.selectedId == 1 || this.selectedId == 2 || this.selectedId == 3 || this.selectedId == 4)
     {
-      this.navCtrl.push(MenuPage);
+      this.navCtrl.push(MenuPage)
     }
-    else
-      {
+    else if(this.parentId != null) {
         this.navCtrl.push(this.rootPage, {
-          menuId: this.parentId
+        menuId: this.parentId
       });
+    }
+    else {
+      var pId;
+        for(var menu of this.subMenus){
+          if(this.selectedId ==  menu.id)
+          {
+            pId = menu.parent_id;
+            break;
+          }
+        }
+        this.navCtrl.push(this.rootPage, {
+        menuId: pId
+      });
+
     }
   }
 
