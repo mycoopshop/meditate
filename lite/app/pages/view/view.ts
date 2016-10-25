@@ -4,7 +4,6 @@ import { Component, ViewChild } from '@angular/core';
 import { Http } from '@angular/http';
 import { Slides } from 'ionic-angular';
 
-
 @Component({
   templateUrl: 'build/pages/view/view.html',
 })
