@@ -6,11 +6,15 @@
     height: 100%;
     background-color: #939598;
   }
+  .quote-container {
+    float: left;
+    margin-bottom: 3%;
+  }
 
   .inner-main {
     float: left;
     width:90%;
-    height: 94%;
+    height: 90%;
     margin: 5%;
   }
 
@@ -18,7 +22,7 @@
     float: left;
     width:90%;
     right:10%;
-    height: 87vh;
+    height: 85vh;
 
     .title-container {
       float: left;
@@ -52,12 +56,12 @@
       float: left;
       width:80%;
       font-weight: bold;
-      font-size: 150%;
+      font-size: 165%;
 
       .pause-text-container {
         float: left;
         width:100%;
-        height: 90%;
+        height: 50%;
         line-height: 1em;
         
         .pause-text-deco {
@@ -75,10 +79,12 @@
         float: left;
         width:100%;
         height: 50%;
+        margin-top: 2%;
         line-height: 1.6em;
+
         .skip-text-deco {
           text-decoration: inherit;
-    	  color: black !important;
+    	    color: black !important;
         }
         .skip-text-deco:hover {
           text-decoration: inherit;

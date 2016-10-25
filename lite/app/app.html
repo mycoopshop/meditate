@@ -10,16 +10,16 @@
    <div class="content-backdrop"></div>
    <ion-content style="background-color: #999898;">
       <ion-list right>
-        <div *ngFor="let p of pages" (click)="openPage(p)">
+        <div *ngFor="let p of pages">
           <div *ngIf="(p.type == 'main menu')">
              <div class="main-menu-container animated fadeInUp">
+                <!-- <a style="text-decoration:none;color:#000" (click)="openPage(p)">{{p.title}}</a> -->
                 {{p.title}}
              </div>
           </div>
           <div *ngIf="(p.type == 'sub menu')">
              <div class="sub-menu-container animated lisgtSlidIn">
-                <a href="{{p.component}}">{{p.title}}</a>
-                <!-- <a>{{p.title}}</a> -->
+                <a (click)="viewPage(p.component)">{{p.title}}</a>
              </div>
           </div>
         </div>

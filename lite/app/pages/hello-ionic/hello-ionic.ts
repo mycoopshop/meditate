@@ -23,7 +23,7 @@ export class HelloIonicPage {
   @ViewChild('mySlider') slider: Slides;
   slides: Slide[];
 
-  constructor(private navController: NavController) {
+  constructor(public navController: NavController) {
 
     this.slides = [
       {id: 1,  author: "-Osho",          title: "Relax, let go. But remember only one thing: You are a witness."},

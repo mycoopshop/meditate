@@ -6,10 +6,10 @@
      <ion-title>Hello Ionic</ion-title>
    </ion-navbar> full-div-hide
    </ion-header> -->
-<ion-header>
-   <!-- <meta http-equiv="refresh" content="5;url=http://ionicframework.com/docs/v2/getting-started/tutorial/navigation/" /> -->
-   <!-- <meta http-equiv="refresh" content="3;url=build/pages/menu/menu.html" /> -->
-</ion-header>
+<!-- <ion-header>
+   <meta http-equiv="refresh" content="5;url=http://ionicframework.com/docs/v2/getting-started/tutorial/navigation/" />
+   <meta http-equiv="refresh" content="3;url=build/pages/menu/menu.html" />
+</ion-header> -->
 <ion-content class="getting-started">
    <div class="main-container">
       <div class="inner-main" id="#">
@@ -18,8 +18,7 @@
                <ion-slides #mySlider  [options]="mySlideOptions">
                   <ion-slide *ngFor="let quote of slides">
                      <div class="myslider">
-                        <div class="#" [innerHTML]="quote.title"></div>
-                           <br>
+                        <div class="quote-container" [innerHTML]="quote.title"></div>
                         <div [innerHTML]="quote.author"></div>
                      </div>
                   </ion-slide>
