@@ -53,6 +53,7 @@ class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
+      this.registerBackButtonListener();
       StatusBar.styleDefault();
     });
   }
@@ -67,6 +68,12 @@ class MyApp {
     this.nav.push(ViewPage, {
       url: url
     });
+  }
+
+  registerBackButtonListener() {
+   document.addEventListener('backbutton', () => {
+   //console.log("back press");
+   });
   }
   
 }

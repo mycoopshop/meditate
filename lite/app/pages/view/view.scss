@@ -70,3 +70,20 @@ iframe {position:absolute;
    height: 63%;
 }
 
+.back-view-container {
+    float: left;
+    width: 90%;
+    height: 5vh;
+    margin: -15% 0% 0% 3%;
+    cursor:pointer;
+  
+    .back-text {
+      float: right;
+      width: 17%;
+      height: 100%;
+      font-size: 130%;
+      color: #585353;
+      font-weight: bold;
+    }
+}
+
