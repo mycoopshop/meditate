@@ -71,8 +71,8 @@ class MyApp {
   }
 
   registerBackButtonListener() {
-   document.addEventListener('backbutton', () => {
-   //console.log("back press");
+     document.addEventListener('backbutton', () => {
+     console.log("back press");
    });
   }
   
