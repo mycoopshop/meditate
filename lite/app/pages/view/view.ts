@@ -40,9 +40,17 @@ export class ViewPage {
   } 
 
   goBack() {
-    this.nav.push(ListPage, {
-      menuId: this.parentId
-    });
+    if(this.parentId != null)
+    {
+      this.nav.push(ListPage, {
+        menuId: this.parentId
+      });
+    }
+    else
+    {
+      this.nav.pop();
+    }
+    
   }
 
 }

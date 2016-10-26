@@ -221,18 +221,18 @@
   }
 
   .back-container {
-    float: left;
-    width: 30%;
+    float: right !important;
+    width: 20% !important;
     height: 5vh;
-    margin: -9% 0% 0% 3%;
+    margin: -12% 0% 0% 3%;
     cursor:pointer;
   
     .back-text {
-      float: left;
+      float: right !important;
       width: 100%;
       height: 100%;
-      font-size: 120%;
-      color: #888;
+      font-size: 130% !important;
+      color: #585353 !important;
       font-weight: bold;
     }
   }
