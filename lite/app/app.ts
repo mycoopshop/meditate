@@ -72,8 +72,8 @@ class MyApp {
 
   registerBackButtonListener() {
      document.addEventListener('backbutton', () => {
-     //console.log("back press");
-   });
+     console.log("back press");
+   },false);
   }
   
 }
