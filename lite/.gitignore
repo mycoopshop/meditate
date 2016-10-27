@@ -2,6 +2,7 @@
 # http://git-scm.com/docs/gitignore
 
 www/build/
+platforms/
 *.swp
 .DS_Store
 Thumbs.db
