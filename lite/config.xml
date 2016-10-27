@@ -70,13 +70,24 @@
   <preference name="DisallowOverscroll" value="true"/>
   <preference name="android-minSdkVersion" value="16"/>
   <preference name="BackupWebStorage" value="none"/>
+
+  <preference name="ShowSplashScreen" value="true"/>
   <preference name="SplashScreen" value="screen"/>
+  <preference name="SplashScreenDelay" value="30000"/>
+  <preference name="AutoHideSplashScreen" value="false"/>
+  <preference name="SplashShowOnlyFirstTime" value="false"/>
+  <preference name="FadeSplashScreen" value="false"/>
+  <feature name="SplashScreen">
+    <param name="android-package" value="org.apache.cordova.splashscreen.SplashScreen"/>
+  </feature>
+  
+  <!-- <preference name="SplashScreen" value="screen"/>
   <preference name="SplashScreenDelay" value="200"/>
   <preference name="FadeSplashScreenDuration" value="12500"/>
   <preference name="ShowSplashScreen" value="0"/>
   <preference name="AutoHideSplashScreen" value="true"/>
   <preference name="SplashShowOnlyFirstTime" value="true"/>
-  <preference name="FadeSplashScreen" value="true"/>
+  <preference name="FadeSplashScreen" value="true"/> -->
   <feature name="StatusBar">
     <param name="ios-package" onload="true" value="CDVStatusBar"/>
   </feature>

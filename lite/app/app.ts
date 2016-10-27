@@ -1,6 +1,6 @@
 import {ionicBootstrap, Platform, MenuController, Nav}  from 'ionic-angular';
 import {Component, ViewChild}                           from '@angular/core';
-import {StatusBar}       from 'ionic-native';
+import {StatusBar, Splashscreen}                        from 'ionic-native';
 import {HelloIonicPage}  from './pages/hello-ionic/hello-ionic';
 import {ListPage}        from './pages/list/list';
 import {PopUpPage}       from './pages/pop-up/pop-up';
@@ -24,6 +24,9 @@ class MyApp {
     ) 
   {
     this.initializeApp();
+    this.platform.registerBackButtonAction(function(e) {
+      e.preventDefault();
+    }, 1000);
 
     this.pages = [
       { title: 'WELCOME',                    type: 'main menu',  component: VideoPage },
@@ -53,7 +56,6 @@ class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      this.registerBackButtonListener();
       StatusBar.styleDefault();
     });
   }
@@ -70,11 +72,11 @@ class MyApp {
     });
   }
 
-  registerBackButtonListener() {
-     document.addEventListener('backbutton', () => {
-     console.log("back press");
-   },false);
-  }
+  // registerBackButtonListener() {
+  //    document.addEventListener('backbutton', () => {
+  //    console.log("back press");
+  //  },false);
+  // }
   
 }
 
