@@ -58,8 +58,17 @@ class MyApp {
     this.platform.ready().then(() => {
       StatusBar.styleDefault();
       Splashscreen.hide();
+      // this.hideSplashScreen();
     });
   }
+
+  // hideSplashScreen() {
+  //   if (Splashscreen) {
+  //     setTimeout(() => {
+  //       Splashscreen.hide();
+  //     }, 100);
+  //   }
+  // }
 
   openPage(page) {
     this.menu.close();
