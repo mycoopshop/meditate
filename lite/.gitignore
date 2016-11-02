@@ -1,8 +1,7 @@
 # Specifies files to intentionally ignore when using Git
 # http://git-scm.com/docs/gitignore
 
-plugin/
-node_modules/
+
 www/build/
 platforms/
 *.swp
