@@ -1,0 +1,55 @@
+{
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-console": {
+            "PACKAGE_NAME": "com.ionicframework.lite619891"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "com.ionicframework.lite619891"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "com.ionicframework.lite619891"
+        },
+        "cordova-plugin-statusbar": {
+            "PACKAGE_NAME": "com.ionicframework.lite619891"
+        },
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "com.ionicframework.lite619891"
+        },
+        "ionic-plugin-keyboard": {
+            "PACKAGE_NAME": "com.ionicframework.lite619891"
+        },
+        "cordova-plugin-inappbrowser": {
+            "PACKAGE_NAME": "com.ionicframework.lite619891"
+        },
+        "cordova-labs-wkwebview-engine-localhost": {
+            "PACKAGE_NAME": "com.ionicframework.lite619891"
+        },
+        "cordova-plugin-ace": {
+            "PACKAGE_NAME": "com.ionicframework.lite619891"
+        },
+        "com.telerik.plugins.nativepagetransitions": {
+            "PACKAGE_NAME": "com.ionicframework.lite619891"
+        }
+    },
+    "dependent_plugins": {
+        "cordova-plugin-compat": {
+            "PACKAGE_NAME": "com.ionicframework.lite619891"
+        },
+        "cordova-plugin-file": {
+            "PACKAGE_NAME": "com.ionicframework.lite619891"
+        },
+        "cordova-labs-local-webserver": {
+            "PACKAGE_NAME": "com.ionicframework.lite619891"
+        },
+        "cordova-plugin-wkwebview-engine": {
+            "PACKAGE_NAME": "com.ionicframework.lite619891"
+        }
+    }
+}
