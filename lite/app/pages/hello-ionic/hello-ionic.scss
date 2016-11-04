@@ -50,13 +50,15 @@
   .bottom-inner-container {
     float: left;
     width:100%;
-    height: 5%;
+    height: 2%;
 
     .pause-me-now {
       float: left;
       width:80%;
       font-weight: bold;
-      font-size: 165%;
+      font-size: 130%;
+      text-align: left;
+
 
       .pause-text-container {
         float: left;
@@ -98,7 +100,6 @@
       float: left;
       width: 90%;
       height: 96%;
-      margin-top: 5%;
 
         button {
           background-color: transparent ;
@@ -112,13 +113,11 @@
           .human-being-title {
             float: left;
             width: 76%;
-            margin: 2% -7%;
           }
           .up-arrow-container {
-            width: 14%;
+            width: 13%;
             float: right;
-            margin: 2% 3% 0% 0%;
-            height: 25%;
+            height: 4vh;
           }
         }
     }
@@ -128,7 +127,7 @@
       width: 88%;
       height: 65%;
       float: left;
-      margin: 5% 0% 0% 0%;
+      margin: 5% 0% 0% 5%;
 
       .top-inner-container {
         width: 100%;
@@ -282,4 +281,12 @@
   float:teft;
   width:10%;
   height:40%;
+}
+.slide-zoom {
+      height: 100%;
+   }
+
+ion-slide img {
+    height: 23vh !important;
+    width: 100% !important;
 }

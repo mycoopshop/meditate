@@ -1,10 +1,9 @@
-import {Component} from '@angular/core';
 import {NavController, NavParams, Content} from 'ionic-angular';
-import {ListPage} from '../list/list';
-import {MenuPage} from '../menu/menu';
-import {PopUpPage} from '../pop-up/pop-up';
-import { Slides } from 'ionic-angular';
-import { ViewChild } from '@angular/core';
+import {Component, ViewChild}     from '@angular/core';
+import {PopUpPage}    from '../pop-up/pop-up';
+import {ListPage}     from '../list/list';
+import {MenuPage}     from '../menu/menu';
+import { Slides }     from 'ionic-angular';
 
 interface Slide {
   id: number;
@@ -110,7 +109,17 @@ export class HelloIonicPage {
   onSlideChanged() {
     let currentIndex = this.slider.getActiveIndex();
     this.slider.slideTo(currentIndex, 10);
-    //console.log("Current index is", currentIndex);
   }
+
+  myMainSlideOptions = {
+    initialSlide: 0,
+    loop: false,
+    autoplay: 4700,
+    direction:"horizontal",
+    speed: 6000,
+    allowSwipeToPrev: false,
+    allowSwipeToNext: true,
+    autoplayStopOnLast: true
+  };
 
 }

@@ -6,106 +6,108 @@
      <ion-title>Hello Ionic</ion-title>
    </ion-navbar> full-div-hide
    </ion-header> -->
-<!-- <ion-header>
-   <meta http-equiv="refresh" content="5;url=http://ionicframework.com/docs/v2/getting-started/tutorial/navigation/" />
-   <meta http-equiv="refresh" content="3;url=build/pages/menu/menu.html" />
-</ion-header> -->
 <ion-content class="getting-started">
    <div class="main-container">
-      <div class="inner-main" id="#">
-         <div class="top-inner-main-container">
-            <div class="title-containermyslider">
-               <ion-slides #mySlider  [options]="mySlideOptions">
-                  <ion-slide *ngFor="let quote of slides">
-                     <div class="myslider">
-                        <div class="quote-container" [innerHTML]="quote.title"></div>
-                        <div [innerHTML]="quote.author"></div>
-                     </div>
-                  </ion-slide>
-               </ion-slides>
-            </div>
-         </div>
-         <div class="bottom-inner-container">
-            <div class="bottom-inner-container">
-               <div class="pause-me-now">
-                    <div  (ionDidChange)="onSlideChanged()" class="pause-text-container">
-                       <a href="#" class="pause-me pause-text-deco">Pause</a>
-                    </div>
-                  <div class="skip-text-container">
-                     <a class="skip-text-deco" href="#menu-show" [navPush]="menuPage">Skip</a>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </div>
-      <!-- <div class="swiper-slide">
-         <div class="home-page-container" id="menu-show">
-            <div class="home-page-main-title">
-               <div class="human-being-title">
-                  <ion-row responsive-sm>
-                     <ion-col width80>
-                        <img src="img/logo-the-art.png" width="80" height="80">
-                     </ion-col>
-                  </ion-row>
-               </div>
-               <button class="up-arrow-container" menuToggle>
-               <img src="img/greater-than.png" width="15" height="25">
-               </button>
-            </div>
-            <div class="home-inner-main-container">
-               <div class="top-inner-container">
-                  <div class="top-right-border">
-                  </div>
-               </div>
-               <div class="middle-inner-container">
-                  <div class="mid-left-container">
-                     <div class="side-left-top-border">
-                     </div>
-                  </div>
-                  <div class="mid-center-container background-blinker">
-                     <div class="mid-center-top-container">
-                        <div class="explore-outer-container">
-                           <button class="explore-rotate-text" (click)="itemTappedTwo($event, menuId)">
-                           Explore
-                           </button>
+      <ion-slides #mySlider  [options]="myMainSlideOptions">
+         <ion-slide>
+            <div class="inner-main" id="#">
+               <div class="top-inner-main-container">
+                  <div class="title-containermyslider">
+                     <ion-slides #mySlider  [options]="mySlideOptions">
+                     <ion-slide *ngFor="let quote of slides">
+                        <div class="myslider">
+                           <div class="quote-container" [innerHTML]="quote.title"></div>
+                           <div [innerHTML]="quote.author" ></div>
                         </div>
-                        <div class="challenges-outer-container">
-                           <button class="challenges-simple-text" (click)="itemTappedOne($event, menuId)">
-                           Challenges
-                           </button>
-                        </div>
-                     </div>
-                     <div class="mid-center-middle-container">
-                     </div>
-                     <div class="mid-center-bottom-container">
-                        <div class="meditate-main-container">
-                           <button class="meditate-rotate-text" (click)="itemTappedThree($event, menuId)">
-                           Meditate Now
-                           </button>
-                        </div>
-                        <div class="read-main-container">
-                           <div class="read-inner-container" >
-                              <button class="read-text" (click)="itemTappedFour($event, menuId)">
-                              Read
-                              </button>
-                           </div>
-                        </div>
-                     </div>
-                  </div>
-                  <div class="mid-right-container">
-                     <div class="top-right-empty-border">
-                     </div>
-                     <div class="side-right-bottom-border">
-                     </div>
+                     </ion-slide>
+                     </ion-slides>
                   </div>
                </div>
                <div class="bottom-inner-container">
-                  <div class="bottom-left-border">
+                  <div class="bottom-inner-container">
+                     <div class="pause-me-now">
+                        <div  (ionDidChange)="onSlideChanged()" class="pause-text-container">
+                           <a href="#" class="pause-me pause-text-deco">Pause</a>
+                        </div>
+                        <div class="skip-text-container">
+                         <a class="skip-text-deco" href="#menu-show"[navPush]="menuPage">Skip</a>
+                        </div>
+                     </div>
                   </div>
                </div>
             </div>
-         </div>
-      </div> -->
+         </ion-slide>
+         <ion-slide>
+            <div class="swiper-slide">
+               <div class="home-page-container menu-page-show" id="menu-show">
+                  <div class="home-page-main-title">
+                     <div class="human-being-title animated zoomIn">
+                        <ion-row responsive-sm>
+                           <ion-col width80>
+                              <img src="img/logo-the-art.png" width="80" height="80">
+                           </ion-col>
+                        </ion-row>
+                     </div>
+                     <button class="up-arrow-container" menuToggle>
+                     <img src="img/greater-than.png" width="15" height="25">
+                     </button>
+                  </div>
+                  <div class="home-inner-main-container">
+                     <div class="top-inner-container">
+                        <div class="top-right-border">
+                        </div>
+                     </div>
+                     <div class="middle-inner-container">
+                        <div class="mid-left-container">
+                           <div class="side-left-top-border">
+                           </div>
+                        </div>
+                        <div class="mid-center-container background-blinker">
+                           <div class="mid-center-top-container">
+                              <div class="explore-outer-container animated zoomIn">
+                                 <button class="explore-rotate-text" (click)="itemTappedTwo($event, menuId)">
+                                 Explore
+                                 </button>
+                              </div>
+                              <div class="challenges-outer-container animated zoomIn">
+                                 <button class="challenges-simple-text" (click)="itemTappedOne($event, menuId)">
+                                    Challenges
+                                 </button>
+                              </div>
+                           </div>
+                           <div class="mid-center-middle-container">
+                           </div>
+                           <div class="mid-center-bottom-container">
+                              <div class="meditate-main-container animated zoomIn">
+                               <button class="meditate-rotate-text" (click)="itemTappedThree($event, menuId)">
+                                 Meditate Now
+                              </button>
+                              </div>
+                              <div class="read-main-container animated zoomIn">
+                                 <div class="read-inner-container" >
+                                    <button class="read-text" (click)="itemTappedFour($event, menuId)">
+                                    Read
+                                    </button>
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                        <div class="mid-right-container">
+                           <div class="top-right-empty-border">
+                           </div>
+                           <div class="side-right-bottom-border">
+                           </div>
+                        </div>
+                     </div>
+                     <div class="bottom-inner-container">
+                        <div class="bottom-left-border">
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </ion-slide>
+      </ion-slides>
    </div>
 </ion-content>
 <style type="text/css">
@@ -120,6 +122,11 @@
    }
    .swiper-slide {
       background-color: transparent;
+   }
+
+   ion-slide img {
+    height: 23vh !important;
+    width: 100% !important;
    }
 </style>
 
