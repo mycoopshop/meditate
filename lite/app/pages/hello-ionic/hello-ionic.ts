@@ -92,7 +92,7 @@ export class HelloIonicPage {
     this.navController.push(MenuPage);
   }
 
-  // slide quotes
+  // quotes slider
   mySlideOptions = {
     initialSlide: 0,
     loop: true,
@@ -111,12 +111,13 @@ export class HelloIonicPage {
     this.slider.slideTo(currentIndex, 10);
   }
 
+  // home page slider
   myMainSlideOptions = {
     initialSlide: 0,
     loop: false,
-    autoplay: 4700,
+    autoplay: 22100,
     direction:"horizontal",
-    speed: 6000,
+    speed: 5000,
     allowSwipeToPrev: false,
     allowSwipeToNext: true,
     autoplayStopOnLast: true

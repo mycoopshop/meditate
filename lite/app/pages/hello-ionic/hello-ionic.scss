@@ -117,7 +117,7 @@
           .up-arrow-container {
             width: 13%;
             float: right;
-            height: 4vh;
+            height: 3.8vh;
           }
         }
     }
@@ -282,11 +282,7 @@
   width:10%;
   height:40%;
 }
-.slide-zoom {
-      height: 100%;
-   }
 
-ion-slide img {
-    height: 23vh !important;
-    width: 100% !important;
+.slide-zoom {
+  height: 100%;
 }
