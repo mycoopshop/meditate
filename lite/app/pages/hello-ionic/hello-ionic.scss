@@ -4,7 +4,7 @@
     float: left;
     width:100%;
     height: 100%;
-    background-color: #939598;
+    background-color: gray;
   }
   .quote-container {
     float: left;
@@ -27,7 +27,7 @@
     .title-container {
       float: left;
       font-size: 180%;
-      font-family: sans-serif;
+      font-family: sans_medium;
       text-transform: uppercase;
       font-weight: bold;
 
@@ -123,7 +123,7 @@
     }
 
     .home-inner-main-container {
-      background-color: #939598;
+      background-color: gray;
       width: 88%;
       height: 65%;
       float: left;
@@ -165,6 +165,7 @@
         height: 100%;
         float: left;
         border: 3px solid black;
+        font-family: sans_medium;
         
         
         .mid-center-top-container {
@@ -180,9 +181,9 @@
             .explore-rotate-text {
               transform: rotate(90deg);
               float: left;
-              font-size: 19px;
-              margin-top: 105%;
-              margin-left: -139%;
+              font-size: 22px;
+              margin-top: 75%;
+              margin-left: -160%;
               font-weight: bold;
               color : #000;
               text-transform: uppercase;
@@ -197,10 +198,10 @@
             .challenges-simple-text {
               font-weight: bold;
               text-transform: uppercase;
-              font-size: 19px;
+              font-size: 22px;
               float: right;
               color : #000;
-              margin: 0% -8% 0% 0%;
+              margin: -12% -14% 0% 0%;
             }
             
           }
@@ -225,9 +226,9 @@
             .meditate-rotate-text {
               font-weight: bold;
               text-transform: uppercase;
-              font-size: 19px;
+              font-size: 22px;
               color : #000;
-              margin: 60% 0% 0% -5%;
+              margin: 59% 0% 0% -10%;
             }
           }
 
@@ -245,11 +246,11 @@
               .read-text {
                 float: right;
                 color : #000;
-                font-size: 19px;
+                font-size: 22px;
                 font-weight: bold;
                 transform: rotate(90deg);
                 text-transform: uppercase;
-                margin: 20% -80% -5% -4%;
+                margin: 20% -130% 0% 0%;
               }
             }
           }

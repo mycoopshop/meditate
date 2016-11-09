@@ -12,7 +12,7 @@
       min-heightt: 100%;
    }
    .bg-color {
-      background-color: #999;
+      background-color: gray;
       height: 100%;
    }
 
@@ -20,7 +20,7 @@
       float: left;
       width: 100%;
       height: 35%;
-      margin: 0% 0% 12% 0%;
+      margin: 15% 0% 15% 0%;
       // align-items: center;
       // position: relative;
       // top: 50%;
@@ -42,12 +42,12 @@
    .center-menu-container {
       float: left;
       width: 100%;
-      height: 100px;
+      height: 110px;
    }
    .inner-border-box {
       float: left;
       width: 94%;
-      height: 82%;
+      height: 90%;
       border: 5px solid #000;
    }
    
@@ -70,7 +70,7 @@
    .inner-border-html-box {
       float: left;
       width: 100%;
-      height: 82%;
+      height: 90%;
       border-bottom: 5px solid #000;
    }
    .html-menu-title-container {
@@ -83,7 +83,6 @@
       float: left;
       margin: 3% 0% 0% 5%;
       font-size: 16px;
-      font-family: -webkit-body;
       color: #000;
       word-wrap: break-word;
       text-align: left;
@@ -108,11 +107,12 @@
    .top-text-container {
       float: left;
       width: 100%;
-      height: 83%;
+      height: 90%;
    }
    .bottom-icon-container {
       float: left;
       width: 100%;
+      margin-top:-10px;
    }
    .floating-boarder1 {
       float: left;
@@ -123,13 +123,13 @@
   .floating-boarder2 {
       float: left;
       width: 2%;
-      height: 82.1px;
+      height: 99px;
       background-color: #000;
    }
    .floating-boarder3 {
       float: left;
       width: 2%;
-      height: 82px;
+      height: 99px;
       background-color: #000;
    }
    .menu-title-container {
@@ -141,8 +141,8 @@
    .menu-title {
       float: left;
       margin: 3% 0% 0% 5%;
-      font-size: 122%;
-      font-family: -webkit-body;
+      font-size: 150%;
+      font-family: sans_medium;
       color: #000;
       word-wrap: break-word;
       font-weight: bold;
@@ -214,6 +214,8 @@
   .gb-color {
     background-color: gray;
     height: 8%;
+    box-shadow: 0px -3px 5px rgba(0,0,0,0.15);
+    border-top: 2px solid gray;
   }
 
   .manage-me {

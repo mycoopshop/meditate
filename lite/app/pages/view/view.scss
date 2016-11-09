@@ -29,6 +29,8 @@ ion-slide img {
 .gb-color {
   background-color: gray;
   height: 8%;
+  box-shadow: 0px -3px 5px rgba(0,0,0,0.15);
+  border-top: 2px solid gray;
 }
 .manage-me {
   margin-top: 5%;
@@ -41,7 +43,7 @@ ion-slide img {
 }
 
 .gray-background {
-  background-color: #999;
+  background-color: gray;
   height: 100%;
 }
 

@@ -8,17 +8,17 @@
       </div>
    </ion-row>
    <div class="content-backdrop"></div>
-   <ion-content style="background-color: #999898;">
+   <ion-content style="background-color: gray;">
       <ion-list right>
         <div *ngFor="let p of pages">
           <div *ngIf="(p.type == 'main menu')">
-             <div class="main-menu-container animated fadeInUp">
-                <!-- <a style="text-decoration:none;color:#000" (click)="openPage(p)">{{p.title}}</a> -->
+             <div class="main-menu-container module animated fadeInUp">
+                <!-- <a style="text-decoration:none;color:#000" (click)="openPage(p)">{{p.title}}</a> --> 
                 {{p.title}}
              </div>
           </div>
           <div *ngIf="(p.type == 'sub menu')">
-             <div class="sub-menu-container animated lisgtSlidIn">
+             <div class="sub-menu-container module animated fadeInUp">
                 <a (click)="viewPage(p.component)">{{p.title}}</a>
              </div>
           </div>
@@ -32,21 +32,20 @@
 </ion-menu>
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
 
-<link rel="stylesheet" type="text/css" href="/assets/fonts/MuseoSansRounded-300.ttf">
+
 <style type="text/css">
   .main-menu-container {
     width: 70%;
     float: left;
-    margin: 7% 0% 0% 25%;
+    margin: 5% 0% 0% 25%;
     text-transform: uppercase;
     font-size: 16px;
-    font-family: MuseoSansRounded;
   }
   .sub-menu-container {
     width: 70%;
     float: left;
     font-size: 16px;
-    margin: 1.3% 0% 0% 30%;
+    margin: 0% 0% 0% 30%;
   }
   .sub-menu-container a {
     text-decoration: none;
@@ -57,14 +56,14 @@
     color: #fff;
   }
   .toolbar-background {
-    background-color: #999 !important;
+    background-color: gray !important;
   }
   .side-menu {
     width: 100%;
     opacity: 0.97;
   }
   .title-main-container {
-    background-color: #999;
+    background-color: gray;
     text-align: left;
     padding: 4% 0% 1% 5%;
     color: #000;
@@ -73,7 +72,7 @@
   .inner-title {
     float: left;
     width: 88%;
-    background-color: #999;
+    background-color: gray;
     font-size: 32px;
   }
   .top-toggle {
