@@ -3,7 +3,7 @@
   <name>Mindfulness</name>
   <description>An app to lead towards maditatetion.</description>
   <author email="hi@ionicframework" href="http://ionicframework.com/">Mindfulness Team</author>
-  <content src="http://localhost:0"/>
+  <content src="index.html"/>
   <access origin="*"/>
   <allow-intent href="http://*/*"/>
   <allow-intent href="https://*/*"/>
