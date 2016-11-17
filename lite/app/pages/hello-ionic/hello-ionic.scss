@@ -186,6 +186,8 @@
               float: left;
               font-size: 22px;
               margin-top: 80%;
+              font-kerning: inherit;
+              font-family: sans_medium;
               margin-left: -164%;
               font-weight: bold;
               color : #000;
@@ -201,6 +203,8 @@
             .challenges-simple-text {
               font-weight: bold;
               text-transform: uppercase;
+              font-kerning: inherit;
+              font-family: sans_medium;
               font-size: 22px;
               float: right;
               color : #000;
@@ -229,6 +233,8 @@
             .meditate-rotate-text {
               font-weight: bold;
               text-transform: uppercase;
+              font-kerning: inherit;
+              font-family: sans_medium;
               font-size: 22px;
               color : #000;
               margin: 60% 0% 0% -10%;
@@ -249,6 +255,8 @@
               .read-text {
                 float: right;
                 color : #000;
+                font-kerning: inherit;
+                font-family: sans_medium;
                 font-size: 22px;
                 font-weight: bold;
                 transform: rotate(90deg);

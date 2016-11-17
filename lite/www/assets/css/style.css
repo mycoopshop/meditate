@@ -16,6 +16,7 @@ body {
     font-family: sans_regular !important;
     /*font-size: 15px;*/
     text-align: justify;
+    font-kerning: inherit;
     /*line-height:1.5;*/	
 }
 

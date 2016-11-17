@@ -98,6 +98,8 @@
               transform: rotate(90deg);
               float: left;
               font-size: 22px;
+              font-kerning: inherit;
+              font-family: sans_medium;
               margin-top: 80%;
               margin-left: -164%;
               font-weight: bold;
@@ -115,6 +117,8 @@
             .challenges-simple-text {
               font-weight: bold;
               text-transform: uppercase;
+              font-kerning: inherit;
+              font-family: sans_medium;
               font-size: 22px;
               float: right;
               color : #000;
@@ -143,6 +147,8 @@
             .meditate-rotate-text {
               font-weight: bold;
               text-transform: uppercase;
+              font-kerning: inherit;
+              font-family: sans_medium;
               font-size: 22px;
               color : #000;
               margin: 60% 0% 0% -10%;
@@ -164,6 +170,8 @@
                 float: right;
                 color : #000;
                 font-size: 22px;
+                font-kerning: inherit;
+                font-family: sans_medium;
                 font-weight: bold;
                 transform: rotate(90deg);
                 text-transform: uppercase;
