@@ -29,8 +29,8 @@
                         <div  (ionDidChange)="onSlideChanged()" class="pause-text-container">
                            <a href="#" class="pause-me pause-text-deco">Pause</a>
                         </div>
-                        <div class="skip-text-container">
-                         <a class="skip-text-deco" href="#menu-show"[navPush]="menuPage">Skip</a>
+                        <div class="skip-text-container"  (click)="navigateSkip()">
+                         <a class="skip-text-deco" href="#menu-show">Skip</a>
                         </div>
                      </div>
                   </div>

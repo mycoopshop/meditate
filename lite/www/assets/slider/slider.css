@@ -20,8 +20,13 @@ a {
 }
 
 .swiper-container {
+  width: 95vw;
+  height: 170px;
+}
+.swiper-wrapper {
+  float: left;
   width: 100%;
-  height: 40vh;
+  height: 100%;
 }
 
 .swiper-slide {
@@ -42,7 +47,7 @@ a {
     align-items: center;
 }
 
-.swiper-slide imge {
+.swiper-slide img {
     width: 100%;
     height: 100%;
 }

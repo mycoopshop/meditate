@@ -22,7 +22,7 @@
     float: left;
     width:90%;
     right:10%;
-    height: 85vh;
+    height: 82vh;
 
     .title-container {
       float: left;
@@ -64,6 +64,7 @@
         float: left;
         width:100%;
         height: 50%;
+        cursor: pointer;
         line-height: 1em;
         
         .pause-text-deco {
@@ -82,15 +83,17 @@
         width:100%;
         height: 50%;
         margin-top: 2%;
+        z-index: 1000;
+        cursor: pointer;
         line-height: 1.6em;
 
         .skip-text-deco {
           text-decoration: inherit;
-    	    color: black !important;
+          color: black !important;
         }
         .skip-text-deco:hover {
           text-decoration: inherit;
-    	    color: #757070 !important;
+          color: #757070 !important;
         }
       }
     }
@@ -182,8 +185,8 @@
               transform: rotate(90deg);
               float: left;
               font-size: 22px;
-              margin-top: 125%;
-              margin-left: -160%;
+              margin-top: 80%;
+              margin-left: -164%;
               font-weight: bold;
               color : #000;
               text-transform: uppercase;
@@ -201,7 +204,7 @@
               font-size: 22px;
               float: right;
               color : #000;
-              margin: -12% -14% 0% 0%;
+              margin: -24% -14% 0% 0%;
             }
             
           }
@@ -228,7 +231,7 @@
               text-transform: uppercase;
               font-size: 22px;
               color : #000;
-              margin: 59% 0% 0% -10%;
+              margin: 60% 0% 0% -10%;
             }
           }
 

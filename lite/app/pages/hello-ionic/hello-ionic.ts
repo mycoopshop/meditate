@@ -88,7 +88,7 @@ export class HelloIonicPage {
     });
   }
 
-  navigate() {
+  navigateSkip() {
     this.navController.push(MenuPage);
   }
 
