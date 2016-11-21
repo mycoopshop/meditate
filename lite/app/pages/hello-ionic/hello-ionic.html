@@ -26,11 +26,11 @@
                <div class="bottom-inner-container">
                   <div class="bottom-inner-container">
                      <div class="pause-me-now">
-                        <div  (ionDidChange)="onSlideChanged()" class="pause-text-container">
-                           <a href="#" class="pause-me pause-text-deco">Pause</a>
+                        <div class="pause-text-container">
+                           <a href="#" (click)="onSlideChanged()" class="pause-me pause-text-deco">Pause</a>
                         </div>
-                        <div class="skip-text-container"  (click)="navigateSkip()">
-                         <a class="skip-text-deco" href="#menu-show">Skip</a>
+                        <div class="skip-text-container">
+                         <button (click)="navigateSkip()" class="skip-text-deco" href="#">Skip</button>
                         </div>
                      </div>
                   </div>
@@ -116,7 +116,7 @@
    ion-slide div.myslider {
       height: auto !important;
       width: 100% !important;
-      font-size: 210%;
+      font-size: 5vh;
       text-transform: uppercase;
       font-weight: bolder;
       text-align:left;

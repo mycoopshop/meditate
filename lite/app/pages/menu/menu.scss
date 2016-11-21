@@ -28,7 +28,7 @@
       width: 14%;
       float: right;
       margin: 2% 0% 0% 0%;
-      height: 25%;
+      height: 4vh;
     }
   }
 }
@@ -101,7 +101,7 @@
               font-kerning: inherit;
               font-family: sans_medium;
               margin-top: 80%;
-              margin-left: -164%;
+              margin-left: -155%;
               font-weight: bold;
               color : #000;
               text-transform: uppercase;
@@ -124,7 +124,6 @@
               color : #000;
               margin: -24% -14% 0% 0%;
             }
-            
           }
         }
 
@@ -143,7 +142,7 @@
             width: 50%;
             height: 100%;
             float: left;
-                        
+                  
             .meditate-rotate-text {
               font-weight: bold;
               text-transform: uppercase;
@@ -151,7 +150,7 @@
               font-family: sans_medium;
               font-size: 22px;
               color : #000;
-              margin: 60% 0% 0% -10%;
+              margin: 57% 0% 0% -10%;
             }
           }
 
@@ -175,12 +174,13 @@
                 font-weight: bold;
                 transform: rotate(90deg);
                 text-transform: uppercase;
-                margin: 20% -130% 0% 0%;
+                margin: 5% -130% 0% 0%;
               }
             }
           }
         }
       }
+
       .mid-right-container {
         width: 3%;
         height: 100%;
@@ -200,6 +200,7 @@
         }
       }
     }
+
 .bottom-inner-container {
   width: 100%;
   height: 2.3%;
