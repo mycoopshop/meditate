@@ -103,7 +103,7 @@
       float: left;
       width: 70%;
       height: 30%;
-      margin: 7% 15% 0% 5%;
+      margin: 7% 17% 0% 5%;
    }
    .top-text-container {
       float: left;
@@ -213,6 +213,7 @@
     float: right;
     width: 5%;
     margin-top: 6%;
+    img { height:23px; }
   }
 
   .gb-color {
@@ -250,8 +251,7 @@
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
- { /* STYLES GO HERE */ 
-
+ {
   .back-container .back-text img{height:25px;width:20px;}
   .back-container .back-text {font-size:230%;font-weight: bolder;}
   .back-container { margin: -17% 0% 0% 18%;}
@@ -275,4 +275,6 @@ and (max-device-width : 1024px)
   }
   .bottom-arrow-icon img{height:18px;width:22px;}
 
- }
+  .align-me-now img { height:50px; }
+  
+}
