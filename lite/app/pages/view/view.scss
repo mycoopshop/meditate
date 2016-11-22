@@ -94,7 +94,7 @@ iframe {
     font-weight: bold;
   }
 }
-
+/*UI for iPad 768 X 1024*/
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
@@ -103,6 +103,7 @@ and (max-device-width : 1024px)
     width: 71%;
     height: 300px;
   }
+  
   .text-logo img {
     width: 425px;
     height: 220px;
