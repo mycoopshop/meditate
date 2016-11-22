@@ -1,4 +1,4 @@
-<!-- <ion-header>
+<!-- <ion-header> 
    <ion-navbar>
       <button menuToggle right>
       <img src="img/greater-than.png" width="20" height="20">
@@ -8,22 +8,23 @@
       <ion-title>Menu List</ion-title>
    </ion-navbar>
    </ion-header> -->
-<ion-nav-view>
+
    <ion-content overflow-scroll="true" class="background-blinker">
-      <ion-list>
-         <ion-row responsive-sm>
-            <ion-col width-80>
+         <ion-row responsive-md responsive-sm responsive-lg >
+            <ion-col >
                <div class="text-logo animated zoomIn">
-                  <img src="img/logo-the-art.png" width="250" height="135">
+                  <img src="img/logo-the-art.png" >
                </div>
                <span menuToggle class="align-me-now" fab-fixed>
-               <img src="img/greater-than.png" width="15" height="25">
+               <img src="img/greater-than.png" >
                </span>
             </ion-col>
                <div class="back-container" (click)="goBack()">
-                  <div class="back-text animated slideInRight"> <img height="10" src="img/back-me.png" width="8"> Back </div>
+                  <div class="back-text animated slideInRight"> <img src="img/back-me.png" > Back </div>
                </div>
          </ion-row>
+         <ion-nav-view>
+          <ion-list>
          <div class="top-align animated slideInRight">
             <div *ngFor="let menu of subMenus">
                <div class="#" *ngIf="(menu.parent_id == getValue())">
@@ -44,7 +45,7 @@
                                     </div>
                                     <div class="arrow-container">
                                        <div class="arrow-icon">
-                                          <img src="img/greater-than.png" width="8" height="12">
+                                          <img src="img/greater-than.png" >
                                        </div>
                                     </div>
                                  </div>
@@ -79,7 +80,7 @@
                                     </div>
                                     <div class="arrow-container">
                                        <div class="arrow-icon">
-                                          <img src="img/greater-than.png" width="8" height="12">
+                                          <img src="img/greater-than.png" >
                                        </div>
                                     </div>
                                  </div>
@@ -119,7 +120,7 @@
                                        </div>
                                        <div *ngIf="(menu.contain=='none')">
                                           <div class="arrow-icon">
-                                             <img src="img/greater-than.png" width="8" height="12">
+                                             <img src="img/greater-than.png" >
                                           </div>
                                        </div>
                                     </div>
@@ -159,7 +160,7 @@
                                     </div>
                                     <div class="html-arrow-container">
                                        <div class="html-arrow-icon">
-                                          <img src="img/greater-than.png" width="8" height="12">
+                                          <img src="img/greater-than.png" >
                                        </div>
                                     </div>
                                  </div>
@@ -172,8 +173,9 @@
             </div>
          </div>
       </ion-list>
+      </ion-nav-view>
    </ion-content>
-</ion-nav-view>
+
 <ion-footer class="bar-stable gb-color">
    <center class="manage-me" (click)="scrollTo()">
       <img src="img/arrow-down.png" width="25" height="15">

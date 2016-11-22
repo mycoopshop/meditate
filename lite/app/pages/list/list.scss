@@ -50,7 +50,7 @@
       height: 90%;
       border: 5px solid #000;
    }
-   
+
    .HtmlSlideContainer {
      text-align: center;
      margin: 10%;
@@ -97,12 +97,13 @@
    .html-arrow-icon {
      float: right;
      margin: 1%;
+     img{height:12px;}
    }
    .text-logo {
       float: left;
-      width: 87%;
+      width: 70%;
       height: 30%;
-      margin: 7% 0% 0% 5%;
+      margin: 7% 15% 0% 5%;
    }
    .top-text-container {
       float: left;
@@ -159,7 +160,7 @@
       float: left;
       margin: 37% 10% 0% 0%;
    }
-   
+
    .bottom-arrow-icon {
       float: left;
       width: 13%;
@@ -167,6 +168,8 @@
    .arrow-icon {
      float: right;
      margin: 10%;
+
+     img{height:12px;}
    }
 
   .down-scroll-container {
@@ -183,7 +186,7 @@
     -moz-animation: AnimationName 200s ease-in infinite;
     animation: AnimationName 200s ease-in infinite;
   }
-  
+
   @-webkit-keyframes AnimationName {
     0%{background-position:79% 0%}
     50%{background-position:22% 100%}
@@ -194,7 +197,7 @@
     50%{background-position:22% 100%}
     100%{background-position:79% 0%}
   }
-  @keyframes AnimationName { 
+  @keyframes AnimationName {
     0%{background-position:79% 0%}
     50%{background-position:22% 100%}
     100%{background-position:79% 0%}
@@ -207,7 +210,7 @@
 
   .align-me-now {
     float: right;
-    width: 10%;
+    width: 5%;
     margin-top: 6%;
   }
 
@@ -225,16 +228,34 @@
   .back-container {
     float: left;
     width: 90%;
-    height: 5vh;
-    margin: -12% 0% 0% 3%;
+    height: 0vh;
+    margin: -9% 0% 0% 15%;
     cursor:pointer;
-  
+
     .back-text {
       float: right;
-      width: 17%;
+      width: 30%;
       height: 100%;
       font-size: 110%;
       color: #585353;
       font-weight: bold;
+
+      img{height:15px;}
     }
   }
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+ {
+  .back-container .back-text img{height:30px;}
+  .back-container .back-text {font-size:210%;}
+  .back-container { margin: -9% 0% 0% 18%;}
+  .align-me-now {width:4%;}
+  .center-menu-container {height: 210px;}
+  .menu-title { margin: 6% 0% 0% 10%;font-size: 300%; }
+  .html-arrow-icon img, .arrow-icon img{ height:24px; }
+  .html-menu-title{font-size: 32px;}
+	.floating-boarder2 {height: 189px;margin-left: -1px;}
+  .floating-boarder1 {height: 7px;margin-top: -1px;}
+ }
