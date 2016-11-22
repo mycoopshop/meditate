@@ -120,11 +120,11 @@ button {
   width: 76%;
 }
 
-/*.up-arrow-container {
+.up-arrow-container {
   width: 14%;
   float: right;
   height: 4vh;
-}*/
+}
 
 .home-inner-main-container {
   background-color: gray;
@@ -328,13 +328,44 @@ and (max-device-width : 1024px)
     float: left;
     width: 100%;
   }
-  
-  .zoomIn img {
+  .logo {
+    width: 80%;
+  }
+
+  .logo img {
     width: 425px;
     height: 220px;
   }
 
   .align-me-now {
     width:4%;
+  }
+
+  .up-arrow-container {
+    width: 10% !important;
+    float: right;
+    margin-top: 0% !important;
+    height: 5vh !important;
+  }
+
+  .explore-rotate-text {
+    font-size: 40px !important;
+    margin-top: 60% !important;
+    margin-left: -145% !important;
+  }
+
+  .challenges-simple-text {
+    font-size: 40px !important;
+    margin: -22% -10% 0% 0% !important;
+  }
+
+  .meditate-rotate-text  {
+    font-size: 40px !important;
+    margin: 40% 0% 0% -9% !important;
+  }
+
+  .read-text {
+    font-size: 40px !important;
+    margin: -85% -100% 0% 0% !important;
   }
 }

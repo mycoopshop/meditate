@@ -1,10 +1,10 @@
 <ion-menu [content]="content" side="right" class="side-menu">
    <ion-row class="title-main-container">
       <div class = "col-67 inner-title">
-         <img src="img/mindfullness.png" width="245" height="30">
+         <img src="img/mindfullness.png">
       </div>
       <div menuToggle class = "col-20 top-toggle">
-         <img src="img/less-than.png" width="15" height="25">
+         <img src="img/less-than.png">
       </div>
    </ion-row>
    <div class="content-backdrop"></div>
@@ -65,7 +65,7 @@
   .title-main-container {
     background-color: gray;
     text-align: left;
-    padding: 9% 0% 0% 7%;
+    padding: 9% 0% 3% 7%;
     color: #000;
     font-weight: bold;
   }
@@ -75,14 +75,29 @@
     background-color: gray;
     font-size: 32px;
   }
+
+  .inner-title img{width:240px;}
+
   .top-toggle {
     float: left;
     width: 8%;
     margin-top: -1%;
+
   }
+  .top-toggle img{height:30px;/*width:15px;*/}
   .bottom-bar {
     float: left;
     width: 100%;
     height: 20px;
   }
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+{ 
+  .inner-title img{width: 425px;height:50px;}
+  .top-toggle img{height:50px;}
+  .main-menu-container,.sub-menu-container{font-size:32px;}
+  .title-main-container {padding: 7% 0% 0% 7%;}
+  .top-toggle {margin-top:-15px;} 
+}
 </style>
