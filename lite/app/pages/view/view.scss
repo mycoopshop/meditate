@@ -79,18 +79,50 @@ iframe {
 }
 
 .back-view-container {
-    float: left;
-    width: 90%;
-    height: 5vh;
-    margin: -15% 0% 0% 3%;
-    cursor:pointer;
+  float: left;
+  width: 90%;
+  height: 5vh;
+  margin: -15% 0% 0% 3%;
+  cursor:pointer;
   
-    .back-text {
-      float: right;
-      width: 17%;
-      height: 100%;
-      font-size: 110% !important;
-      color: #585353;
-      font-weight: bold;
-    }
+  .back-text {
+    float: right;
+    width: 17%;
+    height: 100%;
+    font-size: 110% !important;
+    color: #585353;
+    font-weight: bold;
+  }
+}
+
+@media only screen
+and (min-device-width : 768px)
+and (max-device-width : 1024px)
+ {
+  .text-logo {
+    width: 71%;
+    height: 300px;
+  }
+  .text-logo img {
+    width: 425px;
+    height: 220px;
+  }
+
+  .back-container .back-text img {
+    height:30px;
+  }
+
+  .back-container .back-text {
+    font-size:210%;
+    margin-top: -50px;
+  }
+
+  .back-container {
+    margin: -10% 0% 0% 18%;
+    z-index: 1;
+  }
+
+  .align-me-now {
+    width:4%;
+  }
 }
