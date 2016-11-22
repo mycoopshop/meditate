@@ -319,9 +319,22 @@ button {
   margin-top: 0%;
 }
 
+/*UI for iPad 768 X 1024*/
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
- { 
+ {
+  .human-being-title {
+    float: left;
+    width: 100%;
+  }
   
- }
+  .zoomIn img {
+    width: 425px;
+    height: 220px;
+  }
+
+  .align-me-now {
+    width:4%;
+  }
+}

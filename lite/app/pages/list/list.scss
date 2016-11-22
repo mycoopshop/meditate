@@ -50,7 +50,7 @@
       height: 90%;
       border: 5px solid #000;
    }
-
+   
    .HtmlSlideContainer {
      text-align: center;
      margin: 10%;
@@ -160,10 +160,11 @@
       float: left;
       margin: 37% 10% 0% 0%;
    }
-
+   
    .bottom-arrow-icon {
       float: left;
       width: 13%;
+      img{width:11px; height:7px;}
    }
    .arrow-icon {
      float: right;
@@ -186,7 +187,7 @@
     -moz-animation: AnimationName 200s ease-in infinite;
     animation: AnimationName 200s ease-in infinite;
   }
-
+  
   @-webkit-keyframes AnimationName {
     0%{background-position:79% 0%}
     50%{background-position:22% 100%}
@@ -197,7 +198,7 @@
     50%{background-position:22% 100%}
     100%{background-position:79% 0%}
   }
-  @keyframes AnimationName {
+  @keyframes AnimationName { 
     0%{background-position:79% 0%}
     50%{background-position:22% 100%}
     100%{background-position:79% 0%}
@@ -223,6 +224,8 @@
 
   .manage-me {
     margin-top: 5%;
+
+    img{ width:30px; height:20px;}
   }
 
   .back-container {
@@ -231,7 +234,7 @@
     height: 0vh;
     margin: -9% 0% 0% 15%;
     cursor:pointer;
-
+  
     .back-text {
       float: right;
       width: 30%;
@@ -240,23 +243,36 @@
       color: #585353;
       font-weight: bold;
 
-      img{height:15px;}
+      img{height:15px; width:12px;}
     }
   }
 
-/*UI for iPad 768 X 1024*/
-@media only screen
-and (min-device-width : 768px)
-and (max-device-width : 1024px)
- {
-  .back-container .back-text img{height:30px;}
-  .back-container .back-text {font-size:210%;}
-  .back-container { margin: -9% 0% 0% 18%;}
-  .align-me-now {width:4%;}
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px) 
+ { /* STYLES GO HERE */ 
+
+  .back-container .back-text img{height:25px;width:20px;}
+  .back-container .back-text {font-size:230%;font-weight: bolder;}
+  .back-container { margin: -17% 0% 0% 18%;}
   .center-menu-container {height: 210px;}
-  .menu-title { margin: 6% 0% 0% 10%;font-size: 300%; }
+  .menu-title {font-size: 280%;font-weight: bolder; }
   .html-arrow-icon img, .arrow-icon img{ height:24px; }
   .html-menu-title{font-size: 32px;}
-	.floating-boarder2 {height: 189px;margin-left: -1px;}
+  .floating-boarder2,.floating-boarder3 {height: 189px;margin-left: -1px;}
   .floating-boarder1 {height: 7px;margin-top: -1px;}
-}
+  .top-align {margin: 8% 0% 15% 0%;}
+  .gb-color {height:10% !important;}
+  .manage-me img{height:40px;width:60px;}
+
+   .text-logo {
+    width: 71%;
+    height: 300px;
+  }
+  .text-logo img {
+    width: 425px;
+    height: 220px;
+  }
+  .bottom-arrow-icon img{height:18px;width:22px;}
+
+ }
