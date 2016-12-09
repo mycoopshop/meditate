@@ -3,7 +3,7 @@
       <ion-title>view Page</ion-title>
    </ion-navbar>
    </ion-header> -->
-<div class="gray-background scroller">
+<ion-content overflow-scroll="true" class="gray-background">
          <ion-row responsive-md responsive-sm responsive-lg >
             <ion-col >
                <div class="text-logo animated zoomIn">
@@ -39,15 +39,15 @@
          <div  (ionDidChange)="onSlideChanged()" class="swiper-button-prev"></div>
          <div (ionWillChange)="onSlideChanged()" class="swiper-button-next"></div>
       </div>
-   </ion-col> -->
+      </ion-col> -->
    <!-- {{page}} -->
-
-   <div class="iframe_container">
-      <iframe class= "animated fadeInUp" id="iframe1" [src]='page' frameborder="0" >
-        <!--  <img src="img/video-icon.png"> -->
-      </iframe><br>
-   </div>
-</div>
+    <div class="iframe_container">
+      <iframe  class= "animated fadeInUp" id="iframe1" [src]='page' frameborder="0" > 
+         <!--  <img src="img/video-icon.png"> -->
+      </iframe>
+      
+   </div> 
+</ion-content>
 <ion-footer class="bar-stable gb-color">
    <center class="manage-me" (click)="scrollTo()">
       <img src="img/arrow-down.png" width="25" height="15">

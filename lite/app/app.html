@@ -8,7 +8,7 @@
       </div>
    </ion-row>
    <div class="content-backdrop"></div>
-   <ion-content style="background-color: gray;">
+   <ion-content style="background-color: gray" bar-light transparent-nav>
       <ion-list right>
         <div *ngFor="let p of pages">
           <div *ngIf="(p.type == 'main menu')">
@@ -34,6 +34,7 @@
 
 
 <style type="text/css">
+
   .main-menu-container {
     width: 70%;
     float: left;

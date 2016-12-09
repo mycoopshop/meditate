@@ -100,8 +100,8 @@
               font-size: 22px;
               font-kerning: inherit;
               font-family: sans_medium;
-              margin-top: 80%;
-              margin-left: -155%;
+              margin-top: 85%;
+              margin-left: -173%;
               font-weight: bold;
               color : #000;
               text-transform: uppercase;
@@ -122,7 +122,7 @@
               font-size: 22px;
               float: right;
               color : #000;
-              margin: -24% -14% 0% 0%;
+              margin: -24% -12% 0% 0%;
             }
           }
         }
@@ -150,7 +150,7 @@
               font-family: sans_medium;
               font-size: 22px;
               color : #000;
-              margin: 57% 0% 0% -10%;
+              margin: 60% 0% 0% -10%;
             }
           }
  
@@ -215,6 +215,11 @@
     margin: 0% 0% 0% 3%;
   }
 }
+
+up-arrow-container img {
+    height: 30vh !important;
+    width: 100% !important;
+   }
 
 /*UI for iPad 768 X 1024*/
 @media only screen
