@@ -62,32 +62,33 @@ overflow: auto;
   width: 100%;
   height: 40%;
 }
+
 .iframe_container {
-  overflow: hidden; 
+  overflow: auto; 
   position: relative; 
   -webkit-overflow-scrolling: touch;
-   height:63%;
-   margin-top: 7%;
+  height: 67%;
 }
 
 iframe {
   position:relative;
+  top: 3%;
+  left: 5%;
   border: 0 !important;
-  width: 100%;
-  height: 100%;
-  padding: 1% 2% 1% 4%;
+  width: 90%;
+  height: 96%;
 }
 
 .back-view-container {
   float: left;
   width: 90%;
   height: 5vh;
-  margin: -15% 0% 0% 3%;
+  margin: -15% 0% 0% 10%;
   cursor:pointer;
   
-  .back-text {
+  .backbtn {
     float: right;
-    width: 17%;
+    width: 30%;
     height: 100%;
     font-size: 110% !important;
     color: #585353;
@@ -114,7 +115,7 @@ and (max-device-width : 1024px)
     height:30px;
   }
 
-  .back-container .back-text {
+  .back-container .backbtn {
     font-size:210%;
     margin-top: -50px;
   }

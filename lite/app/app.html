@@ -8,7 +8,7 @@
       </div>
    </ion-row>
    <div class="content-backdrop"></div>
-   <ion-content style="background-color: gray" bar-light transparent-nav>
+   <ion-content style="background-color: gray">
       <ion-list right>
         <div *ngFor="let p of pages">
           <div *ngIf="(p.type == 'main menu')">
@@ -66,7 +66,7 @@
   .title-main-container {
     background-color: gray;
     text-align: left;
-    padding: 9% 0% 3% 7%;
+    padding: 8% 0% 3% 7%;
     color: #000;
     font-weight: bold;
   }
@@ -77,13 +77,15 @@
     font-size: 32px;
   }
 
-  .inner-title img{width:240px;}
+  .inner-title img {
+    width:240px;
+    height: 4.6vh;
+  }
 
   .top-toggle {
     float: left;
     width: 8%;
-    margin-top: -1%;
-    margin-left: 14px;
+    margin-left: 7px;
 
   }
   .top-toggle img {

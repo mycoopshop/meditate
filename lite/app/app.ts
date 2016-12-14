@@ -56,9 +56,9 @@ class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      StatusBar.styleDefault();
+      StatusBar.overlaysWebView(false);
+      StatusBar.hide();
       Splashscreen.hide();
-      // this.hideSplashScreen();
     });
   }
 
@@ -80,15 +80,8 @@ class MyApp {
     this.nav.push(ViewPage, {
       url: url
     });
-  }
-
-  // registerBackButtonListener() {
-  //    document.addEventListener('backbutton', () => {
-  //    console.log("back press");
-  //  },false);
-  // }
-  
+  }  
 }
-
-ionicBootstrap(MyApp);
+let config = {statusbarPadding: false};
+ionicBootstrap(MyApp,null, config);
 

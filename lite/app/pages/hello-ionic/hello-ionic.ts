@@ -111,11 +111,20 @@ export class HelloIonicPage {
     this.slider.slideTo(currentIndex, 10);
   }
 
+  getRandomIndex(): number {
+    return Math.floor(Math.random() * this.slides.length);
+  }
+
+  newSlide() {
+    let newSlide = this.getRandomIndex();
+    this.slider.slideTo(newSlide,500);
+  }
+
   // home page slider
   myMainSlideOptions = {
     initialSlide: 0,
     loop: false,
-    autoplay: 22100,
+    autoplay: 11000,
     direction:"horizontal",
     speed: 5000,
     allowSwipeToPrev: false,

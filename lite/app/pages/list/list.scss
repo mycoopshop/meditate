@@ -6,9 +6,9 @@
    }
    .slideContainer {
       text-align: center;
-      margin: 0% 20% 0% 20%;
+      margin: 0% 16% 0% 16%;
       float: left;
-      width: 60%;
+      width: 68%;
       min-heightt: 100%;
    }
    .bg-color {
@@ -75,14 +75,14 @@
    }
    .html-menu-title-container {
       float: left;
-      width: 85%;
+      width: 91%;
       height:100%;
       color: #000;
    }
    .html-menu-title {
       float: left;
       margin: 3% 0% 0% 5%;
-      font-size: 16px;
+      font-size: 18px;
       color: #000;
       word-wrap: break-word;
       text-align: left;
@@ -90,7 +90,8 @@
    }
    .html-arrow-container {
       float: left;
-      width: 15%;
+      width: 9%;
+      margin-top: 4%;
       height:100%;
       color: #fff;
    }
@@ -103,8 +104,12 @@
       float: left;
       width: 70%;
       height: 30%;
-      margin: 7% 17% 0% 5%;
+      margin: 5% 17% 0% 5%;
    }
+   .text-logo img {
+    width: 100%;
+    height: 21vh;
+  }
    .top-text-container {
       float: left;
       width: 100%;
@@ -142,11 +147,12 @@
    .menu-title {
       float: left;
       margin: 3% 0% 0% 5%;
-      font-size: 150%;
-      font-family: sans_medium;
+      font-size: 172%;
+      line-height: 95%;
+      font-family: sans-serif;
       color: #000;
       word-wrap: break-word;
-      font-weight: bold;
+      font-weight: bolder;
       text-align: left;
       text-transform: uppercase;
    }
@@ -233,10 +239,10 @@
     float: left;
     width: 90%;
     height: 0vh;
-    margin: -9% 0% 0% 15%;
+    margin: -10% 0% 3% 10%;
     cursor:pointer;
   
-    .back-text {
+    .backbtn {
       float: right;
       width: 30%;
       height: 100%;
@@ -253,7 +259,7 @@ and (min-device-width : 768px)
 and (max-device-width : 1024px) 
  {
   .back-container .back-text img{height:25px;width:20px;}
-  .back-container .back-text {font-size:230%;font-weight: bolder;}
+  .back-container .backbtn {font-size:230%;font-weight: bolder;}
   .back-container { margin: -17% 0% 0% 18%;}
   .center-menu-container {height: 210px;}
   .menu-title {font-size: 280%;font-weight: bolder; }

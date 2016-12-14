@@ -20,7 +20,12 @@
                </span>
             </ion-col>
                <div class="back-container" (click)="goBack()">
-                  <div class="back-text animated slideInRight"> <img src="img/back-me.png" > Back </div>
+                  <div class="back-text animated slideInRight"> 
+                     <button class="button button-clear icon-left backbtn">
+                        <ion-icon name='arrow-back'></ion-icon>
+                          Back
+                     </button>
+                  </div>
                </div>
          </ion-row>
          <ion-nav-view>

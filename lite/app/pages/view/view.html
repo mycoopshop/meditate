@@ -3,20 +3,25 @@
       <ion-title>view Page</ion-title>
    </ion-navbar>
    </ion-header> -->
-<ion-content overflow-scroll="true" class="gray-background">
-         <ion-row responsive-md responsive-sm responsive-lg >
-            <ion-col >
-               <div class="text-logo animated zoomIn">
-                  <img src="img/logo-the-art.png" >
-               </div>
-               <span menuToggle class="align-me-now" fab-fixed>
-               <img src="img/greater-than.png" >
-               </span>
-            </ion-col>
-               <div class="back-container" (click)="goBack()">
-                  <div class="back-text animated slideInRight"> <img src="img/back-me.png" > Back </div>
-               </div>
-         </ion-row>
+<div class="gray-background scroller">
+   <ion-row responsive-sm>
+      <ion-col width-80>
+         <div class="text-logo animated zoomIn">
+            <img src="img/logo-the-art.png" width="250" height="135">
+         </div>
+         <span menuToggle class="align-me-now" fab-fixed>
+            <img src="img/greater-than.png" width="15" height="25">
+         </span>
+      </ion-col>
+         <div class="back-view-container" (click)="goBack()">
+            <div class="back-text animated slideInRight"> 
+               <button class="button button-clear icon-left backbtn">
+                  <ion-icon name='arrow-back'></ion-icon>
+                    Back
+               </button>
+            </div>
+         </div>
+   </ion-row>
    <!-- <ion-col width-100>
       <ion-slides #mySlider  [options]="mySlideOptions">
       <ion-slide>
@@ -39,15 +44,15 @@
          <div  (ionDidChange)="onSlideChanged()" class="swiper-button-prev"></div>
          <div (ionWillChange)="onSlideChanged()" class="swiper-button-next"></div>
       </div>
-      </ion-col> -->
+   </ion-col> -->
    <!-- {{page}} -->
-    <div class="iframe_container">
-      <iframe  class= "animated fadeInUp" id="iframe1" [src]='page' frameborder="0" > 
-         <!--  <img src="img/video-icon.png"> -->
-      </iframe>
-      
-   </div> 
-</ion-content>
+
+   <div class="iframe_container">
+      <iframe class= "animated fadeInUp" id="iframe1" [src]='page' frameborder="0" >
+        <!--  <img src="img/video-icon.png"> -->
+      </iframe><br>
+   </div>
+</div>
 <ion-footer class="bar-stable gb-color">
    <center class="manage-me" (click)="scrollTo()">
       <img src="img/arrow-down.png" width="25" height="15">

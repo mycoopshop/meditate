@@ -14,14 +14,14 @@
   float: left;
   width: 90%;
   height: 90%;
-  margin: 5%;
+  margin: 4% 0% 0% 6%;
 }
 
 .top-inner-main-container {
   float: left;
   width: 90%;
   right: 10%;
-  height: 82vh;
+  height: 84.3vh;
 }
 
 .title-container {
@@ -129,7 +129,7 @@ button {
 .home-inner-main-container {
   background-color: gray;
   width: 88%;
-  height: 65%;
+  height: 68%;
   float: left;
   margin: 5% 0% 0% 5%;
 }
@@ -191,12 +191,13 @@ button {
 .explore-rotate-text {
   transform: rotate(90deg);
   float: left;
-  font-size: 22px;
+  font-size: 25px;
   font-kerning: inherit;
   font-family: sans_medium;
-  margin-top: 85%;
+  margin-top: 87%;
   margin-left: -173%;
   font-weight: bold;
+  letter-spacing: -2px;
   color: #000;
   text-transform: uppercase;
 }
@@ -208,14 +209,15 @@ button {
 }
 
 .challenges-simple-text {
-  font-weight: bold;
+  font-weight: bolder;
   text-transform: uppercase;
   font-kerning: inherit;
   font-family: sans_medium;
-  font-size: 22px;
+  font-size: 25px;
+  letter-spacing: -2px;
   float: right;
   color: #000;
-  margin: -24% -12% 0% 0%;
+  margin: -24% -10% 0% 0%;
 }
 
 .mid-center-middle-container {
@@ -237,13 +239,14 @@ button {
 }
 
 .meditate-rotate-text {
-  font-weight: bold;
+  font-weight: bolder;
   text-transform: uppercase;
   font-kerning: inherit;
   font-family: sans_medium;
-  font-size: 22px;
+  font-size: 25px;
+  letter-spacing: -2px;
   color: #000;
-  margin: 60% 0% 0% -10%;
+  margin: 64% 0% 0% -10%;
 }
 
 .read-main-container {
@@ -254,7 +257,7 @@ button {
 
 .read-inner-container {
   width: 18%;
-  margin-top: 44%;
+  margin-top: 40%;
   height: 51%;
   float: right;
 }
@@ -264,11 +267,12 @@ button {
   color: #000;
   font-kerning: inherit;
   font-family: sans_medium;
-  font-size: 22px;
-  font-weight: bold;
+  font-size: 25px;
+  letter-spacing: -2px;
+  font-weight: bolder;
   transform: rotate(90deg);
   text-transform: uppercase;
-  margin: 5% -130% 0% 0%;
+  margin: 19% -125% 0% 0%;
 }
 
 .mid-right-container {

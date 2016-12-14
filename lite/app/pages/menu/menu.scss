@@ -35,7 +35,7 @@
 .home-inner-main-container {
     /* background-color: #939598; */
     width: 88%;
-    height: 65%;
+    height: 68%;
     float: left;
     margin: 5% 0% 0% 5%;
 
@@ -97,12 +97,13 @@
             .explore-rotate-text {
               transform: rotate(90deg);
               float: left;
-              font-size: 22px;
+              font-size: 25px;
               font-kerning: inherit;
               font-family: sans_medium;
-              margin-top: 85%;
+              margin-top: 87%;
               margin-left: -173%;
-              font-weight: bold;
+              font-weight: bolder;
+              letter-spacing: -2px;
               color : #000;
               text-transform: uppercase;
             }
@@ -115,14 +116,15 @@
             float: right;
             
             .challenges-simple-text {
-              font-weight: bold;
+              font-weight: bolder;
               text-transform: uppercase;
               font-kerning: inherit;
               font-family: sans_medium;
-              font-size: 22px;
+              font-size: 25px;
+              letter-spacing: -2px;
               float: right;
               color : #000;
-              margin: -24% -12% 0% 0%;
+              margin: -25% -10% 0% 0%;
             }
           }
         }
@@ -144,13 +146,14 @@
             float: left;
                   
             .meditate-rotate-text {
-              font-weight: bold;
+              font-weight: bolder;
               text-transform: uppercase;
               font-kerning: inherit;
               font-family: sans_medium;
-              font-size: 22px;
+              font-size: 25px;
+              letter-spacing: -2px;
               color : #000;
-              margin: 60% 0% 0% -10%;
+              margin: 59% 0% 0% -10%;
             }
           }
  
@@ -161,20 +164,21 @@
 
             .read-inner-container {
               width: 18%;
-              margin-top: 44%;
+              margin-top: 40%;
               height: 51%;
               float: right;
 
               .read-text {
                 float: right;
                 color : #000;
-                font-size: 22px;
+                font-size: 25px;
+                letter-spacing: -2px;
                 font-kerning: inherit;
                 font-family: sans_medium;
-                font-weight: bold;
+                font-weight: bolder;
                 transform: rotate(90deg);
                 text-transform: uppercase;
-                margin: 5% -130% 0% 0%;
+                margin: 19% -125% 0% 0%;
               }
             }
           }
@@ -252,7 +256,7 @@ and (max-device-width : 1024px)
 
   .explore-rotate-text {
     font-size: 40px !important;
-    margin-top: 60% !important;
+    margin-top: 56% !important;
     margin-left: -145% !important;
   }
 
