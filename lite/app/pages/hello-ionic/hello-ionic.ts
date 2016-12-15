@@ -25,7 +25,7 @@ export class HelloIonicPage {
   constructor(public navController: NavController) {
 
     this.slides = [
-      {id: 1,  author: "-Osho",          title: "Relax, let go. But remember only one thing: You are a witness."},
+      {id: 1, author: "-D. Ford",       title: "What we cannot be with will not let us be."},
       {id: 2,  author: "-Unknown",       title: "When you own your breath, nobody can steal your peace."},
       {id: 3,  author: "-T.N. Hanh",     title: "Our one true home is in the present moment."},
       {id: 4,  author: "-J. Goethe",     title: "Nothing is worth more than this day."},
@@ -38,8 +38,8 @@ export class HelloIonicPage {
       {id: 11, author: "-B. Katie",      title: "In my experience, we don't make thoughts appear, they just appear. One day, I noticed that their appearance just wasn't personal."},
       {id: 12, author: "-C. Jung",       title: "What you resist persists."},
       {id: 13, author: "-M. Montaigne",  title: "My life has been full of terrible misfortunes, most of which have never happened."},
+      {id: 15,  author: "-Osho",          title: "Relax, let go. But remember only one thing: You are a witness."},
       {id: 14, author: "-B. Katie",      title: "When you argue with reality, you lose... 100% of the time... Arguing with reality is like teaching a cat to bark."},
-      {id: 15, author: "-D. Ford",       title: "What we cannot be with will not let us be."},
       {id: 16, author: "-M. Williamson", title: "Change is in the air, as old patterns fall away and new energies are emerging."},
       {id: 17, author: "-N.D. Walsch ",  title: "If I do not go within, I go without."},
       {id: 18, author: "-T.N. Hanh",     title: "I think therefore I am not here."},
@@ -98,7 +98,7 @@ export class HelloIonicPage {
     loop: true,
     effect: 'fade',
     fade: {crossFade:true},
-    autoplay:2700,
+    autoplay:90,
     autoplayDisableOnInteraction: true,
     direction:"horizontal",
     speed:4000,
