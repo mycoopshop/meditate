@@ -225,7 +225,7 @@ up-arrow-container img {
     width: 100% !important;
    }
 
-/*UI for iPad 768 X 1024*/
+/*UI for iPad resulation 768 X 1024*/
 @media only screen
 and (min-device-width : 768px)
 and (max-device-width : 1024px)
@@ -275,3 +275,13 @@ and (max-device-width : 1024px)
     margin: -85% -100% 0% 0% !important;
   }
 }
+
+/*UI for iPhone 5 & 5S Resolutions (320 × 568)*/
+/*@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+ {
+  .explore-rotate-text {
+    margin-left: -200%;
+  }
+}*/

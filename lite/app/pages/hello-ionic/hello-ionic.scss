@@ -324,3 +324,36 @@ button {
 .platform-ios .mid-center-top-container {
   margin-top: 0%;
 }
+
+/*UI for iPhone 5 & 5S Resolutions (320 × 568)*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+ {
+  
+  .explore-rotate-text {
+    margin-left: -210% !important;
+    margin-top: 93% !important;
+  }
+  
+  .challenges-simple-text {
+    margin: -30% -15% 0% 0% !important;
+  }
+
+  .meditate-rotate-text {
+    margin: 54% 0% 0% -13% !important;
+  }
+
+  .read-text {
+    margin: -30% -163% 0% 0% !important;
+  }
+  .mid-right-container {
+    height: 100.1% !important;
+  }
+
+  .up-arrow-container {
+    width: 17% !important;
+    margin: 3% -5% 0% 0% !important;
+    height: 4.4vh !important;
+  }
+}
