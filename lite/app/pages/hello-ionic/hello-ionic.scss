@@ -353,7 +353,36 @@ and (max-device-width : 568px)
 
   .up-arrow-container {
     width: 17% !important;
-    margin: 3% -5% 0% 0% !important;
+    margin: 1.8% -5% 0% 0% !important;
     height: 4.4vh !important;
+  }
+}
+
+/*UI for iPhone 5 & 5S Resolutions (375 × 667)*/
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+{
+  .explore-rotate-text {
+    margin-left: -175% !important;
+    margin-top: 87% !important;
+  }
+
+  .challenges-simple-text {
+    margin: -26% -12% 0% 0% !important;
+  }
+
+  .meditate-rotate-text {
+    margin: 59% 0% 0% -10% !important;
+  }
+
+  .read-text {
+    margin: 25% -135% 0% 0% !important;
+  }
+
+  .up-arrow-container {
+    width: 15% !important;
+    margin: 1.8% -5% 0% 0% !important;
+    height: 4vh !important;
   }
 }

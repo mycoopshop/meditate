@@ -46,7 +46,7 @@
    }
    .inner-border-box {
       float: left;
-      width: 94%;
+      width: 98%;
       height: 90%;
       border: 5px solid #000;
    }
@@ -83,6 +83,7 @@
       float: left;
       margin: 3% 0% 0% 5%;
       font-size: 18px;
+      font-family: sans_regular;
       color: #000;
       word-wrap: break-word;
       text-align: left;
@@ -147,9 +148,9 @@
    .menu-title {
       float: left;
       margin: 3% 0% 0% 5%;
-      font-size: 172%;
+      font-size: 167%;
       line-height: 95%;
-      font-family: sans-serif;
+      font-family: sans_medium;
       color: #000;
       word-wrap: break-word;
       font-weight: bolder;
@@ -158,13 +159,13 @@
    }
    .arrow-container {
       float: left;
-      width: 21%;
+      width: 20%;
       height:100%;
       color: #fff;
    }
    .video-icon {
       float: left;
-      margin: 37% 10% 0% 0%;
+      margin: 65% 10% 0% 0%;
    }
    
    .bottom-arrow-icon {
@@ -219,7 +220,7 @@
     float: right;
     width: 5%;
     margin-top: 6%;
-    img { height:23px; }
+    img { height: 4vh; }
   }
 
   .gb-color {
@@ -282,5 +283,16 @@ and (max-device-width : 1024px)
   .bottom-arrow-icon img{height:18px;width:22px;}
 
   .align-me-now img { height:50px; }
-  
+}
+
+/*UI for iPhone 5 & 5S Resolutions (375 × 667)*/
+@media only screen
+and (min-device-width : 375px)
+and (max-device-width : 667px)
+{
+  .video-icon {
+      float: left;
+      margin: 45% 10% 0% 0%;
+   }
+
 }
