@@ -13,7 +13,7 @@
             <div class="inner-main" id="#">
                <div class="top-inner-main-container">
                   <div class="title-containermyslider">
-                     <ion-slides #mySlider (ionWillChange)="newSlide()" [options]="mySlideOptions">
+                     <ion-slides #mySlider (ionDidChange)="newSlide()" [options]="mySlideOptions">
                      <ion-slide *ngFor="let quote of slides">
                         <div class="myslider">
                            <div class="quote-container" [innerHTML]="quote.title"></div>
