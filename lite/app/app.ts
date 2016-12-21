@@ -18,10 +18,7 @@ class MyApp {
   rootPage: any = HelloIonicPage;
   pages: Array <{title: string, component: any, type: string}>;
 
-  constructor(
-      private platform: Platform,
-      private menu: MenuController
-    ) 
+  constructor( private platform: Platform, private menu: MenuController) 
   {
     this.initializeApp();
     this.platform.registerBackButtonAction(function(e) {
@@ -82,6 +79,7 @@ class MyApp {
     });
   }  
 }
+
 let config = {statusbarPadding: false};
 ionicBootstrap(MyApp,null, config);
 
