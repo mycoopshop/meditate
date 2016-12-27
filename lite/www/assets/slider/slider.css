@@ -2,7 +2,6 @@
 @font-face {
   font-family: 'sans_regular';
   src: url('../css/fonts/SanFranciscoText-Regular.otf');
-  
 }
 
 /*a {color:#7EC349;}*/
@@ -10,8 +9,7 @@
 body, p {
     font-family: sans_regular !important;
     font-size: 18px;
-    text-align: justify;
-    /*line-height:1.5;*/  
+    /*text-align: justify;*/
 }
 
 a {
