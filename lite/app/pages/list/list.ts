@@ -262,4 +262,8 @@ export class ListPage {
     }
   }
 
+  goToHome() {
+    this.navCtrl.push(MenuPage);
+  }
+
 }

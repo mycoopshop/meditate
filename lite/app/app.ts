@@ -7,6 +7,7 @@ import {PopUpPage}       from './pages/pop-up/pop-up';
 import {VideoPage}       from './pages/video/video';
 import {AudioPage}       from './pages/audio/audio';
 import {ViewPage}        from './pages/view/view';
+import {MenuPage}        from './pages/menu/menu';
 
 @Component({
   templateUrl: 'build/app.html'
@@ -65,6 +66,10 @@ class MyApp {
   //       Splashscreen.hide();
   //     }, 100);
   //   }
+  // }
+
+  // goToHome() {
+  //   this.navCtrl.push(MenuPage);
   // }
 
   openPage(page) {

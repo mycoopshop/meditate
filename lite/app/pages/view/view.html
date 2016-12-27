@@ -6,21 +6,15 @@
 <div class="gray-background scroller">
    <ion-row responsive-sm>
       <ion-col width-80>
-         <div class="text-logo animated zoomIn">
-            <img src="img/logo-the-art.png" width="250" height="135">
-         </div>
+         <a href="#" (click)="goToHome()" style="text-decoration: none">
+            <div class="text-logo animated zoomIn">
+               <img src="img/logo-the-art.png" width="250" height="135">
+            </div>
+         </a>
          <span menuToggle class="align-me-now" fab-fixed>
             <img src="img/greater-than.png" width="15" height="25">
          </span>
       </ion-col>
-         <div class="back-view-container" (click)="goBack()">
-            <div class="back-text animated slideInRight"> 
-               <button class="button button-clear icon-left backbtn">
-                  <ion-icon name='arrow-back'></ion-icon>
-                    Back
-               </button>
-            </div>
-         </div>
    </ion-row>
    <!-- <ion-col width-100>
       <ion-slides #mySlider  [options]="mySlideOptions">
@@ -49,12 +43,17 @@
 
    <div class="iframe_container">
       <iframe class= "animated fadeInUp" id="iframe1" [src]='page' frameborder="0" >
-        <!--  <img src="img/video-icon.png"> -->
       </iframe><br>
    </div>
 </div>
-<ion-footer class="bar-stable gb-color">
-   <center class="manage-me" (click)="scrollTo()">
-      <img src="img/arrow-down.png" width="25" height="15">
-   </center>
+
+<ion-footer class="gb-color">
+     <div class="down-back-container" (click)="goBack()">
+         <img src="img/back_arrow.png">
+     </div>
+     <div class="down-scroll-container">
+         <center class="manage-me" (click)="scrollTo()">
+            <img src="img/arrow-down.png">
+         </center>
+     </div>
 </ion-footer>

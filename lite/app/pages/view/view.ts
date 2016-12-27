@@ -1,8 +1,9 @@
 import {SafeResourceUrl, DomSanitizationService} from '@angular/platform-browser';
-import { NavController, NavParams, Slides } from 'ionic-angular';
+import { NavController, NavParams, Slides }      from 'ionic-angular';
 import { Component, ViewChild } from '@angular/core';
 import {ListPage}               from '../list/list';
 import { Http }                 from '@angular/http';
+import {MenuPage}               from '../menu/menu';
 
 @Component({
   templateUrl: 'build/pages/view/view.html',
@@ -49,8 +50,11 @@ export class ViewPage {
     else
     {
       this.nav.pop();
-    }
-    
+    }  
+  }
+
+  goToHome() {
+    this.nav.push(MenuPage);
   }
 
 }
