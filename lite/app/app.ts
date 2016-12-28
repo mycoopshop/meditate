@@ -68,9 +68,9 @@ class MyApp {
   //   }
   // }
 
-  // goToHome() {
-  //   this.navCtrl.push(MenuPage);
-  // }
+  goToHome() {
+    this.nav.push(MenuPage);
+  }
 
   openPage(page) {
     this.menu.close();

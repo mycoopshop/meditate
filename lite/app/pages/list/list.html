@@ -13,12 +13,12 @@
          <ion-row responsive-md responsive-sm responsive-lg >
             <ion-col>
                <a href="#" (click)="goToHome()" style="text-decoration: none">
-                  <div class="text-logo animated zoomIn">
+                  <div class="text-logo animated slideInRight">
                      <img src="img/logo-the-art.png" >
                   </div>
                </a>
-               <span menuToggle class="align-me-now" fab-fixed>
-               <img src="img/greater-than.png" >
+               <span menuToggle class="align-me-now" fab-fixed >
+                  <img src="img/greater-than.png" >
                </span>
             </ion-col>
                <!-- <div class="back-container" (click)="goBack()">
@@ -159,7 +159,7 @@
                               <div *ngIf="(menu.border_type == 3)">
                               </div>
                               <div class="inner-border-html-box">
-                                 <div class="top-text-container" (click)="viewPage($event, menu.url, menu.parent_id)" style="margin-bottom:2%">
+                                 <div class="top-text-container" (click)="viewPage($event, menu.url, menu.parent_id)" style="margin-bottom:4%">
                                     <div class="html-menu-title-container">
                                        <div class="html-menu-title module">
                                           <a style="text-decoration:none;color:#000">{{menu.title}}</a>
