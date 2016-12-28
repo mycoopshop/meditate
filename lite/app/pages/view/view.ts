@@ -2,8 +2,8 @@ import {SafeResourceUrl, DomSanitizationService} from '@angular/platform-browser
 import { NavController, NavParams, Slides }      from 'ionic-angular';
 import { Component, ViewChild } from '@angular/core';
 import {ListPage}               from '../list/list';
-import { Http }                 from '@angular/http';
 import {MenuPage}               from '../menu/menu';
+import { Http }                 from '@angular/http';
 
 @Component({
   templateUrl: 'build/pages/view/view.html',
@@ -19,7 +19,7 @@ export class ViewPage {
   constructor( public sanitizer: DomSanitizationService, public nav: NavController, navParams: NavParams ) {
     let url = navParams.get('url');
     this.page = this.sanitizer.bypassSecurityTrustResourceUrl(url);
-    this.parentId = navParams.get('parent_id');
+    this.parentId = navParams.get('listMenuId');
     // this.url = navParams.get('url'); 
     // console.log(this.url);
   }

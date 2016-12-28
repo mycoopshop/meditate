@@ -73,6 +73,7 @@
                   <div *ngIf="(menu.type=='list')">
                      <div class="slideContainer">
                         <div class="royal-menu-container" (click)="setValue(menu.id, menu.parent_id)" >
+                        <!-- <div class="royal-menu-container" (click)="setValue(menu.id, menu.parent_id)" (click)="htmlList($event, menu.id, menu.parent_id)" > -->
                            <div *ngIf="(menu.border_type == 3)">
                               <div class="floating-boarder1">
                               </div>
