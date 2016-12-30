@@ -3,18 +3,25 @@
       <ion-title>view Page</ion-title>
    </ion-navbar>
    </ion-header> -->
-<div class="gray-background scroller">
-   <ion-row responsive-sm>
-      <ion-col width-80>
+<ion-content overflow-scroll="true" class="gray-background">
+   <ion-row responsive-md responsive-sm responsive-lg >
+      <ion-col >
          <a href="#" (click)="goToHome()" style="text-decoration: none">
-            <div class="text-logo animated slideInRight">
-               <img src="img/logo-the-art.png" width="250" height="135">
+            <div class="text-logo animated zoomIn">
+               <img src="img/logo-the-art.png" >
             </div>
          </a>
          <span menuToggle class="align-me-now" fab-fixed>
-            <img src="img/greater-than.png" width="15" height="25">
+         <img src="img/greater-than.png" >
          </span>
       </ion-col>
+      <!-- <div class="back-container" (click)="goBack()">
+         <div class="back-text animated slideInLeft">  
+         <button class="button button-clear icon-left backbtn">
+               <ion-icon name='arrow-back'></ion-icon>
+               Back
+         </button>  </div>
+         </div> -->
    </ion-row>
    <!-- <ion-col width-100>
       <ion-slides #mySlider  [options]="mySlideOptions">
@@ -38,22 +45,21 @@
          <div  (ionDidChange)="onSlideChanged()" class="swiper-button-prev"></div>
          <div (ionWillChange)="onSlideChanged()" class="swiper-button-next"></div>
       </div>
-   </ion-col> -->
+      </ion-col> -->
    <!-- {{page}} -->
-
    <div class="iframe_container">
-      <iframe class= "animated fadeInUp" id="iframe1" [src]='page' frameborder="0" >
-      </iframe><br>
+      <iframe  class= "animated fadeInUp" id="iframeID" [src]='page' frameborder="0"  >
+         <!--  <img src="img/video-icon.png"> -->
+      </iframe>
    </div>
-</div>
-
+</ion-content>
 <ion-footer class="gb-color">
-     <div class="down-back-container" (click)="goBack()">
-         <img src="img/back_arrow.png">
-     </div>
-     <div class="down-scroll-container">
-         <center class="manage-me" (click)="scrollTo()">
-            <img src="img/arrow-down.png">
-         </center>
-     </div>
+   <div class="down-back-container" (click)="goBack()">
+      <img src="img/back_arrow.png">
+   </div>
+   <div class="down-scroll-container">
+      <center class="manage-me" (click)="scrollTo()">
+         <img src="img/arrow-down.png">
+      </center>
+   </div>
 </ion-footer>

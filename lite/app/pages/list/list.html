@@ -8,30 +8,29 @@
       <ion-title>Menu List</ion-title>
    </ion-navbar>
    </ion-header> -->
-
-   <ion-content overflow-scroll="true" class="background-blinker">
-         <ion-row responsive-md responsive-sm responsive-lg >
-            <ion-col>
-               <a href="#" (click)="goToHome()" style="text-decoration: none">
-                  <div class="text-logo animated slideInRight">
-                     <img src="img/logo-the-art.png" >
-                  </div>
-               </a>
-               <span menuToggle class="align-me-now" fab-fixed >
-                  <img src="img/greater-than.png" >
-               </span>
-            </ion-col>
-               <!-- <div class="back-container" (click)="goBack()">
-                  <div class=" animated slideInRight"> 
-                     <button class="button button-clear icon-left backbtn">
-                        <ion-icon name='ios-arrow-back-outline'></ion-icon>
-                          Back
-                     </button>
-                  </div>
-               </div> -->
-         </ion-row>
-         <ion-nav-view>
-          <ion-list>
+<ion-content overflow-scroll="true" class="background-blinker">
+   <ion-row responsive-md responsive-sm responsive-lg >
+      <ion-col >
+         <a href="#" (click)="goToHome()" style="text-decoration: none">
+            <div class="text-logo animated zoomIn">
+               <img src="img/logo-the-art.png" >
+            </div>
+         </a>
+         <span menuToggle class="align-me-now" fab-fixed>
+         <img src="img/greater-than.png" >
+         </span>
+      </ion-col>
+      <!-- <div class="back-container" (click)="goBack()">
+         <div class="back-text animated slideInLeft">  
+         <button class="button button-clear icon-left backbtn">
+               <ion-icon name='arrow-back'></ion-icon>
+               Back
+         </button> 
+         </div>
+         </div> -->
+   </ion-row>
+   <ion-nav-view>
+      <ion-list>
          <div class="top-align animated slideInRight">
             <div *ngFor="let menu of subMenus">
                <div class="#" *ngIf="(menu.parent_id == getValue())">
@@ -46,7 +45,7 @@
                               <div class="inner-border-box">
                                  <div class="top-text-container">
                                     <div class="menu-title-container">
-                                       <div class="menu-title module">
+                                       <div class="menu-title module animated slideInLeft">
                                           {{menu.title}}
                                        </div>
                                     </div>
@@ -73,7 +72,6 @@
                   <div *ngIf="(menu.type=='list')">
                      <div class="slideContainer">
                         <div class="royal-menu-container" (click)="setValue(menu.id, menu.parent_id)" >
-                        <!-- <div class="royal-menu-container" (click)="setValue(menu.id, menu.parent_id)" (click)="htmlList($event, menu.id, menu.parent_id)" > -->
                            <div *ngIf="(menu.border_type == 3)">
                               <div class="floating-boarder1">
                               </div>
@@ -82,7 +80,7 @@
                               <div class="inner-border-box">
                                  <div class="top-text-container">
                                     <div class="menu-title-container">
-                                       <div class="menu-title module">
+                                       <div class="menu-title module animated slideInLeft">
                                           {{menu.title}}
                                        </div>
                                     </div>
@@ -116,7 +114,7 @@
                               <div class="inner-border-box">
                                  <div (click)="viewPage($event, menu.url, menu.parent_id)" class="top-text-container">
                                     <div class="menu-title-container">
-                                       <div class="menu-title module">
+                                       <div class="menu-title module animated slideInRight">
                                           <a style="text-decoration:none;color:#000" >{{menu.title}}</a>
                                        </div>
                                     </div>
@@ -160,9 +158,9 @@
                               <div *ngIf="(menu.border_type == 3)">
                               </div>
                               <div class="inner-border-html-box">
-                                 <div class="top-text-container" (click)="viewPage($event, menu.url, menu.parent_id)" style="margin-bottom:4%">
+                                 <div class="top-text-container" (click)="viewPage($event, menu.url, menu.parent_id)" style="margin-bottom:3%">
                                     <div class="html-menu-title-container">
-                                       <div class="html-menu-title module">
+                                       <div class="html-menu-title module animated fadeInUp">
                                           <a style="text-decoration:none;color:#000">{{menu.title}}</a>
                                        </div>
                                     </div>
@@ -181,16 +179,15 @@
             </div>
          </div>
       </ion-list>
-      </ion-nav-view>
-   </ion-content>
-
+   </ion-nav-view>
+</ion-content>
 <ion-footer class="gb-color">
-     <div class="down-back-container" (click)="goBack()">
-         <img src="img/back_arrow.png">
-     </div>
-     <div class="down-scroll-container">
-         <center class="manage-me" (click)="scrollTo()">
-            <img src="img/arrow-down.png">
-         </center>
-     </div>
+   <div class="down-back-container" (click)="goBack()">
+      <img src="img/back_arrow.png">
+   </div>
+   <div class="down-scroll-container">
+      <center class="manage-me" (click)="scrollTo()">
+         <img src="img/arrow-down.png">
+      </center>
+   </div>
 </ion-footer>

@@ -1,5 +1,5 @@
-import {SafeResourceUrl, DomSanitizationService} from '@angular/platform-browser';
-import { NavController, NavParams, Slides }      from 'ionic-angular';
+import {SafeResourceUrl, DomSanitizationService}      from '@angular/platform-browser';
+import { NavController, NavParams, Slides, Content }  from 'ionic-angular';
 import { Component, ViewChild } from '@angular/core';
 import {ListPage}               from '../list/list';
 import {MenuPage}               from '../menu/menu';
@@ -14,12 +14,15 @@ export class ViewPage {
   //url: any;
   parentId: any;
   page: any;
+  Scroll_height: number;
+  iframe_height: any;
   @ViewChild('mySlider') slider: Slides;
-
+  @ViewChild(Content) content: Content;
   constructor( public sanitizer: DomSanitizationService, public nav: NavController, navParams: NavParams ) {
     let url = navParams.get('url');
     this.page = this.sanitizer.bypassSecurityTrustResourceUrl(url);
-    this.parentId = navParams.get('listMenuId');
+    this.parentId = navParams.get('parent_id');
+    this.Scroll_height = 397;
     // this.url = navParams.get('url'); 
     // console.log(this.url);
   }
@@ -50,11 +53,21 @@ export class ViewPage {
     else
     {
       this.nav.pop();
-    }  
+    }
   }
+
+  scrollTo() {
+    let iFramelen = document.getElementById('iframeID');
+    this.iframe_height = iFramelen.scrollHeight;
+    this.iframe_height = (this.Scroll_height);
+    //let off_height = iFramelen.clientHeight;
+    this.Scroll_height = this.Scroll_height+this.Scroll_height;
+    //console.log(this.Scroll_height);
+    console.log(this.iframe_height);
+  };
 
   goToHome() {
     this.nav.push(MenuPage);
   }
-
+  
 }

@@ -1,6 +1,5 @@
 import {NavController, NavParams, Content} from 'ionic-angular';
 import {Component, ViewChild} from '@angular/core';
-import {VideoPage} from '../video/video';
 import {ViewPage} from '../view/view';
 import {MenuPage} from '../menu/menu';
 
@@ -235,16 +234,9 @@ export class ListPage {
     });
   }
 
-  htmlList(event, Id, PId) {
-    this.navCtrl.push(VideoPage, {
-      listMenuId: Id, 
-      listMenuPId: PId
-    });
-  }
-
   goBack() {
     //this.navCtrl.pop();
-    // console.log('selectedId= '+this.selectedId);
+    console.log('selectedId= '+this.selectedId);
     if(this.selectedId == 1 || this.selectedId == 2 || this.selectedId == 3 || this.selectedId == 4)
     {
       this.navCtrl.push(MenuPage)
@@ -266,12 +258,11 @@ export class ListPage {
         this.navCtrl.push(this.rootPage, {
         menuId: pId
       });
-
     }
   }
 
   goToHome() {
     this.navCtrl.push(MenuPage);
   }
-
+  
 }
