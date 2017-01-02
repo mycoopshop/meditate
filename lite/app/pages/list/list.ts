@@ -1,7 +1,8 @@
 import {NavController, NavParams, Content} from 'ionic-angular';
 import {Component, ViewChild} from '@angular/core';
-import {ViewPage} from '../view/view';
-import {MenuPage} from '../menu/menu';
+import {VideoPage} from '../video/video';
+import {ViewPage}  from '../view/view';
+import {MenuPage}  from '../menu/menu';
 
 @Component({
   templateUrl: 'build/pages/list/list.html',
@@ -233,6 +234,13 @@ export class ListPage {
       parent_id: id
     });
   }
+
+  // htmlList(event, Id, PId) {
+  //   this.navCtrl.push(VideoPage, {
+  //     listMenuId: Id, 
+  //     listMenuPId: PId
+  //   });
+  // }
 
   goBack() {
     //this.navCtrl.pop();
