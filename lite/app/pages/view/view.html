@@ -7,7 +7,7 @@
    <ion-row responsive-md responsive-sm responsive-lg >
       <ion-col >
          <a href="#" (click)="goToHome()" style="text-decoration: none">
-            <div class="text-logo animated zoomIn">
+            <div class="text-logo animated slideInRight">
                <img src="img/logo-the-art.png" >
             </div>
          </a>
@@ -48,18 +48,15 @@
       </ion-col> -->
    <!-- {{page}} -->
    <div class="iframe_container">
-      <iframe  class= "animated fadeInUp" id="iframeID" [src]='page' frameborder="0"  >
+      <iframe  class= "animated slideInRight" id="iframeID" [src]='page' frameborder="0"  >
          <!--  <img src="img/video-icon.png"> -->
       </iframe>
    </div>
 </ion-content>
 <ion-footer class="gb-color">
-   <div class="down-back-container" (click)="goBack()">
-      <img src="img/back_arrow.png">
-   </div>
    <div class="down-scroll-container">
-      <center class="manage-me" (click)="scrollTo()">
-         <img src="img/arrow-down.png">
+      <center class="manage-me" (click)="goBack()" >
+         <img src="img/less-than.png">
       </center>
    </div>
 </ion-footer>

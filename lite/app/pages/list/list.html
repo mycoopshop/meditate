@@ -12,7 +12,7 @@
    <ion-row responsive-md responsive-sm responsive-lg >
       <ion-col >
          <a href="#" (click)="goToHome()" style="text-decoration: none">
-            <div class="text-logo animated zoomIn">
+            <div class="text-logo animated slideInRight">
                <img src="img/logo-the-art.png" >
             </div>
          </a>
@@ -45,7 +45,7 @@
                               <div class="inner-border-box">
                                  <div class="top-text-container">
                                     <div class="menu-title-container">
-                                       <div class="menu-title module animated slideInLeft">
+                                       <div class="menu-title module animated slideInRight">
                                           {{menu.title}}
                                        </div>
                                     </div>
@@ -81,7 +81,7 @@
                                  <div class="top-text-container">
                                     <div class="menu-title-container">
                                        <!-- <a href="" (click)="htmlList($event, menu.id, menu.parent_id)"></a> -->
-                                       <div class="menu-title module animated slideInLeft">
+                                       <div class="menu-title module animated slideInRight">
                                           {{menu.title}}
                                        </div>
                                     </div>
@@ -161,7 +161,7 @@
                               <div class="inner-border-html-box">
                                  <div class="top-text-container" (click)="viewPage($event, menu.url, menu.parent_id)" style="margin-bottom:3%">
                                     <div class="html-menu-title-container">
-                                       <div class="html-menu-title module animated fadeInUp">
+                                       <div class="html-menu-title module animated slideInRight">
                                           <a style="text-decoration:none;color:#000">{{menu.title}}</a>
                                        </div>
                                     </div>
@@ -183,12 +183,12 @@
    </ion-nav-view>
 </ion-content>
 <ion-footer class="gb-color">
-   <div class="down-back-container" (click)="goBack()">
-      <img src="img/back_arrow.png">
-   </div>
+   <!-- <div class="down-back-container" (click)="goBack()" >
+      <img src="img/less-than.png">
+      </div> -->
    <div class="down-scroll-container">
-      <center class="manage-me" (click)="scrollTo()">
-         <img src="img/arrow-down.png">
+      <center class="manage-me" (click)="goBack()" >
+         <img src="img/less-than.png">
       </center>
    </div>
 </ion-footer>
