@@ -1,9 +1,9 @@
 <ion-menu [content]="content" side="right" class="side-menu">
    <ion-row class="title-main-container">
       <a menuToggle href="#" (click)="goToHome()" style="text-decoration: none; width:75%;">
-        <div class = "col-67 inner-title">
-          <img src="img/mindfullness.png">
-        </div>
+         <div class = "col-67 inner-title">
+            <img src="img/mindfullness.png">
+         </div>
       </a>
       <div menuToggle class = "col-20 top-toggle">
          <img src="img/less-than.png">
@@ -11,25 +11,27 @@
    </ion-row>
    <div class="content-backdrop"></div>
    <ion-content style="background-color: gray">
-      <ion-list right>
-        <div *ngFor="let p of pages">
-          <div *ngIf="(p.type == 'main menu')">
-             <div class="main-menu-container module animated fadeInUp">
-                <!-- <a style="text-decoration:none;color:#000" (click)="openPage(p)">{{p.title}}</a> --> 
-                {{p.title}}
-             </div>
-          </div>
-          <div *ngIf="(p.type == 'sub menu')">
-             <div class="sub-menu-container module animated fadeInUp">
-                <a (click)="viewPage(p.component)">{{p.title}}</a>
-             </div>
-          </div>
-        </div>
-        <ion-row class="bottom-bar">
-          <ion-col width-100>
-          </ion-col>
-        </ion-row>
-      </ion-list>
+      <ion-scroll scrollY="true">
+         <ion-list right>
+            <div *ngFor="let p of pages">
+               <div *ngIf="(p.type == 'main menu')">
+                  <div class="main-menu-container module animated fadeInUp">
+                     <!-- <a style="text-decoration:none;color:#000" (click)="openPage(p)">{{p.title}}</a> --> 
+                     {{p.title}}
+                  </div>
+               </div>
+               <div *ngIf="(p.type == 'sub menu')">
+                  <div class="sub-menu-container module animated fadeInUp">
+                     <a (click)="viewPage(p.component)">{{p.title}}</a>
+                  </div>
+               </div>
+            </div>
+            <ion-row class="bottom-bar">
+               <ion-col width-100>
+               </ion-col>
+            </ion-row>
+         </ion-list>
+      </ion-scroll>
    </ion-content>
 </ion-menu>
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
@@ -40,7 +42,7 @@
   .main-menu-container {
     width: 70%;
     float: left;
-    margin: 5% 0% 0% 25%;
+    margin: 3% 0% 0% 15%;
     text-transform: uppercase;
     font-size: 16px;
   }
@@ -48,7 +50,7 @@
     width: 70%;
     float: left;
     font-size: 16px;
-    margin: 0% 0% 0% 30%;
+    margin: 0% 0% 0% 20%;
   }
   .sub-menu-container a {
     text-decoration: none;
@@ -97,7 +99,7 @@
   .bottom-bar {
     float: left;
     width: 100%;
-    height: 20px;
+    height: 30px;
   }
 @media only screen 
 and (min-device-width : 768px) 
@@ -109,4 +111,9 @@ and (max-device-width : 1024px)
   .title-main-container {padding: 7% 0% 0% 7%;}
   .top-toggle {margin-top:-15px;} 
 }
+
+ion-scroll {
+  position: initial; 
+}
+
 </style>

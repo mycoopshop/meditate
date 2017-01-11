@@ -8,7 +8,7 @@
       <ion-title>Menu List</ion-title>
    </ion-navbar>
    </ion-header> -->
-<ion-content overflow-scroll="true" class="background-blinker">
+<ion-content style="overflow-y: hidden;" class="background-blinker">
    <ion-row responsive-md responsive-sm responsive-lg >
       <ion-col >
          <a href="#" (click)="goToHome()" style="text-decoration: none">
@@ -30,8 +30,9 @@
          </div> -->
    </ion-row>
    <ion-nav-view>
-      <ion-list>
-         <div class="top-align animated slideInRight">
+   <div class="top-align">
+             <ion-scroll scrollY="true" style="width: 100%; height: 100%;">
+         <div class="animated slideInRight">
             <div *ngFor="let menu of subMenus">
                <div class="#" *ngIf="(menu.parent_id == getValue())">
                   <div *ngIf="(menu.type=='menu')">
@@ -179,7 +180,8 @@
                </div>
             </div>
          </div>
-      </ion-list>
+            </ion-scroll>
+            </div>
    </ion-nav-view>
 </ion-content>
 <ion-footer class="gb-color">
