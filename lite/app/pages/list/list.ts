@@ -247,12 +247,12 @@ export class ListPage {
     console.log('selectedId= '+this.selectedId);
     if(this.selectedId == 1 || this.selectedId == 2 || this.selectedId == 3 || this.selectedId == 4)
     {
-      this.navCtrl.push(MenuPage)
+      this.navCtrl.insert(0, MenuPage,{},{direction: 'back'});
     }
     else if(this.parentId != null) {
-        this.navCtrl.push(this.rootPage, {
+        this.navCtrl.insert(0, this.rootPage, {
         menuId: this.parentId
-      });
+      },{direction: 'back'});
     }
     else {
       var pId;
@@ -263,9 +263,9 @@ export class ListPage {
             break;
           }
         }
-        this.navCtrl.push(this.rootPage, {
+        this.navCtrl.insert(0, this.rootPage, {
         menuId: pId
-      });
+      },{direction: 'back'});
     }
   }
 

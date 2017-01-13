@@ -12,7 +12,7 @@
    <ion-row responsive-md responsive-sm responsive-lg >
       <ion-col >
          <a href="#" (click)="goToHome()" style="text-decoration: none">
-            <div class="text-logo animated slideInRight">
+            <div class="text-logo">
                <img src="img/logo-the-art.png" >
             </div>
          </a>
@@ -32,7 +32,7 @@
    <ion-nav-view>
    <div class="top-align">
              <ion-scroll scrollY="true" style="width: 100%; height: 100%;">
-         <div class="animated slideInRight">
+         <div class="#">
             <div *ngFor="let menu of subMenus">
                <div class="#" *ngIf="(menu.parent_id == getValue())">
                   <div *ngIf="(menu.type=='menu')">
@@ -46,7 +46,7 @@
                               <div class="inner-border-box">
                                  <div class="top-text-container">
                                     <div class="menu-title-container">
-                                       <div class="menu-title module animated slideInRight">
+                                       <div class="menu-title module">
                                           {{menu.title}}
                                        </div>
                                     </div>
@@ -82,7 +82,7 @@
                                  <div class="top-text-container">
                                     <div class="menu-title-container">
                                        <!-- <a href="" (click)="htmlList($event, menu.id, menu.parent_id)"></a> -->
-                                       <div class="menu-title module animated slideInRight">
+                                       <div class="menu-title module ">
                                           {{menu.title}}
                                        </div>
                                     </div>
@@ -116,7 +116,7 @@
                               <div class="inner-border-box">
                                  <div (click)="viewPage($event, menu.url, menu.parent_id)" class="top-text-container">
                                     <div class="menu-title-container">
-                                       <div class="menu-title module animated slideInRight">
+                                       <div class="menu-title module">
                                           <a style="text-decoration:none;color:#000" >{{menu.title}}</a>
                                        </div>
                                     </div>
@@ -162,7 +162,7 @@
                               <div class="inner-border-html-box">
                                  <div class="top-text-container" (click)="viewPage($event, menu.url, menu.parent_id)" style="margin-bottom:3%">
                                     <div class="html-menu-title-container">
-                                       <div class="html-menu-title module animated slideInRight">
+                                       <div class="html-menu-title module">
                                           <a style="text-decoration:none;color:#000">{{menu.title}}</a>
                                        </div>
                                     </div>

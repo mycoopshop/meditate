@@ -68,12 +68,13 @@ overflow: auto;
   -webkit-overflow-scrolling: touch;
    height:66%;
    margin-top: 10%;
+   max-width: 100%;
 }
 
 iframe {
   position:relative;
   border: 0 !important;
-  width: 100%;
+  width: 98%;
   height: 100%;
   padding: 1% 2% 1% 4%;
 }

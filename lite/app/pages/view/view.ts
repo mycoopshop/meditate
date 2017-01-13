@@ -46,9 +46,9 @@ export class ViewPage {
   goBack() {
     if(this.parentId != null)
     {
-      this.nav.push(ListPage, {
+      this.nav.insert(1,ListPage, {
         menuId: this.parentId
-      });
+      },{direction: 'back'});
     }
     else
     {
