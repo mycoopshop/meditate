@@ -10,9 +10,11 @@ import {MenuPage}  from '../menu/menu';
 
 export class ListPage {
   selectedId: any;
+  selectedTitle: string;
   public flag;
   public scrollNow;
   parentId: any;
+  parentTitle :string;
   rootPage: any = ListPage;
   
   subMenus: Array<{id: number, border_type:number, title: string, contain: string, parent_id: number, type: string, child_type: number, url: string}>;
@@ -21,6 +23,7 @@ export class ListPage {
   constructor(private navCtrl: NavController, navParams: NavParams) {
     
     this.selectedId = navParams.get('menuId'); 
+    this.selectedTitle = navParams.get('title'); 
     this.flag = "0";
     this.scrollNow = "2500";
 
@@ -209,9 +212,10 @@ export class ListPage {
     ];
   }
 
-  setValue(id, pId) {
+  setValue(id, pId, title) {
     this.selectedId=id;
     this.parentId=pId;
+    this.parentTitle=title;
   };
   
   getValue() {
@@ -251,7 +255,8 @@ export class ListPage {
     }
     else if(this.parentId != null) {
         this.navCtrl.insert(0, this.rootPage, {
-        menuId: this.parentId
+        menuId: this.parentId,
+        //parentTitle: menu.title
       },{direction: 'back'});
     }
     else {
@@ -260,6 +265,7 @@ export class ListPage {
           if(this.selectedId ==  menu.id)
           {
             pId = menu.parent_id;
+            // parentTitle = menu.title;
             break;
           }
         }
