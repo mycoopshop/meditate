@@ -8,7 +8,7 @@
       <ion-title>Menu List</ion-title>
    </ion-navbar>
    </ion-header> -->
-<ion-content style="overflow-y: hidden;" class="background-blinker">
+<ion-content style="overflow-y: hidden;" class="background-blinker pt-perspective">
    <ion-row responsive-md responsive-sm responsive-lg >
       <ion-col >
          <a href="#" (click)="goToHome()" style="text-decoration: none">
@@ -31,7 +31,7 @@
    </ion-row>
    <ion-nav-view>
       <ion-row>
-        <div style="margin-left: 5%" class="col-10" (click)="goToHome()">Home </div>
+        <div style="margin-left: 6%" class="col-10" (click)="goToHome()">Home </div>
         <div style="margin-left: 1%" class="col-10" (click)="goBack()"> {{'> '+selectedTitle}} </div>
         <div style="margin-left: 1%;" *ngIf="(selectedId > 4)">
            <div (click)="goBack()"> {{'> '+parentTitle}} </div>
@@ -79,7 +79,7 @@
                      </div>
                      <div *ngIf="(menu.type=='list')">
                         <div class="slideContainer">
-                           <div class="royal-menu-container" (click)="setValue(menu.id, menu.parent_id, menu.title)" >
+                           <div class="royal-menu-container animated slideInRight" (click)="setValue(menu.id, menu.parent_id, menu.title)" >
                               <div *ngIf="(menu.border_type == 3)">
                                  <div class="floating-boarder1">
                                  </div>
@@ -161,7 +161,7 @@
                         </div>
                      </div>
                      <div *ngIf="((menu.type=='html')&& !(menu.contain=='video'))">
-                        <div class="HtmlSlideContainer">
+                        <div class="HtmlSlideContainer animated slideInRight">
                            <div class="royal-menu-container-html" (click)="setValue(menu.id, menu.parent_id, menu.title)" >
                               <div class="center-menu-container-html">
                                  <div *ngIf="(menu.border_type == 3)">

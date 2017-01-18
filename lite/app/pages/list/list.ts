@@ -17,6 +17,7 @@ export class ListPage {
   parentTitle :string;
   rootPage: any = ListPage;
   
+  
   subMenus: Array<{id: number, border_type:number, title: string, contain: string, parent_id: number, type: string, child_type: number, url: string}>;
   @ViewChild(Content) content: Content;
   
@@ -24,16 +25,21 @@ export class ListPage {
     
     this.selectedId = navParams.get('menuId'); 
     this.selectedTitle = navParams.get('title'); 
+    
     this.flag = "0";
     this.scrollNow = "2500";
 
     this.subMenus = [
-      { id: 5,   border_type: 1, parent_id: 1,   title: '8 day challenge',                            contain: 'none',   type: 'list', child_type: 1, url: ''},
-      { id: 6,   border_type: 2, parent_id: 1,   title: '8 day micro course',                         contain: 'none',   type: 'list', child_type: 2, url: ''},
+      { id: 1,   border_type: 0, parent_id: 0,   title: 'Challenges',                                 contain: 'none',   type: 'none', child_type: 1, url: ''},
+      { id: 2,   border_type: 0, parent_id: 0,   title: 'Explore',                                    contain: 'none',   type: 'none', child_type: 1, url: ''},
+      { id: 3,   border_type: 0, parent_id: 0,   title: 'Meditate Now',                               contain: 'none',   type: 'none', child_type: 1, url: ''},
+      { id: 4,   border_type: 0, parent_id: 0,   title: 'Read',                                       contain: 'none',   type: 'none', child_type: 1, url: ''},
+      { id: 5,   border_type: 1, parent_id: 1,   title: '8 day challenge',                            contain: 'none',   type: 'menu', child_type: 1, url: ''},
+      { id: 6,   border_type: 2, parent_id: 1,   title: '8 day micro course',                         contain: 'none',   type: 'menu', child_type: 2, url: ''},
       { id: 7,   border_type: 3, parent_id: 0,   title: 'More',                                       contain: 'none',   type: 'list', child_type: 3, url: ''},
-      { id: 8,   border_type: 1, parent_id: 2,   title: "I like them short",                          contain: 'none',   type: 'list', child_type: 1, url: ''},
-      { id: 9,   border_type: 2, parent_id: 2,   title: "I'm used to this",                           contain: 'none',   type: 'list', child_type: 1, url: ''},
-      { id: 10,  border_type: 3, parent_id: 2,   title: "Let's go deeper",                            contain: 'none',   type: 'list', child_type: 3, url: ''},
+      { id: 8,   border_type: 1, parent_id: 2,   title: "I like them short",                          contain: 'none',   type: 'menu', child_type: 1, url: ''},
+      { id: 9,   border_type: 2, parent_id: 2,   title: "I'm used to this",                           contain: 'none',   type: 'menu', child_type: 1, url: ''},
+      { id: 10,  border_type: 3, parent_id: 2,   title: "Let's go deeper",                            contain: 'none',   type: 'menu', child_type: 3, url: ''},
       { id: 11,  border_type: 1, parent_id: 3,   title: 'An Imaginary Line',                          contain: 'video',  type: 'html', child_type: 1, url: 'assets/explore/i_like_them_short/guided_mindfulness/an_imaginary_balloon_seven_mins.html'},
       { id: 12,  border_type: 2, parent_id: 3,   title: 'An Imaginary Balloon',                       contain: 'video',  type: 'html', child_type: 2, url: 'assets/explore/i_like_them_short/guided_mindfulness/an_imaginary_balloon_seven_mins.html'},
       { id: 13,  border_type: 3, parent_id: 3,   title: 'Choose It - Use It',                         contain: 'video',  type: 'html', child_type: 2, url: 'assets/explore/i_like_them_short/guided_mindfulness/an_imaginary_balloon_seven_mins.html'},
@@ -210,6 +216,15 @@ export class ListPage {
       { id: 184, border_type: 3, parent_id: 33,  title: 'Summary',                                    contain: 'none',  type: 'html', child_type: 1, url: 'assets/read/ch_5_the_art_of_allowing/summary.html'},
       { id: 185, border_type: 1, parent_id: 34,  title: 'Final words',                                contain: 'none',  type: 'html', child_type: 2, url: 'assets/read/final_words/final_words.html'},
     ];
+    
+    for(var m of this.subMenus){
+      if(this.selectedId ==  m.id)
+      {
+        this.selectedTitle = m.title;
+        console.log('title from constructor='+this.selectedTitle);
+      }
+    }
+
   }
 
   setValue(id, pId, title) {
@@ -251,13 +266,14 @@ export class ListPage {
     console.log('selectedId= '+this.selectedId);
     if(this.selectedId == 1 || this.selectedId == 2 || this.selectedId == 3 || this.selectedId == 4)
     {
+      // console.log("hello="+this.parentTitle)
       this.navCtrl.insert(0, MenuPage,{},{direction: 'back'});
     }
     else if(this.parentId != null) {
-        this.navCtrl.insert(0, this.rootPage, {
-        menuId: this.parentId,
-        //parentTitle: menu.title
+      this.navCtrl.insert(0, this.rootPage, {
+        menuId: this.parentId
       },{direction: 'back'});
+      // console.log("else if part selectedTitle= "+this.selectedTitle);
     }
     else {
       var pId;
@@ -265,7 +281,6 @@ export class ListPage {
           if(this.selectedId ==  menu.id)
           {
             pId = menu.parent_id;
-            // parentTitle = menu.title;
             break;
           }
         }
@@ -276,7 +291,8 @@ export class ListPage {
   }
 
   goToHome() {
-    this.navCtrl.push(MenuPage);
+    // this.navCtrl.insert(MenuPage);
+    this.navCtrl.insert(0, MenuPage,{},{direction: 'back'});
   }
   
 }
