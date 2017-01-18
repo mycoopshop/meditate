@@ -223,6 +223,9 @@ export class ListPage {
         this.selectedTitle = m.title;
         console.log('title from constructor='+this.selectedTitle);
       }
+      else {
+        this.parentTitle = ' ';
+      }
     }
 
   }
@@ -291,7 +294,6 @@ export class ListPage {
   }
 
   goToHome() {
-    // this.navCtrl.insert(MenuPage);
     this.navCtrl.insert(0, MenuPage,{},{direction: 'back'});
   }
   
