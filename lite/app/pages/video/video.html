@@ -5,23 +5,65 @@
       </button>
       <ion-title>My Menu List</ion-title>
    </ion-navbar>
-</ion-header> -->
-<ion-content class="background-blinker " padding="true" overflow-scroll="true">
-   <ion-view title="Welcome">
-      <ion-row responsive-sm>
-         <ion-col width-80>
-            <div menuToggle class="align-me">
-              <img src="img/greater-than.png" width="15" height="25">
+   </ion-header> -->
+<ion-content class="bg-color" padding="true" overflow-scroll="true">
+   <ion-row responsive-md responsive-sm responsive-lg >
+      <ion-col >
+         <a href="#" (click)="goToHome()" style="text-decoration: none">
+            <div class="GrayPagetext-logo animated slideInRight">
+               <img src="img/logo-the-art.png" >
             </div>
-         </ion-col>
-      </ion-row>
-      <video autoplay="true" controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline" class="videoPlayer">
-         <source src="videos/your_mind.m4v" type="video/mp4"/>
-      </video>
-      this is: 
-      {{listMenuId}} 
+         </a>
+         <span menuToggle class="Grayalign-me-now" fab-fixed>
+         <img src="img/greater-than.png" >
+         </span>
+      </ion-col>
+   </ion-row>
+   <ion-row>
+      <div style="margin-left: 3%" class="col-10" (click)="goToHome()">Home </div>
+      <div style="margin-left: 1%" class="col-10" (click)="goBack()"> {{'> '+MainMenuPTitle}} </div>
+      <div style="margin-left: 1%" class="col-10" (click)="goBack()"> {{'> '+ListMenuPTitle}} </div>
+   </ion-row>
+   <!-- <video autoplay="true" controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline" class="videoPlayer">
+      <source src="videos/your_mind.m4v" type="video/mp4"/>
+      </video> -->
+   <div class="Graytop-align">
+      <ion-scroll scrollY="true" style="height: 100%;">
+         <div *ngFor="let list of htmlLists">
+            <div *ngIf="(listMenuId ==list.parent_id)">
+               <div class="GrayHtmlSlideContainer animated slideInRight">
+                  <div class="royal-menu-container-html" >
+                     <div class="center-menu-container-html">
+                        <div class="inner-border-html-box">
+                           <div class="top-text-container" (click)="viewPage($event, list.url, list.parent_id)" style="margin-bottom:3%">
+                              <div class="html-menu-title-container">
+                                 <div class="html-menu-title module">
+                                    <a style="text-decoration:none;color:#000">{{list.title}}</a>
+                                 </div>
+                              </div>
+                              <div class="html-arrow-container">
+                                 <div class="html-arrow-icon">
+                                    <img src="img/greater-than.png" >
+                                 </div>
+                              </div>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </ion-scroll>
+   </div>
+   <!--  this is:
+      {{listMenuId}}
       parent is:
-      {{listMenuPId}}
-   </ion-view>
-   <br>
+      {{listMenuPId}} -->
 </ion-content>
+<ion-footer class="gb-color">
+   <div class="down-scroll-container">
+      <center class="manage-me" (click)="goBack()" >
+         <img src="img/less-than.png">
+      </center>
+   </div>
+</ion-footer>

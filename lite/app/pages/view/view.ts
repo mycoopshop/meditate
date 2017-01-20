@@ -45,26 +45,26 @@ export class ViewPage {
 
   goBack() {
     if(this.parentId != null)
-    {
-      this.nav.insert(1,ListPage, {
-        menuId: this.parentId
-      },{direction: 'back'});
-    }
+      {
+        this.nav.insert(1,ListPage, {
+          menuId: this.parentId
+        },{direction: 'back'});
+      }
     else
-    {
-      this.nav.pop();
-    }
+      {
+        this.nav.pop();
+      }
   }
 
-  scrollTo() {
-    let iFramelen = document.getElementById('iframeID');
-    this.iframe_height = iFramelen.scrollHeight;
-    this.iframe_height = (this.Scroll_height);
-    //let off_height = iFramelen.clientHeight;
-    this.Scroll_height = this.Scroll_height+this.Scroll_height;
-    //console.log(this.Scroll_height);
-    console.log(this.iframe_height);
-  };
+  // scrollTo() {
+  //   let iFramelen = document.getElementById('iframeID');
+  //   this.iframe_height = iFramelen.scrollHeight;
+  //   this.iframe_height = (this.Scroll_height);
+  //   //let off_height = iFramelen.clientHeight;
+  //   this.Scroll_height = this.Scroll_height+this.Scroll_height;
+  //   //console.log(this.Scroll_height);
+  //   console.log(this.iframe_height);
+  // };
 
   goToHome() {
     this.nav.push(MenuPage);

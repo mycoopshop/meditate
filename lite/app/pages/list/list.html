@@ -31,11 +31,11 @@
    </ion-row>
    <ion-nav-view>
       <ion-row>
-        <div style="margin-left: 6%" class="col-10" (click)="goToHome()">Home </div>
-        <div style="margin-left: 1%" class="col-10" (click)="goBack()"> {{'> '+selectedTitle}} </div>
-        <div style="margin-left: 1%;" *ngIf="(selectedId > 4)">
-           <div (click)="goBack()"> {{'> '+parentTitle}} </div>
-        </div>
+         <div style="margin-left: 6%" class="col-10" (click)="goToHome()">Home </div>
+         <div style="margin-left: 1%" class="col-10" (click)="goBack()"> {{'> '+selectedTitle}} </div>
+         <div style="margin-left: 1%;" *ngIf="(selectedId > 4)">
+            <div (click)="goBack()"> {{'> '+parentTitle}} </div>
+         </div>
       </ion-row>
       <div class="top-align">
          <ion-scroll scrollY="true" style="width: 100%; height: 100%;">
@@ -53,8 +53,17 @@
                                  <div class="inner-border-box">
                                     <div class="top-text-container">
                                        <div class="menu-title-container">
-                                          <div class="menu-title module">
-                                             {{menu.title}}
+                                          <div *ngIf="(menu.stage == 'final')">
+                                             <a href="#" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)">
+                                                <div class="menu-title module ">
+                                                   {{menu.title}}
+                                                </div>
+                                             </a>
+                                          </div>
+                                          <div *ngIf="(menu.stage != 'final')">
+                                             <div class="menu-title module">
+                                                {{menu.title}}
+                                             </div>
                                           </div>
                                        </div>
                                        <div class="arrow-container">
@@ -88,9 +97,17 @@
                                  <div class="inner-border-box">
                                     <div class="top-text-container">
                                        <div class="menu-title-container">
-                                          <!-- <a href="" (click)="htmlList($event, menu.id, menu.parent_id)"></a> -->
-                                          <div class="menu-title module ">
-                                             {{menu.title}}
+                                          <div *ngIf="(menu.stage == 'final')">
+                                             <a href="#" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)">
+                                                <div class="menu-title module ">
+                                                   {{menu.title}}
+                                                </div>
+                                             </a>
+                                          </div>
+                                          <div *ngIf="(menu.stage != 'final')">
+                                             <div class="menu-title module ">
+                                                {{menu.title}}
+                                             </div>
                                           </div>
                                        </div>
                                        <div class="arrow-container">
@@ -167,15 +184,45 @@
                                  <div *ngIf="(menu.border_type == 3)">
                                  </div>
                                  <div class="inner-border-html-box">
-                                    <div class="top-text-container" (click)="viewPage($event, menu.url, menu.parent_id)" style="margin-bottom:3%">
-                                       <div class="html-menu-title-container">
-                                          <div class="html-menu-title module">
-                                             <a style="text-decoration:none;color:#000">{{menu.title}}</a>
+                                    <div *ngIf="(menu.child_type == 3)">
+                                       <div class="top-text-container" (click)="viewPage($event, menu.url, menu.parent_id)" style="margin-bottom:3%">
+                                          <div class="html-menu-title-container">
+                                             <div class="html-menu-title module">
+                                                <a style="text-decoration:none;color:#000">{{menu.title}}</a>
+                                             </div>
+                                          </div>
+                                          <div class="html-arrow-container">
+                                             <div class="html-arrow-icon">
+                                                <img src="img/greater-than.png" >
+                                             </div>
                                           </div>
                                        </div>
-                                       <div class="html-arrow-container">
-                                          <div class="html-arrow-icon">
-                                             <img src="img/greater-than.png" >
+                                    </div>
+                                    <div *ngIf="(menu.child_type == 4)">
+                                       <div class="top-text-container" style="margin-bottom:3%">
+                                          <div class="html-menu-title-container">
+                                             <div class="html-menu-title module">
+                                                <a style="text-decoration:none;color:#000">{{menu.title}}</a>
+                                             </div>
+                                          </div>
+                                          <div class="html-arrow-container">
+                                             <div class="html-arrow-icon">
+                                                <img src="img/greater-than.png" >
+                                             </div>
+                                          </div>
+                                       </div>
+                                    </div>
+                                    <div *ngIf="(menu.child_type == 5)">
+                                       <div class="top-text-container" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)" style="margin-bottom:3%">
+                                          <div class="html-menu-title-container">
+                                             <div class="html-menu-title module">
+                                                <a style="text-decoration:none;color:#000">{{menu.title}}</a>
+                                             </div>
+                                          </div>
+                                          <div class="html-arrow-container">
+                                             <div class="html-arrow-icon">
+                                                <img src="img/greater-than.png" >
+                                             </div>
                                           </div>
                                        </div>
                                     </div>
