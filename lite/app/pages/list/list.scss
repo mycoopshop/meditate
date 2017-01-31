@@ -24,7 +24,7 @@
    .top-align {
       float: left;
       width: 100%;
-      height: 65%;
+      height: 66%;
       margin: 3% 0% 0% 0%;
       // align-items: center;
       // position: relative;
@@ -38,6 +38,9 @@
       // width: 100%
    }
 
+   scroll-content {
+     margin-bottom: 0px !important;
+   }
    .royal-menu-container {
       width: 100%;
       color: #fff;
@@ -128,6 +131,19 @@
       height: 90%;
       position: relative;
    }
+   
+   .active {
+    width: 100%;
+    height: 100%;
+   }
+
+   .active:hover {
+    width: 100%;
+    height: 110%;
+    background-color: rgba(128, 128, 128, 0.31);
+    opacity: 0.5;
+   }
+
    .bottom-icon-container {
       float: left;
       width: 100%;
@@ -196,6 +212,14 @@
     text-align: center;
   }
 
+  .breadcrumb-container {
+    font-family: sans_medium;
+    font-size: 20px;
+    text-transform: uppercase;
+    color: #808080;
+    margin-top: 1.8%;
+  }
+
   .background-blinker {
     /*background: linear-gradient(320deg, #E4903C,#F5D0A9,#FF8001,#68BDF5,#D64EC4,#AAB66B,#B44080,#569BC9,#CE5196,#6D91A9,#F5D0A9,#F5D0A9,#6D91A9,#569BC9);*/
     background: linear-gradient(320deg, #F7BC92,#ECC19B,#DEC8A3,#A6DEC5,#F7BC92,#8AE8D6,#ECC19B,#8AE8D6,#DEC8A3,#A6DEC5,#F7BC92,#F7BC92,#A6DEC5,#8AE8D6);
@@ -229,13 +253,13 @@
   .align-me-now {
     float: right;
     width: 5%;
-    margin-top: 6%;
+    margin-top: 5.4%;
     img { height: 4vh; }
   }
 
   .gb-color {
     background-color: gray;
-    height: 8%;
+    height: 6%;
     box-shadow: 0px -3px 5px rgba(0,0,0,0.15);
     border-top: 2px solid gray;
   }
@@ -243,12 +267,16 @@
 
   .down-scroll-container {
     float: left;
-    width: 100%;
+    width: 66%;
   }
 
   .manage-me {
-    margin-top: 4.4%;
-    img{ width:20px; height:28px;}
+    margin-top: 1.9%;
+    img{ 
+      width:18px;
+      height:25px;
+      margin-left: 51%;
+    }
   }
 
   .back-container {
@@ -270,6 +298,38 @@
     }
   }
 
+  .web-page-link-container {
+    width: 32.5%;
+    font-size: 10px;
+    float: left;
+    margin: 5.3% 1.5% 0% 0%;
+    a {
+      width: 100%;
+      text-align: right;
+      text-decoration: none;
+      color: #000;
+    }
+    a:hover {
+      width: 100%;
+      text-align: right;
+      text-decoration: none;
+      color: #222;
+    }
+  }
+  
+.platform-container {
+  width: 100%;
+  text-transform: uppercase;
+  font-size: 18px;
+  color: #000;
+  font-family: sans_medium;
+  
+  .platform-text {
+    float: left;
+    margin: 5% 0% 0% 5%;
+  }
+}
+
 @media only screen 
 and (min-device-width : 768px) 
 and (max-device-width : 1024px) 
@@ -284,7 +344,7 @@ and (max-device-width : 1024px)
   .floating-boarder2,.floating-boarder3 {height: 189px;margin-left: -1px;}
   .floating-boarder1 {height: 7px;margin-top: -1px;}
   .top-align {margin: 8% 0% 15% 0%;}
-  .gb-color {height:10% !important;}
+  .gb-color {height:8% !important;}
   .manage-me img{height:40px;width:60px;}
 
    .text-logo {

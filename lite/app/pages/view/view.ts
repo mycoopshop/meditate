@@ -67,7 +67,7 @@ export class ViewPage {
   // };
 
   goToHome() {
-    this.nav.push(MenuPage);
+    this.nav.insert(0, MenuPage,{},{direction: 'back', duration: 177});
   }
   
 }

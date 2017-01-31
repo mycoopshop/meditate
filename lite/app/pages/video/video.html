@@ -10,7 +10,7 @@
    <ion-row responsive-md responsive-sm responsive-lg >
       <ion-col >
          <a href="#" (click)="goToHome()" style="text-decoration: none">
-            <div class="GrayPagetext-logo animated slideInRight">
+            <div class="GrayPagetext-logo">
                <img src="img/logo-the-art.png" >
             </div>
          </a>
@@ -19,10 +19,10 @@
          </span>
       </ion-col>
    </ion-row>
-   <ion-row>
-      <div style="margin-left: 3%" class="col-10" (click)="goToHome()">Home </div>
-      <div style="margin-left: 1%" class="col-10" (click)="goBack()"> {{'> '+MainMenuPTitle}} </div>
-      <div style="margin-left: 1%" class="col-10" (click)="goBack()"> {{'> '+ListMenuPTitle}} </div>
+   <ion-row class="breadcrumb-container" >
+<!--       <div style="margin-left: 3%" class="col-10" (click)="goToHome()">Home </div> -->
+      <div style="margin-left: 3%" class="col-10" (click)="goBack()"> {{MainMenuPTitle}} </div>
+      <div style="margin-left: 2%" class="col-10" (click)="goBack()"> {{'> '+ListMenuPTitle}} </div>
    </ion-row>
    <!-- <video autoplay="true" controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline" class="videoPlayer">
       <source src="videos/your_mind.m4v" type="video/mp4"/>
@@ -31,7 +31,7 @@
       <ion-scroll scrollY="true" style="height: 100%;">
          <div *ngFor="let list of htmlLists">
             <div *ngIf="(listMenuId ==list.parent_id)">
-               <div class="GrayHtmlSlideContainer animated slideInRight">
+               <div class="GrayHtmlSlideContainer">
                   <div class="royal-menu-container-html" >
                      <div class="center-menu-container-html">
                         <div class="inner-border-html-box">
@@ -66,4 +66,7 @@
          <img src="img/less-than.png">
       </center>
    </div>
+   <ion-row class="web-page-link-container" >
+      <a class="web-link" href="http://mindfulcreation.com/">MINDFULCREATION.COM</a>
+   </ion-row>
 </ion-footer>

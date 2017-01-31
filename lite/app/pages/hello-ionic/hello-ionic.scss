@@ -170,7 +170,7 @@ button {
   width: 94%;
   height: 100%;
   float: left;
-  border: 3px solid black;
+  border: 5px solid black;
   font-family: sans_medium;
 }
 
@@ -344,12 +344,12 @@ and (max-device-width : 568px)
 
   .up-arrow-container {
     width: 17% !important;
-    margin: 1.8% -5% 0% 0% !important;
+    margin: 2.3% -5% 0% 0% !important;
     height: 4.4vh !important;
   }
 }
 
-/*UI for iPhone 5 & 5S Resolutions (375 × 667)*/
+/*UI for iPhone 6, 6S & 7 Resolutions (375 × 667)*/
 @media only screen
 and (min-device-width : 375px)
 and (max-device-width : 667px)
@@ -373,7 +373,7 @@ and (max-device-width : 667px)
 
   .up-arrow-container {
     width: 15% !important;
-    margin: 1.8% -5% 0% 0% !important;
+    margin: 2.3% -5% 0% 0% !important;
     height: 4vh !important;
   }
 }

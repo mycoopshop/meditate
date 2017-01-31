@@ -164,7 +164,7 @@ export class VideoPage {
   }
 
   goToHome() {
-    this.nav.insert(0, MenuPage,{},{direction: 'back'});
+    this.nav.insert(0, MenuPage,{},{direction: 'back', duration: 177});
   }
 
   viewPage(event, url, id) {

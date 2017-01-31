@@ -7,11 +7,11 @@
    <ion-row responsive-md responsive-sm responsive-lg >
       <ion-col >
          <a href="#" (click)="goToHome()" style="text-decoration: none">
-            <div class="text-logo animated slideInRight">
-               <img src="img/logo-the-art.png" >
+            <div class="view-text-logo">
+               <img src="img/mindfullness.png" >
             </div>
          </a>
-         <span menuToggle class="align-me-now" fab-fixed>
+         <span menuToggle class="view-align-me-now" fab-fixed>
          <img src="img/greater-than.png" >
          </span>
       </ion-col>
@@ -23,29 +23,9 @@
          </button>  </div>
          </div> -->
    </ion-row>
-   <!-- <ion-col width-100>
-      <ion-slides #mySlider  [options]="mySlideOptions">
-      <ion-slide>
-         <div class="slide-container">
-            <img src="img/mindfulness_part_two.jpg">
-         </div>
-      </ion-slide>
-      <ion-slide>
-         <div class="slide-container">
-            <img src="img/hat.jpg">
-         </div>
-      </ion-slide>
-      <ion-slide>
-         <div class="slide-container">
-            <img src="img/online.jpg" >
-         </div>
-      </ion-slide>
-      </ion-slides>
-      <div class="slider-toggle">
-         <div  (ionDidChange)="onSlideChanged()" class="swiper-button-prev"></div>
-         <div (ionWillChange)="onSlideChanged()" class="swiper-button-next"></div>
-      </div>
-      </ion-col> -->
+      <!-- <video controls="controls" preload="auto" poster="img/Play_button_2.jpg" webkit-playsinline="webkit-playsinline" class="videoPlayer">
+         <source src="videos/your_mind.m4v" type="video/mp4" />
+      </video> -->
    <!-- {{page}} -->
    <div class="iframe_container">
       <iframe id="iframeID" [src]='page' frameborder="0"  >
@@ -59,4 +39,7 @@
          <img src="img/less-than.png">
       </center>
    </div>
+   <ion-row class="web-page-link-container" >
+      <a class="web-link" href="http://mindfulcreation.com/">MINDFULCREATION.COM</a>
+   </ion-row>
 </ion-footer>

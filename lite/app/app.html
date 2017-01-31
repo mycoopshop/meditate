@@ -37,7 +37,7 @@
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
 
 <style type="text/css">
-
+  
   .main-menu-container {
     width: 70%;
     float: left;
@@ -69,7 +69,7 @@
   .title-main-container {
     background-color: gray;
     text-align: left;
-    padding: 6.5% 0% 3% 7%;
+    padding: 6.5% 0% 4% 7%;
     color: #000;
     font-weight: bold;
   }
@@ -89,7 +89,7 @@
     float: left;
     width: 11%;
     margin-left: 14%;
-    margin-top: 1.2%;
+    /*margin-top: 1.2%;*/
   }
   .top-toggle img {
     height:25px;
@@ -100,9 +100,15 @@
     width: 100%;
     height: 30px;
   }
+
+  ion-scroll {
+    position: initial; 
+  }
+
+/*for iPod*/
 @media only screen 
 and (min-device-width : 768px) 
-and (max-device-width : 1024px) 
+and (max-device-width : 1024px)
 { 
   .inner-title img {width: 425px;height:50px;}
   .top-toggle img {height:50px !important; margin-left: 14px;}
@@ -111,8 +117,14 @@ and (max-device-width : 1024px)
   .top-toggle {margin-top:-15px;} 
 }
 
-ion-scroll {
-  position: initial; 
+/*UI for iPhone 5 & 5S Resolutions (320 × 568)*/
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 568px)
+{
+  .top-toggle {
+    margin-top: 1%;
+  }
 }
 
 </style>
