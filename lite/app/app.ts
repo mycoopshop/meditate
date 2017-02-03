@@ -69,7 +69,7 @@ class MyApp {
   // }
 
   goToHome() {
-    this.nav.insert(0, MenuPage,{},{direction: 'back', duration: 177});
+    this.nav.insert(0, MenuPage,{},{direction: 'back', duration: 490});
   }
 
   openPage(page) {

@@ -10,17 +10,20 @@
    <ion-row responsive-md responsive-sm responsive-lg >
       <ion-col >
          <a href="#" (click)="goToHome()" style="text-decoration: none">
-            <div class="GrayPagetext-logo">
+            <div class="GrayPagetext-logo" *ngIf ="(listMenuPId > 10) || (listMenuPId < 8)">
                <img src="img/logo-the-art.png" >
+            </div>
+            <div class="GrayPagetext-Mindfull-logo" *ngIf ="(listMenuPId == 8) || (listMenuPId == 9) || (listMenuPId == 10)">
+               <img src="img/mindfullness.png" >
             </div>
          </a>
          <span menuToggle class="Grayalign-me-now" fab-fixed>
-         <img src="img/greater-than.png" >
+            <img src="img/greater-than.png" >
          </span>
       </ion-col>
    </ion-row>
-   <ion-row class="breadcrumb-container" >
-<!--       <div style="margin-left: 3%" class="col-10" (click)="goToHome()">Home </div> -->
+   <ion-row class="breadcrumb-container" *ngIf ="(listMenuPId > 10) || (listMenuPId < 8)" >
+      <!--       <div style="margin-left: 3%" class="col-10" (click)="goToHome()">Home </div> -->
       <div style="margin-left: 3%" class="col-10" (click)="goBack()"> {{MainMenuPTitle}} </div>
       <div style="margin-left: 2%" class="col-10" (click)="goBack()"> {{'> '+ListMenuPTitle}} </div>
    </ion-row>

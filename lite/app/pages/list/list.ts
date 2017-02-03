@@ -64,15 +64,15 @@ export class ListPage {
       { id: 32,  border_type: 1, parent_id: 4,   title: 'Patterns of behaviour',                     platform: ' ',  contain: 'none',   type: 'html', stage: 'empty', child_type: 4, url: ''},
       { id: 33,  border_type: 2, parent_id: 4,   title: 'The art of allowing',                       platform: ' ',  contain: 'none',   type: 'html', stage: 'final', child_type: 3, url: 'assets/explore/i_like_them_short/tips_and_tools/labelling.html'},
       { id: 34,  border_type: 3, parent_id: 4,   title: 'Final words',                               platform: ' ',  contain: 'none',   type: 'html', stage: 'final', child_type: 3, url: 'assets/explore/i_like_them_short/guided_mindfulness/the_world_outside_eleven_mins.html'},
-      { id: 35,  border_type: 1, parent_id: 8,   title: 'Guided Mindfulness',                        platform: ' ',  contain: 'none',   type: 'list', stage: 'final', child_type: 1, url: ''},
-      { id: 36,  border_type: 2, parent_id: 8,   title: 'Experiential Exercises',                    platform: ' ',  contain: 'none',   type: 'list', stage: 'final', child_type: 2, url: ''},
-      { id: 37,  border_type: 3, parent_id: 8,   title: 'Tips And Tools',                            platform: ' ',  contain: 'none',   type: 'list', stage: 'final', child_type: 3, url: ''},
-      { id: 38,  border_type: 1, parent_id: 9,   title: 'Guided Mindfulness',                        platform: ' ',  contain: 'none',   type: 'list', stage: 'final', child_type: 1, url: ''},
-      { id: 39,  border_type: 2, parent_id: 9,   title: 'Experiential Exercises',                    platform: ' ',  contain: 'none',   type: 'list', stage: 'final', child_type: 2, url: ''},
-      { id: 40,  border_type: 3, parent_id: 9,   title: 'Tips And Tools',                            platform: ' ',  contain: 'none',   type: 'list', stage: 'final', child_type: 3, url: ''},
-      { id: 41,  border_type: 1, parent_id: 10,  title: 'Guided Mindfulness',                        platform: ' ',  contain: 'none',   type: 'list', stage: 'final', child_type: 1, url: ''},
-      { id: 42,  border_type: 2, parent_id: 10,  title: 'Experiential Exercises',                    platform: ' ',  contain: 'none',   type: 'list', stage: 'final', child_type: 2, url: ''},
-      { id: 43,  border_type: 3, parent_id: 10,  title: 'Tips And Tools',                            platform: ' ',  contain: 'none',   type: 'list', stage: 'final', child_type: 3, url: ''}, 
+      { id: 35,  border_type: 1, parent_id: 8,   title: 'Guided Mindfulness',                        platform: '1',  contain: 'none',   type: 'list', stage: 'final', child_type: 1, url: ''},
+      { id: 36,  border_type: 2, parent_id: 8,   title: 'Experiential Exercises',                    platform: '2',  contain: 'none',   type: 'list', stage: 'final', child_type: 2, url: ''},
+      { id: 37,  border_type: 3, parent_id: 8,   title: 'Tips And Tools',                            platform: '3',  contain: 'none',   type: 'list', stage: 'final', child_type: 3, url: ''},
+      { id: 38,  border_type: 1, parent_id: 9,   title: 'Guided Mindfulness',                        platform: '1',  contain: 'none',   type: 'list', stage: 'final', child_type: 1, url: ''},
+      { id: 39,  border_type: 2, parent_id: 9,   title: 'Experiential Exercises',                    platform: '2',  contain: 'none',   type: 'list', stage: 'final', child_type: 2, url: ''},
+      { id: 40,  border_type: 3, parent_id: 9,   title: 'Tips And Tools',                            platform: '3',  contain: 'none',   type: 'list', stage: 'final', child_type: 3, url: ''},
+      { id: 41,  border_type: 1, parent_id: 10,  title: 'Guided Mindfulness',                        platform: '1',  contain: 'none',   type: 'list', stage: 'final', child_type: 1, url: ''},
+      { id: 42,  border_type: 2, parent_id: 10,  title: 'Experiential Exercises',                    platform: '2',  contain: 'none',   type: 'list', stage: 'final', child_type: 2, url: ''},
+      { id: 43,  border_type: 3, parent_id: 10,  title: 'Tips And Tools',                            platform: '3',  contain: 'none',   type: 'list', stage: 'final', child_type: 3, url: ''}, 
       { id: 44,  border_type: 1, parent_id: 31,  title: 'Your Mind',                                 platform: ' ',  contain: 'none',   type: 'html', stage: 'final', child_type: 5, url: ''},
       { id: 45,  border_type: 2, parent_id: 31,  title: 'Thoughts-as-thoughts',                      platform: ' ',  contain: 'none',   type: 'html', stage: 'final', child_type: 5, url: ''},
       { id: 46,  border_type: 3, parent_id: 31,  title: 'Feelings-as-feelings',                      platform: ' ',  contain: 'none',   type: 'html', stage: 'final', child_type: 5, url: ''},
@@ -136,12 +136,12 @@ export class ListPage {
     if(this.selectedId == 1 || this.selectedId == 2 || this.selectedId == 3 || this.selectedId == 4)
     {
       // console.log("hello="+this.parentTitle)
-      this.navCtrl.insert(0, MenuPage,{},{direction: 'back', duration: 280});
+      this.navCtrl.insert(0, MenuPage,{},{direction: 'back', duration: 490});
     }
     else if(this.parentId != null) {
       this.navCtrl.insert(0, this.rootPage, {
         menuId: this.parentId
-      },{direction: 'back', duration: 280});
+      },{direction: 'back', duration: 490});
       // console.log("else if part selectedTitle= "+this.selectedTitle);
     }
     else {
@@ -155,12 +155,12 @@ export class ListPage {
         }
         this.navCtrl.insert(0, this.rootPage, {
         menuId: pId
-      },{direction: 'back', duration: 280});
+      },{direction: 'back', duration: 490});
     }
   }
 
   goToHome() {
-    this.navCtrl.insert(0, MenuPage,{},{direction: 'back', duration: 280});
+    this.navCtrl.insert(0, MenuPage,{},{direction: 'back', duration: 490});
   }
   
 }
