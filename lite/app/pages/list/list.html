@@ -210,7 +210,7 @@
                   </div>
                </div>
                <div *ngIf="((menu.type=='html')&& !(menu.contain=='video'))">
-                  <div class="HtmlSlideContainer">
+                  <div class="HtmlSlideContainer animated slideInRight">
                      <div class="royal-menu-container-html" (click)="setValue(menu.id, menu.parent_id, menu.title)" >
                         <div class="center-menu-container-html">
                            <div *ngIf="(menu.border_type == 3)">
@@ -245,7 +245,7 @@
                                  </div>
                               </div>
                               <div *ngIf="(menu.child_type == 5)">
-                                 <div class="top-text-container animated slideInRight" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)" style="margin-bottom:3%">
+                                 <div class="top-text-container" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)" style="margin-bottom:3%">
                                     <div class="html-menu-title-container">
                                        <div class="html-menu-title module">
                                           <a style="text-decoration:none;color:#000">{{menu.title}}</a>
