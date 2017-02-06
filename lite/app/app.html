@@ -1,4 +1,4 @@
-<ion-menu [content]="content" side="right" class="side-menu">
+<ion-menu [content]="content" side="right" class="side-menu" type="overlay">
    <ion-row class="title-main-container">
       <a menuToggle href="#" (click)="goToHome()" style="text-decoration: none; width:75%;">
          <div class = "col-67 inner-title">
@@ -104,6 +104,19 @@
   ion-scroll {
     position: initial; 
   }
+
+  .menu-open .content-backdrop {
+  position: fixed;
+  top: 44px;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.1s opacity linear;
+  -moz-transition: 0.1s opacity linear;
+  transition: 0.1s opacity linear;
+}
 
 /*for iPod*/
 @media only screen 
