@@ -18,7 +18,7 @@
             </div>
          </a>
          <span menuToggle class="Grayalign-me-now" fab-fixed>
-            <img src="img/greater-than.png" >
+         <img src="img/greater-than.png" >
          </span>
       </ion-col>
    </ion-row>
@@ -30,23 +30,25 @@
    <!-- <video autoplay="true" controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline" class="videoPlayer">
       <source src="videos/your_mind.m4v" type="video/mp4"/>
       </video> -->
-   <div class="Graytop-align">
-      <ion-scroll scrollY="true" style="height: 100%;">
-         <div *ngFor="let list of htmlLists">
-            <div *ngIf="(listMenuId ==list.parent_id)">
-               <div class="GrayHtmlSlideContainer">
-                  <div class="royal-menu-container-html" >
-                     <div class="center-menu-container-html">
-                        <div class="inner-border-html-box">
-                           <div class="top-text-container" (click)="viewPage($event, list.url, list.parent_id)" style="margin-bottom:3%">
-                              <div class="html-menu-title-container">
-                                 <div class="html-menu-title module">
-                                    <a style="text-decoration:none;color:#000">{{list.title}}</a>
+   <ion-scroll scrollY="true" direction="y" style="width: 100%; height: 65%">
+      <div class="video-outer">
+         <div class="middle">
+            <div *ngFor="let list of htmlLists">
+               <div *ngIf="(listMenuId ==list.parent_id)">
+                  <div class="GrayHtmlSlideContainer">
+                     <div class="royal-menu-container-html inner" >
+                        <div class="center-menu-container-html">
+                           <div class="inner-border-html-box">
+                              <div class="top-text-container" (click)="viewPage($event, list.url, list.parent_id)" style="margin-bottom:3%">
+                                 <div class="html-menu-title-container">
+                                    <div class="html-menu-title module">
+                                       <a style="text-decoration:none;color:#000">{{list.title}}</a>
+                                    </div>
                                  </div>
-                              </div>
-                              <div class="html-arrow-container">
-                                 <div class="html-arrow-icon">
-                                    <img src="img/greater-than.png" >
+                                 <div class="html-arrow-container">
+                                    <div class="html-arrow-icon">
+                                       <img src="img/greater-than.png" >
+                                    </div>
                                  </div>
                               </div>
                            </div>
@@ -56,8 +58,8 @@
                </div>
             </div>
          </div>
-      </ion-scroll>
-   </div>
+      </div>
+   </ion-scroll>
    <!--  this is:
       {{listMenuId}}
       parent is:

@@ -180,12 +180,12 @@ export class ListPage {
     if(this.selectedId == 1 || this.selectedId == 2 || this.selectedId == 3 || this.selectedId == 4)
     {
       // console.log("hello="+this.parentTitle)
-      this.navCtrl.insert(0, MenuPage,{},{direction: 'back', duration: 490});
+      this.navCtrl.insert(0, MenuPage,{},{direction: 'back', duration: 610});
     }
     else if(this.parentId != null) {
       this.navCtrl.insert(0, this.rootPage, {
         menuId: this.parentId
-      },{direction: 'back', duration: 490});
+      },{direction: 'back', duration: 610});
       // console.log("else if part selectedTitle= "+this.selectedTitle);
     }
     else {
@@ -199,12 +199,12 @@ export class ListPage {
         }
         this.navCtrl.insert(0, this.rootPage, {
         menuId: pId
-      },{direction: 'back', duration: 490});
+      },{direction: 'back', duration: 610});
     }
   }
 
   goToHome() {
-    this.navCtrl.insert(0, MenuPage,{},{direction: 'back', duration: 490});
+    this.navCtrl.insert(0, MenuPage,{},{direction: 'back', duration: 610});
   }
   
 }

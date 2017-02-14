@@ -317,9 +317,7 @@ button {
 }
 
 /*UI for iPhone 5 & 5S Resolutions (320 × 568)*/
-@media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px)
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px)
  {
   
   .explore-rotate-text {
@@ -353,9 +351,7 @@ and (max-device-width : 568px)
 }
 
 /*UI for iPhone 6, 6S & 7 Resolutions (375 × 667)*/
-@media only screen
-and (min-device-width : 375px)
-and (max-device-width : 667px)
+@media only screen and (min-device-width : 375px) and (max-device-width : 667px)
 {
   .explore-rotate-text {
     margin-left: -150% !important;
