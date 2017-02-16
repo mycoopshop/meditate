@@ -16,6 +16,11 @@ export class ListPage {
   parentId: any;
   parentTitle :string;
   rootPage: any = ListPage;
+  // public items: Array<Item> = [];
+
+  // public addItem(item: Item) {
+  //     this.items.push(item);
+  // }
   
   
   subMenus: Array<{id: number, border_type:number, title: string, platform: string,  contain: string, parent_id: number, type: string, stage:string, child_type: number, url: string}>;

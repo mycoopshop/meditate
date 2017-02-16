@@ -60,6 +60,16 @@ class MyApp {
     });
   }
 
+  ionViewCanEnter(): boolean{
+   // here we can either return true or false
+   // depending on if we want to leave this view
+   if((5)){
+      return true;
+    } else {
+      return false;
+    }
+  }
+
   // hideSplashScreen() {
   //   if (Splashscreen) {
   //     setTimeout(() => {
