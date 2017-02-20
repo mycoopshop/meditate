@@ -253,6 +253,10 @@
     text-transform: uppercase;
     color: #808080;
     margin-top: 1.8%;
+
+    .breadcrumb-text {
+      margin-top: -20px; margin-left: 50px;
+    }
   }
 
   .background-blinker {

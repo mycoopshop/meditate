@@ -16,12 +16,7 @@ export class ListPage {
   parentId: any;
   parentTitle :string;
   rootPage: any = ListPage;
-  // public items: Array<Item> = [];
-
-  // public addItem(item: Item) {
-  //     this.items.push(item);
-  // }
-  
+  public breadcrumbs = ["Read",];  
   
   subMenus: Array<{id: number, border_type:number, title: string, platform: string,  contain: string, parent_id: number, type: string, stage:string, child_type: number, url: string}>;
   @ViewChild(Content) content: Content;
@@ -29,8 +24,7 @@ export class ListPage {
   constructor(private navCtrl: NavController, navParams: NavParams) {
     
     this.selectedId = navParams.get('menuId'); 
-    this.selectedTitle = navParams.get('title'); 
-    
+    this.selectedTitle = navParams.get('title');
     this.flag = "0";
     this.scrollNow = "2500";
 
@@ -134,10 +128,12 @@ export class ListPage {
       if(this.selectedId ==  m.id)
       {
         this.selectedTitle = m.title;
+        // this.breadcrumbs.push(this.selectedTitle);
         // console.log('title from constructor='+this.selectedTitle);
       }
       else {
         this.parentTitle = ' ';
+        // this.breadcrumbs.push(this.title);
       }
     }
 
@@ -170,12 +166,19 @@ export class ListPage {
     });
   }
 
+  addClickedItem(title) {
+    console.log('Selected Title=',title)
+    this.breadcrumbs.push(title); 
+    console.log('Added to breadcrumbs Array=',this.breadcrumbs);
+  }
+
   htmlList(event, Id, PId, PTitle, MenuPTitle) {
     this.navCtrl.push(VideoPage, {
       listMenuId: Id,
       listMenuPId: PId,
       mainMenuParentTitle: PTitle,
-      listMenuParentTitle: MenuPTitle
+      listMenuParentTitle: MenuPTitle,
+      breadcrumbsCollection: this.breadcrumbs
     });
   }
 

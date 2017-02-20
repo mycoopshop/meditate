@@ -14,6 +14,7 @@ export class VideoPage {
   listMenuPId: any;
   MainMenuPTitle: string;
   ListMenuPTitle: string;
+  BreadcrumbsCollection :any;
 
   htmlLists: Array<{id: number, parent_id: number, title: string, contain: string, url: string}>;
 
@@ -22,6 +23,7 @@ export class VideoPage {
   	this.listMenuPId = navParams.get('listMenuPId');
   	this.MainMenuPTitle = navParams.get('mainMenuParentTitle');
   	this.ListMenuPTitle = navParams.get('listMenuParentTitle');
+    this.BreadcrumbsCollection = navParams.get('breadcrumbsCollection');
 
   	this.htmlLists = [
   	  { id: 1,   parent_id: 5,   title: 'The 8 Day Challenge',                        contain: 'none', url: 'assets/challenges/eight_day_challenge/the_eight_day_challenge.html'},
