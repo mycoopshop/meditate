@@ -22,22 +22,27 @@
          </span>
         </ion-col>
     </ion-row>
-    <div class="breadcrumb-container">
-        <div *ngFor="let bcrumb of BreadcrumbsCollection">
-            <div style="float: left;" (click)="goBack()" *ngIf="(listMenuPId >10)">
-              {{"&nbsp;"+bcrumb}} &gt;
+    <div *ngIf="(listMenuPId > 8)" class="breadcrumb-container">
+        <div *ngFor="let bcrumb of BreadcrumbsCollection; let i = index ">
+            <div style="float: left;" class="animated slideInRight" (click)="goBack()" *ngIf="(listMenuPId >10)">
+                <div *ngIf="(i >= 1)">
+                    &nbsp;&gt; {{bcrumb}}
+                </div>
+                <div *ngIf="(i == 0)">
+                    {{"&nbsp;"+bcrumb}}
+                </div>
             </div>
         </div>
     </div>
     <!--       <div style="margin-left: 3%" class="col-10" (click)="goToHome()">Home </div> -->
     <ion-row class="breadcrumb-container" *ngIf="(listMenuPId < 8)">
-        <div style="margin-left: 3%" class="col-10" (click)="goBack()"> {{MainMenuPTitle}} </div>
-        <div style="margin-left: 2%" class="col-10" (click)="goBack()"> {{'> '+ListMenuPTitle}} </div>
+        <div style="margin-left: 3%" class="col-10 animated slideInRight" (click)="goBack()"> {{MainMenuPTitle}} </div>
+        <div style="margin-left: 2%" class="col-10 animated slideInRight" (click)="goBack()"> {{'> '+ListMenuPTitle}} </div>
     </ion-row>
     <!-- <video autoplay="true" controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline" class="videoPlayer">
       <source src="videos/your_mind.m4v" type="video/mp4"/>
       </video> -->
-    <ion-scroll scrollY="true" direction="y" style="width: 100%; height: 65%">
+    <ion-scroll scrollY="true" direction="y" style="width: 100%; height: 59%">
         <div class="video-outer">
             <div class="middle">
                 <div *ngFor="let list of htmlLists">

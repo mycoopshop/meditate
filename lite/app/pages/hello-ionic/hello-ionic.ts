@@ -25,7 +25,7 @@ export class HelloIonicPage {
   constructor(public navController: NavController) {
 
     this.slides = [
-      {id: 1,  author: "- Osho",         title: "Relax, let go. But remember only one thing: You are a witness."},
+      {id: 1,  author: "- B. Katie",     title: "When you argue with reality, you lose… 100% of the time…"},
       {id: 2,  author: "- E.Tolle",      title: "The human condition: lost in thought."},
       {id: 3,  author: "- R.Lowe",       title: "In the gap between your thoughts is your truth."},
       {id: 4,  author: "- T.Brach",      title: "Mindfulness - the space between stimulus and response: that's where choice lies."},
@@ -36,7 +36,7 @@ export class HelloIonicPage {
       {id: 9,  author: "- E. Tolle",     title: "The ‘voice inside your head’ is not who you are."},
       {id: 10, author: "- J. Kabat-Zinn",title: "Our thoughts are just thoughts…"},
       {id: 11, author: "-C. Jung",       title: "What you resist persists."},
-      {id: 12, author: "- B. Katie",     title: "When you argue with reality, you lose… 100% of the time…"},
+      {id: 12, author: "- Osho ",        title: "Relax, let go. But remember only one thing: You are a witness."},
       {id: 13, author: "- B. Katie",     title: "Arguing with reality is like teaching a cat to bark."},
       {id: 14, author: "- D. Ford",      title: "What we cannot be with will not let us be."},
       {id: 15, author: "- N.D. Walsch",  title: "If I do not go within, I go without. "},

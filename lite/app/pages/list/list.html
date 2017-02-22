@@ -34,20 +34,25 @@
          </span>
         </ion-col>
     </ion-row>
-    <div class="breadcrumb-container" style="margin-left: 6.4%">
-        <div *ngFor="let bcrumb of (breadcrumbs)">
+    <div *ngIf="selectedId != 3" class="breadcrumb-container" style="margin-left: 6.4%">
+        <div *ngFor="let bcrumb of (breadcrumbs); let i = index ">
             <div *ngIf="(selectedId == 4 || selectedId == 31 || selectedId == 32)" (click)="goBack()">
-                <div style="float: left;">
-                    {{"&nbsp;"+bcrumb}} &gt;
+                <div style="float: left;" class="animated slideInRight">
+                    <div *ngIf="(i >= 1)">
+                       &nbsp;&gt; {{bcrumb}}
+                    </div>
+                    <div *ngIf="(i == 0)">
+                        {{"&nbsp;"+bcrumb}}
+                    </div>
                 </div>
             </div>
         </div>
         <div *ngIf="( selectedId == 31 || selectedId == 32) && (selectedTitle != 'Read')" (click)="goBack()">
-            <div class="#">
-               {{selectedTitle}}
+            <div class="animated slideInRight">
+                &nbsp;&gt; {{selectedTitle}}
             </div>
         </div>
-        <div *ngIf="(selectedId ==1)">
+        <div *ngIf="(selectedId ==1)" class="animated slideInRight">
             {{selectedTitle}}
         </div>
     </div>
@@ -71,10 +76,10 @@
                                     </div>
                                     <div class="center-menu-container">
                                         <div class="inner-border-box">
-                                            <div class="top-text-container active" *ngIf="(menu.stage == 'final')" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)">
+                                            <button class="top-text-container active" *ngIf="(menu.stage == 'final')" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)">
                                                 <div class="menu-title-container">
                                                     <div class="menu-title module ">
-                                                        menu {{menu.title}}
+                                                        {{menu.title}}
                                                     </div>
                                                 </div>
                                                 <div class="arrow-container">
@@ -82,8 +87,8 @@
                                                         <img src="img/greater-than.png">
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="top-text-container active" *ngIf="(menu.stage == 'empty')">
+                                            </button>
+                                            <button class="top-text-container active" *ngIf="(menu.stage == 'empty')">
                                                 <div class="menu-title-container">
                                                     <div class="platform-container">
                                                         <div class="platform-text">
@@ -99,7 +104,7 @@
                                                         <img src="img/greater-than.png">
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </button>
                                         </div>
                                         <div *ngIf="(menu.border_type == 2)">
                                             <div class="floating-boarder2">
@@ -123,7 +128,7 @@
                                     </div>
                                     <div class="center-menu-container">
                                         <div class="inner-border-box">
-                                            <div class="top-text-container active" *ngIf="(menu.stage == 'final')" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)">
+                                            <button class="top-text-container active" *ngIf="(menu.stage == 'final')" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)">
                                                 <div class="menu-title-container">
                                                     <div class="menu-title module ">
                                                         {{menu.title}}
@@ -134,8 +139,8 @@
                                                         <img src="img/greater-than.png">
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div class="top-text-container active" *ngIf="(menu.stage == 'empty')">
+                                            </button>
+                                            <button class="top-text-container active" *ngIf="(menu.stage == 'empty')">
                                                 <div class="menu-title-container">
                                                     <div class="menu-title module ">
                                                         {{menu.title}}
@@ -146,7 +151,7 @@
                                                         <img src="img/greater-than.png">
                                                     </div>
                                                 </div>
-                                            </div>
+                                            </button>
                                         </div>
                                         <div *ngIf="(menu.border_type == 2)">
                                             <div class="floating-boarder2">
