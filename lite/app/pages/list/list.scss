@@ -43,7 +43,7 @@
   .outer {
     display: table;
     position: absolute;
-    height: 61%;
+    height: 53%;
     width: 100%;
   }
 
@@ -101,7 +101,8 @@
         box-shadow: none !important;
         border: none !important;
         margin: 0rem !important;
-        padding: 0em;
+        padding: 2.5% 0% 0% 0%;
+        font-size: 100%;
         font-family: sans_medium;
       }
    }
@@ -227,6 +228,7 @@
       text-align: left;
       text-transform: uppercase;
    }
+
    .arrow-container {
       float: left;
       width: 20%;
@@ -245,7 +247,7 @@
    }
    .arrow-icon {
      float: right;
-     margin: 10%;
+     margin: 12%;
 
      img{height:12px;}
    }
@@ -365,7 +367,7 @@
   
   .platform-text {
     float: left;
-    margin: 5% 0% 0% 5%;
+    margin: 3% 0% 0% 5%;
   }
 }
 

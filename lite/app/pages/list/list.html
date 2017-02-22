@@ -34,12 +34,12 @@
          </span>
         </ion-col>
     </ion-row>
-    <div *ngIf="selectedId != 3" class="breadcrumb-container" style="margin-left: 6.4%">
+    <div *ngIf="(selectedId == 1) || (selectedId == 4) || (selectedId == 31) || (selectedId == 32)" class="breadcrumb-container" style="margin-left: 6.4%">
         <div *ngFor="let bcrumb of (breadcrumbs); let i = index ">
             <div *ngIf="(selectedId == 4 || selectedId == 31 || selectedId == 32)" (click)="goBack()">
                 <div style="float: left;" class="animated slideInRight">
                     <div *ngIf="(i >= 1)">
-                       &nbsp;&gt; {{bcrumb}}
+                        &nbsp;&gt; {{bcrumb}}
                     </div>
                     <div *ngIf="(i == 0)">
                         {{"&nbsp;"+bcrumb}}
@@ -177,7 +177,9 @@
                                             <div (click)="viewPage($event, menu.url, menu.parent_id)" class="top-text-container">
                                                 <div class="menu-title-container">
                                                     <div class="menu-title module">
-                                                        <a style="text-decoration:none;color:#000"> {{menu.title}}</a>
+                                                        <a style="text-decoration:none;color:#000">
+                                                            {{menu.title}}
+                                                        </a>
                                                     </div>
                                                 </div>
                                                 <div class="arrow-container">
@@ -224,7 +226,9 @@
                                                 <div class="top-text-container" (click)="viewPage($event, menu.url, menu.parent_id)" style="margin-bottom:3%">
                                                     <div class="html-menu-title-container">
                                                         <div class="html-menu-title module">
-                                                            <a style="text-decoration:none;color:#000">{{menu.title}}</a>
+                                                            <a style="text-decoration:none;color:#000">
+                                                                {{menu.title}}
+                                                            </a>
                                                         </div>
                                                     </div>
                                                     <div class="html-arrow-container">
@@ -238,7 +242,9 @@
                                                 <div class="top-text-container" style="margin-bottom:3%">
                                                     <div class="html-menu-title-container" (click)="addClickedItem(menu.title)">
                                                         <div class="html-menu-title module">
-                                                            <a style="text-decoration:none;color:#000">{{menu.title}}</a>
+                                                            <a style="text-decoration:none;color:#000">
+                                                                {{menu.title}}
+                                                            </a>
                                                         </div>
                                                     </div>
                                                     <div class="html-arrow-container">
