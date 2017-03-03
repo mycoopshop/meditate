@@ -43,14 +43,15 @@
   .outer {
     display: table;
     position: absolute;
-    height: 53%;
+    height: 56%;
     width: 100%;
+    overflow-y: auto;
   }
 
   .outer-explore {
     display: table;
     position: absolute;
-    height: 81%;
+    height: 84%;
     width: 100%;
   }
 
@@ -106,6 +107,13 @@
         font-family: sans_medium;
       }
    }
+   .inner-border-box:hover {
+      width: 98%;
+      height: 90%;
+      border: 5px solid rgba(131, 121, 121, 0.31);
+      background-color: rgba(128, 128, 128, 0.31);
+      opacity: 0.6;
+   }
    
    .HtmlSlideContainer {
      text-align: center;
@@ -144,7 +152,7 @@
       color: #000;
       word-wrap: break-word;
       text-align: left;
-      text-transform: capitalize;
+      /*text-transform: capitalize;*/
    }
    .html-arrow-container {
       float: left;
@@ -160,6 +168,21 @@
      margin: 1%;
      img{height:12px;}
    }
+
+   .av-time-container {
+    float: left;
+    width: 100%;
+    height: 4%;
+   }
+
+   .time-text {
+    float: left;
+    width: 90%;
+    margin: 0% 0% 0% 5%;
+    text-align: left;
+    color: #333;
+   }
+
    .text-logo {
       float: left;
       width: 70%;
@@ -185,8 +208,8 @@
    .active:hover {
     width: 100%;
     height: 110%;
-    background-color: rgba(128, 128, 128, 0.31);
-    opacity: 0.5;
+    background-color: rgba(131, 121, 121, 0.31);
+    opacity: 0.6;
    }
 
    .bottom-icon-container {
@@ -224,7 +247,7 @@
       font-size: 171%;
       font-family: sans_medium;
       color: #000;
-      word-wrap: break-word;
+      white-space: normal;
       text-align: left;
       text-transform: uppercase;
    }
@@ -256,7 +279,7 @@
     font-family: sans_medium;
     font-size: 20px;
     text-transform: uppercase;
-    color: #808080;
+    color: #000;
     margin-top: 1.8%;
     height: 8.3%;
   }
@@ -300,23 +323,34 @@
 
   .gb-color {
     background-color: gray;
-    height: 5.9%;
+    height: 8%;
     box-shadow: 0px -3px 5px rgba(0,0,0,0.15);
     border-top: 2px solid gray;
+      button {
+        background-color: transparent !important;
+        box-shadow: none !important;
+        border: none !important;
+        margin: 0rem;
+      }
   }
-
+  .down-back-container{
+    float: left;
+    width: 60%;
+    margin-top: 2%;
+  }
 
   .down-scroll-container {
     float: left;
-    width: 62%;
+    width: 100%;
   }
 
   .manage-me {
-    margin-top: 2.5%;
+    float: left;
+    margin-left: 77%;
+    margin-top: 6% !important;
     img{ 
       width:15px;
       height:21px;
-      margin-left: 56%;
     }
   }
 
@@ -340,20 +374,18 @@
   }
 
   .web-page-link-container {
-    width: 34%;
+    width: 37%;
     font-size: 10px;
     float: right;
-    margin: 5.3% 1.5% 0% 0%;
+    margin: 9% 1.5% 0% 0%;
     a {
-      width: 100%;
       text-decoration: none;
-      text-align: right;
+      float: right;
       color: #000;
     }
     a:hover {
-      width: 100%;
-      text-align: right;
       text-decoration: none;
+      text-align: right;
       color: #000;
     }
   }
@@ -376,9 +408,12 @@
 and (min-device-width : 320px) and (max-device-width : 568px)
  {
   .web-page-link-container {
-    width: 36%;
+    width: 34%;
     font-size: 10px;
-    margin: 5.3% 2% 0% 0%;
+    margin: 8% 2% 0% 0%;
+  }
+  .manage-me {
+    margin-top: -10px !important;
   }
 }
 

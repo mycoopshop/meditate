@@ -1,5 +1,5 @@
 <ion-menu [content]="content" side="right" class="side-menu" type="overlay">
-   <ion-row class="title-main-container">
+   <ion-content class="title-main-container">
       <a menuToggle href="#" (click)="goToHome()" style="text-decoration: none; width:75%;">
          <div class = "col-67 inner-title">
             <img src="img/mindfullness.png">
@@ -8,7 +8,7 @@
       <div menuToggle class = "col-20 top-toggle">
          <img src="img/less-than.png">
       </div>
-   </ion-row>
+   </ion-content>
    <div class="content-backdrop"></div>
    <ion-content style="background-color: gray">
       <ion-scroll scrollY="true">
@@ -41,9 +41,10 @@
   .main-menu-container {
     width: 70%;
     float: left;
-    margin: 3% 0% 0% 15%;
+    margin: 0% 0% 0% 20%;
     text-transform: uppercase;
     font-size: 16px;
+    font-weight: bolder;
   }
   .sub-menu-container {
     width: 70%;
@@ -72,12 +73,14 @@
     padding: 6.5% 0% 4% 7%;
     color: #000;
     font-weight: bold;
+    height: 10%;
   }
   .inner-title {
     float: left;
-    width: 96%;
+    width: 64%;
     background-color: gray;
     font-size: 32px;
+    margin: 6% 1% 0% 7%;
   }
 
   .inner-title img {
@@ -87,18 +90,19 @@
 
   .top-toggle {
     float: left;
-    width: 11%;
-    margin-left: 14%;
-    /*margin-top: 1.2%;*/
+    width: 23%;
+    margin-left: 0%;
+    margin-top: 7.5%;
   }
   .top-toggle img {
-    height:25px;
+    height:24px;
+    margin-left: 75%;
   }
 
   .bottom-bar {
     float: left;
     width: 100%;
-    height: 30px;
+    height: 50px;
   }
 
   ion-scroll {
@@ -120,8 +124,7 @@
 
 /*for iPod*/
 @media only screen 
-and (min-device-width : 768px) 
-and (max-device-width : 1024px)
+and (min-device-width : 768px) and (max-device-width : 1024px)
 { 
   .inner-title img {width: 425px;height:50px;}
   .top-toggle img {height:50px !important; margin-left: 14px;}
@@ -132,11 +135,10 @@ and (max-device-width : 1024px)
 
 /*UI for iPhone 5 & 5S Resolutions (320 × 568)*/
 @media only screen
-and (min-device-width : 320px)
-and (max-device-width : 568px)
+and (min-device-width : 320px) and (max-device-width : 568px)
 {
   .top-toggle {
-    margin-top: 1%;
+    margin-top: 7.5%;
   }
 }
 

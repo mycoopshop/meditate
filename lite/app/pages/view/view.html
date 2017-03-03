@@ -15,13 +15,6 @@
          <img src="img/greater-than.png" >
          </span>
       </ion-col>
-      <!-- <div class="back-container" (click)="goBack()">
-         <div class="back-text animated slideInLeft">  
-         <button class="button button-clear icon-left backbtn">
-               <ion-icon name='arrow-back'></ion-icon>
-               Back
-         </button>  </div>
-         </div> -->
    </ion-row>
       <!-- <video controls="controls" preload="auto" poster="img/Play_button_2.jpg" webkit-playsinline="webkit-playsinline" class="videoPlayer">
          <source src="videos/your_mind.m4v" type="video/mp4" />
@@ -34,12 +27,11 @@
    </div>
 </ion-content>
 <ion-footer class="gb-color">
-   <div class="down-scroll-container">
-      <center class="manage-me" (click)="goBack()" >
-         <img src="img/less-than.png">
-      </center>
-   </div>
-   <ion-row class="web-page-link-container" >
-      <a class="web-link" href="http://mindfulcreation.com/">MINDFULCREATION.COM</a>
-   </ion-row>
+    <div class="down-back-container">
+        <button class="down-scroll-container" (click)="goBack()">
+            <div class="manage-me">
+                <img src="img/less-than.png">
+            </div>
+        </button>
+    </div>
 </ion-footer>

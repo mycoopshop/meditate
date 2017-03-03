@@ -72,18 +72,13 @@
             </div>
         </div>
     </ion-scroll>
-    <!--  this is:
-      {{listMenuId}}
-      parent is:
-      {{listMenuPId}} -->
 </ion-content>
 <ion-footer class="gb-color">
-    <div class="down-scroll-container">
-        <center class="manage-me" (click)="goBack()">
-            <img src="img/less-than.png">
-        </center>
+    <div class="down-back-container">
+        <button class="down-scroll-container" (click)="goBack()">
+            <div class="manage-me">
+                <img src="img/less-than.png">
+            </div>
+        </button>
     </div>
-    <ion-row class="web-page-link-container">
-        <a class="web-link" href="http://mindfulcreation.com/">MINDFULCREATION.COM</a>
-    </ion-row>
 </ion-footer>

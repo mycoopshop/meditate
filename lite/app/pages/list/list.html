@@ -13,10 +13,10 @@
         <ion-col>
             <a href="#" (click)="goToHome()" style="text-decoration: none">
                 <div class="text-logo">
-                    <div *ngIf="(selectedId == 1) || (selectedId == 4) || (selectedId > 10 && selectedId < 35) || (selectedId == 5) || (selectedId == 6) || (selectedId == 7)">
+                    <div *ngIf="(selectedId != 3)">
                         <img src="img/logo-the-art.png">
                     </div>
-                    <div *ngIf="(selectedId == 2) || (selectedId == 3) || (selectedId == 8) || (selectedId == 9) || (selectedId == 10) || (selectedId >= 35 && selectedId <= 43 )">
+                    <div *ngIf="(selectedId == 3)">
                         <img style="height: 4.7vh; margin-top: 1%" src="img/mindfullness.png">
                     </div>
                 </div>
@@ -34,9 +34,9 @@
          </span>
         </ion-col>
     </ion-row>
-    <div *ngIf="(selectedId == 1) || (selectedId == 4) || (selectedId == 31) || (selectedId == 32)" class="breadcrumb-container" style="margin-left: 6.4%">
+    <div *ngIf="(selectedId == 1) || (selectedId == 2) || (selectedId == 4) || (selectedId == 8) || (selectedId == 9) || (selectedId == 10) || (selectedId == 31) || (selectedId == 32) || (selectedId >= 35 && selectedId <= 43 )" class="breadcrumb-container" style="margin-left: 6.4%">
         <div *ngFor="let bcrumb of (breadcrumbs); let i = index ">
-            <div *ngIf="(selectedId == 4 || selectedId == 31 || selectedId == 32)" (click)="goBack()">
+            <div *ngIf="(selectedId == 4 || selectedId == 31 || selectedId == 32) || (selectedId == 2) || (selectedId == 8) || (selectedId == 9) || (selectedId == 10) || (selectedId >= 35 && selectedId <= 43 )" (click)="goBack()">
                 <div style="float: left;" class="animated slideInRight">
                     <div *ngIf="(i >= 1)">
                         &nbsp;&gt; {{bcrumb}}
@@ -63,7 +63,9 @@
             <div (click)="goBack()"> {{'> '+parentTitle}} </div>
          </div>
       </ion-row> -->
-        <div [ngClass]="selectedId == 3 ? 'top-align-second-case' : selectedId == 2 ? 'outer-explore' : selectedId == 8 ? 'outer-explore' : selectedId == 35 ? 'outer-explore' : selectedId == 9 ? 'outer-explore' : selectedId == 36 ? 'outer-explore' : selectedId == 10 ? 'outer-explore' : selectedId == 37 ? 'outer-explore': selectedId == 38 ? 'outer-explore'  : selectedId == 39 ? 'outer-explore' : selectedId == 40 ? 'outer-explore' : selectedId == 41 ? 'outer-explore' : selectedId == 42 ? 'outer-explore' : selectedId == 43 ? 'outer-explore' :'outer'">
+        <!-- <div [ngClass]="selectedId == 3 ? 'top-align-second-case' : selectedId == 2 ? 'outer-explore' : selectedId == 8 ? 'outer-explore' : selectedId == 35 ? 'outer-explore' : selectedId == 9 ? 'outer-explore' : selectedId == 36 ? 'outer-explore' : selectedId == 10 ? 'outer-explore' : selectedId == 37 ? 'outer-explore': selectedId == 38 ? 'outer-explore'  : selectedId == 39 ? 'outer-explore' : selectedId == 40 ? 'outer-explore' : selectedId == 41 ? 'outer-explore' : selectedId == 42 ? 'outer-explore' : selectedId == 43 ? 'outer-explore' :'outer'"> -->
+        <ion-scroll scrollY="true" direction="y" style="width: 100%; height: 54%">
+        <div [ngClass]="selectedId == 3 ? 'top-align-second-case' : 'outer'">
             <div class="middle">
                 <div *ngFor="let menu of subMenus">
                     <div class="#" *ngIf="(menu.parent_id == getValue())">
@@ -79,7 +81,7 @@
                                             <button class="top-text-container active" *ngIf="(menu.stage == 'final')" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)">
                                                 <div class="menu-title-container">
                                                     <div class="menu-title module ">
-                                                        {{menu.title}}
+                                                       {{menu.title}}
                                                     </div>
                                                 </div>
                                                 <div class="arrow-container">
@@ -89,10 +91,10 @@
                                                 </div>
                                             </button>
                                             <button class="top-text-container active" *ngIf="(menu.stage == 'empty')">
-                                                <div class="menu-title-container">
+                                                <div class="menu-title-container" (click)="addClickedItem(menu.title)">
                                                     <div class="platform-container">
                                                         <div class="platform-text">
-                                                            platform {{menu.platform}}:
+                                                           platform {{menu.platform}}:
                                                         </div>
                                                     </div>
                                                     <div class="menu-title module ">
@@ -141,7 +143,7 @@
                                                 </div>
                                             </button>
                                             <button class="top-text-container active" *ngIf="(menu.stage == 'empty')">
-                                                <div class="menu-title-container">
+                                                <div class="menu-title-container" (click)="addClickedItem(menu.title)">
                                                     <div class="menu-title module ">
                                                         {{menu.title}}
                                                     </div>
@@ -236,6 +238,11 @@
                                                             <img src="img/greater-than.png">
                                                         </div>
                                                     </div>
+                                                    <div class="av-time-container">
+                                                        <div class="time-text">
+                                                            {{menu.time}}
+                                                        </div>
+                                                    </div>
                                                 </div>
                                             </div>
                                             <div *ngIf="(menu.child_type == 4)">
@@ -258,7 +265,9 @@
                                                 <div class="top-text-container" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)" style="margin-bottom:3%">
                                                     <div class="html-menu-title-container" (click)="addClickedItem(menu.title)">
                                                         <div class="html-menu-title module">
-                                                            <a style="text-decoration:none;color:#000">{{menu.title}}</a>
+                                                            <a style="text-decoration:none;color:#000">
+                                                                {{menu.title}}
+                                                            </a>
                                                         </div>
                                                     </div>
                                                     <div class="html-arrow-container">
@@ -277,18 +286,23 @@
                 </div>
             </div>
         </div>
+        </ion-scroll>
     </ion-nav-view>
 </ion-content>
 <ion-footer class="gb-color">
     <!-- <div class="down-back-container" (click)="goBack()" >
       <img src="img/less-than.png">
       </div> -->
-    <div class="down-scroll-container">
-        <center class="manage-me" (click)="goBack()">
-            <img src="img/less-than.png">
-        </center>
+    <div class="down-back-container">
+        <button class="down-scroll-container" (click)="goBack()">
+            <div class="manage-me">
+                <img src="img/less-than.png">
+            </div>
+        </button>
     </div>
-    <ion-row class="web-page-link-container">
-        <a class="web-link" href="http://mindfulcreation.com/">MINDFULCREATION.COM</a>
-    </ion-row>
+    <div class="web-page-link-container">
+        <a class="web-link" href="http://mindfulcreation.com/">
+            MINDFULCREATION.COM
+        </a>
+    </div>
 </ion-footer>

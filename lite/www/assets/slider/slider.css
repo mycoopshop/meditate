@@ -20,7 +20,15 @@ a {
 .swiper-container {
   width: 95vw;
   height: 170px;
+  margin-left: -8px !important;
 }
+  
+.html-text-container {
+  float: left;
+  width: 88%;
+  margin-left: 4%;
+}
+
 .swiper-wrapper {
   float: left;
   width: 100%;
