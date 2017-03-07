@@ -61,7 +61,7 @@ class MyApp {
     this.platform.ready().then(() => {
       StatusBar.overlaysWebView(false);
       StatusBar.hide();
-      // Splashscreen.hide();
+      Splashscreen.hide();
       this.hideSplashScreen();
     });
   }
@@ -70,7 +70,7 @@ class MyApp {
     if (Splashscreen) {
       setTimeout(() => {
         Splashscreen.hide();
-      }, 110);
+      }, 924);
     }
   }
 

@@ -25,10 +25,10 @@ export class HelloIonicPage {
   constructor(public navController: NavController) {
 
     this.slides = [
-      {id: 1,  author: "- B. Katie",     title: "When you argue with reality, you lose… 100% of the time…"},
+      {id: 1,  author: "- T.Brach",      title: "Mindfulness - the space between stimulus and response: that's where choice lies."},
       {id: 2,  author: "- E.Tolle",      title: "The human condition: lost in thought."},
       {id: 3,  author: "- R.Lowe",       title: "In the gap between your thoughts is your truth."},
-      {id: 4,  author: "- T.Brach",      title: "Mindfulness - the space between stimulus and response: that's where choice lies."},
+      {id: 4,  author: "- B. Katie",     title: "When you argue with reality, you lose… 100% of the time…"},
       {id: 5,  author: "- A. Maslow",    title: "You will either move forwards into growth or backwards into safety."},
       {id: 6,  author: "- Unknown",      title: "When you own your breath, nobody can steal your peace."},
       {id: 7,  author: "- T.N. Hanh",    title: "Our one true home is in the present moment."},

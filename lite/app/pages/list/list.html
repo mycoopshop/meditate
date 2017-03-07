@@ -64,215 +64,216 @@
          </div>
       </ion-row> -->
         <!-- <div [ngClass]="selectedId == 3 ? 'top-align-second-case' : selectedId == 2 ? 'outer-explore' : selectedId == 8 ? 'outer-explore' : selectedId == 35 ? 'outer-explore' : selectedId == 9 ? 'outer-explore' : selectedId == 36 ? 'outer-explore' : selectedId == 10 ? 'outer-explore' : selectedId == 37 ? 'outer-explore': selectedId == 38 ? 'outer-explore'  : selectedId == 39 ? 'outer-explore' : selectedId == 40 ? 'outer-explore' : selectedId == 41 ? 'outer-explore' : selectedId == 42 ? 'outer-explore' : selectedId == 43 ? 'outer-explore' :'outer'"> -->
-        <ion-scroll scrollY="true" direction="y" style="width: 100%; height: 54%">
         <div [ngClass]="selectedId == 3 ? 'top-align-second-case' : 'outer'">
-            <div class="middle">
-                <div *ngFor="let menu of subMenus">
-                    <div class="#" *ngIf="(menu.parent_id == getValue())">
-                        <div *ngIf="(menu.type=='menu')">
-                            <div class="slideContainer">
-                                <div class="royal-menu-container inner" (click)="setValue(menu.id, menu.parent_id, menu.title )">
-                                    <div *ngIf="(menu.border_type == 3)">
-                                        <div class="floating-boarder1">
-                                        </div>
-                                    </div>
-                                    <div class="center-menu-container">
-                                        <div class="inner-border-box">
-                                            <button class="top-text-container active" *ngIf="(menu.stage == 'final')" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)">
-                                                <div class="menu-title-container">
-                                                    <div class="menu-title module ">
-                                                       {{menu.title}}
-                                                    </div>
-                                                </div>
-                                                <div class="arrow-container">
-                                                    <div class="arrow-icon">
-                                                        <img src="img/greater-than.png">
-                                                    </div>
-                                                </div>
-                                            </button>
-                                            <button class="top-text-container active" *ngIf="(menu.stage == 'empty')">
-                                                <div class="menu-title-container" (click)="addClickedItem(menu.title)">
-                                                    <div class="platform-container">
-                                                        <div class="platform-text">
-                                                           platform {{menu.platform}}:
-                                                        </div>
-                                                    </div>
-                                                    <div class="menu-title module ">
-                                                        {{menu.title}}
-                                                    </div>
-                                                </div>
-                                                <div class="arrow-container">
-                                                    <div class="arrow-icon">
-                                                        <img src="img/greater-than.png">
-                                                    </div>
-                                                </div>
-                                            </button>
-                                        </div>
-                                        <div *ngIf="(menu.border_type == 2)">
-                                            <div class="floating-boarder2">
-                                            </div>
-                                        </div>
-                                        <div *ngIf="(menu.border_type == 1)">
+            <ion-scroll scrollY="true" direction="y" style="width: 100%; height: 100%">
+                <div class="middle">
+                    <div *ngFor="let menu of subMenus">
+                        <div class="#" *ngIf="(menu.parent_id == getValue())">
+                            <div *ngIf="(menu.type=='menu')">
+                                <div class="slideContainer">
+                                    <div class="royal-menu-container inner" (click)="setValue(menu.id, menu.parent_id, menu.title )">
+                                        <div *ngIf="(menu.border_type == 3)">
                                             <div class="floating-boarder1">
                                             </div>
                                         </div>
-                                    </div>
-                                    <!-- {{getValue()}}  -->
-                                </div>
-                            </div>
-                        </div>
-                        <div *ngIf="(menu.type=='list')">
-                            <div class="slideContainer">
-                                <div class="royal-menu-container animated slideInRight" (click)="setValue(menu.id, menu.parent_id, menu.title)">
-                                    <div *ngIf="(menu.border_type == 3)">
-                                        <div class="floating-boarder1">
-                                        </div>
-                                    </div>
-                                    <div class="center-menu-container">
-                                        <div class="inner-border-box">
-                                            <button class="top-text-container active" *ngIf="(menu.stage == 'final')" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)">
-                                                <div class="menu-title-container">
-                                                    <div class="menu-title module ">
-                                                        {{menu.title}}
-                                                    </div>
-                                                </div>
-                                                <div class="arrow-container">
-                                                    <div class="arrow-icon">
-                                                        <img src="img/greater-than.png">
-                                                    </div>
-                                                </div>
-                                            </button>
-                                            <button class="top-text-container active" *ngIf="(menu.stage == 'empty')">
-                                                <div class="menu-title-container" (click)="addClickedItem(menu.title)">
-                                                    <div class="menu-title module ">
-                                                        {{menu.title}}
-                                                    </div>
-                                                </div>
-                                                <div class="arrow-container">
-                                                    <div class="arrow-icon">
-                                                        <img src="img/greater-than.png">
-                                                    </div>
-                                                </div>
-                                            </button>
-                                        </div>
-                                        <div *ngIf="(menu.border_type == 2)">
-                                            <div class="floating-boarder2">
-                                            </div>
-                                        </div>
-                                        <div *ngIf="(menu.border_type == 1)">
-                                            <div class="floating-boarder1">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div *ngIf="(menu.contain=='video')">
-                            <div class="slideContainer">
-                                <div class="royal-menu-container" (click)="setValue(menu.id, menu.parent_id, menu.title)">
-                                    <div *ngIf="(menu.border_type == 3)">
-                                        <div class="floating-boarder1">
-                                        </div>
-                                    </div>
-                                    <div class="center-menu-container">
-                                        <div class="inner-border-box">
-                                            <div (click)="viewPage($event, menu.url, menu.parent_id)" class="top-text-container">
-                                                <div class="menu-title-container">
-                                                    <div class="menu-title module">
-                                                        <a style="text-decoration:none;color:#000">
-                                                            {{menu.title}}
-                                                        </a>
-                                                    </div>
-                                                </div>
-                                                <div class="arrow-container">
-                                                    <div *ngIf="(menu.contain=='video')">
-                                                        <div class="video-icon">
-                                                            <img src="img/video-icon.png">
+                                        <div class="center-menu-container">
+                                            <div class="inner-border-box">
+                                                <button class="top-text-container" *ngIf="(menu.stage == 'final')" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)">
+                                                    <div class="menu-title-container">
+                                                        <div class="menu-title module ">
+                                                           {{menu.title}}
                                                         </div>
                                                     </div>
-                                                    <div *ngIf="(menu.contain=='none')">
+                                                    <div class="arrow-container">
                                                         <div class="arrow-icon">
                                                             <img src="img/greater-than.png">
                                                         </div>
                                                     </div>
-                                                </div>
-                                            </div>
-                                            <div *ngIf="(menu.contain=='video')">
-                                                <div class="bottom-icon-container">
-                                                    <div class="bottom-arrow-icon">
-                                                        <img src="img/arrow-down.png">
+                                                </button>
+                                                <button class="top-text-container" *ngIf="(menu.stage == 'empty')">
+                                                    <div class="menu-title-container" (click)="addClickedItem(menu.title)">
+                                                        <div class="platform-container">
+                                                            <div class="platform-text">
+                                                              platform {{menu.platform}}:
+                                                            </div>
+                                                        </div>
+                                                        <div class="menu-title module ">
+                                                            {{menu.title}}
+                                                        </div>
                                                     </div>
+                                                    <div class="arrow-container">
+                                                        <div class="arrow-icon">
+                                                            <img src="img/greater-than.png">
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                            <div *ngIf="(menu.border_type == 2)">
+                                                <div class="floating-boarder2">
+                                                </div>
+                                            </div>
+                                            <div *ngIf="(menu.border_type == 1)">
+                                                <div class="floating-boarder1">
                                                 </div>
                                             </div>
                                         </div>
-                                        <div *ngIf="(menu.border_type == 2)">
-                                            <div class="floating-boarder3">
+                                        <!-- {{getValue()}}  -->
+                                    </div>
+                                </div>
+                            </div>
+                            <div *ngIf="(menu.type=='list')">
+                                <div class="slideContainer">
+                                    <div class="royal-menu-container animated slideInRight" (click)="setValue(menu.id, menu.parent_id, menu.title)">
+                                        <div *ngIf="(menu.border_type == 3)">
+                                            <div class="floating-boarder1">
                                             </div>
                                         </div>
-                                        <div *ngIf="(menu.border_type == 1)">
-                                            <div class="floating-boarder1">
+                                        <div class="center-menu-container">
+                                            <div class="inner-border-box">
+                                                <button class="top-text-container" *ngIf="(menu.stage == 'final')" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)">
+                                                    <div class="menu-title-container">
+                                                        <div class="menu-title module ">
+                                                           {{menu.title}}
+                                                        </div>
+                                                    </div>
+                                                    <div class="arrow-container">
+                                                        <div class="arrow-icon">
+                                                            <img src="img/greater-than.png">
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                                <button class="top-text-container" *ngIf="(menu.stage == 'empty')">
+                                                    <div class="menu-title-container" (click)="addClickedItem(menu.title)">
+                                                        <div class="menu-title module ">
+                                                           {{menu.title}}
+                                                        </div>
+                                                    </div>
+                                                    <div class="arrow-container">
+                                                        <div class="arrow-icon">
+                                                            <img src="img/greater-than.png">
+                                                        </div>
+                                                    </div>
+                                                </button>
+                                            </div>
+                                            <div *ngIf="(menu.border_type == 2)">
+                                                <div class="floating-boarder2">
+                                                </div>
+                                            </div>
+                                            <div *ngIf="(menu.border_type == 1)">
+                                                <div class="floating-boarder1">
+                                                </div>
                                             </div>
                                         </div>
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        <div *ngIf="((menu.type=='html')&& !(menu.contain=='video'))">
-                            <div class="HtmlSlideContainer">
-                                <div class="royal-menu-container-html" (click)="setValue(menu.id, menu.parent_id, menu.title)">
-                                    <div class="center-menu-container-html animated slideInRight">
+                            <div *ngIf="(menu.contain=='video')">
+                                <div class="slideContainer">
+                                    <div class="royal-menu-container" (click)="setValue(menu.id, menu.parent_id, menu.title)">
                                         <div *ngIf="(menu.border_type == 3)">
+                                            <div class="floating-boarder1">
+                                            </div>
                                         </div>
-                                        <div class="inner-border-html-box">
-                                            <div *ngIf="(menu.child_type == 3)">
-                                                <div class="top-text-container" (click)="viewPage($event, menu.url, menu.parent_id)" style="margin-bottom:3%">
-                                                    <div class="html-menu-title-container">
-                                                        <div class="html-menu-title module">
+                                        <div class="center-menu-container">
+                                            <div class="inner-border-box">
+                                                <div (click)="viewPage($event, menu.url, menu.parent_id)" class="top-text-container">
+                                                    <div class="menu-title-container">
+                                                        <div class="menu-title module">
                                                             <a style="text-decoration:none;color:#000">
-                                                                {{menu.title}}
-                                                            </a>
+                                                            {{menu.title}}
+                                                        </a>
                                                         </div>
                                                     </div>
-                                                    <div class="html-arrow-container">
-                                                        <div class="html-arrow-icon">
-                                                            <img src="img/greater-than.png">
+                                                    <div class="arrow-container">
+                                                        <div *ngIf="(menu.contain=='video')">
+                                                            <div class="video-icon">
+                                                                <img src="img/video-icon.png">
+                                                            </div>
+                                                        </div>
+                                                        <div *ngIf="(menu.contain=='none')">
+                                                            <div class="arrow-icon">
+                                                                <img src="img/greater-than.png">
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="av-time-container">
-                                                        <div class="time-text">
-                                                            {{menu.time}}
+                                                </div>
+                                                <div *ngIf="(menu.contain=='video')">
+                                                    <div class="bottom-icon-container">
+                                                        <div class="bottom-arrow-icon">
+                                                            <img src="img/arrow-down.png">
                                                         </div>
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div *ngIf="(menu.child_type == 4)">
-                                                <div class="top-text-container" style="margin-bottom:3%">
-                                                    <div class="html-menu-title-container" (click)="addClickedItem(menu.title)">
-                                                        <div class="html-menu-title module">
-                                                            <a style="text-decoration:none;color:#000">
+                                            <div *ngIf="(menu.border_type == 2)">
+                                                <div class="floating-boarder3">
+                                                </div>
+                                            </div>
+                                            <div *ngIf="(menu.border_type == 1)">
+                                                <div class="floating-boarder1">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div *ngIf="((menu.type=='html')&& !(menu.contain=='video'))">
+                                <div class="HtmlSlideContainer">
+                                    <div class="royal-menu-container-html" (click)="setValue(menu.id, menu.parent_id, menu.title)">
+                                        <div class="center-menu-container-html animated slideInRight">
+                                            <div *ngIf="(menu.border_type == 3)">
+                                            </div>
+                                            <div class="inner-border-html-box">
+                                                <div *ngIf="(menu.child_type == 3)">
+                                                    <div class="top-text-container" (click)="viewPage($event, menu.url, menu.parent_id)" style="margin-bottom:3%">
+                                                        <div class="html-menu-title-container">
+                                                            <div class="html-menu-title module">
+                                                                <a style="text-decoration:none;color:#000">
                                                                 {{menu.title}}
                                                             </a>
+                                                            </div>
                                                         </div>
-                                                    </div>
-                                                    <div class="html-arrow-container">
-                                                        <div class="html-arrow-icon">
-                                                            <img src="img/greater-than.png">
+                                                        <div class="html-arrow-container">
+                                                            <div class="html-arrow-icon">
+                                                                <img src="img/greater-than.png">
+                                                            </div>
+                                                        </div>
+                                                        <div class="av-time-container">
+                                                            <div class="time-text">
+                                                                {{menu.time}}
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
-                                            </div>
-                                            <div *ngIf="(menu.child_type == 5)">
-                                                <div class="top-text-container" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)" style="margin-bottom:3%">
-                                                    <div class="html-menu-title-container" (click)="addClickedItem(menu.title)">
-                                                        <div class="html-menu-title module">
-                                                            <a style="text-decoration:none;color:#000">
+                                                <div *ngIf="(menu.child_type == 4)">
+                                                    <div class="top-text-container" style="margin-bottom:3%">
+                                                        <div class="html-menu-title-container" (click)="addClickedItem(menu.title)">
+                                                            <div class="html-menu-title module">
+                                                                <a style="text-decoration:none;color:#000">
                                                                 {{menu.title}}
                                                             </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="html-arrow-container">
+                                                            <div class="html-arrow-icon">
+                                                                <img src="img/greater-than.png">
+                                                            </div>
                                                         </div>
                                                     </div>
-                                                    <div class="html-arrow-container">
-                                                        <div class="html-arrow-icon">
-                                                            <img src="img/greater-than.png">
+                                                </div>
+                                                <div *ngIf="(menu.child_type == 5)">
+                                                    <div class="top-text-container" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)" style="margin-bottom:3%">
+                                                        <div class="html-menu-title-container" (click)="addClickedItem(menu.title)">
+                                                            <div class="html-menu-title module">
+                                                                <a style="text-decoration:none;color:#000">
+                                                                {{menu.title}}
+                                                            </a>
+                                                            </div>
+                                                        </div>
+                                                        <div class="html-arrow-container">
+                                                            <div class="html-arrow-icon">
+                                                                <img src="img/greater-than.png">
+                                                            </div>
                                                         </div>
                                                     </div>
                                                 </div>
@@ -284,9 +285,8 @@
                         </div>
                     </div>
                 </div>
-            </div>
+            </ion-scroll>
         </div>
-        </ion-scroll>
     </ion-nav-view>
 </ion-content>
 <ion-footer class="gb-color">
@@ -300,9 +300,9 @@
             </div>
         </button>
     </div>
-    <div class="web-page-link-container">
+    <!-- <div class="web-page-link-container">
         <a class="web-link" href="http://mindfulcreation.com/">
             MINDFULCREATION.COM
         </a>
-    </div>
+    </div> -->
 </ion-footer>

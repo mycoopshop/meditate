@@ -73,11 +73,12 @@
   <preference name="BackupWebStorage" value="none"/>
   <preference name="ShowSplashScreen" value="true"/>
   <preference name="SplashScreen" value="screen"/>
-  <preference name="SplashScreenDelay" value="100"/>
+  <preference name="SplashScreenDelay" value="2100"/>
   <preference name="AutoHideSplashScreen" value="false"/>
   <preference name="SplashShowOnlyFirstTime" value="false"/>
   <preference name="FadeSplashScreen" value="true"/>
   <preference name="Fullscreen" value="true"/>
+  <preference name="ShowSplashScreenSpinner" value="false" /> <!-- False to stop round loading wheel -->
   <feature name="StatusBar">
     <param name="ios-package" onload="true" value="CDVStatusBar"/>
   </feature>
