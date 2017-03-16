@@ -34,26 +34,26 @@
          </span>
         </ion-col>
     </ion-row>
-    <div *ngIf="(selectedId == 1) || (selectedId == 2) || (selectedId == 4) || (selectedId == 8) || (selectedId == 9) || (selectedId == 10) || (selectedId == 31) || (selectedId == 32) || (selectedId >= 35 && selectedId <= 43 )" class="breadcrumb-container" style="margin-left: 6.4%">
+    <div class="breadcrumb-container" style="margin-left: 5.3%" *ngIf="(selectedId == 1) || (selectedId == 2) || (selectedId == 3) || (selectedId == 4) || (selectedId == 8) || (selectedId == 9) || (selectedId == 10) || (selectedId == 31) || (selectedId == 32) || (selectedId >= 35 && selectedId <= 43 )">
         <div *ngFor="let bcrumb of (breadcrumbs); let i = index ">
-            <div *ngIf="(selectedId == 4 || selectedId == 31 || selectedId == 32) || (selectedId == 2) || (selectedId == 8) || (selectedId == 9) || (selectedId == 10) || (selectedId >= 35 && selectedId <= 43 )" (click)="goBack()">
+            <div *ngIf="( selectedId == 31 || selectedId == 32) || (selectedId == 2) || (selectedId == 3) || (selectedId == 4) || (selectedId == 8) || (selectedId == 9) || (selectedId == 10) || (selectedId >= 35 && selectedId <= 43 )" (click)="goBack()">
                 <div style="float: left;" class="animated slideInRight">
                     <div *ngIf="(i >= 1)">
                         &nbsp;&gt; {{bcrumb}}
                     </div>
                     <div *ngIf="(i == 0)">
-                        {{"&nbsp;"+bcrumb}}
+                        {{'&nbsp;'+bcrumb}}
                     </div>
                 </div>
             </div>
         </div>
-        <div *ngIf="( selectedId == 31 || selectedId == 32) && (selectedTitle != 'Read')" (click)="goBack()">
+        <!-- <div *ngIf="( selectedId == 31 || selectedId == 32) && (selectedTitle != 'Read')" (click)="goBack()">
             <div class="animated slideInRight">
                 &nbsp;&gt; {{selectedTitle}}
             </div>
-        </div>
-        <div *ngIf="(selectedId ==1)" class="animated slideInRight">
-            {{selectedTitle}}
+        </div>  -->
+        <div *ngIf="(selectedId ==1)" class="animated slideInRight" (click)="goBack()">
+           &nbsp; {{selectedTitle}}
         </div>
     </div>
     <ion-nav-view>
@@ -79,7 +79,7 @@
                                         <div class="center-menu-container">
                                             <div class="inner-border-box">
                                                 <button class="top-text-container" *ngIf="(menu.stage == 'final')" (click)="htmlList($event, menu.id, menu.parent_id, selectedTitle, menu.title)">
-                                                    <div class="menu-title-container">
+                                                    <div class="menu-title-container" (click)="addClickedItem(menu.title)">
                                                         <div class="menu-title module ">
                                                            {{menu.title}}
                                                         </div>
@@ -176,10 +176,10 @@
                                         </div>
                                         <div class="center-menu-container">
                                             <div class="inner-border-box">
-                                                <div (click)="viewPage($event, menu.url, menu.parent_id)" class="top-text-container">
+                                                <div (click)="viewPage($event, menu.url, menu.parent_id)" (click)="addClickedItem(menu.title)" class="top-text-container">
                                                     <div class="menu-title-container">
                                                         <div class="menu-title module">
-                                                            <a style="text-decoration:none;color:#000">
+                                                        <a style="text-decoration:none;color:#000">
                                                             {{menu.title}}
                                                         </a>
                                                         </div>

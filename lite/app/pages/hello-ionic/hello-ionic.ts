@@ -92,10 +92,10 @@ export class HelloIonicPage {
     loop: true,
     effect: 'fade',
     fade: {crossFade:true},
-    autoplay:90,
+    autoplay: 10,
     autoplayDisableOnInteraction: true,
-    direction:"horizontal",
-    speed:4000,
+    direction: "horizontal",
+    speed: 4000,
     nextButton: ".pause-me",
     prevButton: ".swiper-button-prev" 
   };
@@ -103,6 +103,7 @@ export class HelloIonicPage {
   onSlideChanged() {
     let currentIndex = this.slider.getActiveIndex();
     this.slider.slideTo(currentIndex, 10);
+    // console.log(currentIndex);
   }
 
   getRandomIndex(): number {
@@ -118,6 +119,10 @@ export class HelloIonicPage {
   myMainSlideOptions = {
     initialSlide: 0,
     loop: false,
+    // effect: 'fade',
+    // fade: {crossFade:true},
+    // preventClicks: false,
+    // preventClicksPropagation: false,
     autoplay: 11000,
     direction:"horizontal",
     speed: 5000,
