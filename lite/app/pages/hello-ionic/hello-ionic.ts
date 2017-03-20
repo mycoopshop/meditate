@@ -21,6 +21,7 @@ export class HelloIonicPage {
   popUpPage = PopUpPage;
   @ViewChild('mySlider') slider: Slides;
   slides: Slide[];
+  firstSlide: number;
 
   constructor(public navController: NavController) {
 
@@ -51,7 +52,7 @@ export class HelloIonicPage {
       {id: 24, author: "-Osho",          title: "Your thinking colours reality."},
       {id: 25, author: "- W. Erhar",     title: "Resistance causes persistence. "}
     ];
-  	
+    this.firstSlide = Math.floor(Math.random() * this.slides.length);
   }
 
   itemTappedOne(event, menuId) {
