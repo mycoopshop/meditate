@@ -168,25 +168,25 @@
                                 </div>
                             </div>
                             <div *ngIf="(menu.contain=='video')">
-                                <div class="slideContainer">
-                                    <div class="royal-menu-container" (click)="setValue(menu.id, menu.parent_id, menu.title)">
-                                        <div *ngIf="(menu.border_type == 3)">
+                                <div class="HtmlSlideContainer">
+                                    <div class="royal-menu-container-html" (click)="setValue(menu.id, menu.parent_id, menu.title)">
+                                        <!-- <div *ngIf="(menu.border_type == 3)">
                                             <div class="floating-boarder1">
                                             </div>
-                                        </div>
-                                        <div class="center-menu-container">
-                                            <div class="inner-border-box">
-                                                <div (click)="viewPage($event, menu.url, menu.parent_id)" (click)="addClickedItem(menu.title)" class="top-text-container">
-                                                    <div class="menu-title-container">
-                                                        <div class="menu-title module">
+                                        </div> -->
+                                        <div class="center-menu-container-html">
+                                            <div class="inner-border-html-box">
+                                                <div (click)="viewPage($event, menu.url, menu.parent_id)" (click)="addClickedItem(menu.title)" class="top-text-container" style="height:12.5vh;">
+                                                    <div class="html-menu-title-container">
+                                                        <div class="html-menu-title module" >
                                                         <a style="text-decoration:none;color:#000">
                                                             {{menu.title}}
                                                         </a>
                                                         </div>
                                                     </div>
-                                                    <div class="arrow-container">
+                                                    <div class="html-arrow-container">
                                                         <div *ngIf="(menu.contain=='video')">
-                                                            <div class="video-icon">
+                                                            <div class="video-icon" style="margin: 0 !important">
                                                                 <img src="img/video-icon.png">
                                                             </div>
                                                         </div>
@@ -205,14 +205,14 @@
                                                     </div>
                                                 </div>
                                             </div>
-                                            <div *ngIf="(menu.border_type == 2)">
+                                            <!-- <div *ngIf="(menu.border_type == 2)">
                                                 <div class="floating-boarder3">
                                                 </div>
                                             </div>
                                             <div *ngIf="(menu.border_type == 1)">
                                                 <div class="floating-boarder1">
                                                 </div>
-                                            </div>
+                                            </div> -->
                                         </div>
                                     </div>
                                 </div>

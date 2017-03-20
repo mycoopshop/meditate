@@ -17,7 +17,7 @@ export class PopUpPage {
       let alert = Alert.create({
         title: 'Help Window!',
         subTitle: 'Demo is here for you and your soul. We are intended to stablish your connection to All Mighty.',
-        buttons: ['Cancle']
+        buttons: ['X']
       });
       this.nav.present(alert);
     }
