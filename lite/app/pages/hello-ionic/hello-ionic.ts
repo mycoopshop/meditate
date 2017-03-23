@@ -96,14 +96,14 @@ export class HelloIonicPage {
     autoplay: 10,
     autoplayDisableOnInteraction: true,
     direction: "horizontal",
-    speed: 4000,
+    speed: 3100,
     nextButton: ".pause-me",
     prevButton: ".swiper-button-prev" 
   };
 
   onSlideChanged() {
     let currentIndex = this.slider.getActiveIndex();
-    this.slider.slideTo(currentIndex, 10);
+    this.slider.slideTo((currentIndex - this.getRandomIndex()), 10);
     // console.log(currentIndex);
   }
 
@@ -113,7 +113,8 @@ export class HelloIonicPage {
 
   newSlide() {
     let newSlide = this.getRandomIndex();
-    this.slider.slideTo(newSlide,500);
+    this.slider.slideTo(newSlide,10);
+    // console.log(newSlide);
   }
 
   // home page slider
@@ -124,7 +125,7 @@ export class HelloIonicPage {
     // fade: {crossFade:true},
     // preventClicks: false,
     // preventClicksPropagation: false,
-    autoplay: 11000,
+    autoplay: 7000,
     direction:"horizontal",
     speed: 5000,
     allowSwipeToPrev: false,

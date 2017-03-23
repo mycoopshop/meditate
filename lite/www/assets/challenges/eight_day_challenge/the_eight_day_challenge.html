@@ -6,6 +6,7 @@
     <link rel="stylesheet" type="text/css" href="../../slider/slider.css">
     <link rel="stylesheet" href="../../slider/swiper.min.css">
     <script src="../../slider/swiper.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
 </head>
 <div class="html-text-container">
     <video controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline" class="videoPlayer">
@@ -18,6 +19,49 @@
     <p>
         Do you want to experience the <em>8 Day (20 Minute) Challenge?</em>
     </p>
+    <script type="text/javascript">
+        $(document).ready(function(){
+      // The video_length_round variable is video specific.
+      // In this example the video is 10.88 seconds long, rounded up to 11.
+      var video_length_round = 1;
+
+      var video = document.getElementById('home_video_element');
+      var mp4Source = document.getElementById('mp4Source');
+
+      // Ensure home_video_element present on page
+      if(typeof video !== 'undefined'){
+
+        // Ensure video element has an mp4Source, if so then update video src
+        if(typeof mp4Source !== 'undefined'){
+          $(mp4Source).attr('src', '../../videos/your_mind.m4v');
+        }
+
+        video.load();
+
+        // Ensure video is fully buffered before playing
+        video.addEventListener("canplay", function() {
+          this.removeEventListener("canplay", arguments.callee, false);
+
+          if(Math.round(video.buffered.end(0)) >= video_length_round){
+            // Video is already loaded
+            this.play();
+
+          } else {
+            // Monitor video buffer progress before playing
+            video.addEventListener("progress", function() {
+              if(Math.round(video.buffered.end(0)) == video_length_round){
+                this.removeEventListener("progress", arguments.callee, false);
+                video.play();
+              }
+            }, false);
+          }
+        }, false);
+      }
+    });
+    </script>
+    <video id="home_video_element" controls="controls" poster="./Play_button_5.jpg" preload="auto" width="100%">
+      <source id="mp4Source" type="video/mp4" >
+    </video>
     <p>
         Why? Because mindfulness has been shown to benefit people in their learning, concentration, compassion, creativity, and overall psychological well-being.
     </p>
