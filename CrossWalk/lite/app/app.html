@@ -1,0 +1,142 @@
+<ion-menu [content]="content" side="right" class="side-menu" type="overlay">
+   <ion-content class="title-main-container">
+      <a menuToggle href="#" (click)="goToHome()" style="text-decoration: none; width:75%;">
+         <div class = "col-67 inner-title">
+            <img src="img/mindfullness.png">
+         </div>
+      </a>
+      <div menuToggle class = "col-20 top-toggle">
+         <img src="img/less-than.png">
+      </div>
+   </ion-content>
+   <div class="content-backdrop"></div>
+   <ion-content style="background-color: gray">
+      <ion-scroll scrollY="true">
+         <ion-list right>
+            <div *ngFor="let p of pages">
+               <div *ngIf="(p.type == 'main menu')">
+                  <div class="main-menu-container module animated fadeInUp">
+                     <a style="text-decoration:none;color:#000" (click)="openPage(p)">{{p.title}}</a>
+                     <!-- {{p.title}} -->
+                  </div>
+               </div>
+               <div *ngIf="(p.type == 'sub menu')">
+                  <div class="sub-menu-container module animated fadeInUp">
+                     <a (click)="viewPage(p.component)">{{p.title}}</a>
+                  </div>
+               </div>
+            </div>
+            <ion-row class="bottom-bar">
+               <ion-col width-100>
+               </ion-col>
+            </ion-row>
+         </ion-list>
+      </ion-scroll>
+   </ion-content>
+</ion-menu>
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+
+<style type="text/css">
+
+.main-menu-container {
+  width: 70%;
+  float: left;
+  margin: 10% 0% 0% 20%;
+  text-transform: uppercase;
+  font-size: 16px;
+  font-weight: bolder;
+}
+.sub-menu-container {
+  width: 70%;
+  float: left;
+  font-size: 16px;
+  margin: 3% 0% 0% 20%;
+}
+.sub-menu-container a {
+  text-decoration: none;
+  color: #000;
+}
+.sub-menu-container a:hover {
+  text-decoration: none;
+  color: #fff;
+}
+.toolbar-background {
+  background-color: gray !important;
+}
+.side-menu {
+  width: 100%;
+  opacity: 0.97;
+}
+.title-main-container {
+  background-color: gray;
+  text-align: left;
+  padding: 6.5% 0% 4% 7%;
+  color: #000;
+  font-weight: bold;
+  height: 10%;
+}
+.inner-title {
+  float: left;
+  width: 64%;
+  background-color: gray;
+  font-size: 32px;
+  margin: 6% 1% 0% 7%;
+}
+
+.inner-title img {
+  width:250px;
+  height: 4.6vh;
+}
+
+.top-toggle {
+  float: left;
+  width: 23%;
+  margin-left: 0%;
+  margin-top: 7.5%;
+}
+
+.top-toggle img {
+  height:24px;
+  margin-left: 75%;
+}
+
+.bottom-bar {
+  float: left;
+  width: 100%;
+  height: 50px;
+}
+
+ion-scroll {
+  position: initial;
+}
+
+.menu-open .content-backdrop {
+  position: fixed;
+  top: 44px;
+  left: 0;
+  z-index: 11;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  -webkit-transition: 0.1s opacity linear;
+  -moz-transition: 0.1s opacity linear;
+  transition: 0.1s opacity linear;
+}
+
+/*for iPod*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px) {
+  .inner-title img {width: 425px;height:50px;}
+  .top-toggle img {height:50px !important; margin-left: 14px;}
+  .main-menu-container,.sub-menu-container {font-size:32px;}
+  .title-main-container {padding: 7% 0% 0% 7%;}
+  .top-toggle {margin-top:-15px;}
+}
+
+/*UI for iPhone 5 & 5S Resolutions (320 × 568)*/
+@media only screen and (min-device-width : 320px) and (max-device-width : 568px) {
+  .top-toggle {
+    margin-top: 7.5%;
+  }
+}
+
+</style>

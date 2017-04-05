@@ -1,0 +1,87 @@
+
+@font-face {
+  font-family: 'sans_regular';
+  src: url('../css/fonts/SanFranciscoText-Regular.otf');
+}
+
+/*a {color:#7EC349;}*/
+
+body, p {
+  font-family: sans_regular !important;
+  font-size: 18px;
+  /*text-align: justify;*/
+}
+
+a {
+  font-family: sans_regular !important;
+  color:#ffd;
+}
+
+.swiper-container {
+  width: 95vw;
+  height: 170px;
+  margin-left: -8px !important;
+}
+
+.html-text-container {
+  float: left;
+  width: 88%;
+  margin-left: 4%;
+}
+
+.swiper-wrapper {
+  float: left;
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-button-next {
+  background-image: url("../slider-img/next.png") !important;
+  background-size: 10px 15px !important;
+}
+
+.swiper-button-prev {
+  background-image: url("../slider-img/previous.png") !important;
+  background-size: 10px 15px !important;
+}
+
+.videoPlayer {
+  width:100%;
+}
+
+/*UI for iPad 768 X 1024*/
+@media only screen and (min-device-width : 768px) and (max-device-width : 1024px)
+{
+  .swiper-container {
+    height: 260px;
+  }
+
+  body, p {
+    font-family: sans_regular !important;
+    font-size: 25px;
+    text-align: justify;
+  }
+}

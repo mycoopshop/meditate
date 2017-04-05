@@ -1,0 +1,20 @@
+@font-face {
+  font-family: 'sans_medium';
+  /*src: url('fonts/SanFranciscoDisplay-Medium.otf');	*/
+  src: url('../css/fonts/Bureau_Grotesk_FB_One Five_Regular.otf');	
+}
+
+@font-face {
+  font-family: 'sans_regular';
+  src: url('fonts/SanFranciscoText-Regular.otf');
+}
+
+body {
+  font-family: sans_regular !important;
+  text-align: justify;
+  font-kerning: inherit;
+}
+
+* {
+   -webkit-user-select: none;
+}

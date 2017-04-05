@@ -89,17 +89,34 @@ export class HelloIonicPage {
 
   // quotes slider
   mySlideOptions = {
-    initialSlide: 0,
-    loop: true,
-    effect: 'fade',
-    fade: {crossFade:true},
-    autoplay: 10,
-    autoplayDisableOnInteraction: true,
-    direction: "horizontal",
-    speed: 3100,
-    nextButton: ".pause-me",
-    prevButton: ".swiper-button-prev" 
+    // initialSlide: 0,
+    // loop: true,
+    // effect: 'fade',
+    // fade: {crossFade:true},
+    // autoplay: 10,
+    // autoplayDisableOnInteraction: true,
+    // direction: "horizontal",
+    // speed: 3100,
+    // nextButton: ".pause-me",
+    // prevButton: ".swiper-button-prev" 
+
+        pagination: '.swiper-pagination',
+        paginationClickable: true,
+        spaceBetween: 5,
+        autoplay: 4500,
+        autoplayDisableOnInteraction: true,
+        effect: 'fade',
+        fade: {crossFade:true},
+        slidesPerView:'auto',
+        visibilityFullFit: true,
+        initialSlide : 0,
+        loop : true,
+        loopedSlides : 7
   };
+  
+  getRandomIndex(): number {
+    return Math.floor(Math.random() * this.slides.length);
+  }
 
   onSlideChanged() {
     let currentIndex = this.slider.getActiveIndex();
@@ -107,9 +124,6 @@ export class HelloIonicPage {
     // console.log(currentIndex);
   }
 
-  getRandomIndex(): number {
-    return Math.floor(Math.random() * this.slides.length);
-  }
 
   newSlide() {
     let newSlide = this.getRandomIndex();

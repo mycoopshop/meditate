@@ -1,0 +1,35 @@
+<!-- <ion-header>
+   <ion-navbar>
+      <button menuToggle right>
+      <img src="img/greater-than.png" width="20" height="30">
+      </button>
+      <ion-title>Pop Up Page</ion-title>
+   </ion-navbar>
+</ion-header> -->
+<ion-content class="background-blinker " padding="true" overflow-scroll="true">
+   <ion-view>
+     <ion-buttons start>
+        <button (click)="refresh()">Refresh</button>
+        </ion-buttons>
+        <ion-buttons end>
+            <button (click)="add()">Add</button>
+      </ion-buttons>
+      <ion-row responsive-sm>
+         <ion-col width-80>
+            <div menuToggle class="align-me">
+              <img src="img/greater-than.png" width="15" height="25">
+            </div>
+         </ion-col>
+      </ion-row>
+      <ion-list>
+         S.No.&nbsp;&nbsp;&nbsp;&nbsp;   Track Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Artist
+      </ion-list>
+      <ion-list>
+        <ion-item *ngFor="let person of personList">
+          {{person.id}}. &nbsp;&nbsp;&nbsp;&nbsp;{{person.firstname}}  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{person.lastname}}
+        </ion-item>
+      </ion-list>
+      <button block dark (click)="showAlert()">Help Window</button>
+      <!-- <allow-navigation href="assets/welcome/100.Introduction.html*" /> -->
+   </ion-view>
+</ion-content>

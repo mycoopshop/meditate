@@ -8,16 +8,32 @@
 </ion-header> -->
 
 <ion-content class="background-blinker " padding="true" overflow-scroll="true">
-   <ion-view title="Welcome">
+         <ion-buttons start>
+            <button (click)="refresh()">Refresh</button>
+        </ion-buttons>
+        <ion-buttons end>
+            <button (click)="add()">Add</button>
+        </ion-buttons>
+
+   <ion-view>
       <ion-row responsive-sm>
+      <ion-list>
+         S.No.&nbsp;&nbsp;&nbsp;&nbsp;   Track Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Artist
+      </ion-list>
+      <ion-list>
+        <ion-item *ngFor="let person of personList">
+          {{person.id}}. &nbsp;&nbsp;&nbsp;&nbsp;{{person.firstname}}  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{person.lastname}}
+          <ion-delete-button class="ion-minus-circled" (click)="deleteItem(person.id)"> Remove</ion-delete-button>
+        </ion-item>
+      </ion-list>
          <ion-col width-80>
             <div menuToggle class="align-me">
               <img src="img/greater-than.png" width="15" height="25">
             </div>
          </ion-col>
       </ion-row>
-         <iframe class= 'webPage' name= "eventsPage" src="assets/1.EXPLORE/1.I_like_them_short/3.Tips-and-Tools/233.SOS-1.html" width="340" height="370">
-         </iframe>
+        <!--  <iframe class= 'webPage' name= "eventsPage" src="assets/1.EXPLORE/1.I_like_them_short/3.Tips-and-Tools/233.SOS-1.html" width="340" height="370">
+         </iframe> -->
       <button block dark (click)="showAlert()">Help Window</button>
       <!-- <allow-navigation href="assets/welcome/100.Introduction.html*" /> -->
    </ion-view>
