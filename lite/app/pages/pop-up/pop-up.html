@@ -1,40 +1,64 @@
-<!-- <ion-header>
-   <ion-navbar>
-      <button menuToggle right>
-      <img src="img/greater-than.png" width="20" height="30">
-      </button>
-      <ion-title>Pop Up Page</ion-title>
-   </ion-navbar>
-</ion-header> -->
+<!-- 
+1 We can to to this page via.
+   ==> Meditate Now > Click on play img > Now we are on this page. 
+2 We have refresh, add, and help button here. 
+3 Below to above buttons we have list of all video which we are fatching from database.
+4 We can delete list (item) by sliding left > click delete button.
+5 We have back button on bottom of the page.
+-->
 
 <ion-content class="background-blinker " padding="true" overflow-scroll="true">
-         <ion-buttons start>
-            <button (click)="refresh()">Refresh</button>
-        </ion-buttons>
-        <ion-buttons end>
-            <button (click)="add()">Add</button>
-        </ion-buttons>
-
+   <ion-col width-100>
+      <div menuToggle style=" margin-top: 6%; float: right;">
+         <img src="img/greater-than.png" width="15" height="25">
+      </div>
+   </ion-col>
+   <ion-buttons start>
+      <button (click)="refresh()" style="margin-left: 15%;">Refresh</button>
+      <button (click)="add('audio1','urll111')">Add</button>
+      <button (click)="showAlert()">Help</button>
+   </ion-buttons>
    <ion-view>
       <ion-row responsive-sm>
-      <ion-list>
-         S.No.&nbsp;&nbsp;&nbsp;&nbsp;   Track Name &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    Artist
-      </ion-list>
-      <ion-list>
-        <ion-item *ngFor="let person of personList">
-          {{person.id}}. &nbsp;&nbsp;&nbsp;&nbsp;{{person.firstname}}  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{person.lastname}}
-          <ion-delete-button class="ion-minus-circled" (click)="deleteItem(person.id)"> Remove</ion-delete-button>
-        </ion-item>
-      </ion-list>
-         <ion-col width-80>
-            <div menuToggle class="align-me">
-              <img src="img/greater-than.png" width="15" height="25">
-            </div>
-         </ion-col>
+         <ion-list>
+            <ion-row>
+               <ion-col width-10 offset-5>S.No.</ion-col>
+               <ion-col width-20 >Track Name</ion-col>
+               <ion-col width-40 offset-25 >Path</ion-col>
+            </ion-row>
+         </ion-list>
+         <ion-list>
+            <ion-grid text-center>
+               <ion-row wrap>
+                  <!-- <ion-item *ngFor="let person of personList">
+                     <ion-col style="text-align: left; max-width: 13%;" > {{person.id}}.</ion-col>
+                     <ion-col style="text-align: left; max-width: 67%;">{{person.trackname}}</ion-col>
+                     <ion-col style="text-align: left; max-width: 20%;">{{person.trackUrl}}</ion-col>
+                     <ion-delete-button class="ion-minus-circled" (click)="deleteItem(person.id)"> X</ion-delete-button>
+                     </ion-item> -->
+                  <ion-item-sliding *ngFor="let video of videoList">
+                     <ion-item>
+                        {{video.id}} &nbsp;&nbsp;&nbsp;&nbsp; {{video.trackname}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; {{video.trackUrl}}
+                     </ion-item>
+                     <ion-item-options>
+                        <button danger (click)="removeItem(video)" style="background-color: red !important">
+                           <icon trash></icon>
+                           Delete
+                        </button>
+                     </ion-item-options>
+                  </ion-item-sliding>
+               </ion-row>
+            </ion-grid>
+         </ion-list>
       </ion-row>
-        <!--  <iframe class= 'webPage' name= "eventsPage" src="assets/1.EXPLORE/1.I_like_them_short/3.Tips-and-Tools/233.SOS-1.html" width="340" height="370">
-         </iframe> -->
-      <button block dark (click)="showAlert()">Help Window</button>
-      <!-- <allow-navigation href="assets/welcome/100.Introduction.html*" /> -->
    </ion-view>
 </ion-content>
+<ion-footer class="gb-color">
+    <div class="down-back-container">
+        <button class="down-scroll-container" (click)="goBack()">
+            <div class="manage-me">
+                <img src="img/less-than.png">
+            </div>
+        </button>
+    </div>
+</ion-footer>

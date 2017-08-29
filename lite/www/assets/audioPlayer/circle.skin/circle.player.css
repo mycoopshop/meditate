@@ -17,7 +17,7 @@
 	/*background:url("bgr.jpg") 0 0 no-repeat;
 	padding:48px;*/
 	margin-left: 45px;
-	padding:4px;
+	margin: 16% 0% 0% 24%;
 	background:url("circular_seekbar5.png") 0 0 no-repeat;
 	-webkit-tap-highlight-color:rgba(0,0,0,0);
 }

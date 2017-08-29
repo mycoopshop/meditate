@@ -1,43 +1,54 @@
 import { Alert, NavController, NavParams, Platform, SqlStorage, Storage} from 'ionic-angular';
-import { Component } from '@angular/core';
+import { Component }    from '@angular/core';
+import {ListPage}       from '../list/list';
 
+// import * as VIDEO from './../../www/assets/VideoStore/main.js';
+// import { video_url } from '../../../www/assets/VideoStore/main';
+// <script src="/../../../www/assets/VideoStore/main.js"></script>
+// import '../../../www/assets/VideoStore/main.js';
 @Component({
   templateUrl: 'build/pages/pop-up/pop-up.html',
 })
 
 export class PopUpPage {
-    
+    // value: any;
+    parentId: any;
     private storage: Storage;
-    public personList: Array<Object>;
+    main:any;
+    public videoList: Array<Object>;
     static get parameters() {
       return [[NavController]];
     }
     
-    public constructor(private nav: NavController, public platform: Platform) {
-        this.nav = nav;
-        this.storage = new Storage(SqlStorage);
-        this.storage.query("CREATE TABLE IF NOT EXISTS people (id INTEGER PRIMARY KEY AUTOINCREMENT, firstname TEXT, lastname TEXT)");
-        this.personList = [];
+    public constructor(private nav: NavController, public platform: Platform, navParams: NavParams) {
+      this.nav = nav;
+      this.storage = new Storage(SqlStorage);
+      this.storage.query("CREATE TABLE IF NOT EXISTS videodb (id INTEGER PRIMARY KEY AUTOINCREMENT, trackname TEXT, trackUrl TEXT)");
+      this.videoList = [];
+      this.parentId = 3;
+      // this.value = document.querySelector('video');
     }
 
     showAlert() {
       let alert = Alert.create({
         title: 'Help Window!',
-        subTitle: 'Demo is here for you and your soul. We are intended to stablish your connection to All Mighty.',
+        subTitle: 'This is just a dummy help windows for videodb and audio list.',
         buttons: ['X']
       });
       this.nav.present(alert);
     }
 
     public onPageLoaded() {
-        this.refresh();
+      this.refresh();
     }
 
-    public add() {
-        this.storage.query("INSERT INTO people (firstname, lastname) VALUES (?, ?)", ["Sanjay", "Yadav"]).then((data) => {
-            this.personList.push({
-                "firstname": "Sanjay",
-                "lastname": "Yadav"
+    public add(trackname,trackUrl) {
+      // console.log('value====== We have======'+value());
+        
+        this.storage.query("INSERT INTO videodb (trackname, trackUrl) VALUES (?, ?)", ['trackname', 'trackUrl']).then((data) => {
+            this.videoList.push({
+                "trackname": "trackname",
+                "trackUrl": "trackUrl"
             });
         }, (error) => {
             console.log(error);
@@ -45,40 +56,52 @@ export class PopUpPage {
     }
  
     public refresh() {
-        this.storage.query("SELECT * FROM people").then((data) => {
+        this.storage.query("SELECT * FROM videodb").then((data) => {
             if(data.res.rows.length > 0) {
-                this.personList = [];
+                this.videoList = [];
                 for(let i = 0; i < data.res.rows.length; i++) {
-                    this.personList.push({
+                    this.videoList.push({
                         "id": data.res.rows.item(i).id,
-                        "firstname": data.res.rows.item(i).firstname,
-                        "lastname": data.res.rows.item(i).lastname,
+                        "trackname": data.res.rows.item(i).trackname,
+                        "trackUrl": data.res.rows.item(i).trackUrl,
                     });
                 }
             }
         }, (error) => {
             console.log(error);
-        });
-    }
-
-    private emptyStorage():void{
-        this.platform.ready().then(() => {
-           console.log("empty the storage");
-           this.storage.query("DROP TABLE IF EXISTS cards"),(data)=>{
-              console.log("deleted",data); // never gets printed
-           },(error) =>{
-              console.log("error deleted",error.err); // never gets printed
-           };
-        });
+      });
     }
 
     private deleteItem(item) {
-      console.log(item);
-      this.storage.query("DELETE FROM people WHERE people_id = item;")=>{
+      // console.log(item);
+      this.storage.query("DELETE FROM videodb WHERE  id = "+item),(data)=>{
         console.log("deleted",item);
       },(error) =>{
         console.log("error deleted",error.err);
-      };
+      }; 
     }
+
+    removeItem(video){
+    for( let i =0 ; i < this.videoList.length; i++) {
+      if(this.videoList[i] == video){
+        this.deleteItem(video.id);
+        this.videoList.splice(i, 1);
+      }
+    }
+  }
+
+  goBack() {
+    if(this.parentId != null)
+      {
+        this.nav.insert(0, ListPage, {
+          menuId: this.parentId
+        },{direction: 'back'});
+      }
+    else
+      {
+        this.nav.pop();
+      }
+  }
+
 }
 

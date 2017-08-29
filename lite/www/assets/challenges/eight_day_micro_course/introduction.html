@@ -1,170 +1,269 @@
 ﻿<!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <link rel="stylesheet" type="text/css" href="../../slider/slider.css">
+      <link rel="stylesheet" href="../../slider/swiper.min.css">
+      <link rel="stylesheet" href="../../slider/audio.css">
+      <script src="../../slider/swiper.min.js"></script>
+      <link rel="stylesheet" href="../../audioPlayer/css/not.the.skin.css">
+      <link rel="stylesheet" href="../../audioPlayer/circle.skin/circle.player.css">
+      <script type="text/javascript" src="../../audioPlayer/js/jquery-3.2.1.js"></script>
+      <script type="text/javascript" src="../../audioPlayer/js/jquery.transform2d.js"></script>
+      <script type="text/javascript" src="../../audioPlayer/js/jquery.grab.js"></script>
+      <script type="text/javascript" src="../../audioPlayer/js/jquery.jplayer.js"></script>
+      <script type="text/javascript" src="../../audioPlayer/js/mod.csstransforms.min.js"></script>
+      <script type="text/javascript" src="../../audioPlayer/js/circle.player.js"></script>
 
-<head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="../../slider/slider.css">
-   <!--  <link rel="stylesheet" href="../../slider/swiper.min.css">
-    <script src="../../slider/swiper.min.js"></script>
-
-    <link rel="stylesheet" href="../../audioPlayer/css/not.the.skin.css">
-    <link rel="stylesheet" href="../../audioPlayer/circle.skin/circle.player.css">
-
-    <script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.6/jquery.min.js"></script>
-    <script type="text/javascript" src="../../audioPlayer/js/jquery.transform2d.js"></script>
-    <script type="text/javascript" src="../../audioPlayer/js/jquery.grab.js"></script>
-    <script type="text/javascript" src="../../audioPlayer/js/jquery.jplayer.js"></script>
-    <script type="text/javascript" src="../../audioPlayer/js/mod.csstransforms.min.js"></script>
-    <script type="text/javascript" src="../../audioPlayer/js/circle.player.js"></script>
-
-    <script type="text/javascript">
-        $(document).ready(function() {
-
-            var myCirclePlayer = new CirclePlayer("#jquery_jplayer_1", {
-                m4a: "http://freehindisongs.in/load/Hindi%20Mp3%20(2013)/3%20Idiots/Aal%20Izz%20Well.mp3"
-                    // m4a: "http://www.jplayer.org/audio/m4a/Miaow-07-Bubble.m4a",
-                    // oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
-            }, {
-                cssSelectorAncestor: "#cp_container_1"
-            });
-        });
-    </script> -->
-</head>
-<!-- slider start here -->
-<!-- <div class="swiper-container">
-    <div class="swiper-wrapper">
-        <div class="swiper-slide"><img src="../../slider-img/1-bird.jpg" /></div>
-        <div class="swiper-slide"><img src="../../slider-img/2-duck.jpg" /></div>
-        <div class="swiper-slide"><img src="../../slider-img/3-boy.jpg" /></div>
-        <div class="swiper-slide"><img src="../../slider-img/4-frog.jpg" /></div>
-        <div class="swiper-slide"><img src="../../slider-img/5-cat.jpg" /></div>
-        <div class="swiper-slide"><img src="../../slider-img/6-hat.jpg" /></div>
-        <div class="swiper-slide"><img src="../../slider-img/7-water.jpg" /></div>
-        <div class="swiper-slide"><img src="../../slider-img/8-day.jpg" /></div>
-        <div class="swiper-slide"><img src="../../slider-img/9-screen.jpg" /></div>
-    </div>
-    <div class="swiper-pagination"></div>
-    <div class="swiper-button-next"></div>
-    <div class="swiper-button-prev"></div>
-</div>
-
-<script>
-    var swiper = new Swiper('.swiper-container', {
-        pagination: '.swiper-pagination',
-        nextButton: '.swiper-button-next',
-        prevButton: '.swiper-button-prev',
-        paginationClickable: true,
-        spaceBetween: 30,
-        centeredSlides: false,
-        autoplay: 2500,
-        autoplayDisableOnInteraction: false
-    });
-</script> -->
-<!-- slider end here -->
-
-<!-- Audio player start here -->
-<div class="html-text-container">
-<!--    <p align="center"><strong>Introduction</strong> </p>
-    <p>
-        <div id="jquery_jplayer_1" class="cp-jplayer"></div>
-        <div class="prototype-wrapper">
-
+   </head>
+   <div class="swiper-container">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide"><img src="../../slider-img/1-bird.jpg" /></div>
+         <div class="swiper-slide"><img src="../../slider-img/2-duck.jpg" /></div>
+         <div class="swiper-slide"><img src="../../slider-img/3-boy.jpg" /></div>
+         <div class="swiper-slide"><img src="../../slider-img/4-frog.jpg" /></div>
+         <div class="swiper-slide"><img src="../../slider-img/5-cat.jpg" /></div>
+         <div class="swiper-slide"><img src="../../slider-img/6-hat.jpg" /></div>
+         <div class="swiper-slide"><img src="../../slider-img/7-water.jpg" /></div>
+         <div class="swiper-slide"><img src="../../slider-img/8-day.jpg" /></div>
+         <div class="swiper-slide"><img src="../../slider-img/9-screen.jpg" /></div>
+      </div>
+      <!-- <div class="swiper-pagination"></div> -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+   </div>
+   <div class="html-text-container">
+      <div class="audio-main-container background-blinker" id="audio-container">
+         <div id="jquery_jplayer_1" class="cp-jplayer"></div>
+         <div class="prototype-wrapper">
+            <!-- A wrapper to emulate use in a webpage and center align -->
+            <!-- The container for the interface can go where you want to display it. Show and hide it as you need. -->
             <div id="cp_container_1" class="cp-container">
-                <div class="cp-buffer-holder"> -->
-                    <!-- .cp-gt50 only needed when buffer is > than 50% -->
-                    <!-- <div class="cp-buffer-1"></div>
-                    <div class="cp-buffer-2"></div>
-                </div>
-                <div class="cp-progress-holder"> -->
-                    <!-- .cp-gt50 only needed when progress is > than 50% -->
-                    <!-- <div class="cp-progress-1"></div>
-                    <div class="cp-progress-2"></div>
-                </div>
-                <div class="cp-circle-control"></div>
-                <ul class="cp-controls">
-                    <li><a class="cp-play" tabindex="1">play</a></li>
-                    <li><a class="cp-pause" style="display:none;" tabindex="1">pause</a></li> -->
-                    <!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block -->
-               <!--  </ul>
+               <div class="cp-buffer-holder">
+                  <!-- .cp-gt50 only needed when buffer is > than 50% -->
+                  <div class="cp-buffer-1"></div>
+                  <div class="cp-buffer-2"></div>
+               </div>
+               <div class="cp-progress-holder">
+                  <!-- .cp-gt50 only needed when progress is > than 50% -->
+                  <div class="cp-progress-1"></div>
+                  <div class="cp-progress-2"></div>
+               </div>
+               <div class="cp-circle-control"></div>
+               <ul class="cp-controls">
+                  <li><a class="cp-play" tabindex="1">play</a></li>
+                  <li><a class="cp-pause" style="display:none;" tabindex="1">pause</a></li>
+                  <!-- Needs the inline style here, or jQuery.show() uses display:inline instead of display:block -->
+               </ul>
             </div>
-
-        </div>
-    </p> -->
-<!-- Audio player end here -->
-
-    <p align="center">
-        <em>The first step is always the hardest. </em>- Unknown
-    </p>
-    <p>
-        This micro course has been designed to help you get a complete overview of the experience of mindfulness in a convenient time frame.
-    </p>
-    <p>
-        <strong>What is a micro course?</strong>
-    </p>
-    <p> <img src="mc.png" alt="Thoughts as Thoughts" width="100%"></p>
-    <p>
-        There's lots of books out there with tens of thousands of words. There's also lots of courses out there with hours of viewing content. A micro course is different.
-    </p>
-    <p>
-        A micro course is:
-    </p>
-    <p>
-        <em>Time efficient</em> - excluding the suggested formal mindfulness practice this should take no longer than a few minutes a day.
-    </p>
-    <p>
-        <em>Content specific</em> - it focuses on small, specific units of information that are quick and easy to process, learn from and even teach your friends.
-    </p>
-    <p>
-        <em>Curriculum set</em> - it follows a set of modules to give you a complete overview of mindfulness in the context of body, mind and world.
-    </p>
-    <p>
-        <strong>What does it look like?</strong>
-    </p>
-    <p>
-        Everyday you are given suggestions to follow the same simple 4 step guide:
-    </p>
-    <p>
-        1) <em>Today's reading</em> - two short sections of suggested reading <em>(5-7 mins)</em>.
-    </p>
-    <p>
-        2) <em>Today's formal practice</em> - one suggested guided audio mindfulness practice relevant to the topic.
-    </p>
-    <p>
-        3) <em>Today's life experiment</em> - suggestions of what you can reflect and take action upon each day. Choose one from the list provided <em>(1-2 mins)</em>.
-    </p>
-    <p>
-        4) <em>Today's questions</em> - questions from to consolidate your learning. Choose just one from the list provided <em>(1-2 mins)</em>.
-    </p>
-    <p>
-        <em> You can revist this micro course again and again because of the multiple choice options in the above sections.</em>
-    </p>
-    <p>
-        <strong>Helpful reminder… </strong>
-    </p>
-    <p>
-        Put time aside for the formal practice that's suggested. Make a mental commitment to yourself about this ritual. Remember, a ritual is doing something at the same time in the same place everyday.
-    </p>
-    <p>
-        If something arises meaning that you cannot do what you set for yourself, simply leave it until the next day. There's no rush. This is about the journey in experience, not outcome!
-    </p>
-    <p>
-        If you do have to put things off for a day, see if you can do just <em>one</em> of the following 1-3 minute exercises.
-    </p>
-    <p>
-        <a href="mindfulness:Experience/2/1">One minute BMW</a>
-    </p>
-    <p>
-        <a href="mindfulness:Experience/2/3">Three minute BMW</a>
-    </p>
-    <p>
-        <a href="mindfulness:Experience/2/4">Three minute nothing exercise</a>
-    </p>
-    <p>
-        And if you have got to the end of your day…
-    </p>
-    <p>
-        …and you're shattered with tiredness… even if it's just before you go to sleep, you could spend just 30 seconds focusing upon the physical sensations of your breath. Then you've still done something that day which continues the momentum for the following day.
-    </p>
-</div>
-
+         </div>
+      </div>
+      <div class="keep-hidden" id="hide-me">  <em>'Play online now !!'</em> </div>
+      <div class="keep-hidden" id="hide-warning">  Be patience, downloading !! </div>
+      <p align="center"><strong>Introduction</strong>
+      <p align="center">
+         <em>The first step is always the hardest. </em>- Unknown
+      </p>
+      <p>
+         This micro course has been designed to help you get a complete overview of the experience of mindfulness in a convenient time frame.
+      </p>
+      <p>
+         <strong>What is a micro course?</strong>
+      </p>
+      <p> <img src="mc.png" alt="Thoughts as Thoughts" width="100%"></p>
+      <p>
+         There's lots of books out there with tens of thousands of words. There's also lots of courses out there with hours of viewing content. A micro course is different.
+      </p>
+      <p>
+         A micro course is:
+      </p>
+      <p>
+         <em>Time efficient</em> - excluding the suggested formal mindfulness practice this should take no longer than a few minutes a day.
+      </p>
+      <p>
+         <em>Content specific</em> - it focuses on small, specific units of information that are quick and easy to process, learn from and even teach your friends.
+      </p>
+      <p>
+         <em>Curriculum set</em> - it follows a set of modules to give you a complete overview of mindfulness in the context of body, mind and world.
+      </p>
+      <p>
+         <strong>What does it look like?</strong>
+      </p>
+      <p>
+         Everyday you are given suggestions to follow the same simple 4 step guide:
+      </p>
+      <p>
+         1) <em>Today's reading</em> - two short sections of suggested reading <em>(5-7 mins)</em>.
+      </p>
+      <p>
+         2) <em>Today's formal practice</em> - one suggested guided audio mindfulness practice relevant to the topic.
+      </p>
+      <p>
+         3) <em>Today's life experiment</em> - suggestions of what you can reflect and take action upon each day. Choose one from the list provided <em>(1-2 mins)</em>.
+      </p>
+      <p>
+         4) <em>Today's questions</em> - questions from to consolidate your learning. Choose just one from the list provided <em>(1-2 mins)</em>.
+      </p>
+      <p><em>
+         You can revist this micro course again and again because of the multiple choice options in the above sections.
+      </p>
+      </em>
+      <p>
+         <strong>Helpful reminder… </strong>
+      </p>
+      <p>
+         Put time aside for the formal practice that's suggested. Make a mental commitment to yourself about this ritual. Remember, a ritual is doing something at the same time in the same place everyday.
+      </p>
+      <p>
+         If something arises meaning that you cannot do what you set for yourself, simply leave it until the next day. There's no rush. This is about the journey in experience, not outcome!
+      </p>
+      <p>
+         If you do have to put things off for a day, see if you can do just <em>one</em> of the following 1-3 minute exercises.
+      </p>
+      <p>
+         <a href="mindfulness:Experience/2/1">One minute BMW</a>
+      </p>
+      <p>
+         <a href="mindfulness:Experience/2/3">Three minute BMW</a>
+      </p>
+      <p>
+         <a href="mindfulness:Experience/2/4">Three minute nothing exercise</a>
+      </p>
+      <p>
+         And if you have got to the end of your day…
+      </p>
+      <p>
+         …and you're shattered with tiredness… even if it's just before you go to sleep, you could spend just 30 seconds focusing upon the physical sensations of your breath. Then you've still done something that day which continues the momentum for the following day.
+      </p>
+   </div>
 </html>
+<script>
+   // Script for slider at top of the page
+   var swiper = new Swiper('.swiper-container', {
+       pagination: '.swiper-pagination',
+       nextButton: '.swiper-button-next',
+       prevButton: '.swiper-button-prev',
+       paginationClickable: true,
+       spaceBetween: 30,
+       centeredSlides: false,
+       autoplay: 2500,
+       autoplayDisableOnInteraction: false
+   });
+
+
+// implementaion of audio player start
+   var liveTrackUrl = 'http://bsingle.ve.vc/data/32/39437/283008/Rozana%20-%20Shreya%20Ghoshal%20(DjPunjab.Com).mp3'; /* manadatery to provide URL while updating by user. */
+   var liveTrackUrlTitle = 'Rozana%20-%20Shreya%20Ghoshal%20(DjPunjab'; /* mandatory to provide Title while updating by user. */
+   var audioUrlToPlay = getAudioUrl(liveTrackUrl);
+   var receivedTitle = RetrieveVideoUrlFromLocalStorage();
+
+   $(document).ready(function(){
+     if ( receivedTitle == liveTrackUrlTitle ) {
+      alert("I am reading = "+receivedTitle);
+        var myCirclePlayer = new CirclePlayer("#jquery_jplayer_1",
+         {
+           m4a: "file:///storage/emulated/0/Download/"+audioUrlToPlay
+         }, {
+          cssSelectorAncestor: "#cp_container_1"
+         });
+
+       } else {
+        var myCirclePlayer = new CirclePlayer("#jquery_jplayer_1",
+          {
+            m4a: "http://bsingle.ve.vc/data/32/39437/283008/Rozana%20-%20Shreya%20Ghoshal%20(DjPunjab.Com).mp3"
+            // oga: "http://www.jplayer.org/audio/ogg/Miaow-07-Bubble.ogg"
+          }, {
+           cssSelectorAncestor: "#cp_container_1"
+          });
+          SaveToLocalStorage(liveTrackUrl,liveTrackUrlTitle);
+          SaveToDisk(liveTrackUrl,liveTrackUrlTitle);
+      }
+   });
+
+   function getAudioUrl(fileUrl) {
+     var hrefRawUrl = fileUrl;
+     var hrefLastRawUrl = hrefRawUrl.split('/').length-1;
+     var hrefSplitedTitle = hrefRawUrl.split('/')[hrefLastRawUrl];
+     return hrefSplitedTitle;
+   }
+
+
+   function SaveToDisk(fileUrl, fileName) {
+      var hyperlink = document.createElement('a');
+      hyperlink.href = fileUrl;
+      hyperlink.target = '_blank';
+      hyperlink.download = fileName || fileUrl;
+
+      var mouseEvent = new MouseEvent('click', {
+        view: window,
+        bubbles: true,
+        cancelable: true
+      });
+
+      hyperlink.dispatchEvent(mouseEvent);
+      (window.URL || window.webkitURL).revokeObjectURL(hyperlink.href);
+   }
+
+   function SaveToLocalStorage(fileUrl, fileName){
+      var rawUrl = fileUrl;
+      var videoTitle = fileName;
+      var lastUrl = rawUrl.split('/').length-1;
+      var splitedTitle = rawUrl.split('/')[lastUrl]
+      localStorage.setItem('Audio URL:', "file:///storage/emulated/0/Download/"+splitedTitle);
+      localStorage.setItem('Audio Title:', splitedTitle);
+      // RetrieveVideoUrlFromLocalStorage();
+   }
+
+   function RetrieveVideoUrlFromLocalStorage() {
+     var retrivedValue = 'None';
+      if (localStorage.getItem('Audio URL:', retrivedValue)) {
+        var retrivedValue = localStorage.getItem('Audio URL:', retrivedValue);
+      } else {
+        var myCirclePlayer = new CirclePlayer("#jquery_jplayer_1",
+          {
+            m4a: "http://bsingle.ve.vc/data/32/39437/283008/Rozana%20-%20Shreya%20Ghoshal%20(DjPunjab.Com).mp3"
+          }, {
+           cssSelectorAncestor: "#cp_container_1"
+        });
+        SaveToDisk(liveTrackUrl,liveTrackUrlTitle);
+        SaveToLocalStorage(liveTrackUrl,liveTrackUrlTitle);
+        document.getElementById('audio-container').className += ' disabled'
+        document.getElementById('hide-me').className = 'warning'
+        document.getElementById('hide-warning').className = 'warning'
+      }
+
+    var allTextLines = retrivedValue.split(/\r/); /* to get line of file */
+    var line = allTextLines[0].split(',');
+    var fileUrl = line[0].split(',');
+    var trackName = fileUrl[0].split("Download/")[1].split('.')[0];
+    return trackName;
+   }
+
+</script>
+
+<style>
+  .disabled {
+    opacity: 0.38;
+    cursor: not-allowed;
+  }
+  .warning {
+    opacity: 0.38;
+    position: absolute;
+    z-index: inherit;
+    width: 84%;
+    margin: 7% 0% 0% 0%;
+    text-align: center;
+    color: #060504;
+    word-wrap: break-word;
+    cursor: not-allowed;
+  }
+  .keep-hidden {
+    visibility: hidden;
+    position: absolute;
+    z-index: inherit;
+  }
+  #hide-warning {
+    float: left;
+    margin-top: 39%;
+  }
+</style>

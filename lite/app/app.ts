@@ -4,8 +4,9 @@ import {StatusBar, Splashscreen, SQLite}                from 'ionic-native';
 import {HelloIonicPage}  from './pages/hello-ionic/hello-ionic';
 import {ListPage}        from './pages/list/list';
 import {PopUpPage}       from './pages/pop-up/pop-up';
+import {MediaPage}       from './pages/media/media';
 import {VideoPage}       from './pages/video/video';
-import {AudioPage}       from './pages/audio/audio';
+import {SettingPage}     from './pages/setting/setting';
 import {ViewPage}        from './pages/view/view';
 import {MenuPage}        from './pages/menu/menu';
 
@@ -27,25 +28,25 @@ class MyApp {
     }, 1000);
 
     this.pages = [
-      { title: 'START HERE',                            type: 'main menu',  component: VideoPage },
+      { title: 'START HERE',                            type: 'main menu',  component: MenuPage },
       { title: 'Welcome',                               type: 'sub menu' ,  component: 'assets/read/ch_5_the_art_of_allowing/the_art_of_allowing.html' },
       { title: 'Why do this?',                          type: 'sub menu' ,  component: 'assets/read/ch_5_the_art_of_allowing/the_art_of_allowing.html' },
       { title: 'How to use this app',                   type: 'sub menu' ,  component: 'assets/challenges/eight_day_micro_course/module_eight_turning_towards.html' },
-      { title: 'INTRO VIDEOS',                          type: 'main menu',  component: AudioPage },
+      { title: 'INTRO VIDEOS',                          type: 'main menu',  component: PopUpPage },
       { title: 'Mindfulness is like a triangle',        type: 'sub menu' ,  component: 'assets/read/ch_5_the_art_of_allowing/the_observer_within_part_two.html' },
       { title: 'BMW',                                   type: 'sub menu' ,  component: 'assets/read/ch_4_patterns_of_behaviour/2_inner_resistance/in_or_out_of_control.html' },
       { title: 'How to practice mindfulness',           type: 'sub menu' ,  component: 'assets/read/ch_3_mind_and_emotions/3_feelings_as_feelings/normal_human_emotions.html' },
       { title: "When your mind says “I can't do it!”" , type: 'sub menu' ,  component: 'assets/read/ch_3_mind_and_emotions/2_thoughts_as_thoughts/associations_part_two.html' },
       { title: 'Thought are like rain on windscreen',   type: 'sub menu' ,  component: 'assets/read/ch_2_introduction_to_mindfulness/overcoming_boredom_part_one.html' },
-      { title: 'SETTINGS',                              type: 'main menu',  component: PopUpPage },
+      { title: 'SETTINGS',                              type: 'main menu',  component: SettingPage },
       { title: 'Random insights reminder',              type: 'sub menu' ,  component: 'assets/explore/i_like_them_short/tips_and_tools/stepping_back.html' },
-      { title: 'MY DOWNLOADS',                          type: 'main menu',  component: VideoPage },
+      { title: 'MY DOWNLOADS',                          type: 'main menu',  component: MediaPage },
       { title: 'My video and audio downloads',          type: 'sub menu' ,  component: 'assets/explore/i_like_them_short/guided_mindfulness/getting_with_the_flow_seven_mins.html' },
-      { title: 'ABOUT ME',                              type: 'main menu',  component: AudioPage },
+      { title: 'ABOUT ME',                              type: 'main menu',  component: MenuPage },
       { title: 'About Reuben',                          type: 'sub menu' ,  component: 'assets/explore/i_like_them_short/tips_and_tools/stepping_back.html' },
       { title: 'Psychology influences',                 type: 'sub menu' ,  component: 'assets/explore/i_like_them_short/tips_and_tools/stepping_back.html' },
       { title: 'About Mindfulness Creation',            type: 'sub menu' ,  component: 'assets/explore/i_like_them_short/tips_and_tools/stepping_back.html' },
-      { title: 'MORE',                                     type: 'main menu',  component: AudioPage },
+      { title: 'MORE',                                     type: 'main menu',  component: MenuPage },
       { title: 'Tap me!',                                  type: 'sub menu' ,  component: 'assets/explore/i_like_them_short/tips_and_tools/stepping_back.html' },
       { title: 'Share with friends',                       type: 'sub menu' ,  component: 'assets/explore/i_like_them_short/experiential_exercises/stories_on_a_stream.html' },
       { title: 'Sign up',                                  type: 'sub menu' ,  component: 'assets/explore/i_like_them_short/guided_mindfulness/getting_with_the_flow_seven_mins.html' },

@@ -1,8 +1,11 @@
-import {NavController, NavParams, Content} from 'ionic-angular';
+import {NavController, NavParams, Content}  from 'ionic-angular';
 import {Component, ViewChild} from '@angular/core';
-import {VideoPage} from '../video/video';
-import {ViewPage}  from '../view/view';
-import {MenuPage}  from '../menu/menu';
+import {ReadMenuListPage}     from '../read-menu-list/read-menu-list';
+import {ExploreMenuPage}      from '../explore-menu/explore-menu';
+import {PopUpPage}            from '../pop-up/pop-up';
+import {VideoPage}            from '../video/video';
+import {ViewPage}             from '../view/view';
+import {MenuPage}             from '../menu/menu';
 
 @Component({
   templateUrl: 'build/pages/list/list.html',
@@ -17,13 +20,22 @@ export class ListPage {
   parentTitle :string;
   rootPage: any = ListPage;
   public breadcrumbs = [];
-  
+  nac: any;
+
   subMenus: Array<{id: number, border_type:number, title: string, platform: string,  contain: string, parent_id: number, type: string, stage:string, child_type: number, time: string, url: string}>;
   @ViewChild(Content) content: Content;
-  
+
   constructor(private navCtrl: NavController, navParams: NavParams) {
-    
-    this.selectedId = navParams.get('menuId'); 
+
+    var navOptions = {
+      animate: false,
+      duration: 0
+      //animation: 'wp-transition'
+    };
+
+    this.nac = navOptions;
+
+    this.selectedId = navParams.get('menuId');
     this.selectedTitle = navParams.get('title');
     this.flag = "0";
     this.scrollNow = "2500";
@@ -58,10 +70,10 @@ export class ListPage {
       { id: 27,  border_type: 2, parent_id: 3,   title: 'Nothing Matters',                                 platform: ' ',  contain: 'video',  type: 'html', stage: 'empty', child_type: 2, time: ' ', url: 'assets/explore/i_like_them_short/guided_mindfulness/an_imaginary_balloon_seven_mins.html'},
       { id: 28,  border_type: 3, parent_id: 3,   title: 'Releasing Resistance',                            platform: ' ',  contain: 'video',  type: 'html', stage: 'empty', child_type: 2, time: ' ', url: 'assets/explore/i_like_them_short/guided_mindfulness/an_imaginary_balloon_seven_mins.html'},
       { id: 29,  border_type: 1, parent_id: 4,   title: 'Intro to the book',                               platform: ' ',  contain: 'none',   type: 'html', stage: 'final', child_type: 3, time: ' ', url: 'assets/explore/i_like_them_short/guided_mindfulness/an_imaginary_balloon_seven_mins.html'},
-      { id: 30,  border_type: 2, parent_id: 4,   title: 'Introduction to mindfulness',                     platform: ' ',  contain: 'none',   type: 'html', stage: 'final', child_type: 3, time: ' ', url: 'assets/read/ch_2_introduction_to_mindfulness/start.html'},
-      { id: 31,  border_type: 3, parent_id: 4,   title: 'Mind and emotions',                               platform: ' ',  contain: 'none',   type: 'html', stage: 'empty', child_type: 4, time: ' ', url: ''},
-      { id: 32,  border_type: 1, parent_id: 4,   title: 'Patterns of behaviour',                           platform: ' ',  contain: 'none',   type: 'html', stage: 'empty', child_type: 4, time: ' ', url: ''},
-      { id: 33,  border_type: 2, parent_id: 4,   title: 'The art of allowing',                             platform: ' ',  contain: 'none',   type: 'html', stage: 'final', child_type: 3, time: ' ', url: 'assets/explore/i_like_them_short/tips_and_tools/labelling.html'},
+      { id: 30,  border_type: 2, parent_id: 4,   title: 'Introduction to mindfulness',                     platform: '1',  contain: 'none',   type: 'html', stage: 'final', child_type: 3, time: ' ', url: 'assets/read/ch_2_introduction_to_mindfulness/start.html'},
+      { id: 31,  border_type: 3, parent_id: 4,   title: 'Mind and emotions',                               platform: '2',  contain: 'none',   type: 'html', stage: 'empty', child_type: 4, time: ' ', url: ''},
+      { id: 32,  border_type: 1, parent_id: 4,   title: 'Patterns of behaviour',                           platform: '3',  contain: 'none',   type: 'html', stage: 'empty', child_type: 4, time: ' ', url: ''},
+      { id: 33,  border_type: 2, parent_id: 4,   title: 'Making space',                                    platform: '4',  contain: 'none',   type: 'html', stage: 'final', child_type: 3, time: ' ', url: 'assets/explore/i_like_them_short/tips_and_tools/labelling.html'},
       { id: 34,  border_type: 3, parent_id: 4,   title: 'Final words',                                     platform: ' ',  contain: 'none',   type: 'html', stage: 'final', child_type: 3, time: ' ', url: 'assets/explore/i_like_them_short/guided_mindfulness/the_world_outside_eleven_mins.html'},
       { id: 35,  border_type: 1, parent_id: 8,   title: 'Guided Mindfulness',                              platform: '1',  contain: 'none',   type: 'list', stage: 'empty', child_type: 1, time: ' ', url: ''},
       { id: 36,  border_type: 2, parent_id: 8,   title: 'Experiential Exercises',                          platform: '2',  contain: 'none',   type: 'list', stage: 'empty', child_type: 2, time: ' ', url: ''},
@@ -71,7 +83,7 @@ export class ListPage {
       { id: 40,  border_type: 3, parent_id: 9,   title: 'Tips And Tools',                                  platform: '3',  contain: 'none',   type: 'list', stage: 'empty', child_type: 3, time: ' ', url: ''},
       { id: 41,  border_type: 1, parent_id: 10,  title: 'Guided Mindfulness',                              platform: '1',  contain: 'none',   type: 'list', stage: 'empty', child_type: 1, time: ' ', url: ''},
       { id: 42,  border_type: 2, parent_id: 10,  title: 'Experiential Exercises',                          platform: '2',  contain: 'none',   type: 'list', stage: 'empty', child_type: 2, time: ' ', url: ''},
-      { id: 43,  border_type: 3, parent_id: 10,  title: 'Tips And Tools',                                  platform: '3',  contain: 'none',   type: 'list', stage: 'empty', child_type: 3, time: ' ', url: ''}, 
+      { id: 43,  border_type: 3, parent_id: 10,  title: 'Tips And Tools',                                  platform: '3',  contain: 'none',   type: 'list', stage: 'empty', child_type: 3, time: ' ', url: ''},
       { id: 44,  border_type: 1, parent_id: 31,  title: 'Your Mind',                                       platform: ' ',  contain: 'none',   type: 'html', stage: 'final', child_type: 5, time: ' ', url: ''},
       { id: 45,  border_type: 2, parent_id: 31,  title: 'Thoughts-as-thoughts',                            platform: ' ',  contain: 'none',   type: 'html', stage: 'final', child_type: 5, time: ' ', url: ''},
       { id: 46,  border_type: 3, parent_id: 31,  title: 'Feelings-as-feelings',                            platform: ' ',  contain: 'none',   type: 'html', stage: 'final', child_type: 5, time: ' ', url: ''},
@@ -122,17 +134,15 @@ export class ListPage {
       { id: 91,  border_type: 2, parent_id: 43,  title: 'Remember who you are',                            platform: ' ',  contain: 'none',   type: 'html', stage: 'empty', child_type: 3, time: '(3 mins)',    url: 'assets/explore/lets_go_deeper/tips_and_tools/module_meaningful_connection.html'},
       { id: 92,  border_type: 3, parent_id: 43,  title: 'SOS',                                             platform: ' ',  contain: 'none',   type: 'html', stage: 'empty', child_type: 3, time: "(Enter here if you're feeling overwhelmed)", url: 'assets/explore/lets_go_deeper/tips_and_tools/module_meaningful_connection.html'}
     ];
-    
+
     for(var m of this.subMenus){
       if(this.selectedId ==  m.id)
       {
         this.selectedTitle = m.title;
         this.breadcrumbs.push(this.selectedTitle);
-          // console.log('title from constructor='+this.selectedTitle);
       }
       else {
         this.parentTitle = ' ';
-        // this.breadcrumbs.push(this.title);
       }
     }
 
@@ -143,11 +153,11 @@ export class ListPage {
     this.parentId=pId;
     this.parentTitle=title;
   };
-  
+
   getValue() {
     return this.selectedId;
   };
-  
+
   scrollTo() {
     let dimensions = this.content.getContentDimensions();
     if (this.scrollNow >= (dimensions.scrollBottom-1920)) {
@@ -165,20 +175,43 @@ export class ListPage {
     });
   }
 
-  addClickedItem(title) {
-    console.log('Selected Title=',title)
-    this.breadcrumbs.push(title); 
-    console.log('Added to breadcrumbs Array=',this.breadcrumbs);
+  exploreMenuPage(event, Id, PId, PTitle, MenuPTitle) {
+    this.navCtrl.push(ExploreMenuPage, {
+      listMenuId: Id,
+      listMenuPId: PId,
+      mainMenuParentTitle: PTitle,
+      listMenuParentTitle: MenuPTitle,
+      breadcrumbsCollection: this.breadcrumbs
+    }, this.nac);
   }
+
+
+  videoList(event, id) {
+    this.navCtrl.push(PopUpPage, {
+      parent_id: id
+    });
+  }
+
 
   htmlList(event, Id, PId, PTitle, MenuPTitle) {
     this.navCtrl.push(VideoPage, {
       listMenuId: Id,
       listMenuPId: PId,
       mainMenuParentTitle: PTitle,
+      backButtonCount: 1,
       listMenuParentTitle: MenuPTitle,
       breadcrumbsCollection: this.breadcrumbs
     });
+  }
+
+  readSubList(event, Id, PId, PTitle, MenuTitle) {
+    this.navCtrl.push(ReadMenuListPage, {
+      readMenuId: Id,
+      readMenuPId: PId,
+      readMenuParentTitle: PTitle,
+      clickedTitle: MenuTitle,
+    });
+      // console.log(readMenuParentTitle+"I am menu");
   }
 
   goBack() {
@@ -186,7 +219,7 @@ export class ListPage {
     console.log('selectedId= '+this.selectedId);
     if(this.selectedId == 1 || this.selectedId == 2 || this.selectedId == 3 || this.selectedId == 4)
     {
-      // console.log("hello="+this.parentTitle)
+      // console.log("hello, I am in if section ="+this.parentTitle)
       this.navCtrl.insert(0, MenuPage,{},{direction: 'back', duration: 610});
     }
     else if(this.parentId != null) {
@@ -213,5 +246,5 @@ export class ListPage {
   goToHome() {
     this.navCtrl.insert(0, MenuPage,{},{direction: 'back', duration: 610});
   }
-  
+
 }

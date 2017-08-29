@@ -1,0 +1,32 @@
+.background-blinker {
+  /*background: linear-gradient(320deg, #E4903C,#F5D0A9,#FF8001,#68BDF5,#D64EC4,#AAB66B,#B44080,#569BC9,#CE5196,#6D91A9,#F5D0A9,#F5D0A9,#6D91A9,#569BC9);*/
+  background: linear-gradient(320deg, #F7BC92,#ECC19B,#DEC8A3,#A6DEC5,#F7BC92,#8AE8D6,#ECC19B,#8AE8D6,#DEC8A3,#A6DEC5,#F7BC92,#F7BC92,#A6DEC5,#8AE8D6);
+  background-size: 600% 800%;
+  -webkit-animation: AnimationName 200s ease-in infinite;
+  -moz-animation: AnimationName 200s ease-in infinite;
+  animation: AnimationName 200s ease-in infinite;
+}
+
+@-webkit-keyframes AnimationName {
+  0%{background-position:79% 0%}
+  50%{background-position:22% 100%}
+  100%{background-position:79% 0%}
+}
+@-moz-keyframes AnimationName {
+  0%{background-position:79% 0%}
+  50%{background-position:22% 100%}
+  100%{background-position:79% 0%}
+}
+@keyframes AnimationName {
+  0%{background-position:79% 0%}
+  50%{background-position:22% 100%}
+  100%{background-position:79% 0%}
+}
+
+.audio-main-container {
+  float: left;
+  margin: 4% 0% 4% 1%;
+  width: 95%;
+  height: 160px;
+  border: black solid 5px;
+}

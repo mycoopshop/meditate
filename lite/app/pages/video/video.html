@@ -1,15 +1,7 @@
-<!-- <ion-header>
-   <ion-navbar>
-      <button menuToggle right>
-      <img src="img/greater-than.png" width="20" height="20">
-      </button>
-      <ion-title>My Menu List</ion-title>
-   </ion-navbar>
-   </ion-header> -->
 <ion-content class="bg-color" padding="true" overflow-scroll="true">
-    <ion-row responsive-md responsive-sm responsive-lg>
-        <ion-col>
-            <a href="#" (click)="goToHome()" style="text-decoration: none">
+   <ion-row responsive-md responsive-sm responsive-lg>
+      <ion-col>
+         <a href="#" (click)="goToHome()" style="text-decoration: none">
             <div class="GrayPagetext-logo" *ngIf ="(listMenuPId > 10) || (listMenuPId < 8)">
                <img src="img/logo-the-art.png" >
             </div>
@@ -17,68 +9,86 @@
                <img src="img/mindfullness.png" >
             </div>
          </a>
-            <span menuToggle class="Grayalign-me-now" fab-fixed>
+         <span menuToggle class="Grayalign-me-now" fab-fixed>
          <img src="img/greater-than.png" >
          </span>
-        </ion-col>
-    </ion-row>
-    <div *ngIf="(listMenuPId > 8)" class="breadcrumb-container">
-        <div *ngFor="let bcrumb of BreadcrumbsCollection; let i = index ">
-            <div style="float: left;" class="animated slideInRight" (click)="goBack()" *ngIf="(listMenuPId >10)">
-                <div *ngIf="(i >= 1)">
-                    &nbsp;&gt; {{bcrumb}}
-                </div>
-                <div *ngIf="(i == 0)">
-                    {{"&nbsp;"+bcrumb}}
-                </div>
+      </ion-col>
+   </ion-row>
+   <div *ngIf="(listMenuPId > 8)" class="breadcrumb-container">
+      <div *ngFor="let bcrumb of BreadcrumbsCollection; let i = index ">
+         <div (click)="goBack()" *ngIf="(listMenuPId >10)">
+            <div *ngIf="(i >= 1)">
+               &nbsp;&gt; {{bcrumb}}
             </div>
-        </div>
-    </div>
-    <!--       <div style="margin-left: 3%" class="col-10" (click)="goToHome()">Home </div> -->
-    <ion-row class="breadcrumb-container" *ngIf="(listMenuPId < 8)">
-        <div style="margin-left: 3%" class="col-10 animated slideInRight" (click)="goBack()"> {{MainMenuPTitle}} </div>
-        <div style="margin-left: 2%" class="col-10 animated slideInRight" (click)="goBack()"> {{'> '+ListMenuPTitle}} </div>
-    </ion-row>
-    <!-- <video autoplay="true" controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline" class="videoPlayer">
-      <source src="videos/your_mind.m4v" type="video/mp4"/>
-      </video> -->
-    <ion-scroll scrollY="true" direction="y" style="width: 100%; height: 59%">
-        <div class="video-outer">
-            <div class="middle">
-                <div *ngFor="let list of htmlLists">
-                    <div *ngIf="(listMenuId ==list.parent_id)">
-                        <div class="GrayHtmlSlideContainer">
-                            <div class="royal-menu-container-html inner">
-                                <div class="center-menu-container-html">
-                                    <div class="inner-border-html-box">
-                                        <div class="top-text-container" (click)="viewPage($event, list.url, list.parent_id)" style="margin-bottom:3%">
-                                            <div class="html-menu-title-container">
-                                                <div class="html-menu-title module">
-                                                    <a style="text-decoration:none;color:#000">{{list.title}}</a>
-                                                </div>
-                                            </div>
-                                            <div class="html-arrow-container">
-                                                <div class="html-arrow-icon">
-                                                    <img src="img/greater-than.png">
-                                                </div>
-                                            </div>
-                                        </div>
+            <div *ngIf="(i == 0)" style="float: left;">
+               Read&nbsp;&gt; {{bcrumb}}
+            </div>
+         </div>
+      </div>
+   </div>
+   <!-- <div style="margin-left: 3%" class="col-10" (click)="goToHome()">Home </div> -->
+   <ion-row class="breadcrumb-container" *ngIf="(listMenuPId < 8)">
+      <div style="margin-left: 3%" class="col-10" (click)="goBack()"> {{MainMenuPTitle}} </div>
+      <div style="margin-left: 2%" class="col-10" (click)="goBack()"> {{'> '+ListMenuPTitle}} </div>
+   </ion-row>
+   <ion-scroll scrollY="true" direction="y" style="width: 100%; height: 59%">
+      <div class="video-outer">
+         <div class="middle">
+            <div *ngFor="let list of htmlLists">
+               <div *ngIf="(listMenuId ==list.parent_id)">
+                  <div class="GrayHtmlSlideContainer">
+                     <div class="royal-menu-container-html inner">
+                        <div class="center-menu-container-html">
+                           <div class="inner-border-html-box">
+                              <div class="top-text-container" (click)="viewPage($event, list.url, list.parent_id)" style="margin-bottom:3%">
+                                 <div class="gray-html-menu-title-container">
+                                    <div *ngIf= "(list.day != ' ')" class="day-container">
+                                       <div class="day-text">
+                                          Day {{list.day}}:
+                                       </div>
                                     </div>
-                                </div>
-                            </div>
+                                    <div class="html-menu-title module">
+                                       <a style="text-decoration:none;color:#000"> 
+                                       {{list.title}}
+                                       </a>
+                                    </div>
+                                    <div *ngIf= "(list.module != ' ')" class="module-time-container">
+                                       <div class="time-text">
+                                          (Module {{list.module}})
+                                       </div>
+                                    </div>
+                                 </div>
+                                 <div class="html-arrow-container">
+                                    <div class="html-arrow-icon">
+                                       <img src="img/greater-than.png">
+                                    </div>
+                                 </div>
+                              </div>
+                           </div>
                         </div>
-                    </div>
-                </div>
+                     </div>
+                  </div>
+               </div>
             </div>
-        </div>
-    </ion-scroll>
+         </div>
+      </div>
+   </ion-scroll>
 </ion-content>
 <ion-footer class="gb-color">
-    <div class="down-back-container">
-        <button class="down-scroll-container" (click)="goBack()">
+   <div class="down-back-container">
+      <div *ngIf = "BackButtonCount == 1">
+         <button class="down-scroll-container" (click)="goBack()">
             <div class="manage-me">
-                <img src="img/less-than.png">
+               <img src="img/less-than.png">
             </div>
-        </button>
-    </div>
+         </button>
+      </div>
+      <div *ngIf = "BackButtonCount == 2">
+         <button class="down-scroll-container" (click)="goBackToRead()">
+            <div class="manage-me">
+               <img src="img/less-than.png">
+            </div>
+         </button>
+      </div>
+   </div>
 </ion-footer>

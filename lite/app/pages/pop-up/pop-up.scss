@@ -10,3 +10,14 @@
 .popup-container {
 	background-color: palegoldenrod;
 }
+
+.item {
+	background-color: transparent !important;
+}
+ion-item-sliding {
+	background-color: transparent;
+}
+
+ion-list .item .item-inner {
+	border-bottom: 5px solid #000;
+}

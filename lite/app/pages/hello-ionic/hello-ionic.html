@@ -1,12 +1,9 @@
-<!-- <ion-header>
-   <ion-navbar>
-     <button menuToggle>
-       <ion-icon name="menu"></ion-icon>
-     </button>
-     <ion-title>Hello Ionic</ion-title>
-   </ion-navbar> full-div-hide
-   </ion-header> -->
-
+<!--
+1. This is home page of application on which quotes get flashed, app get landed on it along with skip and pause button.
+2. Skip button is linked with other page called menu page.
+3. Menu page only contain main menu of four buttons.
+-->
+<script type = 'text/javascript' src = 'jquery.iosslider.js'></script>
 <ion-content class="getting-started">
     <div class="main-container">
         <ion-slides #mySlider1 [options]="myMainSlideOptions">
@@ -28,10 +25,10 @@
                         <div class="bottom-inner-container">
                             <div class="pause-me-now">
                                 <div class="pause-text-container">
-                                    <a href="#" (click)="onSlideChanged()" class="pause-me pause-text-deco">Pause</a>
+                                    <div class="pause-me pause-text-deco" (click)="pauseQuote()">Pause</div>
                                 </div>
                                 <div class="skip-text-container">
-                                    <button (click)="navigateSkip()" class="skip-text-deco" href="#">Skip</button>
+                                    <button (click)="navigateSkip()" class="skip-text-deco" href="#" >Skip </button>
                                 </div>
                             </div>
                         </div>
@@ -126,17 +123,17 @@
       font-family: sans_medium;
       text-align: left;
     }
-    
+
     .swiper-slide {
       background-color: transparent;
     }
-    
+
     ion-slide img {
       height: 21vh !important;
       width: 100% !important;
       margin-top: -2%;
     }
-    
+
     .explore-rotate-text {
       float: left;
       margin-top: 25px;

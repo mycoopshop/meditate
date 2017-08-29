@@ -1,47 +1,163 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
+   <head>
+      <meta charset="utf-8" />
+      <link rel="stylesheet" type="text/css" href="../../slider/slider.css">
+      <link rel="stylesheet" href="../../slider/swiper.min.css">
+      <script src="../../slider/swiper.min.js"></script>
+   </head>
+   <div class="swiper-container">
+      <div class="swiper-wrapper">
+         <div class="swiper-slide"><img src="../../slider-img/1-bird.jpg" /></div>
+         <div class="swiper-slide"><img src="../../slider-img/2-duck.jpg" /></div>
+         <div class="swiper-slide"><img src="../../slider-img/3-boy.jpg" /></div>
+         <div class="swiper-slide"><img src="../../slider-img/4-frog.jpg" /></div>
+         <div class="swiper-slide"><img src="../../slider-img/5-cat.jpg" /></div>
+         <div class="swiper-slide"><img src="../../slider-img/6-hat.jpg" /></div>
+         <div class="swiper-slide"><img src="../../slider-img/7-water.jpg" /></div>
+         <div class="swiper-slide"><img src="../../slider-img/8-day.jpg" /></div>
+         <div class="swiper-slide"><img src="../../slider-img/9-screen.jpg" /></div>
+      </div>
+      <!-- <div class="swiper-pagination"></div> -->
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+   </div>
+   <script>
+      var swiper = new Swiper('.swiper-container', {
+          pagination: '.swiper-pagination',
+          nextButton: '.swiper-button-next',
+          prevButton: '.swiper-button-prev',
+          paginationClickable: true,
+          spaceBetween: 30,
+          centeredSlides: false,
+          autoplay: 2500,
+          autoplayDisableOnInteraction: false
+      });
+   </script>
+   <div class="html-text-container">
+      <p align="center"><strong>Congratulations!</strong></p>
+      <p align="center">
+         <em>What lies behind us and what lies in front of us are tiny matters to what lies within us. - </em>Ralph Waldo Emerson
+      </p>
+      <p>
+         Well done for completing this course. Just by doing so, you've dipped into some key themes within the book.
+      </p>
+      <!-- I am working ...
+         <video controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline" class="videoPlayer">
+            <source src="file:///storage/sdcard0/download/orange1.mp4" type="video/mp4"/ width="100%">
+         </video>
+          me tooo working @@@@
+         <video controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline" class="videoPlayer">
+            <source src="file:///storage/emulated/0/Download/orange1.mp4" type="video/mp4"/ width="100%">
+         </video>  -->
+         <div id="container" onclick="playme()">
+           <video id="video" onclick="playme()" controls autoplay preload="metadata" poster="./Play_button_4.jpg" width="100%" height="100%">Your browser does not support the video element</video>
+           <p id="videoSrc"></p>
+           <p id="data"></p>
+         </div>
+        <!-- <center>
+          <a href="#" onclick="playme()">Play above video</a>
+        </center> -->
+      </p>
+      <p>
+         As we've explored, it's not just about connecting to the external world. It's so much more than that. It's about how you relate to your inner experiences of body and mind. This inner transformation is an ongoing process. It can only take place with practice.
+      </p>
+      <p>
+         Everyone can benefit from insights into the human mind, behaviour and the practice of mindfulness. My hope is that by having completed this micro course, you will have a little more freedom and flexibility in your life.
+      </p>
+   </div>
+   <script>
+      var liveTrackUrl = 'http://ia600607.us.archive.org/14/items/MickeyMouse-RunawayTrain/Film-42.mp4'; /* manadatery to provide URL while updating by user. */
+      // var liveTrackUrl = 'http://ia600607.us.archive.org/14/items/MickeyMouse-RunawayTrain/Film-42.mp4'; /* manadatery to provide URL while updating by user. */
+      var liveTrackUrlTitle = 'Film-42'; /* mandatory to provide Title while updating by user. */
+      function playme() {
+        // if (navigator.onLine) {
 
-<head>
-    <meta charset="utf-8" />
-    <link rel="stylesheet" type="text/css" href="../../slider/slider.css">
-</head>
-<div class="html-text-container">
-    <p align="center"><strong>Congratulations!</strong></p>
-    <p align="center">
-        <em>What lies behind us and what lies in front of us are tiny matters to what lies within us. - </em>Ralph Waldo Emerson
-    </p>
-    <p>
-        Well done for completing this course. Just by doing so, you've dipped into some key themes within the book.
-    </p>
-    <!-- <video controls="controls" preload="metadata" webkit-playsinline="webkit-playsinline" class="videoPlayer">
-        <source src="../../videos/your_mind.m4v" type="video/mp4" width="100%">
-    </video> -->
-    </p>
-    <p>
-        As we've explored, it's not just about connecting to the external world. It's so much more than that. It's about how you relate to your inner experiences of body and mind. This inner transformation is an ongoing process. It can only take place with practice.
-    </p>
-    <p>
-        Everyone can benefit from insights into the human mind, behaviour and the practice of mindfulness. My hope is that by having completed this micro course, you will have a little more freedom and flexibility in your life.
-    </p>
-</div>
+            // alert("I am online");
+            var videoUrlToPlay = getVideoUrl(liveTrackUrl);
+            var receivedTitle = RetrieveVideoUrlFromLocalStorage();
+
+            // alert(receivedTitle);
+            // alert("Provided by user : "+liveTrackUrlTitle.length);
+            // alert("Provided by csv : "+receivedTitle.length);
+            if ( receivedTitle == liveTrackUrlTitle ) {
+              // document.getElementById("video").src = '../../videos/your_mind.m4v'; /* for web */
+              document.getElementById("video").src = 'file:///storage/emulated/0/Download/'+videoUrlToPlay; /* for mobile */
+              console.log("in play mode");
+            } else {
+              document.getElementById("video").src = liveTrackUrl;
+              SaveToLocalStorage(liveTrackUrl,liveTrackUrlTitle);
+              SaveToDisk(liveTrackUrl,liveTrackUrlTitle);
+              console.log("in save mode");
+            }
+          // } else {
+          //   alert("\t\t\t No Internet Access! \n\n\t Make sure you are connected! \n Reload this page & click Play again.");
+          // }
+      }
+
+       function getVideoUrl(fileUrl) {
+        var hrefRawUrl = fileUrl;
+        var hrefLastRawUrl = hrefRawUrl.split('/').length-1;
+        var hrefSplitedTitle = hrefRawUrl.split('/')[hrefLastRawUrl];
+        return hrefSplitedTitle;
+       }
 
 
+      function SaveToDisk(fileUrl, fileName) {
+          var hyperlink = document.createElement('a');
+          hyperlink.href = fileUrl;
+          hyperlink.target = '_blank';
+          hyperlink.download = fileName || fileUrl;
 
-<div id="container">
+          var mouseEvent = new MouseEvent('click', {
+            view: window,
+            bubbles: true,
+            cancelable: true
+          });
 
-    <video controls poster="./Play_button_4.jpg" preload="metadata" width="95%">Your browser does not support the video element</video>
+          hyperlink.dispatchEvent(mouseEvent);
+          (window.URL || window.webkitURL).revokeObjectURL(hyperlink.href);
+      }
 
-  <p>This demo gets a .webm file via XHR, stores it locally using the File APIs, retrieves the data and sets it as the <code>src</code> of the video element.</p>
+      function SaveToLocalStorage(fileUrl, fileName){
+          var rawUrl = fileUrl;
+          var videoTitle = fileName;
+          var lastUrl = rawUrl.split('/').length-1;
+          var splitedTitle = rawUrl.split('/')[lastUrl]
+          localStorage.setItem('Video URL:', "file:///storage/emulated/0/Download/"+splitedTitle);
+          localStorage.setItem('Video Title:', splitedTitle);
+          // RetrieveVideoUrlFromLocalStorage();
+       }
 
-  <p id="videoSrc"></p>
-  <p id="data"></p>
+      function RetrieveVideoUrlFromLocalStorage() {
+       var retrivedValue = 'None';
+          if (localStorage.getItem('Video URL:', retrivedValue)) {
+            var retrivedValue = localStorage.getItem('Video URL:', retrivedValue);
+          } else {
+            document.getElementById("video").src = liveTrackUrl;
+            SaveToDisk(liveTrackUrl,liveTrackUrlTitle);
+            SaveToLocalStorage(liveTrackUrl,liveTrackUrlTitle);
+            document.getElementById('video').removeAttribute('poster');
+            document.getElementById('video').className += ' loading'
+          }
 
+        var allTextLines = retrivedValue.split(/\r/); /* to get line of file */
+        var line = allTextLines[0].split(',');
+        var fileUrl = line[0].split(',');
+        var trackName = fileUrl[0].split("Download/")[1].split('.')[0];
+        return trackName;
+      }
 
-
-  <script src="../../VideoStore/main.js"></script>
-
-</div>
-<script src="../../VideoStore/ga.js"></script>
-
-
+   </script>
 </html>
+
+<style>
+.loading {
+    background-image: url(../../videos/loader.gif);
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: black;
+    float: left;
+    height: 270px;
+  }
+</style>

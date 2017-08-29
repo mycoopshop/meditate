@@ -15,15 +15,19 @@ interface Slide {
   templateUrl: 'build/pages/hello-ionic/hello-ionic.html'
 })
 export class HelloIonicPage {
-  
+
   menuPage = MenuPage;
   listPage = ListPage;
   popUpPage = PopUpPage;
   @ViewChild('mySlider') slider: Slides;
   slides: Slide[];
   firstSlide: number;
+  showSlide: {};
+  speedy: number;
 
   constructor(public navController: NavController) {
+
+    this.speedy = 4500;
 
     this.slides = [
       {id: 1,  author: "- T.Brach",      title: "Mindfulness - the space between stimulus and response: that's where choice lies."},
@@ -52,7 +56,33 @@ export class HelloIonicPage {
       {id: 24, author: "-Osho",          title: "Your thinking colours reality."},
       {id: 25, author: "- W. Erhar",     title: "Resistance causes persistence. "}
     ];
-    this.firstSlide = Math.floor(Math.random() * this.slides.length);
+
+    //Shuffle slides on load
+    function shuffle(array) {
+    var currentIndex = array.length, temporaryValue, randomIndex;
+
+    // While there remain elements to shuffle...
+    while (0 !== currentIndex) {
+
+      // Pick a remaining element...
+      randomIndex = Math.floor(Math.random() * currentIndex);
+      currentIndex -= 1;
+
+      // And swap it with the current element.
+      temporaryValue = array[currentIndex];
+      array[currentIndex] = array[randomIndex];
+      array[randomIndex] = temporaryValue;
+    }
+
+    return array;
+  }
+
+  this.slides = shuffle(this.slides);
+  console.log(this.slides);
+  this.firstSlide = Math.floor(Math.random() * this.slides.length);
+  //this.showSlide = this.slides[this.firstSlide];
+  //console.log(this.showSlide);
+
   }
 
   itemTappedOne(event, menuId) {
@@ -87,6 +117,11 @@ export class HelloIonicPage {
     this.navController.push(MenuPage);
   }
 
+  pauseQuote() {
+    console.log("Pausing quote");
+    //this.slider.stopAutoplay();
+  }
+
   // quotes slider
   mySlideOptions = {
     // initialSlide: 0,
@@ -98,7 +133,7 @@ export class HelloIonicPage {
     // direction: "horizontal",
     // speed: 3100,
     // nextButton: ".pause-me",
-    // prevButton: ".swiper-button-prev" 
+    // prevButton: ".swiper-button-prev"
 
         pagination: '.swiper-pagination',
         paginationClickable: true,
@@ -111,23 +146,32 @@ export class HelloIonicPage {
         visibilityFullFit: true,
         initialSlide : 0,
         loop : true,
-        loopedSlides : 7
+        loopedSlides : 7,
+        // autoplayDisableOnInteraction: true
   };
-  
+
   getRandomIndex(): number {
     return Math.floor(Math.random() * this.slides.length);
   }
 
-  onSlideChanged() {
-    let currentIndex = this.slider.getActiveIndex();
-    this.slider.slideTo((currentIndex - this.getRandomIndex()), 10);
-    // console.log(currentIndex);
-  }
+      // onSlideChanged() {
+      //   let currentIndex = this.slider.getActiveIndex();
+      //   this.slider.slideTo((currentIndex - this.getRandomIndex()), 10);
+      //   // console.log(currentIndex);
+      // }
 
+  onSlideChanged() {
+       let currentIndex = this.slider.getActiveIndex() - 1;
+        if (currentIndex < 0)
+            currentIndex += 7;
+        let objectIndex = currentIndex;
+        console.log("My obj :" +objectIndex);
+        this.slider.slideTo(objectIndex, 10);
+    }
 
   newSlide() {
     let newSlide = this.getRandomIndex();
-    this.slider.slideTo(newSlide,10);
+    // this.slider.slideTo(newSlide,1);
     // console.log(newSlide);
   }
 
@@ -135,16 +179,17 @@ export class HelloIonicPage {
   myMainSlideOptions = {
     initialSlide: 0,
     loop: false,
-    // effect: 'fade',
-    // fade: {crossFade:true},
+    //effect: 'fade',
+    //fade: {crossFade:true},
     // preventClicks: false,
     // preventClicksPropagation: false,
-    autoplay: 7000,
+    autoplay: 11000,
     direction:"horizontal",
     speed: 5000,
     allowSwipeToPrev: false,
     allowSwipeToNext: true,
-    autoplayStopOnLast: true
+    autoplayStopOnLast: true,
+    autoplayDisableOnInteraction: true
   };
 
 }

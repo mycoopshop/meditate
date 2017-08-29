@@ -142,7 +142,7 @@
    .html-menu-title-container {
       float: left;
       width: 91%;
-      height: 8vh;
+      height: 10vh;
       color: #000;
    }
    .html-menu-title {
@@ -277,6 +277,7 @@
     margin-top: 1.8%;
     height: 8.3%;
     width: 90%;
+    text-align: left;
   }
 
   .background-blinker {
@@ -374,8 +375,21 @@
   font-size: 171%;
   color: #000;
   font-family: sans_medium;
-  
+
   .platform-text {
+    float: left;
+    margin: 3% 0% 0% 5%;
+  }
+}
+
+.part-container{
+    font-family: sans_regular;
+    width: 100% !important;
+    float: left;
+    font-weight: normal !important;
+    font-size: 155%;
+
+  .part-text {
     float: left;
     margin: 3% 0% 0% 5%;
   }

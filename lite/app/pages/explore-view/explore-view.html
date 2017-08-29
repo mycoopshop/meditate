@@ -1,0 +1,27 @@
+<ion-content overflow-scroll="true" class="gray-background">
+   <ion-row responsive-md responsive-sm responsive-lg >
+      <ion-col >
+         <a href="#" (click)="goToHome()" style="text-decoration: none">
+            <div class="view-text-logo">
+               <img src="img/mindfullness.png" >
+            </div>
+         </a>
+         <span menuToggle class="view-align-me-now" fab-fixed>
+         <img src="img/greater-than.png" >
+         </span>
+      </ion-col>
+   </ion-row>
+   <div class="iframe_container">
+      <iframe id="iframeID" [src]='page' frameborder="0"  >
+      </iframe>
+   </div>
+</ion-content>
+<ion-footer class="gb-color">
+   <div class="down-back-container">
+      <button class="down-scroll-container" (click)="goBack()">
+         <div class="manage-me">
+            <img src="img/less-than.png">
+         </div>
+      </button>
+   </div>
+</ion-footer>
