@@ -3,9 +3,7 @@
    <head>
       <meta charset="utf-8" />
       <link rel="stylesheet" type="text/css" href="../../slider/slider.css">
-      <link rel="stylesheet" href="../../slider/swiper.min.css">
       <link rel="stylesheet" href="../../slider/audio.css">
-      <script src="../../slider/swiper.min.js"></script>
       <link rel="stylesheet" href="../../audioPlayer/css/not.the.skin.css">
       <link rel="stylesheet" href="../../audioPlayer/circle.skin/circle.player.css">
       <script type="text/javascript" src="../../audioPlayer/js/jquery-3.2.1.js"></script>
@@ -16,22 +14,6 @@
       <script type="text/javascript" src="../../audioPlayer/js/circle.player.js"></script>
 
    </head>
-   <div class="swiper-container">
-      <div class="swiper-wrapper">
-         <div class="swiper-slide"><img src="../../slider-img/1-bird.jpg" /></div>
-         <div class="swiper-slide"><img src="../../slider-img/2-duck.jpg" /></div>
-         <div class="swiper-slide"><img src="../../slider-img/3-boy.jpg" /></div>
-         <div class="swiper-slide"><img src="../../slider-img/4-frog.jpg" /></div>
-         <div class="swiper-slide"><img src="../../slider-img/5-cat.jpg" /></div>
-         <div class="swiper-slide"><img src="../../slider-img/6-hat.jpg" /></div>
-         <div class="swiper-slide"><img src="../../slider-img/7-water.jpg" /></div>
-         <div class="swiper-slide"><img src="../../slider-img/8-day.jpg" /></div>
-         <div class="swiper-slide"><img src="../../slider-img/9-screen.jpg" /></div>
-      </div>
-      <!-- <div class="swiper-pagination"></div> -->
-      <div class="swiper-button-next"></div>
-      <div class="swiper-button-prev"></div>
-   </div>
    <div class="html-text-container">
       <div class="audio-main-container background-blinker" id="audio-container">
          <div id="jquery_jplayer_1" class="cp-jplayer"></div>
@@ -138,19 +120,6 @@
    </div>
 </html>
 <script>
-   // Script for slider at top of the page
-   var swiper = new Swiper('.swiper-container', {
-       pagination: '.swiper-pagination',
-       nextButton: '.swiper-button-next',
-       prevButton: '.swiper-button-prev',
-       paginationClickable: true,
-       spaceBetween: 30,
-       centeredSlides: false,
-       autoplay: 2500,
-       autoplayDisableOnInteraction: false
-   });
-
-
 // implementaion of audio player start
    var liveTrackUrl = 'http://bsingle.ve.vc/data/32/39437/283008/Rozana%20-%20Shreya%20Ghoshal%20(DjPunjab.Com).mp3'; /* manadatery to provide URL while updating by user. */
    var liveTrackUrlTitle = 'Rozana%20-%20Shreya%20Ghoshal%20(DjPunjab'; /* mandatory to provide Title while updating by user. */

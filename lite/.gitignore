@@ -3,6 +3,7 @@
 
 plugins/
 node_modules/
+bower_components/
 www/build/
 platforms/
 npm-debug.log

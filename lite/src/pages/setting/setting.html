@@ -1,0 +1,38 @@
+<ion-content class="gray-background" padding="true" overflow-scroll="true">
+   <ion-col width-100>
+      <div menuToggle style=" margin-top: 6%; float: right;">
+         <img src="img/greater-than.png" width="15" height="25">
+      </div>
+   </ion-col>
+   <!-- <ion-view> -->
+   <ion-row>
+      <ion-list style="margin-top: 4%;">
+         <ion-col width-60 offset-30 text-center>
+            <h2> Settings </h2>
+         </ion-col>
+      </ion-list>
+      <ion-row responsive-sm>
+         <ion-list>
+            <ion-item>
+               <ion-label>Random insights reminder</ion-label>
+               <ion-toggle  (ionChange)="sendItem()"></ion-toggle>
+            </ion-item>
+         </ion-list>
+      </ion-row>
+      <ion-list>
+         <ion-row>
+            <i>   Make it 'ON' to get notification everyday at random. </i>
+         </ion-row>
+      </ion-list>
+   <!-- </ion-view> -->
+   </ion-row>
+</ion-content>
+<ion-footer class="gb-color">
+   <div class="down-back-container">
+      <button class="down-scroll-container" (click)="goBack()">
+         <div class="manage-me">
+            <img src="img/less-than.png">
+         </div>
+      </button>
+   </div>
+</ion-footer>

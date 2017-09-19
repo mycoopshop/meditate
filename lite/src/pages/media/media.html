@@ -1,0 +1,91 @@
+<ion-content class="gray-background" padding="true" overflow-scroll="true">
+   <ion-col width-100>
+      <div menuToggle style=" margin-top: 6%; float: right;">
+         <img src="img/greater-than.png" width="15" height="25">
+      </div>
+   </ion-col>
+   <ion-list style="margin-top: 4%;">
+      <ion-col width-60 offset-30 text-center (click)="refreshMe()">
+         <h2> Track lists </h2>
+      </ion-col>
+   </ion-list>
+   <!-- <ion-view> -->
+   <ion-row>
+      <ion-row responsive-sm>
+         <ion-list>
+            <ion-grid text-center>
+               <ion-row wrap *ngIf="videoCollection[0] != null">
+                  <ion-item-sliding *ngFor="let video of videoCollection">
+                     <ion-item>
+                        <div class="img-container">
+                           <img src="img/video-icon.png" width="23" height="23">
+                        </div>
+                        <div class="track-title">{{video | slice:0:13}}</div>
+                     </ion-item>
+                     <ion-item-options>
+                        <button danger (click)="removeVideoRecord()" style="background-color: red !important">
+                           <!-- <icon trash></icon> -->
+                           Delete
+                        </button>
+                     </ion-item-options>
+                  </ion-item-sliding>
+               </ion-row>
+               <ion-row wrap *ngIf="audioCollection[0] != null">
+                  <ion-item-sliding *ngFor="let audio of audioCollection">
+                     <ion-item>
+                       <div class="img-container">
+                          <img src="img/audio.png" width="20" height="20">
+                       </div>
+                       <div class="track-title">{{audio | slice:0:13}}</div>
+                     </ion-item>
+                     <ion-item-options>
+                        <button danger (click)="removeAudioRecord()" style="background-color: red !important">
+                           <!-- <icon trash></icon> -->
+                           Delete
+                        </button>
+                     </ion-item-options>
+                  </ion-item-sliding>
+               </ion-row>
+               <div wrap *ngIf="(audioCollection[0] == null) && (videoCollection[0] == null)">
+                  <h4>
+                     <em>
+                        <h1>  Oh! No record found! </h1>
+                     </em>
+                  </h4>
+               </div>
+            </ion-grid>
+         </ion-list>
+      </ion-row>
+   <!-- </ion-view> -->
+   </ion-row>
+</ion-content>
+<ion-footer class="gb-color">
+   <div class="down-back-container">
+      <button class="down-scroll-container" (click)="goBack()">
+         <div class="manage-me">
+            <img src="img/less-than.png">
+         </div>
+      </button>
+   </div>
+</ion-footer>
+<style>
+   img {
+     vertical-align: text-bottom;
+   }
+   .track-title {
+     float: left;
+     text-align: center;
+     width: 55%;
+   }
+   .img-container {
+     float: left;
+     width: 30%;
+   }
+   .item {
+     background-color: transparent !important;
+     padding-left: 0px !important;
+   }
+   ion-list .item .item-inner {
+     border-bottom: 5px solid #000;
+   }
+</style>

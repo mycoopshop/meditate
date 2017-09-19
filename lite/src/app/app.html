@@ -1,0 +1,49 @@
+<ion-menu [content]="content" side="right" class="side-menu" type="overlay" >
+  <ion-content class="title-main-container">
+      <a menuToggle href="#" (click)="goToHome()" style="text-decoration: none; width:75%;">
+         <div class = "col-67 inner-title">
+            <img src="img/mindfullness.png">
+         </div>
+      </a>
+      <div menuToggle class = "col-20 top-toggle">
+         <img src="img/less-than.png">
+      </div>
+  </ion-content>
+  <ion-content style="background-color: gray; height: 85%;">
+      <ion-scroll scrollY="true">
+         <ion-list right>
+            <div *ngFor="let p of pages">
+               <div *ngIf="(p.type == 'main menu')">
+                  <div class="main-menu-container module">
+                     <a style="text-decoration:none;color:#000" (click)="openPage(p)">{{p.title}}</a> 
+                     <!-- {{p.title}} -->
+                  </div>
+               </div>
+               <div *ngIf="(p.type == 'sub menu')">
+                  <div class="sub-menu-container module">
+                     <a (click)="viewPage(p.component)">{{p.title}}</a>
+                  </div>
+               </div>
+            </div>
+            <ion-row class="bottom-bar">
+               <ion-col width-100>
+               </ion-col>
+            </ion-row>
+         </ion-list>
+      </ion-scroll>
+   </ion-content>
+
+</ion-menu>
+
+<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>
+
+<style type="text/css">
+/*.menu-inner {
+  width: 100% !important;
+}*/
+  
+ion-content {
+  position: relative;
+}
+
+</style>

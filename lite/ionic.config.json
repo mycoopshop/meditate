@@ -1,6 +1,8 @@
 {
-  "name": "lite",
-  "app_id": "7a74503f",
-  "v2": true,
-  "typescript": true
+  "name": "Mindfulness",
+  "app_id": "",
+  "type": "ionic-angular",
+  "integrations": {
+    "cordova": {}
+  }
 }
