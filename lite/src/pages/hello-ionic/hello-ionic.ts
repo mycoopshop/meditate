@@ -24,10 +24,19 @@ export class HelloIonicPage {
   slides: Slide[];
   firstSlide: number;
   showSlide: {};
+  pauseIt : boolean;
   // speedy: number;
 
   constructor(public navController: NavController) {
-
+    this.pauseIt = false;
+    setTimeout(() => {
+      let view = navController.getActive();
+      console.log(view);
+      console.log("4 seconds in");
+      if(view._zIndex === 100 && this.pauseIt === false) {
+        this.navigateSkip();
+      };
+    }, 4000)
     // this.speedy = 4500;
 
     this.slides = [
@@ -113,17 +122,18 @@ export class HelloIonicPage {
   }
 
   navigateSkip() {
-    this.navController.push(MenuPage);
+    this.navController.push(MenuPage, {}, {animate: true, animation: 'wp-transition'});
   }
 
   pauseQuote() {
-    this.slider.stopAutoplay();
+    this.pauseIt = true;
+    console.log("Stopping autoplay");
   }
 
   slideChanged() {
     let currentIndex = this.slider.getActiveIndex();
     if (currentIndex == 1) {
-      this.pauseQuote();
+      //this.pauseQuote();
       this.slider.lockSwipes(true);
     // console.log('Current index is', currentIndex);
     }
@@ -132,8 +142,8 @@ export class HelloIonicPage {
   myMainSlideOptions = {
     initialSlide: 0,
     loop: false,
-    //effect: 'fade',
-    //fade: {crossFade:true},
+    // effect: 'fade',
+    // fade: {crossFade:true},
     // preventClicks: false,
     // preventClicksPropagation: false,
     autoplay: 11000,

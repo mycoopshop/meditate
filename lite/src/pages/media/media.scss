@@ -7,9 +7,13 @@
 	background-color: transparent !important;
 }
 ion-item-sliding {
-	background-color: transparent;
+	background-color: transparent !important;
 }
 
-ion-list .item .item-inner {
+/*ion-list .item .item-inner {
 	border-bottom: 5px solid #000;
+}*/
+
+.no-background {
+	
 }

@@ -1,5 +1,5 @@
 import {NavController, NavParams, Content}  from 'ionic-angular';
-import {Component, ViewChild} from '@angular/core';
+import {Component, ViewChild, trigger, transition, style, sequence, animate} from '@angular/core';
 import {ReadMenuListPage}     from '../read-menu-list/read-menu-list';
 import {ExploreMenuPage}      from '../explore-menu/explore-menu';
 import {PopUpPage}            from '../pop-up/pop-up';
@@ -10,6 +10,17 @@ import {MenuPage}             from '../menu/menu';
 
 @Component({
   templateUrl: 'list.html',
+  animations: [
+     trigger('anim', [
+        transition('* => void', [
+          style({ height: '*', opacity: '1', transform: 'translateX(0)', 'box-shadow': '0 1px 4px 0 rgba(0, 0, 0, 0.3)'}),
+          sequence([
+            animate(".25s ease", style({ height: '*', opacity: '.2', transform: 'translateX(-200px)', 'box-shadow': 'none'  })),
+            animate(".1s ease", style({ height: '0', opacity: 0, transform: 'translateX(0px)', 'box-shadow': 'none'  }))
+          ])
+        ])
+    ])
+  ]
 })
 
 export class ListPage {
@@ -22,11 +33,22 @@ export class ListPage {
   rootPage: any = ListPage;
   public breadcrumbs = [];
   nac: any;
+  slideOut: boolean;
+  bcrumbOut: string;
+  direction: string;
+  greyDirection: string;
 
   subMenus: Array<{id: number, border_type:number, title: string, platform: string,  contain: string, parent_id: number, type: string, stage:string, child_type: number, time: string, url: string}>;
   @ViewChild(Content) content: Content;
 
   constructor(private navCtrl: NavController, navParams: NavParams) {
+
+    this.selectedTitle = navParams.get('backBread');
+    if (this.selectedTitle != undefined) {
+      this.breadcrumbs.push(this.selectedTitle);
+    }
+    //this.slideOut = false;
+    // console.log("Breadcrumbs now: ", this.selectedTitle);
 
     var navOptions = {
       animate: false,
@@ -35,8 +57,18 @@ export class ListPage {
     };
 
     this.nac = navOptions;
-
     this.selectedId = navParams.get('menuId');
+    this.direction = navParams.get('direction');
+    this.greyDirection = navParams.get('greyDirection');
+
+
+    if(this.selectedId >= 35) {
+      var breadcrumbsPrevious = navParams.get('breadcrumbsView');
+      breadcrumbsPrevious.pop();
+      breadcrumbsPrevious.pop();
+      this.breadcrumbs = breadcrumbsPrevious;
+    };
+
     this.selectedTitle = navParams.get('title');
     this.flag = "0";
     this.scrollNow = "2500";
@@ -140,7 +172,7 @@ export class ListPage {
     for(var m of this.subMenus){
       if(this.selectedId ==  m.id)
       {
-        console.log(this.selectedTitle+"in if cond");
+        // console.log(this.selectedTitle+"in if cond");
         this.selectedTitle = m.title;
         this.breadcrumbs.push(this.selectedTitle);
       }
@@ -149,6 +181,7 @@ export class ListPage {
         this.parentTitle = ' ';
       }
     }
+    console.log(this.selectedId);
 
   }
 
@@ -156,6 +189,7 @@ export class ListPage {
     this.selectedId=id;
     this.parentId=pId;
     this.parentTitle=menuTitle;
+    console.log(this.parentTitle);
     this.breadcrumbs.push(this.parentTitle);
   };
 
@@ -163,20 +197,19 @@ export class ListPage {
     return this.selectedId;
   };
 
-  scrollTo() {
-    // let dimensions = this.content.getContentDimensions();
-    // if (this.scrollNow >= (dimensions.scrollBottom-1920)) {
-    //   this.scrollNow = -165;
-    // }
-    // this.scrollNow = this.scrollNow+320;
-    // this.content.scrollTo(0, this.scrollNow, 3000);
-    // console.log(this.scrollNow);
-  };
+  setDirection() {
+    this.greyDirection = "backWard";
+  }
+
+  removeDirection() {
+    this.direction = "undefined";
+  }
 
   viewPage(event, url, id) {
     this.navCtrl.push(ViewPage, {
       url: url,
-      parent_id: id
+      parent_id: id,
+      breadcrumbs: this.breadcrumbs
     });
   }
 
@@ -216,24 +249,18 @@ export class ListPage {
       readMenuParentTitle: PTitle,
       clickedTitle: MenuTitle,
     });
-      // console.log(readMenuParentTitle+"I am menu");
   }
 
   goBack() {
-    // this.navCtrl.pop();
-    console.log('selectedId= '+this.selectedId);
+    this.breadcrumbs.pop();
+    //this.slideOut = true;
+    this.direction = "backWard";
     if(this.selectedId == 1 || this.selectedId == 2 || this.selectedId == 3 || this.selectedId == 4)
     {
-      console.log("hello, I am in if section ="+this.selectedTitle)
+      // console.log("hello, I am in if section ="+this.selectedTitle)
       this.navCtrl.push(MenuPage,{},{direction: 'back', duration: 610});
-    }
-    else if(this.parentId != null) {
-      this.navCtrl.push( this.rootPage, {
-        menuId: this.parentId
-      },{direction: 'back', duration: 610});
-      console.log("else if part selectedTitle= "+this.selectedTitle);
-    }
-    else {
+    } else {
+      console.log(3);
       var pId;
         for(var menu of this.subMenus){
           if(this.selectedId ==  menu.id)
@@ -242,9 +269,7 @@ export class ListPage {
             break;
           }
         }
-        this.navCtrl.push( this.rootPage, {
-        menuId: pId
-      },{direction: 'back', duration: 610});
+        this.selectedId = pId;
     }
   }
 

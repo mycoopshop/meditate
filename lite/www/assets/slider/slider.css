@@ -17,15 +17,17 @@ a {
   color:#ffd;
 }
 
+/*style="width: 105.3%;"*/
+
 .swiper-container {
-  width: 95vw;
+  width: 100vw;
   height: 170px;
   margin-left: -8px !important;
 }
 
 .html-text-container {
   float: left;
-  width: 88%;
+  width: 92%;
   margin-left: 4%;
 }
 

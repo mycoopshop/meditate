@@ -185,11 +185,15 @@ export class VideoPage {
     if(this.listMenuPId != null)
       {	this.listMenuId
         this.nav.push(ListPage, {
-          menuId: this.listMenuPId
+          menuId: this.listMenuPId,
+          greyDirection: 'GreybackWard',
+          backBread: this.BreadcrumbsCollection[0]
         },{direction: 'back'});
+        // console.log('if BC='+ this.BreadcrumbsCollection[0])
       }
     else {
       this.nav.pop();
+      // console.log('else BC='+ this.BreadcrumbsCollection[0])
     }
   }
 

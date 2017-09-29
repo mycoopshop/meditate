@@ -13,16 +13,20 @@ export class ViewPage {
   //url: any;
   parentId: any;
   page: any;
+  direction: string;
   Scroll_height: number;
   iframe_height: any;
+  breadcrumbsPrevious: any;
   @ViewChild('mySlider') slider: Slides;
   @ViewChild(Content) content: Content;
+
   constructor( public sanitizer: DomSanitizer, public nav: NavController, navParams: NavParams ) {
     let url = navParams.get('url');
     this.page = this.sanitizer.bypassSecurityTrustResourceUrl(url);
     this.parentId = navParams.get('parent_id');
+    this.breadcrumbsPrevious = navParams.get('breadcrumbs');
     this.Scroll_height = 397;
-    // this.url = navParams.get('url'); 
+    // this.url = navParams.get('url');
     // console.log(this.url);
   }
 
@@ -34,19 +38,22 @@ export class ViewPage {
     direction:"horizontal",
     speed:2500,
     nextButton: ".swiper-button-next",
-    prevButton: ".swiper-button-prev" 
+    prevButton: ".swiper-button-prev"
   };
 
   onSlideChanged() {
     let currentIndex = this.slider.getActiveIndex();
     this.slider.slideTo(currentIndex, 500);
-  } 
+  }
 
   goBack() {
+    // console.log(this.parentId);
     if(this.parentId != null)
       {
         this.nav.push(ListPage, {
-          menuId: this.parentId
+          menuId: this.parentId,
+          direction: 'backWard',
+          breadcrumbsView: this.breadcrumbsPrevious
         },{direction: 'back'});
       }
     else
@@ -55,18 +62,8 @@ export class ViewPage {
       }
   }
 
-  // scrollTo() {
-  //   let iFramelen = document.getElementById('iframeID');
-  //   this.iframe_height = iFramelen.scrollHeight;
-  //   this.iframe_height = (this.Scroll_height);
-  //   //let off_height = iFramelen.clientHeight;
-  //   this.Scroll_height = this.Scroll_height+this.Scroll_height;
-  //   //console.log(this.Scroll_height);
-  //   console.log(this.iframe_height);
-  // };
-
   goToHome() {
     this.nav.push( MenuPage,{},{direction: 'back', duration: 610});
   }
-  
+
 }

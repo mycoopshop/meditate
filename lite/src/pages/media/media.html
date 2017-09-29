@@ -1,26 +1,25 @@
 <ion-content class="gray-background" padding="true" overflow-scroll="true">
    <ion-col width-100>
-      <div menuToggle style=" margin-top: 6%; float: right;">
+      <div menuToggle style=" margin-top: 7%; float: right;">
          <img src="img/greater-than.png" width="15" height="25">
       </div>
    </ion-col>
-   <ion-list style="margin-top: 4%;">
+   <ion-list style="margin: 0 auto">
       <ion-col width-60 offset-30 text-center (click)="refreshMe()">
          <h2> Track lists </h2>
       </ion-col>
    </ion-list>
    <!-- <ion-view> -->
-   <ion-row>
-      <ion-row responsive-sm>
-         <ion-list>
+      <ion-row>
+         <ion-list style="width: 100% !important;">
             <ion-grid text-center>
                <ion-row wrap *ngIf="videoCollection[0] != null">
                   <ion-item-sliding *ngFor="let video of videoCollection">
-                     <ion-item>
+                     <ion-item style="background-color: pink">
                         <div class="img-container">
                            <img src="img/video-icon.png" width="23" height="23">
                         </div>
-                        <div class="track-title">{{video | slice:0:13}}</div>
+                        <div class="track-title">{{video.split('%20').join(" ") | slice:0:23}}</div>
                      </ion-item>
                      <ion-item-options>
                         <button danger (click)="removeVideoRecord()" style="background-color: red !important">
@@ -36,7 +35,7 @@
                        <div class="img-container">
                           <img src="img/audio.png" width="20" height="20">
                        </div>
-                       <div class="track-title">{{audio | slice:0:13}}</div>
+                       <div class="track-title">{{audio.split('%20').join(" ") | slice:0:23}}</div>
                      </ion-item>
                      <ion-item-options>
                         <button danger (click)="removeAudioRecord()" style="background-color: red !important">
@@ -57,7 +56,6 @@
          </ion-list>
       </ion-row>
    <!-- </ion-view> -->
-   </ion-row>
 </ion-content>
 <ion-footer class="gb-color">
    <div class="down-back-container">
@@ -73,19 +71,19 @@
      vertical-align: text-bottom;
    }
    .track-title {
-     float: left;
-     text-align: center;
-     width: 55%;
+      float: left;
+      text-align: center;
+      width: 75%;
    }
    .img-container {
-     float: left;
-     width: 30%;
+      float: left;
+      width: 10%;
    }
    .item {
-     background-color: transparent !important;
-     padding-left: 0px !important;
+      background-color: transparent !important;
+      padding-left: 0px !important;
    }
-   ion-list .item .item-inner {
-     border-bottom: 5px solid #000;
+   .list-ios .item-block .item-inner {
+      border-bottom: 3.55px solid rgb(200, 199, 204);
    }
 </style>

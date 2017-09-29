@@ -1,10 +1,17 @@
 
 ion-list .item .item-inner {
-  border-bottom: 5px solid #000;
+  /*border-bottom: 5px solid #000;*/
+  /*border-bottom: none !important;*/
+  /*border-top: none !important;*/
+}
+
+.list-ios > .item-block:last-child, .list-ios > .item-wrapper:last-child .item-block {
+	border-bottom: none;
+	border-top: none;
 }
 
 .toggle-checked {
-  background-color: #454950 !important;
+  background-color: transparent !important;
 }
 
 .toggle-checked .toggle-inner {

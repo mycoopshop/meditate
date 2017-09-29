@@ -48,7 +48,7 @@ export class MediaPage {
     }
 
     goBack() {
-      this.nav.insert(0, MenuPage,{},{direction: 'back', duration: 610});
+      this.nav.push(MenuPage,{},{direction: 'back', duration: 610});
     }
 
 }
